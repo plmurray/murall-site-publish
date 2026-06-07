@@ -153,7 +153,7 @@ export default function JournalPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar onSampleOpen={() => setSampleOpen(true)} />
+      <Navbar onSampleOpen={() => setSampleOpen(true)} lightMode />
 
       {/* Hero */}
       <section className="pt-32 pb-16 bg-stone-50 border-b border-stone-100">

@@ -115,7 +115,7 @@ export default function TradePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar onSampleOpen={() => setSampleOpen(true)} />
+      <Navbar onSampleOpen={() => setSampleOpen(true)} lightMode />
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-stone-900">

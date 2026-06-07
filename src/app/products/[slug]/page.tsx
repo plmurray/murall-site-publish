@@ -47,7 +47,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar onSampleOpen={() => setSampleOpen(true)} />
+      <Navbar onSampleOpen={() => setSampleOpen(true)} lightMode />
 
       {/* Breadcrumb */}
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-4" aria-label="Breadcrumb">
