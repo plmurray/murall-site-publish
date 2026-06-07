@@ -160,8 +160,9 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
   );
 }
 
-export default function Navbar({ onSampleOpen, onCalcOpen }: { onSampleOpen: () => void; onCalcOpen?: () => void }) {
+export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: { onSampleOpen: () => void; onCalcOpen?: () => void; lightMode?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
+  const isDark = lightMode || scrolled;
   const [shopOpen, setShopOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { count, openCart } = useCart();
@@ -176,18 +177,18 @@ export default function Navbar({ onSampleOpen, onCalcOpen }: { onSampleOpen: () 
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? "bg-white/90 backdrop-blur-xl shadow-sm border-b border-stone-100" : "bg-transparent"}`}
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isDark ? "bg-white/90 backdrop-blur-xl shadow-sm border-b border-stone-100" : "bg-transparent"}`}
         initial={{ y: -64 }} animate={{ y: 0 }} transition={{ duration: 0.4, ease: "easeOut" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-32">
             <a href="/" className="flex-shrink-0 cursor-pointer" aria-label="Murall Wallpaper home">
-              <MurallLogo scrolled={scrolled} />
+              <MurallLogo scrolled={isDark} />
             </a>
 
             <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
               <div className="relative" onMouseEnter={() => setShopOpen(true)} onMouseLeave={() => setShopOpen(false)}>
-                <button className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 cursor-pointer ${scrolled ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                <button className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                   aria-expanded={shopOpen} aria-haspopup="true" style={{ fontFamily: "Inter, sans-serif" }}>
                   Shop
                 </button>
@@ -195,7 +196,7 @@ export default function Navbar({ onSampleOpen, onCalcOpen }: { onSampleOpen: () 
               </div>
               {["Brands", "Journal", "Trade", "Where we ship"].map((item) => (
                 <a key={item} href={item === "Where we ship" ? "/shipping" : `/${item.toLowerCase()}`}
-                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 cursor-pointer ${scrolled ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                   style={{ fontFamily: "Inter, sans-serif" }}>{item}</a>
               ))}
             </nav>
@@ -203,7 +204,7 @@ export default function Navbar({ onSampleOpen, onCalcOpen }: { onSampleOpen: () 
             <div className="flex items-center gap-1">
               {onCalcOpen && (
                 <button onClick={onCalcOpen}
-                  className={`hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer mr-1 ${scrolled ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                  className={`hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer mr-1 ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                   style={{ fontFamily: "Inter, sans-serif" }}>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="8" x2="16" y1="10" y2="10"/><line x1="8" x2="12" y1="14" y2="14"/></svg>
                   Rolls calc
@@ -215,12 +216,12 @@ export default function Navbar({ onSampleOpen, onCalcOpen }: { onSampleOpen: () 
                 Request a Sample
               </button>
               <button onClick={openSearch}
-                className={`p-2 rounded-lg transition-colors duration-200 cursor-pointer ${scrolled ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                className={`p-2 rounded-lg transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                 aria-label="Search">
                 <SearchIcon />
               </button>
               <button onClick={openCart}
-                className={`p-2 rounded-lg transition-colors duration-200 cursor-pointer ${scrolled ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                className={`p-2 rounded-lg transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                 aria-label={`Cart, ${count} items`}>
                 <CartIcon count={count} />
               </button>
