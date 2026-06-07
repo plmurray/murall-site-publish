@@ -13,7 +13,7 @@ function MurallLogo({ scrolled, dark = false }: { scrolled?: boolean; dark?: boo
   const leafStroke = "#4A8A6A";
 
   return (
-    <svg width="460" height="115" viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg" aria-label="MURALL WALLPAPER">
+    <svg width="600" height="150" viewBox="0 0 800 160" xmlns="http://www.w3.org/2000/svg" aria-label="MURALL WALLPAPER">
       {/* Left botanical leaf */}
       <g transform="translate(48,30)">
         <ellipse cx="0" cy="28" rx="28" ry="11" transform="rotate(-22,0,28)" fill={leafFill} stroke={leafStroke} strokeWidth="1"/>
@@ -191,7 +191,7 @@ export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: 
         initial={{ y: -64 }} animate={{ y: 0 }} transition={{ duration: 0.4, ease: "easeOut" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-32">
+          <div className="flex items-center justify-between h-40">
             <a href="/" className="flex-shrink-0 cursor-pointer" aria-label="Murall Wallpaper home">
               <MurallLogo scrolled={isDark} />
             </a>
