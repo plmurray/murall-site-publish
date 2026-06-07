@@ -160,7 +160,7 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
   );
 }
 
-export default function Navbar({ onSampleOpen }: { onSampleOpen: () => void }) {
+export default function Navbar({ onSampleOpen, onCalcOpen }: { onSampleOpen: () => void; onCalcOpen?: () => void }) {
   const [scrolled, setScrolled] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -201,6 +201,14 @@ export default function Navbar({ onSampleOpen }: { onSampleOpen: () => void }) {
             </nav>
 
             <div className="flex items-center gap-1">
+              {onCalcOpen && (
+                <button onClick={onCalcOpen}
+                  className={`hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer mr-1 ${scrolled ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                  style={{ fontFamily: "Inter, sans-serif" }}>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="8" x2="16" y1="10" y2="10"/><line x1="8" x2="12" y1="14" y2="14"/></svg>
+                  Rolls calc
+                </button>
+              )}
               <button onClick={onSampleOpen}
                 className="hidden md:inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 cursor-pointer mr-2 border-stone-300 text-stone-700 hover:border-stone-900 hover:text-stone-900 bg-white/80 backdrop-blur-sm"
                 style={{ fontFamily: "Inter, sans-serif" }}>

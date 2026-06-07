@@ -15,14 +15,31 @@ interface Product {
   isBestseller?: boolean;
 }
 
-const PRODUCTS: Product[] = [
-  { id: "1", name: "Verdant Canopy", brand: "Rebel Walls", price: 74, installType: "paste-the-wall", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png", isBestseller: true },
-  { id: "2", name: "Hex Noir", brand: "Graham & Brown", price: 58, installType: "peel-and-stick", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png", isNew: true },
-  { id: "3", name: "Midnight Garden", brand: "Chasing Paper", price: 84, installType: "paste-the-wall", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png", isBestseller: true },
-  { id: "4", name: "Emerald Conservatory", brand: "Tempaper", price: 62, installType: "peel-and-stick", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png", isNew: true },
+interface ProductWithRating extends Product {
+  rating: number;
+  reviewCount: number;
+}
+
+const PRODUCTS: ProductWithRating[] = [
+  { id: "1", name: "Verdant Canopy", brand: "Rebel Walls", price: 74, installType: "paste-the-wall", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png", isBestseller: true, rating: 5, reviewCount: 214 },
+  { id: "2", name: "Hex Noir", brand: "Graham & Brown", price: 58, installType: "peel-and-stick", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png", isNew: true, rating: 5, reviewCount: 87 },
+  { id: "3", name: "Midnight Garden", brand: "Chasing Paper", price: 84, installType: "paste-the-wall", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png", isBestseller: true, rating: 5, reviewCount: 163 },
+  { id: "4", name: "Emerald Conservatory", brand: "Tempaper", price: 62, installType: "peel-and-stick", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png", isNew: true, rating: 4, reviewCount: 52 },
 ];
 
-function ProductCard({ product, index }: { product: Product; index: number }) {
+function Stars({ rating }: { rating: number }) {
+  return (
+    <div className="flex gap-0.5" aria-label={`${rating} out of 5 stars`}>
+      {[1,2,3,4,5].map((s) => (
+        <svg key={s} width="11" height="11" viewBox="0 0 24 24" fill={s <= rating ? "#BF9B5A" : "none"} stroke="#BF9B5A" strokeWidth="1.5" aria-hidden="true">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+function ProductCard({ product, index }: { product: ProductWithRating; index: number }) {
   const [saved, setSaved] = useState(false);
   const [hovered, setHovered] = useState(false);
   const [addedToCart, setAddedToCart] = useState(false);
@@ -92,6 +109,10 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
         <p className="text-xs text-stone-400 uppercase tracking-widest mb-1">{product.brand}</p>
         <h3 className="text-base font-medium text-stone-900 mb-1 leading-snug group-hover:text-emerald-800 transition-colors duration-200"
           style={{ fontFamily: "'Playfair Display', serif" }}>{product.name}</h3>
+        <div className="flex items-center gap-1.5 mb-1.5">
+          <Stars rating={product.rating} />
+          <span className="text-xs text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>({product.reviewCount})</span>
+        </div>
         <div className="flex items-center justify-between">
           <p className="text-sm font-semibold text-stone-800">From ${product.price}<span className="text-xs font-normal text-stone-400 ml-1">/ roll</span></p>
           <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${product.installType === "peel-and-stick" ? "bg-amber-50 text-amber-700 border border-amber-100" : "bg-sky-50 text-sky-700 border border-sky-100"}`}>
