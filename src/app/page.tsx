@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/app/components/Navbar";
 import ProductGrid from "@/app/components/ProductGrid";
@@ -13,11 +13,19 @@ import ReviewsSection from "@/app/components/ReviewsSection";
 import RoomVisualizer from "@/app/components/RoomVisualizer";
 import RollsCalculator from "@/app/components/RollsCalculator";
 import SampleBar from "@/app/components/SampleBar";
+import BeforeAfter from "@/app/components/BeforeAfter";
+import ColorStories from "@/app/components/ColorStories";
+import TradeCTA from "@/app/components/TradeCTA";
+import UGCFeed from "@/app/components/UGCFeed";
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
-const HERO_BG =
-  "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png";
+const HERO_SLIDES = [
+  { img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png", label: "Emerald Conservatory" },
+  { img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png", label: "Verdant Canopy" },
+  { img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png", label: "Midnight Garden" },
+  { img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png", label: "Hex Noir" },
+];
 
 const TRUST_ITEMS = [
   "Free shipping over $120",
@@ -29,21 +37,53 @@ const TRUST_ITEMS = [
 ];
 
 function Hero({ onSampleOpen }: { onSampleOpen: () => void }) {
+  const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    const t = setInterval(() => setSlide((s) => (s + 1) % HERO_SLIDES.length), 5000);
+    return () => clearInterval(t);
+  }, []);
+
   return (
     <section className="relative w-full h-screen min-h-[640px] overflow-hidden" aria-label="Hero">
-      {/* Ken Burns background */}
-      <motion.div
-        className="absolute inset-0"
-        initial={{ scale: 1.08 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 12, ease: "easeOut" }}
-      >
-        <img
-          src={HERO_BG}
-          alt="Emerald Conservatory wallpaper — a lush botanical mural in deep greens"
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
+      {/* Cinematic slideshow */}
+      <div className="absolute inset-0">
+        <AnimatePresence mode="sync">
+          <motion.div
+            key={slide}
+            className="absolute inset-0"
+            initial={{ opacity: 0, scale: 1.08 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.02 }}
+            transition={{ duration: 1.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+          >
+            <img
+              src={HERO_SLIDES[slide].img}
+              alt={`${HERO_SLIDES[slide].label} wallpaper`}
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Slide dots */}
+      <div className="absolute bottom-20 right-8 z-20 flex flex-col gap-2">
+        {HERO_SLIDES.map((s, i) => (
+          <button key={i} onClick={() => setSlide(i)}
+            className={`w-1.5 rounded-full transition-all duration-300 cursor-pointer ${i === slide ? "h-6 bg-white" : "h-1.5 bg-white/40 hover:bg-white/70"}`}
+            aria-label={`View ${s.label}`} aria-pressed={i === slide} />
+        ))}
+      </div>
+
+      {/* Slide label */}
+      <AnimatePresence mode="wait">
+        <motion.div key={slide}
+          initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0 }}
+          transition={{ duration: 0.4 }}
+          className="absolute bottom-20 left-8 z-20 hidden sm:block">
+          <span className="text-[10px] tracking-[0.2em] uppercase text-white/50" style={{ fontFamily: "Inter, sans-serif" }}>{HERO_SLIDES[slide].label}</span>
+        </motion.div>
+      </AnimatePresence>
 
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-stone-900/60 via-stone-900/30 to-stone-900/70" />
@@ -386,8 +426,12 @@ export default function Home() {
         <PressStrip />
         <ProductGrid />
         <RoomVisualizer />
+        <BeforeAfter />
+        <ColorStories />
         <CategoryGrid />
+        <UGCFeed />
         <ReviewsSection />
+        <TradeCTA />
         <WhyMurall />
         <Newsletter />
       </main>
