@@ -162,7 +162,11 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
 
 export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: { onSampleOpen: () => void; onCalcOpen?: () => void; lightMode?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
-  const isDark = lightMode || scrolled;
+  // isDark = white navbar mode (dark text, dark logo ink) — only when scrolled
+  const isDark = scrolled;
+  // darkBanner = inner pages get stone-900 banner so cream+gold logo is visible
+  const darkBanner = lightMode && !scrolled;
+
   const [shopOpen, setShopOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { count, openCart } = useCart();
@@ -174,10 +178,16 @@ export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: 
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
+  const navBg = isDark
+    ? "bg-white/90 backdrop-blur-xl shadow-sm border-b border-stone-100"
+    : darkBanner
+      ? "bg-stone-900/95 backdrop-blur-xl border-b border-stone-800"
+      : "bg-transparent";
+
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isDark ? "bg-white/90 backdrop-blur-xl shadow-sm border-b border-stone-100" : "bg-transparent"}`}
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${navBg}`}
         initial={{ y: -64 }} animate={{ y: 0 }} transition={{ duration: 0.4, ease: "easeOut" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -211,7 +221,7 @@ export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: 
                 </button>
               )}
               <button onClick={onSampleOpen}
-                className="hidden md:inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 cursor-pointer mr-2 border-stone-300 text-stone-700 hover:border-stone-900 hover:text-stone-900 bg-white/80 backdrop-blur-sm"
+                className={`hidden md:inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 cursor-pointer mr-2 ${isDark ? "border-stone-300 text-stone-700 hover:border-stone-900 hover:text-stone-900 bg-white/80" : "border-white/40 text-white/90 hover:border-white hover:text-white bg-white/10"} backdrop-blur-sm`}
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 Request a Sample
               </button>
@@ -226,7 +236,7 @@ export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: 
                 <CartIcon count={count} />
               </button>
               <button onClick={() => setMobileOpen(true)}
-                className={`md:hidden p-2 rounded-lg transition-colors duration-200 cursor-pointer ${scrolled ? "text-stone-600 hover:text-stone-900" : "text-white/80 hover:text-white"}`}
+                className={`md:hidden p-2 rounded-lg transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900" : "text-white/80 hover:text-white"}`}
                 aria-label="Open menu">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="18" y2="18" />
