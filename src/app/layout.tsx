@@ -22,6 +22,44 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
       </head>
       <body className="min-h-screen">
+        {/* JSON-LD: Organisation + Website with SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Murall Wallpaper",
+                url: "https://murallwallpaper.com",
+                logo: "https://murallwallpaper.com/assets/brand/logo-website.svg",
+                sameAs: [
+                  "https://instagram.com/murallwallpaper",
+                  "https://pinterest.com/murallwallpaper",
+                ],
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  contactType: "customer service",
+                  availableLanguage: "English",
+                },
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "Murall Wallpaper",
+                url: "https://murallwallpaper.com",
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: {
+                    "@type": "EntryPoint",
+                    urlTemplate: "https://murallwallpaper.com/search?q={search_term_string}",
+                  },
+                  "query-input": "required name=search_term_string",
+                },
+              },
+            ]),
+          }}
+        />
         <CartProvider>
           <SearchProvider>
             {children}

@@ -18,13 +18,14 @@ interface Product {
 interface ProductWithRating extends Product {
   rating: number;
   reviewCount: number;
+  slug: string;
 }
 
 const PRODUCTS: ProductWithRating[] = [
-  { id: "1", name: "Verdant Canopy", brand: "Rebel Walls", price: 74, installType: "paste-the-wall", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png", isBestseller: true, rating: 5, reviewCount: 214 },
-  { id: "2", name: "Hex Noir", brand: "Graham & Brown", price: 58, installType: "peel-and-stick", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png", isNew: true, rating: 5, reviewCount: 87 },
-  { id: "3", name: "Midnight Garden", brand: "Chasing Paper", price: 84, installType: "paste-the-wall", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png", isBestseller: true, rating: 5, reviewCount: 163 },
-  { id: "4", name: "Emerald Conservatory", brand: "Tempaper", price: 62, installType: "peel-and-stick", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png", isNew: true, rating: 4, reviewCount: 52 },
+  { id: "1", name: "Verdant Canopy", brand: "Rebel Walls", price: 74, installType: "paste-the-wall", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png", isBestseller: true, rating: 5, reviewCount: 214, slug: "verdant-canopy" },
+  { id: "2", name: "Hex Noir", brand: "Graham & Brown", price: 58, installType: "peel-and-stick", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png", isNew: true, rating: 5, reviewCount: 87, slug: "hex-noir" },
+  { id: "3", name: "Midnight Garden", brand: "Chasing Paper", price: 84, installType: "paste-the-wall", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png", isBestseller: true, rating: 5, reviewCount: 163, slug: "midnight-garden" },
+  { id: "4", name: "Emerald Conservatory", brand: "Tempaper", price: 62, installType: "peel-and-stick", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png", isNew: true, rating: 4, reviewCount: 52, slug: "emerald-conservatory" },
 ];
 
 function Stars({ rating }: { rating: number }) {
@@ -59,6 +60,7 @@ function ProductCard({ product, index }: { product: ProductWithRating; index: nu
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.55, delay: index * 0.09, ease: [0.25, 0.46, 0.45, 0.94] }}
       className="group relative flex flex-col cursor-pointer"
+      onClick={() => window.location.href = `/products/${product.slug}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
