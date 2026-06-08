@@ -136,7 +136,7 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
             </button>
           </div>
           <nav className="flex-1 px-6 py-8 overflow-y-auto">
-            {["Shop", "Brands", "Journal", "Trade", "Where we ship"].map((item) => (
+            {["Shop", "Brands", "Journal", "Trade", "Affiliates", "Where we ship"].map((item) => (
               <a key={item} href={item === "Shop" ? "#shop" : item === "Where we ship" ? "/shipping" : `/${item.toLowerCase()}`}
                 className="flex items-center justify-between py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-emerald-700 transition-colors cursor-pointer"
                 style={{ fontFamily: "'Playfair Display', serif" }} onClick={onClose}>
@@ -204,7 +204,7 @@ export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: 
                 </button>
                 <MegaMenu visible={shopOpen} />
               </div>
-              {["Brands", "Journal", "Trade", "Where we ship"].map((item) => (
+              {["Brands", "Journal", "Trade", "Affiliates", "Where we ship"].map((item) => (
                 <a key={item} href={item === "Where we ship" ? "/shipping" : `/${item.toLowerCase()}`}
                   className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                   style={{ fontFamily: "Inter, sans-serif" }}>{item}</a>
