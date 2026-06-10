@@ -75,7 +75,7 @@ export default function ColorStories() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-xs tracking-widest uppercase text-stone-400 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Curated edits</p>
-          <h2 id="stories-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 id="stories-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
             Shop by <em>colour story</em>
           </h2>
           <p className="text-stone-500 text-sm mt-3 max-w-md mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -87,7 +87,7 @@ export default function ColorStories() {
         <div className="flex flex-wrap justify-center gap-3 mb-10">
           {STORIES.map((s, i) => (
             <button key={s.id} onClick={() => setActive(i)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer ${active === i ? "bg-stone-900 text-white shadow-lg" : "bg-stone-100 text-stone-600 hover:bg-stone-200"}`}
+              className={`px-5 py-2.5 rounded-none text-sm font-medium transition-all duration-200 cursor-pointer ${active === i ? "bg-stone-900 text-white shadow-lg" : "bg-stone-100 text-stone-600 hover:bg-stone-200"}`}
               style={{ fontFamily: "Inter, sans-serif" }}>
               {s.name}
             </button>
@@ -102,7 +102,7 @@ export default function ColorStories() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className={`${story.bg} rounded-3xl overflow-hidden`}
+            className={`${story.bg} rounded-none overflow-hidden`}
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[480px]">
               {/* Hero image */}
@@ -120,7 +120,7 @@ export default function ColorStories() {
               {/* Content */}
               <div className="p-8 lg:p-12 flex flex-col justify-center">
                 <p className={`text-xs tracking-widest uppercase mb-2 ${story.accent}`} style={{ fontFamily: "Inter, sans-serif" }}>Colour story</p>
-                <h3 className={`text-3xl font-semibold mb-2 ${story.text}`} style={{ fontFamily: "'Playfair Display', serif" }}>{story.name}</h3>
+                <h3 className={`text-3xl font-semibold mb-2 ${story.text}`} style={{ fontFamily: "'EB Garamond', serif" }}>{story.name}</h3>
                 <p className={`text-sm mb-8 leading-relaxed ${story.text} opacity-70`} style={{ fontFamily: "Inter, sans-serif" }}>{story.tagline}</p>
 
                 {/* Product list */}
@@ -128,11 +128,11 @@ export default function ColorStories() {
                   {story.products.map((p) => (
                     <motion.div key={p.name} whileHover={{ x: 4 }} transition={{ duration: 0.15 }}
                       className="flex items-center gap-4 cursor-pointer group">
-                      <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 shadow-md">
+                      <div className="w-12 h-12 rounded-none overflow-hidden flex-shrink-0 shadow-md">
                         <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                       </div>
                       <div className="flex-1">
-                        <p className={`text-sm font-semibold ${story.text} group-hover:opacity-80 transition-opacity`} style={{ fontFamily: "'Playfair Display', serif" }}>{p.name}</p>
+                        <p className={`text-sm font-semibold ${story.text} group-hover:opacity-80 transition-opacity`} style={{ fontFamily: "'EB Garamond', serif" }}>{p.name}</p>
                         <p className={`text-xs ${story.text} opacity-50`} style={{ fontFamily: "Inter, sans-serif" }}>{p.brand}</p>
                       </div>
                       <p className={`text-sm font-semibold ${story.text} opacity-70`} style={{ fontFamily: "Inter, sans-serif" }}>From ${p.price}</p>
@@ -141,7 +141,7 @@ export default function ColorStories() {
                 </div>
 
                 <a href="#bestsellers"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-stone-900 text-sm font-semibold hover:bg-stone-100 transition-colors cursor-pointer w-fit"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-none bg-white text-stone-900 text-sm font-semibold hover:bg-stone-100 transition-colors cursor-pointer w-fit"
                   style={{ fontFamily: "Inter, sans-serif" }}>
                   Shop this story
                   <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" /></svg>

@@ -76,7 +76,7 @@ export default function SearchOverlay() {
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Search wallpapers, brands, styles…"
                   className="flex-1 text-lg text-stone-900 placeholder-stone-300 outline-none bg-transparent"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  style={{ fontFamily: "'EB Garamond', serif" }}
                   autoComplete="off"
                 />
                 <button onClick={closeSearch} className="text-xs text-stone-400 hover:text-stone-700 cursor-pointer px-2 py-1 rounded hover:bg-stone-50 transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -91,7 +91,7 @@ export default function SearchOverlay() {
                   <div className="flex flex-wrap gap-2">
                     {TRENDING.map((t) => (
                       <button key={t.label} onClick={() => setQuery(t.label)}
-                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-stone-200 text-sm text-stone-600 hover:border-stone-900 hover:text-stone-900 transition-colors cursor-pointer"
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-none border border-stone-200 text-sm text-stone-600 hover:border-stone-900 hover:text-stone-900 transition-colors cursor-pointer"
                         style={{ fontFamily: "Inter, sans-serif" }}>
                         {t.label}
                         <span className="text-[10px] text-stone-300 uppercase">{t.tag}</span>
@@ -111,7 +111,7 @@ export default function SearchOverlay() {
                     <li key={s}>
                       <button
                         onClick={() => { setQuery(s); closeSearch(); }}
-                        className="flex items-center gap-3 w-full px-3 py-2.5 rounded-lg hover:bg-stone-50 text-left transition-colors cursor-pointer group"
+                        className="flex items-center gap-3 w-full px-3 py-2.5 rounded-none hover:bg-stone-50 text-left transition-colors cursor-pointer group"
                       >
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-stone-300 group-hover:text-stone-500" aria-hidden="true">
                           <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" />

@@ -30,7 +30,7 @@ function PostCard({ post, index }: { post: typeof POSTS[0]; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.5, delay: index * 0.07 }}
-      className={`relative group rounded-2xl overflow-hidden cursor-pointer ${post.tall ? "row-span-2" : ""}`}
+      className={`relative group rounded-none overflow-hidden cursor-pointer ${post.tall ? "row-span-2" : ""}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -62,7 +62,7 @@ function PostCard({ post, index }: { post: typeof POSTS[0]; index: number }) {
               <div>
                 <p className="text-white text-xs leading-relaxed mb-3 line-clamp-3" style={{ fontFamily: "Inter, sans-serif" }}>{post.caption}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] px-2.5 py-1 rounded-full bg-white/20 text-white backdrop-blur-sm" style={{ fontFamily: "Inter, sans-serif" }}>
+                  <span className="text-[10px] px-2.5 py-1 rounded-none bg-white/20 text-white backdrop-blur-sm" style={{ fontFamily: "Inter, sans-serif" }}>
                     {post.wallpaper}
                   </span>
                   <button
@@ -101,12 +101,12 @@ export default function UGCFeed() {
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-10 gap-4">
           <div>
             <p className="text-xs tracking-widest uppercase text-stone-400 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Real homes, real walls</p>
-            <h2 id="ugc-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 id="ugc-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
               The <em>#MurallHome</em> community
             </h2>
           </div>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-stone-200 text-stone-600 text-xs font-medium hover:border-stone-400 hover:text-stone-900 transition-colors cursor-pointer"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-none border border-stone-200 text-stone-600 text-xs font-medium hover:border-stone-400 hover:text-stone-900 transition-colors cursor-pointer"
             style={{ fontFamily: "Inter, sans-serif" }}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
@@ -128,7 +128,7 @@ export default function UGCFeed() {
             Tag <strong className="text-stone-700">#MurallHome</strong> on Instagram to be featured
           </p>
           <a href="#bestsellers"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-stone-900 text-white text-sm font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-none bg-stone-900 text-white text-sm font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
             style={{ fontFamily: "Inter, sans-serif" }}>
             Shop the looks
             <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" /></svg>

@@ -413,7 +413,7 @@ function BrandCard({ brand, index }: { brand: typeof BRANDS[0]; index: number })
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.55, delay: index * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className="group relative bg-white rounded-2xl overflow-hidden border border-stone-100 hover:border-emerald-200 hover:shadow-xl transition-all duration-300 flex flex-col"
+      className="group relative bg-white rounded-none overflow-hidden border border-stone-100 hover:border-emerald-200 hover:shadow-xl transition-all duration-300 flex flex-col"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -429,17 +429,17 @@ function BrandCard({ brand, index }: { brand: typeof BRANDS[0]; index: number })
         <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent" />
         {brand.featured && (
           <div className="absolute top-3 left-3">
-            <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-emerald-600 text-white">Featured</span>
+            <span className="px-2.5 py-1 rounded-none text-[10px] font-semibold bg-emerald-600 text-white">Featured</span>
           </div>
         )}
         {/* Affiliate / Trade badge */}
         <div className="absolute top-3 right-3">
           {brand.hasAffiliate ? (
-            <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-amber-500 text-white" title={`Affiliate via ${brand.affiliateNetwork} — ${brand.commission} commission`}>
+            <span className="px-2.5 py-1 rounded-none text-[10px] font-semibold bg-amber-500 text-white" title={`Affiliate via ${brand.affiliateNetwork} — ${brand.commission} commission`}>
               {brand.commission} commission
             </span>
           ) : (
-            <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-stone-800/80 text-stone-200 backdrop-blur-sm">
+            <span className="px-2.5 py-1 rounded-none text-[10px] font-semibold bg-stone-800/80 text-stone-200 backdrop-blur-sm">
               Trade direct
             </span>
           )}
@@ -452,8 +452,8 @@ function BrandCard({ brand, index }: { brand: typeof BRANDS[0]; index: number })
       {/* Content */}
       <div className="p-5 flex flex-col flex-1">
         <div className="flex items-start justify-between mb-2">
-          <h3 className="text-lg font-semibold text-stone-900 leading-snug" style={{ fontFamily: "'Playfair Display', serif" }}>{brand.name}</h3>
-          <span className="text-xs px-2 py-0.5 rounded-full bg-stone-100 text-stone-500 ml-2 flex-shrink-0" title={PRICE_LABELS[brand.priceRange]}>{brand.priceRange}</span>
+          <h3 className="text-lg font-semibold text-stone-900 leading-snug" style={{ fontFamily: "'EB Garamond', serif" }}>{brand.name}</h3>
+          <span className="text-xs px-2 py-0.5 rounded-none bg-stone-100 text-stone-500 ml-2 flex-shrink-0" title={PRICE_LABELS[brand.priceRange]}>{brand.priceRange}</span>
         </div>
         <p className="text-xs text-emerald-700 font-medium mb-3 tracking-wide uppercase" style={{ fontFamily: "Inter, sans-serif" }}>{brand.specialty}</p>
         <p className="text-sm text-stone-500 leading-relaxed mb-4 flex-1" style={{ fontFamily: "Inter, sans-serif" }}>{brand.description}</p>
@@ -461,7 +461,7 @@ function BrandCard({ brand, index }: { brand: typeof BRANDS[0]; index: number })
         {/* Tags */}
         <div className="flex flex-wrap gap-1.5 mb-4">
           {brand.tags.map((tag) => (
-            <span key={tag} className="text-[10px] px-2 py-0.5 rounded-full bg-stone-50 border border-stone-200 text-stone-500" style={{ fontFamily: "Inter, sans-serif" }}>{tag}</span>
+            <span key={tag} className="text-[10px] px-2 py-0.5 rounded-none bg-stone-50 border border-stone-200 text-stone-500" style={{ fontFamily: "Inter, sans-serif" }}>{tag}</span>
           ))}
         </div>
 
@@ -490,7 +490,7 @@ function BrandCard({ brand, index }: { brand: typeof BRANDS[0]; index: number })
           target="_blank"
           rel="noopener noreferrer"
           onClick={(e) => e.stopPropagation()}
-          className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer ${
+          className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-none text-xs font-semibold transition-all duration-200 cursor-pointer ${
             brand.hasAffiliate
               ? "bg-stone-900 text-white hover:bg-stone-700"
               : "bg-stone-100 text-stone-600 hover:bg-stone-200"
@@ -528,7 +528,7 @@ export default function BrandsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Our partners</p>
-            <h1 className="text-4xl sm:text-5xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h1 className="text-4xl sm:text-5xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
               25 world-class <em>brands</em>
             </h1>
             <p className="text-stone-500 text-lg max-w-xl leading-relaxed mb-6" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -561,7 +561,7 @@ export default function BrandsPage() {
             <button
               key={f.key}
               onClick={() => setFilter(f.key)}
-              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer ${
+              className={`px-4 py-1.5 rounded-none text-xs font-medium transition-all duration-200 cursor-pointer ${
                 filter === f.key
                   ? "bg-stone-900 text-white"
                   : "bg-stone-100 text-stone-600 hover:bg-stone-200"
@@ -584,11 +584,11 @@ export default function BrandsPage() {
       <section className="bg-stone-900 py-16 text-center">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className="text-xs tracking-widest uppercase text-emerald-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Trade programme</p>
-          <h2 className="text-3xl font-semibold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>Are you a designer or architect?</h2>
+          <h2 className="text-3xl font-semibold text-white mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>Are you a designer or architect?</h2>
           <p className="text-stone-400 text-sm mb-8 max-w-md mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
             Unlock trade pricing across all 25 brands plus dedicated account support.
           </p>
-          <a href="/trade" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition-colors cursor-pointer" style={{ fontFamily: "Inter, sans-serif" }}>
+          <a href="/trade" className="inline-flex items-center gap-2 px-6 py-3 rounded-none bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition-colors cursor-pointer" style={{ fontFamily: "Inter, sans-serif" }}>
             Apply for trade access
             <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" /></svg>
           </a>

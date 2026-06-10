@@ -62,7 +62,7 @@ function Slider({ before, after, wallpaper, brand }: { before: string; after: st
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden select-none cursor-col-resize"
+      className="relative w-full aspect-[4/3] rounded-none overflow-hidden select-none cursor-col-resize"
       onMouseDown={(e) => { setDragging(true); getPos(e.clientX); }}
       onTouchStart={(e) => { setDragging(true); getPos(e.touches[0].clientX); }}
     >
@@ -92,16 +92,16 @@ function Slider({ before, after, wallpaper, brand }: { before: string; after: st
 
       {/* Labels */}
       <div className="absolute bottom-4 left-4 pointer-events-none z-10">
-        <span className="px-2.5 py-1 rounded-full bg-stone-900/70 backdrop-blur-sm text-white text-[10px] font-medium tracking-wide uppercase" style={{ fontFamily: "Inter, sans-serif" }}>Before</span>
+        <span className="px-2.5 py-1 rounded-none bg-stone-900/70 backdrop-blur-sm text-white text-[10px] font-medium tracking-wide uppercase" style={{ fontFamily: "Inter, sans-serif" }}>Before</span>
       </div>
       <div className="absolute bottom-4 right-4 pointer-events-none z-10">
-        <span className="px-2.5 py-1 rounded-full bg-stone-900/70 backdrop-blur-sm text-white text-[10px] font-medium tracking-wide uppercase" style={{ fontFamily: "Inter, sans-serif" }}>After</span>
+        <span className="px-2.5 py-1 rounded-none bg-stone-900/70 backdrop-blur-sm text-white text-[10px] font-medium tracking-wide uppercase" style={{ fontFamily: "Inter, sans-serif" }}>After</span>
       </div>
 
       {/* Wallpaper badge */}
       <div className="absolute top-4 right-4 pointer-events-none z-10">
-        <div className="px-3 py-1.5 rounded-xl bg-white/90 backdrop-blur-sm border border-stone-100 shadow-sm">
-          <p className="text-xs font-semibold text-stone-800" style={{ fontFamily: "'Playfair Display', serif" }}>{wallpaper}</p>
+        <div className="px-3 py-1.5 rounded-none bg-white/90 backdrop-blur-sm border border-stone-100 shadow-sm">
+          <p className="text-xs font-semibold text-stone-800" style={{ fontFamily: "'EB Garamond', serif" }}>{wallpaper}</p>
           <p className="text-[10px] text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>{brand}</p>
         </div>
       </div>
@@ -119,7 +119,7 @@ export default function BeforeAfter() {
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-10 gap-4">
           <div>
             <p className="text-xs tracking-widest uppercase text-emerald-400 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Room transformations</p>
-            <h2 id="ba-heading" className="text-3xl sm:text-4xl font-semibold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 id="ba-heading" className="text-3xl sm:text-4xl font-semibold text-white" style={{ fontFamily: "'EB Garamond', serif" }}>
               Drag to <em>reveal</em>
             </h2>
             <p className="text-stone-400 text-sm mt-2" style={{ fontFamily: "Inter, sans-serif" }}>Drag the handle to see the transformation.</p>
@@ -127,7 +127,7 @@ export default function BeforeAfter() {
           <div className="flex gap-2">
             {TRANSFORMATIONS.map((t, i) => (
               <button key={t.id} onClick={() => setActive(i)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer ${active === i ? "bg-white text-stone-900" : "bg-white/10 text-stone-400 hover:bg-white/20 hover:text-white"}`}
+                className={`px-3 py-1.5 rounded-none text-xs font-medium transition-all duration-200 cursor-pointer ${active === i ? "bg-white text-stone-900" : "bg-white/10 text-stone-400 hover:bg-white/20 hover:text-white"}`}
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 {t.room}
               </button>

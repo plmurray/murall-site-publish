@@ -199,7 +199,7 @@ export default function TradePage() {
             <p className="text-xs font-medium uppercase tracking-widest mb-6" style={{ fontFamily: "Inter, sans-serif", color: "#c9a96e" }}>
               Trade Programme
             </p>
-            <h1 className="font-semibold text-white mb-5 leading-tight" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(40px, 4.5vw, 62px)" }}>
+            <h1 className="font-semibold text-white mb-5 leading-tight" style={{ fontFamily: "'EB Garamond', serif", fontSize: "clamp(40px, 4.5vw, 62px)" }}>
               For designers who demand <em>the extraordinary</em>
             </h1>
             <p className="text-stone-300 text-lg max-w-xl leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -208,16 +208,16 @@ export default function TradePage() {
             <div className="flex gap-10 flex-wrap border-t border-b border-white/10 py-7 my-8">
               {STATS.map((s) => (
                 <div key={s.label}>
-                  <div className="text-3xl font-semibold" style={{ fontFamily: "'Playfair Display', serif", color: "#c9a96e" }}>{s.value}</div>
+                  <div className="text-3xl font-semibold" style={{ fontFamily: "'EB Garamond', serif", color: "#c9a96e" }}>{s.value}</div>
                   <div className="text-xs text-white/50 mt-1" style={{ fontFamily: "Inter, sans-serif" }}>{s.label}</div>
                 </div>
               ))}
             </div>
             <div className="flex gap-3 flex-wrap">
-              <a href="#apply" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-sm font-semibold transition-colors" style={{ fontFamily: "Inter, sans-serif", background: "#c9a96e", color: "#1c1917" }}>
+              <a href="#apply" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-none text-sm font-semibold transition-colors" style={{ fontFamily: "Inter, sans-serif", background: "#c9a96e", color: "#1c1917" }}>
                 Apply for trade access →
               </a>
-              <button className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-sm font-medium border border-white/30 text-white hover:border-white/70 transition-colors bg-transparent" style={{ fontFamily: "Inter, sans-serif" }}>
+              <button className="inline-flex items-center gap-2 px-7 py-3.5 rounded-none text-sm font-medium border border-white/30 text-white hover:border-white/70 transition-colors bg-transparent" style={{ fontFamily: "Inter, sans-serif" }}>
                 Download lookbook
               </button>
             </div>
@@ -241,7 +241,7 @@ export default function TradePage() {
       <section className="py-24 bg-white" aria-labelledby="benefits-heading">
         <div className="max-w-7xl mx-auto px-8">
           <p className="text-xs font-medium uppercase tracking-widest text-stone-500 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>What&apos;s included</p>
-          <h2 id="benefits-heading" className="text-4xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 id="benefits-heading" className="text-4xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
             Everything your practice <em>needs</em>
           </h2>
           <p className="text-stone-500 text-base mb-14 max-w-xl leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -257,10 +257,10 @@ export default function TradePage() {
                 transition={{ duration: 0.5, delay: i * 0.07 }}
                 className="bg-white p-10 hover:bg-stone-50 transition-colors"
               >
-                <div className="w-10 h-10 rounded-lg bg-stone-100 text-stone-600 flex items-center justify-center mb-5">
+                <div className="w-10 h-10 rounded-none bg-stone-100 text-stone-600 flex items-center justify-center mb-5">
                   {b.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-stone-900 mb-2.5" style={{ fontFamily: "'Playfair Display', serif" }}>{b.title}</h3>
+                <h3 className="text-lg font-semibold text-stone-900 mb-2.5" style={{ fontFamily: "'EB Garamond', serif" }}>{b.title}</h3>
                 <p className="text-sm text-stone-500 leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>{b.body}</p>
               </motion.div>
             ))}
@@ -273,7 +273,7 @@ export default function TradePage() {
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-16">
             <p className="text-xs font-medium uppercase tracking-widest text-stone-500 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>How it works</p>
-            <h2 className="text-4xl font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 className="text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
               Approved and sourcing <em>in days</em>
             </h2>
           </div>
@@ -281,10 +281,10 @@ export default function TradePage() {
             <div className="hidden md:block absolute top-7 left-[20%] right-[20%] h-px bg-stone-200" />
             {STEPS.map((s, i) => (
               <motion.div key={s.num} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="text-center relative z-10">
-                <div className="w-14 h-14 rounded-full border border-stone-200 bg-white flex items-center justify-center mx-auto mb-6 text-2xl font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <div className="w-14 h-14 rounded-full border border-stone-200 bg-white flex items-center justify-center mx-auto mb-6 text-2xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
                   {s.num}
                 </div>
-                <h3 className="text-xl font-semibold text-stone-900 mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{s.title}</h3>
+                <h3 className="text-xl font-semibold text-stone-900 mb-3" style={{ fontFamily: "'EB Garamond', serif" }}>{s.title}</h3>
                 <p className="text-sm text-stone-500 leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>{s.desc}</p>
               </motion.div>
             ))}
@@ -296,7 +296,7 @@ export default function TradePage() {
       <section className="py-24 bg-stone-900">
         <div className="max-w-7xl mx-auto px-8">
           <p className="text-xs font-medium uppercase tracking-widest mb-3" style={{ fontFamily: "Inter, sans-serif", color: "#c9a96e" }}>Projects</p>
-          <h2 className="text-4xl font-semibold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="text-4xl font-semibold text-white mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
             From our <em>trade community</em>
           </h2>
           <p className="text-stone-400 text-base mb-10 max-w-xl leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -307,7 +307,7 @@ export default function TradePage() {
               <div key={i} className={`relative overflow-hidden group cursor-pointer${item.wide ? " col-span-2" : ""}`}>
                 <img src={item.img} alt={item.project} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "linear-gradient(to top, rgba(12,10,9,0.9) 0%, transparent 60%)" }}>
-                  <p className="text-white font-semibold text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>{item.project}</p>
+                  <p className="text-white font-semibold text-lg" style={{ fontFamily: "'EB Garamond', serif" }}>{item.project}</p>
                   <p className="text-xs mt-1" style={{ fontFamily: "Inter, sans-serif", color: "#c9a96e" }}>{item.meta}</p>
                 </div>
                 <div className="absolute top-4 left-4 text-xs font-medium uppercase text-white px-2.5 py-1.5" style={{ fontFamily: "Inter, sans-serif", letterSpacing: "0.1em", background: "rgba(12,10,9,0.65)", borderLeft: "2px solid #c9a96e" }}>
@@ -317,7 +317,7 @@ export default function TradePage() {
             ))}
           </div>
           <div className="mt-10">
-            <button className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-sm font-medium border border-white/30 text-white hover:border-white/70 transition-colors bg-transparent" style={{ fontFamily: "Inter, sans-serif" }}>
+            <button className="inline-flex items-center gap-2 px-7 py-3.5 rounded-none text-sm font-medium border border-white/30 text-white hover:border-white/70 transition-colors bg-transparent" style={{ fontFamily: "Inter, sans-serif" }}>
               View all projects →
             </button>
           </div>
@@ -328,18 +328,18 @@ export default function TradePage() {
       <section className="py-24 bg-stone-50" aria-labelledby="testimonials-heading">
         <div className="max-w-7xl mx-auto px-8">
           <p className="text-xs font-medium uppercase tracking-widest text-stone-500 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>From the community</p>
-          <h2 id="testimonials-heading" className="text-4xl font-semibold text-stone-900 mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 id="testimonials-heading" className="text-4xl font-semibold text-stone-900 mb-12" style={{ fontFamily: "'EB Garamond', serif" }}>
             What leading designers <em>say</em>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {TESTIMONIALS.map((t, i) => (
-              <motion.blockquote key={t.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55, delay: i * 0.1 }} className="bg-white rounded-lg p-8 border border-stone-200">
-                <div className="text-5xl text-stone-200 mb-3 leading-none" style={{ fontFamily: "'Playfair Display', serif" }}>&ldquo;</div>
-                <p className="text-stone-800 text-lg leading-relaxed mb-8 italic" style={{ fontFamily: "'Playfair Display', serif" }}>{t.quote}</p>
+              <motion.blockquote key={t.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.55, delay: i * 0.1 }} className="bg-white rounded-none p-8 border border-stone-200">
+                <div className="text-5xl text-stone-200 mb-3 leading-none" style={{ fontFamily: "'EB Garamond', serif" }}>&ldquo;</div>
+                <p className="text-stone-800 text-lg leading-relaxed mb-8 italic" style={{ fontFamily: "'EB Garamond', serif" }}>{t.quote}</p>
                 <footer className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full border border-stone-200 bg-stone-100 flex items-center justify-center text-sm font-semibold text-stone-600 flex-shrink-0" style={{ fontFamily: "'Playfair Display', serif" }}>{t.initials}</div>
+                  <div className="w-11 h-11 rounded-full border border-stone-200 bg-stone-100 flex items-center justify-center text-sm font-semibold text-stone-600 flex-shrink-0" style={{ fontFamily: "'EB Garamond', serif" }}>{t.initials}</div>
                   <div>
-                    <p className="text-sm font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>{t.name}</p>
+                    <p className="text-sm font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>{t.name}</p>
                     <p className="text-xs text-stone-500" style={{ fontFamily: "Inter, sans-serif" }}>{t.role}</p>
                   </div>
                 </footer>
@@ -353,7 +353,7 @@ export default function TradePage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-8">
           <p className="text-xs font-medium uppercase tracking-widest text-stone-500 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Specification resources</p>
-          <h2 className="text-4xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="text-4xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
             Everything you need to <em>specify</em>
           </h2>
           <p className="text-stone-500 text-base mb-14 max-w-xl leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -361,9 +361,9 @@ export default function TradePage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {RESOURCES.map((r, i) => (
-              <motion.div key={r.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className="border border-stone-200 rounded-lg p-9 hover:border-stone-400 hover:shadow-md transition-all cursor-pointer flex flex-col gap-4">
+              <motion.div key={r.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className="border border-stone-200 rounded-none p-9 hover:border-stone-400 hover:shadow-md transition-all cursor-pointer flex flex-col gap-4">
                 <div className="text-2xl">{r.icon}</div>
-                <h3 className="text-xl font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>{r.title}</h3>
+                <h3 className="text-xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>{r.title}</h3>
                 <p className="text-sm text-stone-500 leading-relaxed flex-1" style={{ fontFamily: "Inter, sans-serif" }}>{r.desc}</p>
                 <span className="text-sm font-semibold text-stone-900 flex items-center gap-1" style={{ fontFamily: "Inter, sans-serif" }}>{r.link} →</span>
               </motion.div>
@@ -377,7 +377,7 @@ export default function TradePage() {
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
           <div className="mb-12">
             <p className="text-xs font-medium uppercase tracking-widest text-stone-500 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Join the programme</p>
-            <h2 id="apply-heading" className="text-4xl font-semibold text-stone-900 mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 id="apply-heading" className="text-4xl font-semibold text-stone-900 mb-3" style={{ fontFamily: "'EB Garamond', serif" }}>
               Apply <em>today</em>
             </h2>
             <p className="text-stone-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -393,7 +393,7 @@ export default function TradePage() {
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-semibold text-stone-900 mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Application received</h3>
+                <h3 className="text-2xl font-semibold text-stone-900 mb-3" style={{ fontFamily: "'EB Garamond', serif" }}>Application received</h3>
                 <p className="text-stone-500 max-w-sm mx-auto text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
                   Thank you! We&apos;ll review your application and be in touch within 2 business days. Keep an eye on your inbox.
                 </p>
@@ -408,7 +408,7 @@ export default function TradePage() {
                     <div key={name}>
                       <label htmlFor={name} className="block text-xs font-medium uppercase tracking-wider text-stone-500 mb-1.5" style={{ fontFamily: "Inter, sans-serif" }}>{label}</label>
                       <input id={name} name={name} type={type} required={required} value={form[name as keyof typeof form]} onChange={handleChange}
-                        className="w-full px-4 py-2.5 rounded-lg border border-stone-200 bg-white text-stone-900 text-sm placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent"
+                        className="w-full px-4 py-2.5 rounded-none border border-stone-200 bg-white text-stone-900 text-sm placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent"
                         style={{ fontFamily: "Inter, sans-serif" }} />
                     </div>
                   ))}
@@ -421,14 +421,14 @@ export default function TradePage() {
                   <div key={name}>
                     <label htmlFor={name} className="block text-xs font-medium uppercase tracking-wider text-stone-500 mb-1.5" style={{ fontFamily: "Inter, sans-serif" }}>{label}</label>
                     <input id={name} name={name} type={type} required={required} value={form[name as keyof typeof form]} onChange={handleChange}
-                      className="w-full px-4 py-2.5 rounded-lg border border-stone-200 bg-white text-stone-900 text-sm placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent"
+                      className="w-full px-4 py-2.5 rounded-none border border-stone-200 bg-white text-stone-900 text-sm placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent"
                       style={{ fontFamily: "Inter, sans-serif" }} />
                   </div>
                 ))}
                 <div>
                   <label htmlFor="role" className="block text-xs font-medium uppercase tracking-wider text-stone-500 mb-1.5" style={{ fontFamily: "Inter, sans-serif" }}>Your role</label>
                   <select id="role" name="role" required value={form.role} onChange={handleChange}
-                    className="w-full px-4 py-2.5 rounded-lg border border-stone-200 bg-white text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent cursor-pointer"
+                    className="w-full px-4 py-2.5 rounded-none border border-stone-200 bg-white text-stone-900 text-sm focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent cursor-pointer"
                     style={{ fontFamily: "Inter, sans-serif" }}>
                     <option value="">Select your role</option>
                     <option>Interior Designer</option>
@@ -444,11 +444,11 @@ export default function TradePage() {
                   <label htmlFor="message" className="block text-xs font-medium uppercase tracking-wider text-stone-500 mb-1.5" style={{ fontFamily: "Inter, sans-serif" }}>Tell us about your projects (optional)</label>
                   <textarea id="message" name="message" rows={3} value={form.message} onChange={handleChange}
                     placeholder="What kinds of spaces do you typically work on? Residential, hospitality, commercial?"
-                    className="w-full px-4 py-2.5 rounded-lg border border-stone-200 bg-white text-stone-900 text-sm placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent resize-none"
+                    className="w-full px-4 py-2.5 rounded-none border border-stone-200 bg-white text-stone-900 text-sm placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-stone-400 focus:border-transparent resize-none"
                     style={{ fontFamily: "Inter, sans-serif" }} />
                 </div>
                 <button type="submit" disabled={loading}
-                  className="w-full py-3.5 rounded-full bg-stone-900 text-white text-sm font-semibold hover:bg-stone-800 transition-colors disabled:opacity-60 cursor-pointer flex items-center justify-center gap-2"
+                  className="w-full py-3.5 rounded-none bg-stone-900 text-white text-sm font-semibold hover:bg-stone-800 transition-colors disabled:opacity-60 cursor-pointer flex items-center justify-center gap-2"
                   style={{ fontFamily: "Inter, sans-serif" }}>
                   {loading ? (
                     <><svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -467,14 +467,14 @@ export default function TradePage() {
       <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-8">
           <p className="text-xs font-medium uppercase tracking-widest text-stone-500 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Common questions</p>
-          <h2 className="text-4xl font-semibold text-stone-900 mb-12" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="text-4xl font-semibold text-stone-900 mb-12" style={{ fontFamily: "'EB Garamond', serif" }}>
             Trade programme <em>FAQ</em>
           </h2>
           <div>
             {FAQS.map((faq, i) => (
               <div key={i} className="border-b border-stone-200 py-6">
                 <button className="w-full flex justify-between items-center gap-6 text-left" onClick={() => setOpenFaq(openFaq === i ? null : i)}>
-                  <span className="text-lg font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>{faq.q}</span>
+                  <span className="text-lg font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>{faq.q}</span>
                   <span className="text-stone-400 text-xl flex-shrink-0" style={{ fontFamily: "Inter, sans-serif" }}>{openFaq === i ? "−" : "+"}</span>
                 </button>
                 <AnimatePresence>
@@ -497,13 +497,13 @@ export default function TradePage() {
 
       {/* ── FOOTER CTA ── */}
       <section className="py-24 text-center" style={{ background: "#2d4a3e" }}>
-        <h2 className="font-semibold text-white mb-4 leading-tight" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(36px, 4vw, 54px)" }}>
+        <h2 className="font-semibold text-white mb-4 leading-tight" style={{ fontFamily: "'EB Garamond', serif", fontSize: "clamp(36px, 4vw, 54px)" }}>
           Ready to elevate your <em>next project?</em>
         </h2>
         <p className="text-lg mb-10" style={{ fontFamily: "Inter, sans-serif", color: "rgba(255,255,255,0.7)" }}>
           Join 2,400+ design professionals already specifying with Murall Trade.
         </p>
-        <a href="#apply" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold rounded-lg transition-colors" style={{ fontFamily: "Inter, sans-serif", background: "#ffffff", color: "#2d4a3e" }}>
+        <a href="#apply" className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold rounded-none transition-colors" style={{ fontFamily: "Inter, sans-serif", background: "#ffffff", color: "#2d4a3e" }}>
           Apply for trade access
         </a>
       </section>

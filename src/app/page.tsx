@@ -105,7 +105,7 @@ function Hero({ onSampleOpen }: { onSampleOpen: () => void }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.7 }}
           className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-white leading-[1.08] max-w-2xl mb-6"
-          style={{ fontFamily: "'Playfair Display', serif" }}
+          style={{ fontFamily: "'EB Garamond', serif" }}
         >
           Walls that<br /><em>tell stories</em>
         </motion.h1>
@@ -128,7 +128,7 @@ function Hero({ onSampleOpen }: { onSampleOpen: () => void }) {
         >
           <a
             href="#bestsellers"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-stone-900 text-sm font-semibold hover:bg-stone-100 transition-colors duration-200 cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-none bg-white text-stone-900 text-sm font-semibold hover:bg-stone-100 transition-colors duration-200 cursor-pointer"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Shop bestsellers
@@ -138,7 +138,7 @@ function Hero({ onSampleOpen }: { onSampleOpen: () => void }) {
           </a>
           <button
             onClick={onSampleOpen}
-            className="inline-flex items-center px-6 py-3 rounded-full border border-white/40 text-white text-sm font-medium hover:bg-white/10 transition-colors duration-200 cursor-pointer backdrop-blur-sm"
+            className="inline-flex items-center px-6 py-3 rounded-none border border-white/40 text-white text-sm font-medium hover:bg-white/10 transition-colors duration-200 cursor-pointer backdrop-blur-sm"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Request a sample
@@ -212,7 +212,7 @@ function WhyMurall() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <p className="text-xs tracking-widest uppercase text-stone-400 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Why murall</p>
-          <h2 id="why-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 id="why-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
             The Murall <em>difference</em>
           </h2>
         </div>
@@ -226,10 +226,10 @@ function WhyMurall() {
               transition={{ duration: 0.55, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="flex flex-col items-start"
             >
-              <div className="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 flex-shrink-0">
+              <div className="w-11 h-11 rounded-none bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 flex-shrink-0">
                 {item.icon}
               </div>
-              <h3 className="text-base font-semibold text-stone-900 mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+              <h3 className="text-base font-semibold text-stone-900 mb-2" style={{ fontFamily: "'EB Garamond', serif" }}>{item.title}</h3>
               <p className="text-sm text-stone-500 leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>{item.body}</p>
             </motion.div>
           ))}
@@ -265,7 +265,7 @@ function Newsletter() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-xs tracking-widest uppercase text-emerald-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Stay inspired</p>
-          <h2 id="newsletter-heading" className="text-3xl sm:text-4xl font-semibold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 id="newsletter-heading" className="text-3xl sm:text-4xl font-semibold text-white mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
             Design stories, straight to your inbox
           </h2>
           <p className="text-stone-400 text-sm mb-8 leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -302,13 +302,13 @@ function Newsletter() {
                   placeholder="your@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-4 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  className="flex-1 px-4 py-3 rounded-none bg-white/10 border border-white/20 text-white placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 />
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-6 py-3 rounded-full bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition-colors duration-200 disabled:opacity-60 cursor-pointer flex-shrink-0"
+                  className="px-6 py-3 rounded-none bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition-colors duration-200 disabled:opacity-60 cursor-pointer flex-shrink-0"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   {loading ? (

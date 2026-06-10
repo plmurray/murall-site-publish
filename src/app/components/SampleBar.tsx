@@ -26,16 +26,16 @@ export default function SampleBar({ onSampleOpen }: { onSampleOpen: () => void }
           role="complementary"
           aria-label="Sample offer"
         >
-          <div className="bg-stone-900 text-white rounded-2xl px-5 py-4 shadow-2xl flex items-center gap-4 border border-white/10">
+          <div className="bg-stone-900 text-white rounded-none px-5 py-4 shadow-2xl flex items-center gap-4 border border-white/10">
             {/* Icon */}
-            <div className="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 rounded-none bg-emerald-600 flex items-center justify-center flex-shrink-0">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
               </svg>
             </div>
             {/* Text */}
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-semibold leading-snug" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <p className="text-sm font-semibold leading-snug" style={{ fontFamily: "'EB Garamond', serif" }}>
                 Not sure yet? Get a sample
               </p>
               <p className="text-xs text-stone-400 mt-0.5" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -45,7 +45,7 @@ export default function SampleBar({ onSampleOpen }: { onSampleOpen: () => void }
             {/* CTA */}
             <button
               onClick={() => { onSampleOpen(); setDismissed(true); }}
-              className="px-4 py-2 rounded-full bg-white text-stone-900 text-xs font-semibold hover:bg-stone-100 transition-colors cursor-pointer flex-shrink-0"
+              className="px-4 py-2 rounded-none bg-white text-stone-900 text-xs font-semibold hover:bg-stone-100 transition-colors cursor-pointer flex-shrink-0"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               Request sample

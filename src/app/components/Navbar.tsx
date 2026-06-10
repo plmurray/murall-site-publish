@@ -89,17 +89,17 @@ function MegaMenu({ visible }: { visible: boolean }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.2 }}
-          className="absolute top-full left-0 mt-2 w-[480px] bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-stone-100 p-6 z-50"
+          className="absolute top-full left-0 mt-2 w-[480px] bg-white/95 backdrop-blur-xl rounded-none shadow-2xl border border-stone-100 p-6 z-50"
         >
           <div className="grid grid-cols-2 gap-2">
             {SHOP_CATEGORIES.map((cat) => (
               <a key={cat.name} href={`#${cat.name.toLowerCase().replace(/\s+/g, "-")}`}
-                className="group flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-stone-50 transition-colors cursor-pointer">
-                <span className="text-sm font-medium text-stone-800 group-hover:text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>{cat.name}</span>
+                className="group flex items-center justify-between px-3 py-2.5 rounded-none hover:bg-stone-50 transition-colors cursor-pointer">
+                <span className="text-sm font-medium text-stone-800 group-hover:text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>{cat.name}</span>
                 {cat.count ? (
                   <span className="text-xs text-stone-400">{cat.count}</span>
                 ) : (
-                  <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-stone-100 text-stone-400">Soon</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded-none bg-stone-100 text-stone-400">Soon</span>
                 )}
               </a>
             ))}
@@ -139,7 +139,7 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
             {["Shop", "Brands", "Journal", "Trade", "Affiliates", "Where we ship"].map((item) => (
               <a key={item} href={item === "Shop" ? "#shop" : item === "Where we ship" ? "/shipping" : `/${item.toLowerCase()}`}
                 className="flex items-center justify-between py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-emerald-700 transition-colors cursor-pointer"
-                style={{ fontFamily: "'Playfair Display', serif" }} onClick={onClose}>
+                style={{ fontFamily: "'EB Garamond', serif" }} onClick={onClose}>
                 {item}
                 <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M4 10h12M10 4l6 6-6 6" />
@@ -149,7 +149,7 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
           </nav>
           <div className="px-6 pb-8">
             <button onClick={() => { onClose(); onSample(); }}
-              className="block w-full text-center py-3 rounded-full bg-stone-900 text-white text-sm font-medium hover:bg-stone-800 transition-colors cursor-pointer"
+              className="block w-full text-center py-3 rounded-none bg-stone-900 text-white text-sm font-medium hover:bg-stone-800 transition-colors cursor-pointer"
               style={{ fontFamily: "Inter, sans-serif" }}>
               Request a Sample
             </button>
@@ -198,7 +198,7 @@ export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: 
 
             <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
               <div className="relative" onMouseEnter={() => setShopOpen(true)} onMouseLeave={() => setShopOpen(false)}>
-                <button className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                <button className={`px-4 py-2 text-sm font-medium rounded-none transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                   aria-expanded={shopOpen} aria-haspopup="true" style={{ fontFamily: "Inter, sans-serif" }}>
                   Shop
                 </button>
@@ -206,7 +206,7 @@ export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: 
               </div>
               {["Brands", "Journal", "Trade", "Affiliates", "Where we ship"].map((item) => (
                 <a key={item} href={item === "Where we ship" ? "/shipping" : `/${item.toLowerCase()}`}
-                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                  className={`px-4 py-2 text-sm font-medium rounded-none transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                   style={{ fontFamily: "Inter, sans-serif" }}>{item}</a>
               ))}
             </nav>
@@ -214,29 +214,29 @@ export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: 
             <div className="flex items-center gap-1">
               {onCalcOpen && (
                 <button onClick={onCalcOpen}
-                  className={`hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer mr-1 ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                  className={`hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-none text-xs font-medium transition-all duration-200 cursor-pointer mr-1 ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                   style={{ fontFamily: "Inter, sans-serif" }}>
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="8" x2="16" y1="10" y2="10"/><line x1="8" x2="12" y1="14" y2="14"/></svg>
                   Rolls calc
                 </button>
               )}
               <button onClick={onSampleOpen}
-                className={`hidden md:inline-flex items-center px-4 py-1.5 rounded-full text-xs font-medium border transition-all duration-200 cursor-pointer mr-2 ${isDark ? "border-stone-300 text-stone-700 hover:border-stone-900 hover:text-stone-900 bg-white/80" : "border-white/40 text-white/90 hover:border-white hover:text-white bg-white/10"} backdrop-blur-sm`}
+                className={`hidden md:inline-flex items-center px-4 py-1.5 rounded-none text-xs font-medium border transition-all duration-200 cursor-pointer mr-2 ${isDark ? "border-stone-300 text-stone-700 hover:border-stone-900 hover:text-stone-900 bg-white/80" : "border-white/40 text-white/90 hover:border-white hover:text-white bg-white/10"} backdrop-blur-sm`}
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 Request a Sample
               </button>
               <button onClick={openSearch}
-                className={`p-2 rounded-lg transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                className={`p-2 rounded-none transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                 aria-label="Search">
                 <SearchIcon />
               </button>
               <button onClick={openCart}
-                className={`p-2 rounded-lg transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                className={`p-2 rounded-none transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                 aria-label={`Cart, ${count} items`}>
                 <CartIcon count={count} />
               </button>
               <button onClick={() => setMobileOpen(true)}
-                className={`md:hidden p-2 rounded-lg transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900" : "text-white/80 hover:text-white"}`}
+                className={`md:hidden p-2 rounded-none transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900" : "text-white/80 hover:text-white"}`}
                 aria-label="Open menu">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="18" y2="18" />

@@ -133,7 +133,7 @@ function CategoryTile({
         delay: index * 0.1,
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
-      className={`relative overflow-hidden rounded-xl aspect-[4/3] cursor-pointer group
+      className={`relative overflow-hidden rounded-none aspect-[4/3] cursor-pointer group
         border-2 transition-colors duration-300
         ${hovered ? "border-emerald-600/60" : "border-transparent"}
         ${category.comingSoon ? "opacity-70" : ""}
@@ -178,12 +178,12 @@ function CategoryTile({
       {/* Top-right badges */}
       <div className="absolute top-3 right-3 flex flex-col items-end gap-1.5 z-10">
         {category.comingSoon ? (
-          <span className="px-2.5 py-1 rounded-full text-[11px] font-medium tracking-wide bg-white/20 text-white/70 backdrop-blur-sm border border-white/20">
+          <span className="px-2.5 py-1 rounded-none text-[11px] font-medium tracking-wide bg-white/20 text-white/70 backdrop-blur-sm border border-white/20">
             Coming Soon
           </span>
         ) : (
           category.productCount > 0 && (
-            <span className="px-2.5 py-1 rounded-full text-[11px] font-medium tracking-wide bg-black/40 text-white/90 backdrop-blur-sm border border-white/10">
+            <span className="px-2.5 py-1 rounded-none text-[11px] font-medium tracking-wide bg-black/40 text-white/90 backdrop-blur-sm border border-white/10">
               {category.productCount} styles
             </span>
           )
@@ -224,7 +224,7 @@ function CategoryTile({
       </div>
 
       {/* Focus ring for keyboard nav */}
-      <div className="absolute inset-0 rounded-xl ring-0 focus-within:ring-2 focus-within:ring-emerald-500 focus-within:ring-offset-2 pointer-events-none" />
+      <div className="absolute inset-0 rounded-none ring-0 focus-within:ring-2 focus-within:ring-emerald-500 focus-within:ring-offset-2 pointer-events-none" />
     </motion.div>
   );
 }
@@ -248,7 +248,7 @@ function FilterBar({
         <button
           key={opt.value}
           onClick={() => onChange(opt.value)}
-          className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 cursor-pointer border
+          className={`px-4 py-1.5 rounded-none text-sm font-medium transition-all duration-200 cursor-pointer border
             ${
               active === opt.value
                 ? "bg-stone-900 text-white border-stone-900"

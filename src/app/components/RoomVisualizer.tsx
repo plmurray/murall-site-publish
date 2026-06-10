@@ -56,7 +56,7 @@ export default function RoomVisualizer() {
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-10 gap-4">
           <div>
             <p className="text-xs tracking-widest uppercase text-stone-400 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Style your space</p>
-            <h2 id="visualizer-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 id="visualizer-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
               See it in your <em>room</em>
             </h2>
             <p className="text-stone-500 text-sm mt-2 max-w-md" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -67,7 +67,7 @@ export default function RoomVisualizer() {
           <div className="flex gap-2">
             {ROOM_SCENES.map((r, i) => (
               <button key={r.id} onClick={() => handleRoomChange(i)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer ${activeRoom === i ? "bg-stone-900 text-white" : "bg-stone-100 text-stone-600 hover:bg-stone-200"}`}
+                className={`px-3 py-1.5 rounded-none text-xs font-medium transition-all duration-200 cursor-pointer ${activeRoom === i ? "bg-stone-900 text-white" : "bg-stone-100 text-stone-600 hover:bg-stone-200"}`}
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 {r.label}
               </button>
@@ -77,7 +77,7 @@ export default function RoomVisualizer() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
           {/* Main visualizer */}
-          <div className="lg:col-span-2 relative rounded-3xl overflow-hidden bg-stone-100 aspect-[4/3]">
+          <div className="lg:col-span-2 relative rounded-none overflow-hidden bg-stone-100 aspect-[4/3]">
             {/* Room base image */}
             <img src={room.roomImg} alt={`${room.label} scene`} className="w-full h-full object-cover" />
 
@@ -117,7 +117,7 @@ export default function RoomVisualizer() {
             {/* Toggle overlay button */}
             <button
               onClick={() => setShowOverlay(!showOverlay)}
-              className="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm text-xs font-medium text-stone-700 border border-stone-200 hover:bg-white transition-colors cursor-pointer shadow-sm"
+              className="absolute top-4 right-4 px-3 py-1.5 rounded-none bg-white/90 backdrop-blur-sm text-xs font-medium text-stone-700 border border-stone-200 hover:bg-white transition-colors cursor-pointer shadow-sm"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               {showOverlay ? "See room only" : "Apply wallpaper"}
@@ -139,14 +139,14 @@ export default function RoomVisualizer() {
                 onClick={() => setActiveWallpaper(i)}
                 whileHover={{ x: 4 }}
                 transition={{ duration: 0.15 }}
-                className={`w-full flex items-center gap-4 p-3 rounded-2xl border-2 transition-all duration-200 cursor-pointer text-left ${activeWallpaper === i ? "border-stone-900 bg-stone-50" : "border-stone-100 hover:border-stone-300 bg-white"}`}
+                className={`w-full flex items-center gap-4 p-3 rounded-none border-2 transition-all duration-200 cursor-pointer text-left ${activeWallpaper === i ? "border-stone-900 bg-stone-50" : "border-stone-100 hover:border-stone-300 bg-white"}`}
                 aria-pressed={activeWallpaper === i}
               >
-                <div className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0">
+                <div className="w-14 h-14 rounded-none overflow-hidden flex-shrink-0">
                   <img src={wp.img} alt={wp.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-stone-900 truncate" style={{ fontFamily: "'Playfair Display', serif" }}>{wp.name}</p>
+                  <p className="text-sm font-semibold text-stone-900 truncate" style={{ fontFamily: "'EB Garamond', serif" }}>{wp.name}</p>
                   <p className="text-xs text-stone-400 mt-0.5" style={{ fontFamily: "Inter, sans-serif" }}>Tap to preview</p>
                 </div>
                 {activeWallpaper === i && (
@@ -162,13 +162,13 @@ export default function RoomVisualizer() {
             {/* CTA */}
             <div className="pt-4 space-y-2">
               <a href="#bestsellers"
-                className="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
+                className="flex items-center justify-center gap-2 w-full py-3 rounded-none bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 Shop {wallpaper.name}
                 <svg width="12" height="12" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" /></svg>
               </a>
               <a href="/sample-request"
-                className="flex items-center justify-center gap-2 w-full py-3 rounded-full border border-stone-200 text-stone-700 text-xs font-medium hover:border-stone-400 transition-colors cursor-pointer"
+                className="flex items-center justify-center gap-2 w-full py-3 rounded-none border border-stone-200 text-stone-700 text-xs font-medium hover:border-stone-400 transition-colors cursor-pointer"
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 Order a sample — from $12
               </a>

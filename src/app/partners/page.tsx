@@ -118,7 +118,7 @@ export default function PartnersPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-xs tracking-widest uppercase text-amber-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Brand Partners</p>
-            <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-4 max-w-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-4 max-w-2xl" style={{ fontFamily: "'EB Garamond', serif" }}>
               The world's finest <em>wallpaper brands</em>
             </h1>
             <p className="text-stone-300 text-lg max-w-xl leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -131,7 +131,7 @@ export default function PartnersPage() {
             className="mt-10 flex flex-wrap gap-3">
             {NETWORKS.map(n => (
               <a key={n.name} href={n.url} target="_blank" rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white/70 text-xs font-medium hover:bg-white/20 hover:text-white transition-all cursor-pointer"
+                className="px-4 py-2 rounded-none bg-white/10 border border-white/20 text-white/70 text-xs font-medium hover:bg-white/20 hover:text-white transition-all cursor-pointer"
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 {n.name} →
               </a>
@@ -151,7 +151,7 @@ export default function PartnersPage() {
               { val: "50+", label: "Countries shipped" },
             ].map(s => (
               <div key={s.label}>
-                <p className="text-2xl font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>{s.val}</p>
+                <p className="text-2xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>{s.val}</p>
                 <p className="text-xs text-stone-500 mt-0.5" style={{ fontFamily: "Inter, sans-serif" }}>{s.label}</p>
               </div>
             ))}
@@ -166,7 +166,7 @@ export default function PartnersPage() {
           <span className="text-xs text-stone-400 uppercase tracking-widest" style={{ fontFamily: "Inter, sans-serif" }}>Filter by commission</span>
           {commissions.map(c => (
             <button key={c} onClick={() => setFilter(c)}
-              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer capitalize ${filter === c ? "bg-stone-900 text-white" : "bg-stone-100 text-stone-600 hover:bg-stone-200"}`}
+              className={`px-4 py-1.5 rounded-none text-xs font-medium transition-all cursor-pointer capitalize ${filter === c ? "bg-stone-900 text-white" : "bg-stone-100 text-stone-600 hover:bg-stone-200"}`}
               style={{ fontFamily: "Inter, sans-serif" }}>
               {c === "all" ? "All brands" : c}
             </button>
@@ -177,14 +177,14 @@ export default function PartnersPage() {
           {filtered.map((p, i) => (
             <motion.div key={p.name} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }} transition={{ duration: 0.5, delay: i * 0.07 }}
-              className="group bg-white rounded-2xl border border-stone-100 hover:border-stone-200 hover:shadow-lg transition-all overflow-hidden flex flex-col">
+              className="group bg-white rounded-none border border-stone-100 hover:border-stone-200 hover:shadow-lg transition-all overflow-hidden flex flex-col">
               {/* Image */}
               <div className="relative aspect-[16/9] overflow-hidden">
                 <img src={p.imageUrl} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent" />
                 {/* Commission badge */}
                 <div className="absolute top-3 right-3">
-                  <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-amber-500 text-stone-900">
+                  <span className="px-2.5 py-1 rounded-none text-[10px] font-bold bg-amber-500 text-stone-900">
                     {p.commission} commission
                   </span>
                 </div>
@@ -195,16 +195,16 @@ export default function PartnersPage() {
 
               {/* Content */}
               <div className="p-5 flex flex-col flex-1">
-                <h3 className="text-lg font-semibold text-stone-900 mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{p.name}</h3>
+                <h3 className="text-lg font-semibold text-stone-900 mb-1" style={{ fontFamily: "'EB Garamond', serif" }}>{p.name}</h3>
                 <p className="text-xs text-stone-400 uppercase tracking-wide mb-3" style={{ fontFamily: "Inter, sans-serif" }}>{p.specialty}</p>
                 <p className="text-sm text-stone-500 leading-relaxed mb-4 flex-1" style={{ fontFamily: "Inter, sans-serif" }}>{p.description}</p>
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {p.tags.map(tag => (
-                    <span key={tag} className={`text-[10px] px-2 py-0.5 rounded-full border ${colorMap[p.color]}`} style={{ fontFamily: "Inter, sans-serif" }}>{tag}</span>
+                    <span key={tag} className={`text-[10px] px-2 py-0.5 rounded-none border ${colorMap[p.color]}`} style={{ fontFamily: "Inter, sans-serif" }}>{tag}</span>
                   ))}
                 </div>
                 <a href={p.href}
-                  className="flex items-center justify-between px-4 py-2.5 rounded-xl bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
+                  className="flex items-center justify-between px-4 py-2.5 rounded-none bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
                   style={{ fontFamily: "Inter, sans-serif" }}>
                   Shop {p.name}
                   <svg width="12" height="12" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6"/></svg>
@@ -219,14 +219,14 @@ export default function PartnersPage() {
       <section className="bg-stone-900 py-16 text-center">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className="text-xs tracking-widest uppercase text-amber-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Earn with Murall</p>
-          <h2 className="text-3xl font-semibold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="text-3xl font-semibold text-white mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
             Promote these brands, <em>earn commission</em>
           </h2>
           <p className="text-stone-400 text-sm mb-8 max-w-md mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
             Join the Murall affiliate programme and earn up to 12% on every sale you inspire across all our partner brands.
           </p>
           <a href="/affiliates"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-amber-500 text-stone-900 text-sm font-bold hover:bg-amber-400 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-none bg-amber-500 text-stone-900 text-sm font-bold hover:bg-amber-400 transition-colors cursor-pointer"
             style={{ fontFamily: "Inter, sans-serif" }}>
             Join the affiliate programme
             <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6"/></svg>

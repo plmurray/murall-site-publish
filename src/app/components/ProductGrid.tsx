@@ -64,7 +64,7 @@ function ProductCard({ product, index }: { product: ProductWithRating; index: nu
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="relative overflow-hidden rounded-xl aspect-[3/4] bg-stone-100 mb-3">
+      <div className="relative overflow-hidden rounded-none aspect-[3/4] bg-stone-100 mb-3">
         <motion.img src={product.imageUrl} alt={`${product.name} wallpaper by ${product.brand}`} loading="lazy"
           className="w-full h-full object-cover"
           animate={{ scale: hovered ? 1.05 : 1 }}
@@ -72,8 +72,8 @@ function ProductCard({ product, index }: { product: ProductWithRating; index: nu
         <motion.div className="absolute inset-0 bg-stone-900/20" animate={{ opacity: hovered ? 1 : 0 }} transition={{ duration: 0.25 }} />
 
         <div className="absolute top-3 left-3 flex flex-col gap-1.5">
-          {product.isBestseller && <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-amber-50 text-amber-800 border border-amber-200">Bestseller</span>}
-          {product.isNew && <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">New</span>}
+          {product.isBestseller && <span className="px-2 py-0.5 rounded-none text-[10px] font-semibold bg-amber-50 text-amber-800 border border-amber-200">Bestseller</span>}
+          {product.isNew && <span className="px-2 py-0.5 rounded-none text-[10px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">New</span>}
         </div>
 
         <AnimatePresence>
@@ -94,7 +94,7 @@ function ProductCard({ product, index }: { product: ProductWithRating; index: nu
             <motion.div initial={{ y: 12, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 12, opacity: 0 }} transition={{ duration: 0.2 }}
               className="absolute bottom-0 left-0 right-0 p-3">
               <button onClick={handleAddToCart}
-                className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-lg text-xs font-semibold transition-all duration-200 cursor-pointer ${addedToCart ? "bg-emerald-600 text-white" : "bg-white/90 backdrop-blur-sm text-stone-900 hover:bg-white"}`}
+                className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-none text-xs font-semibold transition-all duration-200 cursor-pointer ${addedToCart ? "bg-emerald-600 text-white" : "bg-white/90 backdrop-blur-sm text-stone-900 hover:bg-white"}`}
                 aria-label={`Add ${product.name} to cart`}>
                 {addedToCart ? (
                   <><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Added!</>
@@ -110,14 +110,14 @@ function ProductCard({ product, index }: { product: ProductWithRating; index: nu
       <div className="px-0.5">
         <p className="text-xs text-stone-400 uppercase tracking-widest mb-1">{product.brand}</p>
         <h3 className="text-base font-medium text-stone-900 mb-1 leading-snug group-hover:text-emerald-800 transition-colors duration-200"
-          style={{ fontFamily: "'Playfair Display', serif" }}>{product.name}</h3>
+          style={{ fontFamily: "'EB Garamond', serif" }}>{product.name}</h3>
         <div className="flex items-center gap-1.5 mb-1.5">
           <Stars rating={product.rating} />
           <span className="text-xs text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>({product.reviewCount})</span>
         </div>
         <div className="flex items-center justify-between">
           <p className="text-sm font-semibold text-stone-800">From ${product.price}<span className="text-xs font-normal text-stone-400 ml-1">/ roll</span></p>
-          <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${product.installType === "peel-and-stick" ? "bg-amber-50 text-amber-700 border border-amber-100" : "bg-sky-50 text-sky-700 border border-sky-100"}`}>
+          <span className={`text-[10px] px-2 py-0.5 rounded-none font-medium ${product.installType === "peel-and-stick" ? "bg-amber-50 text-amber-700 border border-amber-100" : "bg-sky-50 text-sky-700 border border-sky-100"}`}>
             {product.installType === "peel-and-stick" ? "Peel & Stick" : "Paste-the-Wall"}
           </span>
         </div>
@@ -132,7 +132,7 @@ export default function ProductGrid() {
       <div className="flex items-end justify-between mb-10">
         <div>
           <p className="text-xs tracking-widest uppercase text-stone-400 mb-2">Editor&apos;s picks</p>
-          <h2 id="bestsellers-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 id="bestsellers-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
             This week&apos;s <em>bestsellers</em>
           </h2>
         </div>

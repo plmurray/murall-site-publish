@@ -97,7 +97,7 @@ function PostCard({ post, index, large = false }: { post: typeof POSTS[0]; index
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className={`relative overflow-hidden rounded-2xl mb-4 ${large ? "aspect-[16/9]" : "aspect-[4/3]"}`}>
+      <div className={`relative overflow-hidden rounded-none mb-4 ${large ? "aspect-[16/9]" : "aspect-[4/3]"}`}>
         <motion.img
           src={post.imageUrl}
           alt={post.title}
@@ -107,7 +107,7 @@ function PostCard({ post, index, large = false }: { post: typeof POSTS[0]; index
         />
         <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 to-transparent" />
         <div className="absolute top-3 left-3">
-          <span className={`text-[10px] font-semibold px-2.5 py-1 rounded-full border ${CATEGORY_COLORS[post.category] || "bg-stone-100 text-stone-600 border-stone-200"}`}
+          <span className={`text-[10px] font-semibold px-2.5 py-1 rounded-none border ${CATEGORY_COLORS[post.category] || "bg-stone-100 text-stone-600 border-stone-200"}`}
             style={{ fontFamily: "Inter, sans-serif" }}>
             {post.category}
           </span>
@@ -121,7 +121,7 @@ function PostCard({ post, index, large = false }: { post: typeof POSTS[0]; index
       </div>
 
       <h2 className={`font-semibold text-stone-900 mb-2 leading-snug group-hover:text-emerald-800 transition-colors duration-200 ${large ? "text-2xl sm:text-3xl" : "text-base"}`}
-        style={{ fontFamily: "'Playfair Display', serif" }}>
+        style={{ fontFamily: "'EB Garamond', serif" }}>
         {post.title}
       </h2>
 
@@ -160,7 +160,7 @@ export default function JournalPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>The Murall Journal</p>
-            <h1 className="text-4xl sm:text-5xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h1 className="text-4xl sm:text-5xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
               Stories, guides &amp; <em>inspiration</em>
             </h1>
             <p className="text-stone-500 text-lg max-w-xl leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -187,7 +187,7 @@ export default function JournalPage() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer ${
+              className={`px-4 py-1.5 rounded-none text-xs font-medium transition-all duration-200 cursor-pointer ${
                 activeCategory === cat
                   ? "bg-stone-900 text-white"
                   : "bg-stone-100 text-stone-600 hover:bg-stone-200"
@@ -211,15 +211,15 @@ export default function JournalPage() {
       <section className="bg-stone-900 py-16 text-center">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <p className="text-xs tracking-widest uppercase text-emerald-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Never miss a story</p>
-          <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-8" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-8" style={{ fontFamily: "'EB Garamond', serif" }}>
             Get the Journal delivered fortnightly
           </h2>
           <form className="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto" onSubmit={(e) => e.preventDefault()}>
             <label htmlFor="journal-email" className="sr-only">Email address</label>
             <input id="journal-email" type="email" placeholder="your@email.com" required
-              className="flex-1 px-4 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="flex-1 px-4 py-3 rounded-none bg-white/10 border border-white/20 text-white placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
               style={{ fontFamily: "Inter, sans-serif" }} />
-            <button type="submit" className="px-6 py-3 rounded-full bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition-colors cursor-pointer flex-shrink-0"
+            <button type="submit" className="px-6 py-3 rounded-none bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition-colors cursor-pointer flex-shrink-0"
               style={{ fontFamily: "Inter, sans-serif" }}>Subscribe</button>
           </form>
         </motion.div>

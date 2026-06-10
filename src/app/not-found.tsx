@@ -49,7 +49,7 @@ export default function NotFound() {
           </svg>
 
           <p className="text-xs tracking-[0.2em] uppercase text-stone-400 mb-4" style={{ fontFamily: "Inter, sans-serif" }}>404 — Page not found</p>
-          <h1 className="text-4xl sm:text-5xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="text-4xl sm:text-5xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
             This wall is <em>bare</em>
           </h1>
           <p className="text-stone-500 text-lg mb-10 leading-relaxed max-w-md mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -61,12 +61,12 @@ export default function NotFound() {
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.5 }}
           className="flex flex-wrap justify-center gap-3 mb-12">
           <a href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-stone-900 text-white text-sm font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-none bg-stone-900 text-white text-sm font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
             style={{ fontFamily: "Inter, sans-serif" }}>
             Back to home
           </a>
           <a href="/#bestsellers"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-stone-200 text-stone-700 text-sm font-medium hover:border-stone-400 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-none border border-stone-200 text-stone-700 text-sm font-medium hover:border-stone-400 transition-colors cursor-pointer"
             style={{ fontFamily: "Inter, sans-serif" }}>
             Shop bestsellers
           </a>
@@ -78,7 +78,7 @@ export default function NotFound() {
           <div className="flex flex-wrap justify-center gap-2">
             {SUGGESTED.map((s) => (
               <a key={s.label} href={s.href}
-                className="px-4 py-2 rounded-full bg-stone-100 text-stone-600 text-xs font-medium hover:bg-stone-200 hover:text-stone-900 transition-colors cursor-pointer"
+                className="px-4 py-2 rounded-none bg-stone-100 text-stone-600 text-xs font-medium hover:bg-stone-200 hover:text-stone-900 transition-colors cursor-pointer"
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 {s.label}
               </a>
@@ -88,12 +88,12 @@ export default function NotFound() {
 
         {/* Sample nudge */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 0.5 }}
-          className="mt-16 p-6 bg-stone-50 rounded-2xl border border-stone-100">
+          className="mt-16 p-6 bg-stone-50 rounded-none border border-stone-100">
           <p className="text-sm text-stone-600 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>
             Not sure which wallpaper is right for you?
           </p>
           <button onClick={() => setSampleOpen(true)}
-            className="px-5 py-2.5 rounded-full bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
+            className="px-5 py-2.5 rounded-none bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
             style={{ fontFamily: "Inter, sans-serif" }}>
             Order a sample pack — from $12
           </button>

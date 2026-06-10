@@ -31,7 +31,7 @@ export default function TradeCTA() {
             <p className="text-xs tracking-[0.2em] uppercase text-[#BF9B5A] mb-4" style={{ fontFamily: "Inter, sans-serif" }}>
               Trade &amp; professional programme
             </p>
-            <h2 id="trade-cta-heading" className="text-4xl sm:text-5xl font-semibold text-white mb-6 leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 id="trade-cta-heading" className="text-4xl sm:text-5xl font-semibold text-white mb-6 leading-tight" style={{ fontFamily: "'EB Garamond', serif" }}>
               The wallpaper resource <em>designers trust</em>
             </h2>
             <p className="text-stone-400 text-base leading-relaxed mb-8 max-w-lg" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -44,8 +44,8 @@ export default function TradeCTA() {
                 <motion.div key={s.value}
                   initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                   transition={{ delay: i * 0.08, duration: 0.45 }}
-                  className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4">
-                  <p className="text-2xl font-semibold text-white mb-0.5" style={{ fontFamily: "'Playfair Display', serif" }}>{s.value}</p>
+                  className="bg-white/5 border border-white/10 rounded-none px-5 py-4">
+                  <p className="text-2xl font-semibold text-white mb-0.5" style={{ fontFamily: "'EB Garamond', serif" }}>{s.value}</p>
                   <p className="text-xs text-stone-500 uppercase tracking-wide" style={{ fontFamily: "Inter, sans-serif" }}>{s.label}</p>
                 </motion.div>
               ))}
@@ -53,13 +53,13 @@ export default function TradeCTA() {
 
             <div className="flex flex-wrap gap-3">
               <a href="/trade"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-stone-900 text-sm font-semibold hover:bg-stone-100 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-none bg-white text-stone-900 text-sm font-semibold hover:bg-stone-100 transition-colors cursor-pointer"
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 Apply for trade access
                 <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" /></svg>
               </a>
               <a href="/trade"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/20 text-white text-sm font-medium hover:bg-white/10 transition-colors cursor-pointer"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-none border border-white/20 text-white text-sm font-medium hover:bg-white/10 transition-colors cursor-pointer"
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 Learn more
               </a>
@@ -68,7 +68,7 @@ export default function TradeCTA() {
 
           {/* Right — testimonial card */}
           <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-none p-8">
               {/* Stars */}
               <div className="flex gap-1 mb-5">
                 {[1,2,3,4,5].map((s) => (
@@ -78,7 +78,7 @@ export default function TradeCTA() {
                 ))}
               </div>
               <blockquote>
-                <p className="text-white/90 text-lg leading-relaxed mb-6 italic" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <p className="text-white/90 text-lg leading-relaxed mb-6 italic" style={{ fontFamily: "'EB Garamond', serif" }}>
                   &ldquo;The trade programme has genuinely changed how I source wallpaper. The discount is real, the samples arrive fast, and my account manager actually knows my projects. Rare to find this level of service.&rdquo;
                 </p>
                 <footer className="flex items-center gap-4">
@@ -94,7 +94,7 @@ export default function TradeCTA() {
               <div className="mt-8 pt-6 border-t border-white/10 grid grid-cols-3 gap-4 text-center">
                 {[["£2.4M+", "Annual trade spend"], ["98%", "Renewal rate"], ["< 2 days", "Approval time"]].map(([val, lab]) => (
                   <div key={lab}>
-                    <p className="text-base font-semibold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>{val}</p>
+                    <p className="text-base font-semibold text-white" style={{ fontFamily: "'EB Garamond', serif" }}>{val}</p>
                     <p className="text-[10px] text-stone-500 mt-0.5 leading-snug" style={{ fontFamily: "Inter, sans-serif" }}>{lab}</p>
                   </div>
                 ))}

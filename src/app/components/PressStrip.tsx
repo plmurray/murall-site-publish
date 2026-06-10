@@ -34,7 +34,7 @@ export default function PressStrip() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <p className="text-2xl sm:text-3xl font-semibold text-stone-900 mb-0.5" style={{ fontFamily: "'Playfair Display', serif" }}>{s.value}</p>
+              <p className="text-2xl sm:text-3xl font-semibold text-stone-900 mb-0.5" style={{ fontFamily: "'EB Garamond', serif" }}>{s.value}</p>
               <p className="text-xs text-stone-400 tracking-wide uppercase" style={{ fontFamily: "Inter, sans-serif" }}>{s.label}</p>
             </motion.div>
           ))}

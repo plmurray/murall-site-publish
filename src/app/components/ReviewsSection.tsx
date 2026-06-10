@@ -111,15 +111,15 @@ export default function ReviewsSection() {
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 gap-4">
           <div>
             <p className="text-xs tracking-widest uppercase text-stone-400 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Customer stories</p>
-            <h2 id="reviews-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+            <h2 id="reviews-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
               Loved by <em>design lovers</em>
             </h2>
           </div>
-          <div className="flex items-center gap-3 bg-white rounded-2xl px-5 py-3 border border-stone-100 shadow-sm">
+          <div className="flex items-center gap-3 bg-white rounded-none px-5 py-3 border border-stone-100 shadow-sm">
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <Stars rating={5} size={16} />
-                <span className="text-lg font-semibold text-stone-900" style={{ fontFamily: "'Playfair Display', serif" }}>4.9</span>
+                <span className="text-lg font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>4.9</span>
               </div>
               <p className="text-xs text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>From 1,240 verified reviews</p>
             </div>
@@ -135,14 +135,14 @@ export default function ReviewsSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -16 }}
               transition={{ duration: 0.4 }}
-              className="bg-white rounded-3xl overflow-hidden border border-stone-100 shadow-sm grid grid-cols-1 lg:grid-cols-2"
+              className="bg-white rounded-none overflow-hidden border border-stone-100 shadow-sm grid grid-cols-1 lg:grid-cols-2"
             >
               <div className="relative aspect-[4/3] lg:aspect-auto">
                 <img src={REVIEWS[active].imageUrl} alt={`Room featuring ${REVIEWS[active].product}`}
                   className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/0 lg:to-white/20" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-xs font-medium text-stone-700 border border-stone-200" style={{ fontFamily: "Inter, sans-serif" }}>
+                  <span className="px-3 py-1 rounded-none bg-white/90 backdrop-blur-sm text-xs font-medium text-stone-700 border border-stone-200" style={{ fontFamily: "Inter, sans-serif" }}>
                     {REVIEWS[active].product}
                   </span>
                 </div>
@@ -150,7 +150,7 @@ export default function ReviewsSection() {
               <div className="p-8 lg:p-12 flex flex-col justify-center">
                 <Stars rating={REVIEWS[active].rating} size={18} />
                 <blockquote className="mt-4 mb-6">
-                  <p className="text-xl sm:text-2xl font-semibold text-stone-900 mb-4 leading-snug" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  <p className="text-xl sm:text-2xl font-semibold text-stone-900 mb-4 leading-snug" style={{ fontFamily: "'EB Garamond', serif" }}>
                     &ldquo;{REVIEWS[active].title}&rdquo;
                   </p>
                   <p className="text-stone-500 leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -187,7 +187,7 @@ export default function ReviewsSection() {
             <button
               key={r.id}
               onClick={() => setActive(i)}
-              className={`group relative rounded-xl overflow-hidden aspect-square cursor-pointer transition-all duration-200 ${active === i ? "ring-2 ring-stone-900 ring-offset-2" : "opacity-60 hover:opacity-100"}`}
+              className={`group relative rounded-none overflow-hidden aspect-square cursor-pointer transition-all duration-200 ${active === i ? "ring-2 ring-stone-900 ring-offset-2" : "opacity-60 hover:opacity-100"}`}
               aria-label={`View review by ${r.name}`}
               aria-pressed={active === i}
             >
