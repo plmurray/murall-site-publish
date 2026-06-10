@@ -96,6 +96,7 @@ function PostCard({ post, index, large = false }: { post: typeof POSTS[0]; index
       className={`group cursor-pointer flex flex-col ${large ? "" : ""}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => window.location.href = `/journal/${post.slug}`}
     >
       <div className={`relative overflow-hidden rounded-none mb-4 ${large ? "aspect-[16/9]" : "aspect-[4/3]"}`}>
         <motion.img
