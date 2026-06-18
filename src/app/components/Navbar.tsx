@@ -136,8 +136,8 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
             </button>
           </div>
           <nav className="flex-1 px-6 py-8 overflow-y-auto">
-            {["Shop", "Brands", "Journal", "Trade", "Affiliates", "Where we ship"].map((item) => (
-              <a key={item} href={item === "Shop" ? "/products" : item === "Where we ship" ? "/shipping" : `/${item.toLowerCase()}`}
+            {["Shop", "Brands", "Journal", "Trade", "Affiliates", "Shipping"].map((item) => (
+              <a key={item} href={item === "Shop" ? "/products" : item === "Shipping" ? "/shipping" : `/${item.toLowerCase()}`}
                 className="flex items-center justify-between py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-emerald-700 transition-colors cursor-pointer"
                 style={{ fontFamily: "'EB Garamond', serif" }} onClick={onClose}>
                 {item}
@@ -204,8 +204,8 @@ export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: 
                 </a>
                 <MegaMenu visible={shopOpen} />
               </div>
-              {["Brands", "Journal", "Trade", "Affiliates", "Where we ship"].map((item) => (
-                <a key={item} href={item === "Where we ship" ? "/shipping" : `/${item.toLowerCase()}`}
+              {["Brands", "Journal", "Trade", "Affiliates", "Shipping"].map((item) => (
+                <a key={item} href={item === "Shipping" ? "/shipping" : `/${item.toLowerCase()}`}
                   className={`px-4 py-2 text-sm font-medium rounded-none transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                   style={{ fontFamily: "Inter, sans-serif" }}>{item}</a>
               ))}
