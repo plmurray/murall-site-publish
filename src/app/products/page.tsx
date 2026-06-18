@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { PRODUCTS } from "@/lib/products";
@@ -133,7 +133,7 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: n
   );
 }
 
-export default function ProductsPage() {
+function ProductsCatalogue() {
   const searchParams = useSearchParams();
   const [sampleOpen, setSampleOpen] = useState(false);
   const [installFilter, setInstallFilter] = useState(() => {
@@ -272,5 +272,13 @@ export default function ProductsPage() {
       <SearchOverlay />
       <SampleRequestModal isOpen={sampleOpen} onClose={() => setSampleOpen(false)} />
     </div>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense>
+      <ProductsCatalogue />
+    </Suspense>
   );
 }
