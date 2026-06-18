@@ -47,7 +47,7 @@ const CATEGORIES: Category[] = [
     id: "peel-stick",
     name: "Peel & Stick",
     productCount: 213,
-    imageUrl: null,
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png",
     installTypes: ["all", "peel-and-stick"],
     comingSoon: false,
   },
