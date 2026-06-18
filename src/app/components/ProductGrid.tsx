@@ -160,7 +160,7 @@ export default function ProductGrid() {
             This week&apos;s <em>bestsellers</em>
           </h2>
         </div>
-        <a href="#all-products" className="hidden sm:inline-flex items-center gap-1.5 text-sm text-stone-500 hover:text-stone-900 transition-colors cursor-pointer">
+        <a href="/products" className="hidden sm:inline-flex items-center gap-1.5 text-sm text-stone-500 hover:text-stone-900 transition-colors cursor-pointer">
           See all
           <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" /></svg>
         </a>
