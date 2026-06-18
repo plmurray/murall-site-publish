@@ -112,6 +112,15 @@ function ArrowIcon() {
   );
 }
 
+// ─── Category URL map ─────────────────────────────────────────────────────────
+
+const CATEGORY_HREFS: Record<string, string> = {
+  botanical: "/products?tag=Botanical",
+  geometric: "/products?tag=Geometric",
+  "dark-moody": "/products?tag=Dark+%26+Moody",
+  "peel-stick": "/products?install=Peel+%26+Stick",
+};
+
 // ─── Category Tile ────────────────────────────────────────────────────────────
 
 function CategoryTile({
@@ -122,6 +131,11 @@ function CategoryTile({
   index: number;
 }) {
   const [hovered, setHovered] = useState(false);
+  const href = CATEGORY_HREFS[category.id];
+
+  const navigate = () => {
+    if (!category.comingSoon && href) window.location.href = href;
+  };
 
   return (
     <motion.div
@@ -136,17 +150,18 @@ function CategoryTile({
       className={`relative overflow-hidden rounded-none aspect-[4/3] cursor-pointer group
         border-2 transition-colors duration-300
         ${hovered ? "border-emerald-600/60" : "border-transparent"}
-        ${category.comingSoon ? "opacity-70" : ""}
+        ${category.comingSoon ? "opacity-70 cursor-default" : ""}
       `}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={navigate}
       role="link"
       tabIndex={0}
       aria-label={`Browse ${category.name} wallpapers${category.comingSoon ? " — coming soon" : ""}`}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          // navigate to category page
+          navigate();
         }
       }}
     >
