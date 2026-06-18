@@ -143,7 +143,7 @@ export default function BeforeAfter() {
           <p className="text-xs text-stone-500" style={{ fontFamily: "Inter, sans-serif" }}>
             All transformations shown with real Murall wallpaper. Colours may vary slightly on screen.
           </p>
-          <a href="#bestsellers" className="text-xs text-emerald-400 font-medium hover:text-emerald-300 transition-colors cursor-pointer" style={{ fontFamily: "Inter, sans-serif" }}>
+          <a href="/products" className="text-xs text-emerald-400 font-medium hover:text-emerald-300 transition-colors cursor-pointer" style={{ fontFamily: "Inter, sans-serif" }}>
             Shop this look →
           </a>
         </div>

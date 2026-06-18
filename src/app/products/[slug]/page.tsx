@@ -54,7 +54,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
         <ol className="flex items-center gap-2 text-xs text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>
           <li><a href="/" className="hover:text-stone-700 transition-colors cursor-pointer">Home</a></li>
           <li aria-hidden="true">›</li>
-          <li><a href="/#bestsellers" className="hover:text-stone-700 transition-colors cursor-pointer">Shop</a></li>
+          <li><a href="/products" className="hover:text-stone-700 transition-colors cursor-pointer">Shop</a></li>
           <li aria-hidden="true">›</li>
           <li className="text-stone-700">{product.name}</li>
         </ol>

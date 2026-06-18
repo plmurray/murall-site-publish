@@ -11,7 +11,7 @@ const SUGGESTED = [
   { label: "Botanical & Tropical", href: "/#categories" },
   { label: "Bold Geometric", href: "/#categories" },
   { label: "Peel & Stick", href: "/#categories" },
-  { label: "Bestsellers", href: "/#bestsellers" },
+  { label: "Bestsellers", href: "/products" },
   { label: "Trade programme", href: "/trade" },
   { label: "Our brands", href: "/brands" },
 ];
@@ -65,7 +65,7 @@ export default function NotFound() {
             style={{ fontFamily: "Inter, sans-serif" }}>
             Back to home
           </a>
-          <a href="/#bestsellers"
+          <a href="/products"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-none border border-stone-200 text-stone-700 text-sm font-medium hover:border-stone-400 transition-colors cursor-pointer"
             style={{ fontFamily: "Inter, sans-serif" }}>
             Shop bestsellers

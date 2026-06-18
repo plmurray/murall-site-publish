@@ -93,7 +93,7 @@ function MegaMenu({ visible }: { visible: boolean }) {
         >
           <div className="grid grid-cols-2 gap-2">
             {SHOP_CATEGORIES.map((cat) => (
-              <a key={cat.name} href={`#${cat.name.toLowerCase().replace(/\s+/g, "-")}`}
+              <a key={cat.name} href="/products"
                 className="group flex items-center justify-between px-3 py-2.5 rounded-none hover:bg-stone-50 transition-colors cursor-pointer">
                 <span className="text-sm font-medium text-stone-800 group-hover:text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>{cat.name}</span>
                 {cat.count ? (
@@ -105,8 +105,8 @@ function MegaMenu({ visible }: { visible: boolean }) {
             ))}
           </div>
           <div className="mt-4 pt-4 border-t border-stone-100">
-            <a href="#bestsellers" className="text-xs tracking-widest uppercase text-emerald-700 hover:text-emerald-900 font-medium transition-colors">
-              View all bestsellers →
+            <a href="/products" className="text-xs tracking-widest uppercase text-emerald-700 hover:text-emerald-900 font-medium transition-colors">
+              View all wallpapers →
             </a>
           </div>
         </motion.div>
@@ -137,7 +137,7 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
           </div>
           <nav className="flex-1 px-6 py-8 overflow-y-auto">
             {["Shop", "Brands", "Journal", "Trade", "Affiliates", "Where we ship"].map((item) => (
-              <a key={item} href={item === "Shop" ? "#shop" : item === "Where we ship" ? "/shipping" : `/${item.toLowerCase()}`}
+              <a key={item} href={item === "Shop" ? "/products" : item === "Where we ship" ? "/shipping" : `/${item.toLowerCase()}`}
                 className="flex items-center justify-between py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-emerald-700 transition-colors cursor-pointer"
                 style={{ fontFamily: "'EB Garamond', serif" }} onClick={onClose}>
                 {item}
@@ -198,10 +198,10 @@ export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: 
 
             <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
               <div className="relative" onMouseEnter={() => setShopOpen(true)} onMouseLeave={() => setShopOpen(false)}>
-                <button className={`px-4 py-2 text-sm font-medium rounded-none transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                <a href="/products" className={`px-4 py-2 text-sm font-medium rounded-none transition-colors duration-200 cursor-pointer ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
                   aria-expanded={shopOpen} aria-haspopup="true" style={{ fontFamily: "Inter, sans-serif" }}>
                   Shop
-                </button>
+                </a>
                 <MegaMenu visible={shopOpen} />
               </div>
               {["Brands", "Journal", "Trade", "Affiliates", "Where we ship"].map((item) => (

@@ -127,7 +127,7 @@ function Hero({ onSampleOpen }: { onSampleOpen: () => void }) {
           className="flex flex-wrap gap-3"
         >
           <a
-            href="#bestsellers"
+            href="/products"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-none bg-white text-stone-900 text-sm font-semibold hover:bg-stone-100 transition-colors duration-200 cursor-pointer"
             style={{ fontFamily: "Inter, sans-serif" }}
           >

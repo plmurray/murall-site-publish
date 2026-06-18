@@ -127,7 +127,7 @@ export default function UGCFeed() {
           <p className="text-sm text-stone-500 mb-4" style={{ fontFamily: "Inter, sans-serif" }}>
             Tag <strong className="text-stone-700">#MurallHome</strong> on Instagram to be featured
           </p>
-          <a href="#bestsellers"
+          <a href="/products"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-none bg-stone-900 text-white text-sm font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
             style={{ fontFamily: "Inter, sans-serif" }}>
             Shop the looks

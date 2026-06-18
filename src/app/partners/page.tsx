@@ -16,7 +16,7 @@ const PARTNERS = [
     description: "Sweeping botanical murals and lush tropical scenes, printed to order on eco-certified substrate.",
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
     tags: ["Eco-certified", "Paste-the-Wall", "Custom sizing"],
-    href: "/#bestsellers",
+    href: "/products",
     color: "emerald",
   },
   {
@@ -27,7 +27,7 @@ const PARTNERS = [
     description: "A British heritage brand with nearly 80 years of wallpaper craft. Bold patterns, vibrant palettes, exceptional value.",
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png",
     tags: ["Heritage", "Peel & Stick", "Paste-the-Wall"],
-    href: "/#bestsellers",
+    href: "/products",
     color: "amber",
   },
   {
@@ -38,7 +38,7 @@ const PARTNERS = [
     description: "The pioneers of removable peel-and-stick wallpaper. Perfect for renters and commitment-phobes.",
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png",
     tags: ["Removable", "Renter-friendly", "Peel & Stick"],
-    href: "/#bestsellers",
+    href: "/products",
     color: "rose",
   },
   {
@@ -49,7 +49,7 @@ const PARTNERS = [
     description: "Premium self-adhesive wallpaper designed for easy application and removal. A favourite among interior designers.",
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png",
     tags: ["Self-adhesive", "No damage", "Designer favourite"],
-    href: "/#bestsellers",
+    href: "/products",
     color: "violet",
   },
   {
@@ -60,7 +60,7 @@ const PARTNERS = [
     description: "One of the world's most prestigious wallpaper houses. Archive prints dating back 150 years.",
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
     tags: ["Luxury", "Archive prints", "Paste-the-Wall"],
-    href: "/#bestsellers",
+    href: "/products",
     color: "amber",
   },
   {
@@ -71,7 +71,7 @@ const PARTNERS = [
     description: "Bold, artistic wallpaper designs that make a statement. Loved by designers who aren't afraid of colour.",
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png",
     tags: ["Artistic", "Bold", "Paste-the-Wall"],
-    href: "/#bestsellers",
+    href: "/products",
     color: "rose",
   },
 ];

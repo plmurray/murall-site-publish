@@ -161,7 +161,7 @@ export default function RoomVisualizer() {
 
             {/* CTA */}
             <div className="pt-4 space-y-2">
-              <a href="#bestsellers"
+              <a href="/products"
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-none bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 Shop {wallpaper.name}

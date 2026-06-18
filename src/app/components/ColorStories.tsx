@@ -140,7 +140,7 @@ export default function ColorStories() {
                   ))}
                 </div>
 
-                <a href="#bestsellers"
+                <a href="/products"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-none bg-white text-stone-900 text-sm font-semibold hover:bg-stone-100 transition-colors cursor-pointer w-fit"
                   style={{ fontFamily: "Inter, sans-serif" }}>
                   Shop this story

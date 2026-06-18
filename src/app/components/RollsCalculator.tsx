@@ -177,7 +177,7 @@ export default function RollsCalculator({ isOpen, onClose }: Props) {
                         </div>
                       </div>
                       <div className="flex gap-3">
-                        <a href="#bestsellers"
+                        <a href="/products"
                           className="flex-1 py-2.5 rounded-none bg-white text-stone-900 text-xs font-semibold text-center hover:bg-stone-100 transition-colors cursor-pointer"
                           style={{ fontFamily: "Inter, sans-serif" }} onClick={onClose}>
                           Shop wallpaper →
