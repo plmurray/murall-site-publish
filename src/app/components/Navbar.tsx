@@ -72,12 +72,12 @@ function CartIcon({ count }: { count: number }) {
 }
 
 const SHOP_CATEGORIES = [
-  { name: "Botanical & Tropical", count: 142 },
-  { name: "Bold Geometric", count: 98 },
-  { name: "Dark & Moody", count: 74 },
-  { name: "Peel & Stick", count: 213 },
-  { name: "Vintage Floral", count: null },
-  { name: "Chinoiserie", count: null },
+  { name: "Botanical & Tropical", count: 142, href: "/products?tag=Botanical" },
+  { name: "Bold Geometric", count: 98, href: "/products?tag=Geometric" },
+  { name: "Dark & Moody", count: 74, href: "/products?tag=Dark+%26+Moody" },
+  { name: "Peel & Stick", count: 213, href: "/products?install=Peel+%26+Stick" },
+  { name: "Vintage Floral", count: null, href: "/products" },
+  { name: "Chinoiserie", count: null, href: "/products" },
 ];
 
 function MegaMenu({ visible }: { visible: boolean }) {
@@ -93,7 +93,7 @@ function MegaMenu({ visible }: { visible: boolean }) {
         >
           <div className="grid grid-cols-2 gap-2">
             {SHOP_CATEGORIES.map((cat) => (
-              <a key={cat.name} href="/products"
+              <a key={cat.name} href={cat.href}
                 className="group flex items-center justify-between px-3 py-2.5 rounded-none hover:bg-stone-50 transition-colors cursor-pointer">
                 <span className="text-sm font-medium text-stone-800 group-hover:text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>{cat.name}</span>
                 {cat.count ? (

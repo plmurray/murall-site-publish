@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { PRODUCTS } from "@/lib/products";
 import { useCart } from "@/context/CartContext";
@@ -133,9 +134,16 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: n
 }
 
 export default function ProductsPage() {
+  const searchParams = useSearchParams();
   const [sampleOpen, setSampleOpen] = useState(false);
-  const [installFilter, setInstallFilter] = useState("All");
-  const [tagFilter, setTagFilter] = useState("All styles");
+  const [installFilter, setInstallFilter] = useState(() => {
+    const v = searchParams.get("install");
+    return v ? decodeURIComponent(v) : "All";
+  });
+  const [tagFilter, setTagFilter] = useState(() => {
+    const v = searchParams.get("tag");
+    return v ? decodeURIComponent(v) : "All styles";
+  });
   const [sort, setSort] = useState("featured");
 
   let filtered = PRODUCTS.filter((p) => {
