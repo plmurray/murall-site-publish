@@ -190,7 +190,7 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
   );
 }
 
-export default function Navbar({ onSampleOpen, onCalcOpen, lightMode = false }: { onSampleOpen: () => void; onCalcOpen?: () => void; lightMode?: boolean }) {
+export default function Navbar({ onSampleOpen = () => {}, onCalcOpen, lightMode = false }: { onSampleOpen?: () => void; onCalcOpen?: () => void; lightMode?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   // isDark = white navbar mode (dark text, dark logo ink) — only when scrolled
   const isDark = scrolled;

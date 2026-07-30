@@ -4,12 +4,12 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const POSTS = [
-  { id: 1, handle: "@thehouseofwren", location: "London, UK", likes: 1240, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png", caption: "Finally finished the dining room 🌿 The Verdant Canopy is even more stunning in person. Absolutely obsessed.", wallpaper: "Verdant Canopy", tall: true },
-  { id: 2, handle: "@studiomadebylou", location: "Paris, France", likes: 876, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png", caption: "Geometric dreams in the home office. Hex Noir from @murallwallpaper — it makes the whole room feel intentional.", wallpaper: "Hex Noir", tall: false },
-  { id: 3, handle: "@nightgardenhome", location: "Melbourne, AU", likes: 2103, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png", caption: "Midnight Garden turned our plain bedroom into something from a dream. Best wallpaper decision we've ever made.", wallpaper: "Midnight Garden", tall: false },
-  { id: 4, handle: "@roomsbyrafaela", location: "New York, USA", likes: 934, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png", caption: "The peel & stick is a game changer for renters. Up in 3 hours, looking like a professional install.", wallpaper: "Emerald Conservatory", tall: true },
-  { id: 5, handle: "@interiors.by.k", location: "Stockholm, Sweden", likes: 1567, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png", caption: "Client reveal today — they cried happy tears when they saw it. That's the Murall effect.", wallpaper: "Verdant Canopy", tall: false },
-  { id: 6, handle: "@theplasteredwall", location: "Dublin, Ireland", likes: 712, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png", caption: "Pattern matching was perfect — couldn't be happier. The rolls calculator was spot on too, not a strip wasted.", wallpaper: "Hex Noir", tall: false },
+  { id: 1, handle: "@thehouseofwren", location: "London, UK", likes: 1240, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png", caption: "Finally finished the dining room 🌿 The Verdant Canopy is even more stunning in person. Absolutely obsessed.", wallpaper: "Verdant Canopy", productSlug: "verdant-canopy", tall: true },
+  { id: 2, handle: "@studiomadebylou", location: "Paris, France", likes: 876, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png", caption: "Geometric dreams in the home office. Hex Noir from @murallwallpaper — it makes the whole room feel intentional.", wallpaper: "Hex Noir", productSlug: "hex-noir", tall: false },
+  { id: 3, handle: "@nightgardenhome", location: "Melbourne, AU", likes: 2103, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png", caption: "Midnight Garden turned our plain bedroom into something from a dream. Best wallpaper decision we've ever made.", wallpaper: "Midnight Garden", productSlug: "midnight-garden", tall: false },
+  { id: 4, handle: "@roomsbyrafaela", location: "New York, USA", likes: 934, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png", caption: "The peel & stick is a game changer for renters. Up in 3 hours, looking like a professional install.", wallpaper: "Emerald Conservatory", productSlug: "emerald-conservatory", tall: true },
+  { id: 5, handle: "@interiors.by.k", location: "Stockholm, Sweden", likes: 1567, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png", caption: "Client reveal today — they cried happy tears when they saw it. That's the Murall effect.", wallpaper: "Verdant Canopy", productSlug: "verdant-canopy", tall: false },
+  { id: 6, handle: "@theplasteredwall", location: "Dublin, Ireland", likes: 712, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png", caption: "Pattern matching was perfect — couldn't be happier. The rolls calculator was spot on too, not a strip wasted.", wallpaper: "Hex Noir", productSlug: "hex-noir", tall: false },
 ];
 
 function HeartIcon({ filled }: { filled: boolean }) {
@@ -33,6 +33,7 @@ function PostCard({ post, index }: { post: typeof POSTS[0]; index: number }) {
       className={`relative group rounded-none overflow-hidden cursor-pointer ${post.tall ? "row-span-2" : ""}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => { window.location.href = `/products/${post.productSlug}`; }}
     >
       <div className={`relative overflow-hidden ${post.tall ? "h-full min-h-[420px]" : "aspect-square"}`}>
         <motion.img
@@ -58,13 +59,19 @@ function PostCard({ post, index }: { post: typeof POSTS[0]; index: number }) {
                 <span className="text-stone-300 text-[10px]" style={{ fontFamily: "Inter, sans-serif" }}>{post.location}</span>
               </div>
 
-              {/* Caption */}
+              {/* Caption + CTA */}
               <div>
                 <p className="text-white text-xs leading-relaxed mb-3 line-clamp-3" style={{ fontFamily: "Inter, sans-serif" }}>{post.caption}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] px-2.5 py-1 rounded-none bg-white/20 text-white backdrop-blur-sm" style={{ fontFamily: "Inter, sans-serif" }}>
-                    {post.wallpaper}
-                  </span>
+                  <a
+                    href={`/products/${post.productSlug}`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-[10px] px-2.5 py-1 rounded-none bg-white text-stone-900 font-semibold hover:bg-stone-100 transition-colors flex items-center gap-1"
+                    style={{ fontFamily: "Inter, sans-serif" }}
+                  >
+                    Shop this look
+                    <svg width="10" height="10" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" /></svg>
+                  </a>
                   <button
                     onClick={(e) => { e.stopPropagation(); setLiked(!liked); }}
                     className="flex items-center gap-1.5 text-xs cursor-pointer"
@@ -105,7 +112,7 @@ export default function UGCFeed() {
               The <em>#MurallHome</em> community
             </h2>
           </div>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+          <a href="https://instagram.com/murallwallpaper" target="_blank" rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-2.5 rounded-none border border-stone-200 text-stone-600 text-xs font-medium hover:border-stone-400 hover:text-stone-900 transition-colors cursor-pointer"
             style={{ fontFamily: "Inter, sans-serif" }}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

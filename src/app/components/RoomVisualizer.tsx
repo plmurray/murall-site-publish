@@ -9,9 +9,9 @@ const ROOM_SCENES = [
     label: "Living Room",
     roomImg: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png",
     wallpapers: [
-      { id: "verdant", name: "Verdant Canopy", color: "#1E3A2F", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png" },
-      { id: "hex",     name: "Hex Noir",       color: "#1a1a2e", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png" },
-      { id: "mid",     name: "Midnight Garden", color: "#0d1f1a", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png" },
+      { id: "verdant", name: "Verdant Canopy",  slug: "verdant-canopy",  color: "#1E3A2F", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png" },
+      { id: "hex",     name: "Hex Noir",        slug: "hex-noir",        color: "#1a1a2e", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png" },
+      { id: "mid",     name: "Midnight Garden", slug: "midnight-garden", color: "#0d1f1a", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png" },
     ],
   },
   {
@@ -19,9 +19,9 @@ const ROOM_SCENES = [
     label: "Bedroom",
     roomImg: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png",
     wallpapers: [
-      { id: "mid",     name: "Midnight Garden", color: "#0d1f1a", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png" },
-      { id: "verdant", name: "Verdant Canopy", color: "#1E3A2F", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png" },
-      { id: "em",      name: "Emerald Conservatory", color: "#2d4a3e", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png" },
+      { id: "mid",     name: "Midnight Garden",     slug: "midnight-garden",     color: "#0d1f1a", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png" },
+      { id: "verdant", name: "Verdant Canopy",       slug: "verdant-canopy",       color: "#1E3A2F", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png" },
+      { id: "em",      name: "Emerald Conservatory", slug: "emerald-conservatory", color: "#2d4a3e", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png" },
     ],
   },
   {
@@ -29,9 +29,9 @@ const ROOM_SCENES = [
     label: "Study",
     roomImg: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png",
     wallpapers: [
-      { id: "hex",     name: "Hex Noir",       color: "#1a1a2e", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png" },
-      { id: "mid",     name: "Midnight Garden", color: "#0d1f1a", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png" },
-      { id: "verdant", name: "Verdant Canopy", color: "#1E3A2F", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png" },
+      { id: "hex",     name: "Hex Noir",        slug: "hex-noir",        color: "#1a1a2e", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png" },
+      { id: "mid",     name: "Midnight Garden",  slug: "midnight-garden",  color: "#0d1f1a", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png" },
+      { id: "verdant", name: "Verdant Canopy",   slug: "verdant-canopy",   color: "#1E3A2F", img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png" },
     ],
   },
 ];
@@ -161,7 +161,7 @@ export default function RoomVisualizer() {
 
             {/* CTA */}
             <div className="pt-4 space-y-2">
-              <a href="/products"
+              <a href={`/products/${wallpaper.slug}`}
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-none bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors cursor-pointer"
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 Shop {wallpaper.name}

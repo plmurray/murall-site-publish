@@ -133,6 +133,71 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: n
   );
 }
 
+const COMING_SOON_TAGS = ["Vintage Floral", "Chinoiserie"];
+
+function NotifyMeBanner({ tag }: { tag: string }) {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setSubmitted(true);
+  };
+
+  return (
+    <motion.div
+      key={tag}
+      initial={{ opacity: 0, y: -8 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="mb-8 p-6 bg-stone-50 border border-stone-200 rounded-none"
+    >
+      <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+        <div className="flex-1">
+          <p className="text-xs tracking-widest uppercase text-stone-400 mb-1" style={{ fontFamily: "Inter, sans-serif" }}>
+            Growing collection
+          </p>
+          <h3 className="text-xl font-semibold text-stone-900 mb-1" style={{ fontFamily: "'EB Garamond', serif" }}>
+            More {tag} designs coming soon
+          </h3>
+          <p className="text-sm text-stone-500" style={{ fontFamily: "Inter, sans-serif" }}>
+            We&apos;re curating new {tag.toLowerCase()} wallpapers right now. Be the first to hear when they drop.
+          </p>
+        </div>
+        <div className="flex-shrink-0 min-w-[280px]">
+          {submitted ? (
+            <div className="flex items-center gap-2 text-emerald-700 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+              You&apos;re on the list — we&apos;ll be in touch!
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex gap-2">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="your@email.com"
+                required
+                className="flex-1 px-3 py-2 text-sm border border-stone-200 rounded-none focus:outline-none focus:border-stone-400 bg-white"
+                style={{ fontFamily: "Inter, sans-serif" }}
+              />
+              <button
+                type="submit"
+                className="px-4 py-2 bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors cursor-pointer rounded-none flex-shrink-0"
+                style={{ fontFamily: "Inter, sans-serif" }}
+              >
+                Notify me
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 function ProductsCatalogue() {
   const searchParams = useSearchParams();
   const [sampleOpen, setSampleOpen] = useState(false);
@@ -219,6 +284,11 @@ function ProductsCatalogue() {
 
       {/* Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <AnimatePresence>
+          {COMING_SOON_TAGS.includes(tagFilter) && (
+            <NotifyMeBanner key={tagFilter} tag={tagFilter} />
+          )}
+        </AnimatePresence>
         <AnimatePresence mode="wait">
           {filtered.length > 0 ? (
             <motion.div
