@@ -5,10 +5,10 @@ import { SearchProvider } from "@/context/SearchContext";
 
 export const metadata: Metadata = {
   title: "Murall Wallpaper — Walls that tell stories",
-  description: "The world's most beautiful wallpaper, curated from 12 leading global brands. Botanical, geometric, murals, peel & stick, luxury — delivered to 50+ countries.",
+  description: "The world's most beautiful wallpaper, curated from 17 leading global brands. Botanical, geometric, murals, peel & stick, luxury — delivered to 50+ countries.",
   openGraph: {
     title: "Murall Wallpaper — Walls that tell stories",
-    description: "The world's most beautiful wallpaper, curated from 12 leading global brands. Delivered to 50+ countries.",
+    description: "The world's most beautiful wallpaper, curated from 17 leading global brands. Delivered to 50+ countries.",
     images: ["https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png"],
   },
 };

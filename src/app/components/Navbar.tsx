@@ -72,11 +72,11 @@ function CartIcon({ count }: { count: number }) {
 }
 
 const SHOP_CATEGORIES = [
-  { name: "Botanical & Tropical", count: 10, href: "/products?tag=Botanical" },
-  { name: "Bold Geometric", count: 3, href: "/products?tag=Geometric" },
-  { name: "Dark & Moody", count: 3, href: "/products?tag=Dark+%26+Moody" },
+  { name: "Botanical & Tropical", count: 14, href: "/products?tag=Botanical" },
+  { name: "Bold Geometric", count: 4, href: "/products?tag=Geometric" },
+  { name: "Dark & Moody", count: 5, href: "/products?tag=Dark+%26+Moody" },
   { name: "Peel & Stick", count: 5, href: "/products?install=Peel+%26+Stick" },
-  { name: "Vintage Floral", count: 2, href: "/products?tag=Vintage+Floral" },
+  { name: "Vintage Floral", count: 3, href: "/products?tag=Vintage+Floral" },
   { name: "Chinoiserie", count: 2, href: "/products?tag=Chinoiserie" },
 ];
 
