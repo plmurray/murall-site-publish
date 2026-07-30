@@ -2,30 +2,28 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useCart } from "@/context/CartContext";
+import { getAffiliateUrl } from "@/lib/affiliate";
 
-interface Product {
+interface ProductWithRating {
   id: string;
   name: string;
   brand: string;
+  brandSlug: string;
   price: number;
   installType: "paste-the-wall" | "peel-and-stick";
   imageUrl: string;
   isNew?: boolean;
   isBestseller?: boolean;
-}
-
-interface ProductWithRating extends Product {
   rating: number;
   reviewCount: number;
   slug: string;
 }
 
 const PRODUCTS: ProductWithRating[] = [
-  { id: "1", name: "Verdant Canopy", brand: "Rebel Walls", price: 74, installType: "paste-the-wall", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png", isBestseller: true, rating: 5, reviewCount: 214, slug: "verdant-canopy" },
-  { id: "2", name: "Hex Noir", brand: "Graham & Brown", price: 58, installType: "peel-and-stick", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png", isNew: true, rating: 5, reviewCount: 87, slug: "hex-noir" },
-  { id: "3", name: "Midnight Garden", brand: "Chasing Paper", price: 84, installType: "paste-the-wall", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png", isBestseller: true, rating: 5, reviewCount: 163, slug: "midnight-garden" },
-  { id: "4", name: "Emerald Conservatory", brand: "Tempaper", price: 62, installType: "peel-and-stick", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png", isNew: true, rating: 4, reviewCount: 52, slug: "emerald-conservatory" },
+  { id: "1", name: "Verdant Canopy",       brand: "Rebel Walls",    brandSlug: "rebel-walls",   price: 74, installType: "paste-the-wall", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png", isBestseller: true, rating: 5, reviewCount: 214, slug: "verdant-canopy" },
+  { id: "2", name: "Hex Noir",             brand: "Graham & Brown", brandSlug: "graham-brown",  price: 58, installType: "peel-and-stick", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png", isNew: true, rating: 5, reviewCount: 87, slug: "hex-noir" },
+  { id: "3", name: "Midnight Garden",      brand: "Chasing Paper",  brandSlug: "chasing-paper", price: 84, installType: "paste-the-wall", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png", isBestseller: true, rating: 5, reviewCount: 163, slug: "midnight-garden" },
+  { id: "4", name: "Emerald Conservatory", brand: "Tempaper",       brandSlug: "tempaper",      price: 62, installType: "peel-and-stick", imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png", isNew: true, rating: 4, reviewCount: 52, slug: "emerald-conservatory" },
 ];
 
 function Stars({ rating }: { rating: number }) {
@@ -43,15 +41,6 @@ function Stars({ rating }: { rating: number }) {
 function ProductCard({ product, index }: { product: ProductWithRating; index: number }) {
   const [saved, setSaved] = useState(false);
   const [hovered, setHovered] = useState(false);
-  const [addedToCart, setAddedToCart] = useState(false);
-  const { addItem } = useCart();
-
-  const handleAddToCart = (e: React.MouseEvent) => {
-    e.preventDefault();
-    addItem({ id: product.id, name: product.name, brand: product.brand, price: product.price, imageUrl: product.imageUrl });
-    setAddedToCart(true);
-    setTimeout(() => setAddedToCart(false), 1800);
-  };
 
   return (
     <motion.article
@@ -123,7 +112,7 @@ function ProductCard({ product, index }: { product: ProductWithRating; index: nu
           </span>
         </div>
 
-        {/* Add to cart — slides up on hover */}
+        {/* Buy CTA — slides up on hover */}
         <AnimatePresence>
           {hovered && (
             <motion.div
@@ -131,17 +120,21 @@ function ProductCard({ product, index }: { product: ProductWithRating; index: nu
               transition={{ duration: 0.2 }}
               className="mt-3"
             >
-              <button
-                onClick={handleAddToCart}
-                className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-none text-xs font-semibold transition-all duration-200 cursor-pointer ${addedToCart ? "bg-emerald-600 text-white" : "bg-white text-stone-900 hover:bg-stone-100"}`}
-                aria-label={`Add ${product.name} to cart`}
+              <a
+                href={getAffiliateUrl(product.slug, product.brandSlug)}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                onClick={(e) => e.stopPropagation()}
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-none text-xs font-semibold bg-white text-stone-900 hover:bg-stone-100 transition-colors"
+                aria-label={`Buy ${product.name} from ${product.brand}`}
               >
-                {addedToCart ? (
-                  <><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Added!</>
-                ) : (
-                  <><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><line x1="3" x2="21" y1="6" y2="6" /><path d="M16 10a4 4 0 0 1-8 0" /></svg>Add to cart</>
-                )}
-              </button>
+                Buy from {product.brand}
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
             </motion.div>
           )}
         </AnimatePresence>

@@ -5,7 +5,7 @@ import { use } from "react";
 import { notFound } from "next/navigation";
 import { motion } from "framer-motion";
 import { PRODUCTS } from "@/lib/products";
-import { useCart } from "@/context/CartContext";
+import { getAffiliateUrl } from "@/lib/affiliate";
 import Navbar from "@/app/components/Navbar";
 import CartDrawer from "@/app/components/CartDrawer";
 import SearchOverlay from "@/app/components/SearchOverlay";
@@ -26,16 +26,6 @@ function Stars({ rating }: { rating: number }) {
 
 function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: number }) {
   const [hovered, setHovered] = useState(false);
-  const [added, setAdded] = useState(false);
-  const { addItem } = useCart();
-
-  const handleAdd = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    addItem({ id: product.slug, name: product.name, brand: product.brand, price: product.price, imageUrl: product.imageUrl });
-    setAdded(true);
-    setTimeout(() => setAdded(false), 1800);
-  };
 
   return (
     <motion.article
@@ -79,14 +69,22 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: n
         </div>
         {hovered && (
           <motion.div initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="mt-3">
-            <button
-              onClick={handleAdd}
-              className={`w-full py-2.5 text-xs font-semibold transition-all duration-200 cursor-pointer ${added ? "bg-emerald-600 text-white" : "bg-white text-stone-900 hover:bg-stone-100"}`}
+            <a
+              href={getAffiliateUrl(product.slug, product.brandSlug)}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              onClick={(e) => e.stopPropagation()}
+              className="w-full flex items-center justify-center gap-2 py-2.5 text-xs font-semibold bg-white text-stone-900 hover:bg-stone-100 transition-colors"
               style={{ fontFamily: "Inter, sans-serif" }}
-              aria-label={`Add ${product.name} to cart`}
+              aria-label={`Buy ${product.name} from ${product.brand}`}
             >
-              {added ? "Added!" : "Add to cart"}
-            </button>
+              Buy from {product.brand}
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
           </motion.div>
         )}
       </div>

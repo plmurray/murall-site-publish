@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { notFound } from "next/navigation";
 import { use } from "react";
 import { getProduct, getRelatedProducts } from "@/lib/products";
+import { getAffiliateUrl } from "@/lib/affiliate";
 import Navbar from "@/app/components/Navbar";
 import CartDrawer from "@/app/components/CartDrawer";
 import SearchOverlay from "@/app/components/SearchOverlay";
 import SampleRequestModal from "@/app/components/SampleRequestModal";
-import { useCart } from "@/context/CartContext";
 
 function Stars({ rating, size = 14 }: { rating: number; size?: number }) {
   return (
@@ -29,21 +29,10 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
   if (!product) notFound();
 
   const related = getRelatedProducts(slug);
-  const { addItem } = useCart();
 
   const [activeImg, setActiveImg] = useState(0);
-  const [qty, setQty] = useState(1);
-  const [added, setAdded] = useState(false);
   const [sampleOpen, setSampleOpen] = useState(false);
   const [zoomed, setZoomed] = useState(false);
-
-  const handleAddToCart = () => {
-    for (let i = 0; i < qty; i++) {
-      addItem({ id: product.slug, name: product.name, brand: product.brand, price: product.price, imageUrl: product.imageUrl });
-    }
-    setAdded(true);
-    setTimeout(() => setAdded(false), 2000);
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -139,29 +128,31 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
               </span>
             </div>
 
-            {/* Quantity + Add to cart */}
-            <div className="flex gap-3 mb-4">
-              <div className="flex items-center border border-stone-200 rounded-full overflow-hidden">
-                <button onClick={() => setQty(Math.max(1, qty - 1))} className="px-4 py-3 text-stone-600 hover:bg-stone-50 transition-colors cursor-pointer text-lg leading-none" aria-label="Decrease quantity">−</button>
-                <span className="px-4 text-sm font-semibold text-stone-900 min-w-[2rem] text-center" style={{ fontFamily: "Inter, sans-serif" }}>{qty}</span>
-                <button onClick={() => setQty(qty + 1)} className="px-4 py-3 text-stone-600 hover:bg-stone-50 transition-colors cursor-pointer text-lg leading-none" aria-label="Increase quantity">+</button>
-              </div>
-              <button onClick={handleAddToCart}
-                className={`flex-1 py-3 rounded-none text-sm font-semibold transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 ${added ? "bg-emerald-600 text-white" : "bg-stone-900 text-white hover:bg-stone-800"}`}
+            {/* Affiliate CTA */}
+            <div className="flex flex-col gap-3 mb-2">
+              <a
+                href={getAffiliateUrl(product.slug, product.brandSlug)}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="w-full py-3.5 rounded-none bg-stone-900 text-white text-sm font-semibold hover:bg-stone-800 transition-colors flex items-center justify-center gap-2"
+                style={{ fontFamily: "Inter, sans-serif" }}
+              >
+                Buy from {product.brand}
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+              <button onClick={() => setSampleOpen(true)}
+                className="w-full py-3 rounded-none border border-stone-200 text-stone-700 text-sm font-medium hover:border-stone-400 transition-colors cursor-pointer"
                 style={{ fontFamily: "Inter, sans-serif" }}>
-                {added ? (
-                  <><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Added to cart</>
-                ) : (
-                  <>Add {qty} roll{qty > 1 ? "s" : ""} to cart — ${product.price * qty}</>
-                )}
+                Order a sample — from $12
               </button>
             </div>
-
-            <button onClick={() => setSampleOpen(true)}
-              className="w-full py-3 rounded-none border border-stone-200 text-stone-700 text-sm font-medium hover:border-stone-400 transition-colors cursor-pointer mb-6"
-              style={{ fontFamily: "Inter, sans-serif" }}>
-              Order a sample — from $12
-            </button>
+            <p className="text-[10px] text-stone-400 mb-6" style={{ fontFamily: "Inter, sans-serif" }}>
+              Opens {product.brand}&apos;s website · price may vary at retailer · affiliate link
+            </p>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-1.5 mb-8">
@@ -185,12 +176,12 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
               </dl>
             </div>
 
-            {/* Shipping & trust */}
+            {/* Trust strip */}
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
               {[
-                { icon: "🚚", label: "Free shipping", sub: "Orders over $120" },
-                { icon: "📦", label: "3–5 day dispatch", sub: "Tracked to 50+ countries" },
-                { icon: "↩", label: "30-day returns", sub: "Unopened rolls" },
+                { icon: "🏷️", label: "Best price", sub: "At the brand's store" },
+                { icon: "📦", label: "Ships worldwide", sub: "Direct from the brand" },
+                { icon: "↩", label: "Brand returns", sub: "Per retailer policy" },
                 { icon: "🌿", label: "Eco-friendly inks", sub: "Low-VOC, child-safe" },
               ].map(({ icon, label, sub }) => (
                 <div key={label} className="text-center p-3 bg-stone-50 rounded-none border border-stone-100">

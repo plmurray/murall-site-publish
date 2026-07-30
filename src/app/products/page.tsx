@@ -4,7 +4,7 @@ import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { PRODUCTS } from "@/lib/products";
-import { useCart } from "@/context/CartContext";
+import { getAffiliateUrl } from "@/lib/affiliate";
 import Navbar from "@/app/components/Navbar";
 import CartDrawer from "@/app/components/CartDrawer";
 import SearchOverlay from "@/app/components/SearchOverlay";
@@ -35,16 +35,6 @@ function Stars({ rating }: { rating: number }) {
 function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: number }) {
   const [hovered, setHovered] = useState(false);
   const [saved, setSaved] = useState(false);
-  const [addedToCart, setAddedToCart] = useState(false);
-  const { addItem } = useCart();
-
-  const handleAddToCart = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    addItem({ id: product.slug, name: product.name, brand: product.brand, price: product.price, imageUrl: product.imageUrl });
-    setAddedToCart(true);
-    setTimeout(() => setAddedToCart(false), 1800);
-  };
 
   return (
     <motion.article
@@ -114,17 +104,21 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: n
               transition={{ duration: 0.2 }}
               className="mt-3"
             >
-              <button
-                onClick={handleAddToCart}
-                className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-none text-xs font-semibold transition-all duration-200 cursor-pointer ${addedToCart ? "bg-emerald-600 text-white" : "bg-white text-stone-900 hover:bg-stone-100"}`}
-                aria-label={`Add ${product.name} to cart`}
+              <a
+                href={getAffiliateUrl(product.slug, product.brandSlug)}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                onClick={(e) => e.stopPropagation()}
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-none text-xs font-semibold bg-white text-stone-900 hover:bg-stone-100 transition-colors"
+                aria-label={`Buy ${product.name} from ${product.brand}`}
               >
-                {addedToCart ? (
-                  <><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>Added!</>
-                ) : (
-                  <><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><line x1="3" x2="21" y1="6" y2="6" /><path d="M16 10a4 4 0 0 1-8 0" /></svg>Add to cart</>
-                )}
-              </button>
+                Buy from {product.brand}
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
             </motion.div>
           )}
         </AnimatePresence>
