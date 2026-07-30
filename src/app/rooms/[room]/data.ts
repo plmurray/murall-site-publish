@@ -6,7 +6,7 @@ export const ROOMS = {
     description:
       "The living room is where a home tells its story. A single statement wall — botanical, geometric, or dramatically dark — turns an everyday space into something worth lingering in. These are our editors' picks for the room that matters most.",
     metaDescription:
-      "Shop living room wallpaper from 12 world-class brands. Botanical murals, bold geometrics, dark feature walls — delivered worldwide from $74/roll.",
+      "Shop living room wallpaper from 17 world-class brands. Botanical murals, bold geometrics, dark feature walls — delivered worldwide from $74/roll.",
     productSlugs: [
       "verdant-canopy",
       "midnight-garden",
@@ -40,7 +40,7 @@ export const ROOMS = {
     description:
       "Bedrooms reward intimacy. A wallpaper behind the bed — botanical, floral, or chinoiserie — replaces the headboard and becomes the room's defining element. These are our picks for spaces that are personal, considered, and genuinely restful.",
     metaDescription:
-      "Shop bedroom wallpaper from 12 world-class brands. Vintage florals, soft botanicals, chinoiserie — the perfect feature wall behind your bed, delivered worldwide.",
+      "Shop bedroom wallpaper from 17 world-class brands. Vintage florals, soft botanicals, chinoiserie — the perfect feature wall behind your bed, delivered worldwide.",
     productSlugs: [
       "archive-rose",
       "garden-party",
@@ -106,7 +106,7 @@ export const ROOMS = {
     description:
       "Dining rooms are made for drama. A dark botanical, a sweeping chinoiserie scene, or a rich floral behind the host's chair rewards sustained attention over a dinner in a way that plain paint simply cannot. These are our picks for the room that earns its boldness.",
     metaDescription:
-      "Shop dining room wallpaper — dark botanicals, chinoiserie, vintage florals for a dramatic feature wall. 12 world-class brands, delivered worldwide from $56/roll.",
+      "Shop dining room wallpaper — dark botanicals, chinoiserie, vintage florals for a dramatic feature wall. 17 world-class brands, delivered worldwide from $56/roll.",
     productSlugs: [
       "midnight-garden",
       "woods-cole-son",
