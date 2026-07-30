@@ -72,12 +72,19 @@ function CartIcon({ count }: { count: number }) {
 }
 
 const SHOP_CATEGORIES = [
-  { name: "Botanical & Tropical", count: 142, href: "/products?tag=Botanical" },
-  { name: "Bold Geometric", count: 98, href: "/products?tag=Geometric" },
-  { name: "Dark & Moody", count: 74, href: "/products?tag=Dark+%26+Moody" },
-  { name: "Peel & Stick", count: 213, href: "/products?install=Peel+%26+Stick" },
-  { name: "Vintage Floral", count: null, href: "/products" },
-  { name: "Chinoiserie", count: null, href: "/products" },
+  { name: "Botanical & Tropical", count: 10, href: "/products?tag=Botanical" },
+  { name: "Bold Geometric", count: 3, href: "/products?tag=Geometric" },
+  { name: "Dark & Moody", count: 3, href: "/products?tag=Dark+%26+Moody" },
+  { name: "Peel & Stick", count: 5, href: "/products?install=Peel+%26+Stick" },
+  { name: "Vintage Floral", count: 2, href: "/products?tag=Vintage+Floral" },
+  { name: "Chinoiserie", count: 2, href: "/products?tag=Chinoiserie" },
+];
+
+const SHOP_ROOMS = [
+  { name: "Living Room", href: "/rooms/living-room" },
+  { name: "Bedroom", href: "/rooms/bedroom" },
+  { name: "Nursery", href: "/rooms/nursery" },
+  { name: "Dining Room", href: "/rooms/dining-room" },
 ];
 
 function MegaMenu({ visible }: { visible: boolean }) {
@@ -89,24 +96,36 @@ function MegaMenu({ visible }: { visible: boolean }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.2 }}
-          className="absolute top-full left-0 mt-2 w-[480px] bg-white/95 backdrop-blur-xl rounded-none shadow-2xl border border-stone-100 p-6 z-50"
+          className="absolute top-full left-0 mt-2 w-[600px] bg-white/95 backdrop-blur-xl rounded-none shadow-2xl border border-stone-100 p-6 z-50"
         >
-          <div className="grid grid-cols-2 gap-2">
-            {SHOP_CATEGORIES.map((cat) => (
-              <a key={cat.name} href={cat.href}
-                className="group flex items-center justify-between px-3 py-2.5 rounded-none hover:bg-stone-50 transition-colors cursor-pointer">
-                <span className="text-sm font-medium text-stone-800 group-hover:text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>{cat.name}</span>
-                {cat.count ? (
-                  <span className="text-xs text-stone-400">{cat.count}</span>
-                ) : (
-                  <span className="text-[10px] px-1.5 py-0.5 rounded-none bg-stone-100 text-stone-400">Soon</span>
-                )}
-              </a>
-            ))}
+          <div className="grid grid-cols-2 gap-x-8">
+            <div>
+              <p className="text-[10px] tracking-widest uppercase text-stone-400 mb-3 font-medium" style={{ fontFamily: "Inter, sans-serif" }}>Shop by style</p>
+              <div className="space-y-0.5">
+                {SHOP_CATEGORIES.map((cat) => (
+                  <a key={cat.name} href={cat.href}
+                    className="group flex items-center justify-between px-3 py-2 rounded-none hover:bg-stone-50 transition-colors cursor-pointer">
+                    <span className="text-sm font-medium text-stone-800 group-hover:text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>{cat.name}</span>
+                    <span className="text-xs text-stone-400">{cat.count}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="text-[10px] tracking-widest uppercase text-stone-400 mb-3 font-medium" style={{ fontFamily: "Inter, sans-serif" }}>Shop by room</p>
+              <div className="space-y-0.5">
+                {SHOP_ROOMS.map((room) => (
+                  <a key={room.name} href={room.href}
+                    className="group flex items-center px-3 py-2 rounded-none hover:bg-stone-50 transition-colors cursor-pointer">
+                    <span className="text-sm font-medium text-stone-800 group-hover:text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>{room.name}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
           <div className="mt-4 pt-4 border-t border-stone-100">
             <a href="/products" className="text-xs tracking-widest uppercase text-emerald-700 hover:text-emerald-900 font-medium transition-colors">
-              View all wallpapers →
+              View all 15 wallpapers →
             </a>
           </div>
         </motion.div>
@@ -136,6 +155,17 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
             </button>
           </div>
           <nav className="flex-1 px-6 py-8 overflow-y-auto">
+            <p className="text-[10px] tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Shop by room</p>
+            {SHOP_ROOMS.map((room) => (
+              <a key={room.name} href={room.href}
+                className="flex items-center justify-between py-3 border-b border-stone-50 text-base font-medium text-stone-700 hover:text-emerald-700 transition-colors cursor-pointer"
+                style={{ fontFamily: "'EB Garamond', serif" }} onClick={onClose}>
+                {room.name}
+              </a>
+            ))}
+            <div className="mt-6 mb-2">
+              <p className="text-[10px] tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Menu</p>
+            </div>
             {["Shop", "Brands", "Journal", "Trade", "Affiliates", "Shipping"].map((item) => (
               <a key={item} href={item === "Shop" ? "/products" : item === "Shipping" ? "/shipping" : `/${item.toLowerCase()}`}
                 className="flex items-center justify-between py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-emerald-700 transition-colors cursor-pointer"
