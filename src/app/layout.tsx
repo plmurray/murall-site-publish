@@ -5,7 +5,7 @@ import { SearchProvider } from "@/context/SearchContext";
 
 export const metadata: Metadata = {
   title: "Murall Wallpaper — Walls that tell stories",
-  description: "The world's most beautiful wallpaper, curated from 25 leading global brands. Botanical, geometric, murals, peel & stick, luxury — delivered to 50+ countries.",
+  description: "The world's most beautiful wallpaper, curated from 12 leading global brands. Botanical, geometric, murals, peel & stick, luxury — delivered to 50+ countries.",
   openGraph: {
     title: "Murall Wallpaper — Walls that tell stories",
     description: "The world's most beautiful wallpaper, curated from 12 leading global brands. Delivered to 50+ countries.",
