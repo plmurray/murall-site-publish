@@ -29,7 +29,7 @@ const HERO_SLIDES = [
 
 const TRUST_ITEMS = [
   "Free shipping over $120",
-  "25 curated brands",
+  "12 curated brands",
   "Sample packs from $12",
   "Expert install guides",
   "Peel & Stick options",
@@ -117,7 +117,7 @@ function Hero({ onSampleOpen }: { onSampleOpen: () => void }) {
           className="text-base sm:text-lg text-white/75 max-w-md mb-10 leading-relaxed"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
-          The world&apos;s most beautiful wallpaper, curated from 25 leading global brands. Botanical, geometric, murals, peel &amp; stick, luxury — delivered to 50+ countries.
+          The world&apos;s most beautiful wallpaper, curated from 12 leading global brands. Botanical, geometric, murals, peel &amp; stick, luxury — delivered to 50+ countries.
         </motion.p>
 
         <motion.div
@@ -174,7 +174,7 @@ const WHY_ITEMS = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "25 Curated Brands",
+    title: "12 Curated Brands",
     body: "We hand-select every brand — from indie studios to iconic houses. No mass-market filler, ever.",
   },
   {

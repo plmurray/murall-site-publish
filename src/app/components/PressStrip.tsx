@@ -15,7 +15,7 @@ const PRESS = [
 
 const STATS = [
   { value: "50+", label: "Countries shipped to" },
-  { value: "25", label: "Curated brands" },
+  { value: "12", label: "Curated brands" },
   { value: "2,400+", label: "Trade clients" },
   { value: "4.9★", label: "Average review" },
 ];

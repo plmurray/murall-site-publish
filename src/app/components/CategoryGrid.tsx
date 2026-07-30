@@ -22,7 +22,7 @@ const CATEGORIES: Category[] = [
   {
     id: "botanical",
     name: "Botanical & Tropical",
-    productCount: 142,
+    productCount: 10,
     imageUrl:
       "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
     installTypes: ["all", "paste-the-wall", "peel-and-stick"],
@@ -30,7 +30,7 @@ const CATEGORIES: Category[] = [
   {
     id: "geometric",
     name: "Bold Geometric",
-    productCount: 98,
+    productCount: 3,
     imageUrl:
       "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png",
     installTypes: ["all", "paste-the-wall", "peel-and-stick"],
@@ -38,34 +38,31 @@ const CATEGORIES: Category[] = [
   {
     id: "dark-moody",
     name: "Dark & Moody",
-    productCount: 74,
+    productCount: 3,
     imageUrl:
       "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png",
-    installTypes: ["all", "paste-the-wall"],
+    installTypes: ["all", "paste-the-wall", "peel-and-stick"],
   },
   {
     id: "peel-stick",
     name: "Peel & Stick",
-    productCount: 213,
+    productCount: 5,
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png",
     installTypes: ["all", "peel-and-stick"],
-    comingSoon: false,
   },
   {
     id: "vintage-floral",
     name: "Vintage Floral",
-    productCount: 0,
-    imageUrl: null,
-    installTypes: ["all", "paste-the-wall"],
-    comingSoon: true,
+    productCount: 2,
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png",
+    installTypes: ["all", "paste-the-wall", "peel-and-stick"],
   },
   {
     id: "chinoiserie",
     name: "Chinoiserie",
-    productCount: 0,
-    imageUrl: null,
+    productCount: 2,
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
     installTypes: ["all", "paste-the-wall"],
-    comingSoon: true,
   },
 ];
 
@@ -119,6 +116,8 @@ const CATEGORY_HREFS: Record<string, string> = {
   geometric: "/products?tag=Geometric",
   "dark-moody": "/products?tag=Dark+%26+Moody",
   "peel-stick": "/products?install=Peel+%26+Stick",
+  "vintage-floral": "/products?tag=Vintage+Floral",
+  chinoiserie: "/products?tag=Chinoiserie",
 };
 
 // ─── Category Tile ────────────────────────────────────────────────────────────

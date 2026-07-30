@@ -11,7 +11,7 @@ import SearchOverlay from "@/app/components/SearchOverlay";
 import SampleRequestModal from "@/app/components/SampleRequestModal";
 
 const INSTALL_FILTERS = ["All", "Paste-the-Wall", "Peel & Stick"];
-const TAG_FILTERS = ["All styles", "Botanical", "Geometric", "Dark & Moody", "Bestseller", "New", "Renter-friendly"];
+const TAG_FILTERS = ["All styles", "Botanical", "Geometric", "Dark & Moody", "Vintage Floral", "Chinoiserie", "Bestseller", "New", "Renter-friendly"];
 
 const SORT_OPTIONS = [
   { value: "featured", label: "Featured" },
