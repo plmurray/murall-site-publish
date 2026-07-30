@@ -332,11 +332,41 @@ function Newsletter() {
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
 
-const FOOTER_LINKS: Record<string, string[]> = {
-  Shop: ["Botanical & Tropical", "Bold Geometric", "Peel & Stick", "New Arrivals", "Bestsellers"],
-  Help: ["Track Your Order", "Sizing Guide", "Installation Help", "Returns & Exchanges", "Contact Us"],
-  Company: ["About Murall", "Our Brands", "Trade Programme", "Journal", "Careers"],
+const FOOTER_LINKS: Record<string, { label: string; href: string }[]> = {
+  Shop: [
+    { label: "Botanical & Tropical", href: "/products?tag=Botanical" },
+    { label: "Bold Geometric", href: "/products?tag=Geometric" },
+    { label: "Peel & Stick", href: "/products?install=Peel+%26+Stick" },
+    { label: "New Arrivals", href: "/products?tag=New" },
+    { label: "Bestsellers", href: "/products?tag=Bestseller" },
+  ],
+  Help: [
+    { label: "Track Your Order", href: "/contact" },
+    { label: "Sizing Guide", href: "/journal/how-many-rolls-do-i-need" },
+    { label: "Installation Help", href: "/shipping" },
+    { label: "Returns & Exchanges", href: "/shipping" },
+    { label: "Contact Us", href: "/contact" },
+  ],
+  Company: [
+    { label: "About Murall", href: "/about" },
+    { label: "Our Brands", href: "/brands" },
+    { label: "Trade Programme", href: "/trade" },
+    { label: "Journal", href: "/journal" },
+    { label: "Affiliates", href: "/affiliates" },
+  ],
 };
+
+const SOCIAL_LINKS = [
+  { label: "Instagram", initial: "I", href: "https://instagram.com/murallwallpaper" },
+  { label: "Pinterest", initial: "P", href: "https://pinterest.com/murallwallpaper" },
+  { label: "TikTok", initial: "T", href: "https://tiktok.com/@murallwallpaper" },
+];
+
+const LEGAL_LINKS = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms" },
+  { label: "Cookie Settings", href: "/privacy-policy#cookies" },
+];
 
 function Footer() {
   return (
@@ -368,10 +398,10 @@ function Footer() {
               Curated wallpaper from the world&apos;s finest studios. Ships free worldwide over $120.
             </p>
             <div className="flex gap-3">
-              {["Instagram", "Pinterest", "TikTok"].map((social) => (
-                <a key={social} href={`#${social.toLowerCase()}`} aria-label={social}
+              {SOCIAL_LINKS.map((s) => (
+                <a key={s.label} href={s.href} aria-label={s.label} target="_blank" rel="noopener noreferrer"
                   className="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 hover:text-white hover:bg-stone-700 transition-colors cursor-pointer">
-                  <span className="text-[10px] font-bold">{social[0]}</span>
+                  <span className="text-[10px] font-bold">{s.initial}</span>
                 </a>
               ))}
             </div>
@@ -381,11 +411,11 @@ function Footer() {
             <div key={heading}>
               <h3 className="text-xs tracking-widest uppercase text-stone-400 mb-4 font-medium" style={{ fontFamily: "Inter, sans-serif" }}>{heading}</h3>
               <ul className="space-y-2.5">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+                {links.map((item) => (
+                  <li key={item.label}>
+                    <a href={item.href}
                       className="text-sm text-stone-500 hover:text-white transition-colors cursor-pointer" style={{ fontFamily: "Inter, sans-serif" }}>
-                      {link}
+                      {item.label}
                     </a>
                   </li>
                 ))}
@@ -399,10 +429,10 @@ function Footer() {
             © 2026 Murall Ltd. All rights reserved.
           </p>
           <div className="flex gap-5">
-            {["Privacy Policy", "Terms of Service", "Cookie Settings"].map((link) => (
-              <a key={link} href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
+            {LEGAL_LINKS.map((item) => (
+              <a key={item.label} href={item.href}
                 className="text-xs text-stone-600 hover:text-stone-400 transition-colors cursor-pointer" style={{ fontFamily: "Inter, sans-serif" }}>
-                {link}
+                {item.label}
               </a>
             ))}
           </div>
