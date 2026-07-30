@@ -10,7 +10,7 @@ import Navbar from "@/app/components/Navbar";
 import CartDrawer from "@/app/components/CartDrawer";
 import SearchOverlay from "@/app/components/SearchOverlay";
 import SampleRequestModal from "@/app/components/SampleRequestModal";
-import { ROOMS, RoomKey } from "./page";
+import { ROOMS, RoomKey } from "./data";
 
 function Stars({ rating }: { rating: number }) {
   return (
