@@ -397,7 +397,7 @@ function Footer() {
             <p className="text-stone-500 text-sm leading-relaxed mb-4" style={{ fontFamily: "Inter, sans-serif" }}>
               Curated wallpaper from the world&apos;s finest studios. Ships free worldwide over $120.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-3 mb-4">
               {SOCIAL_LINKS.map((s) => (
                 <a key={s.label} href={s.href} aria-label={s.label} target="_blank" rel="noopener noreferrer"
                   className="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center text-stone-400 hover:text-white hover:bg-stone-700 transition-colors cursor-pointer">
@@ -405,6 +405,9 @@ function Footer() {
                 </a>
               ))}
             </div>
+            <a href="mailto:hello@murallwallpaper.com" className="text-xs text-stone-600 hover:text-stone-400 transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
+              hello@murallwallpaper.com
+            </a>
           </div>
 
           {Object.entries(FOOTER_LINKS).map(([heading, links]) => (
@@ -424,7 +427,25 @@ function Footer() {
           ))}
         </div>
 
-        <div className="border-t border-stone-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        {/* Trust badges */}
+        <div className="border-t border-stone-800 pt-8 pb-6 grid grid-cols-2 sm:grid-cols-4 gap-5">
+          {[
+            { icon: "🔒", label: "Secure checkout", sub: "256-bit encrypted" },
+            { icon: "🌿", label: "Eco-friendly inks", sub: "Low-VOC, child-safe" },
+            { icon: "📋", label: "Sample first", sub: "From $12 before you commit" },
+            { icon: "🚚", label: "Free shipping", sub: "On orders over $120" },
+          ].map(({ icon, label, sub }) => (
+            <div key={label} className="flex items-center gap-3">
+              <span className="text-lg flex-shrink-0" aria-hidden="true">{icon}</span>
+              <div>
+                <p className="text-xs font-medium text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>{label}</p>
+                <p className="text-[10px] text-stone-600" style={{ fontFamily: "Inter, sans-serif" }}>{sub}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="border-t border-stone-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-stone-600" style={{ fontFamily: "Inter, sans-serif" }}>
             © 2026 Murall Ltd. All rights reserved.
           </p>

@@ -185,12 +185,13 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
               </dl>
             </div>
 
-            {/* Shipping */}
-            <div className="mt-6 grid grid-cols-3 gap-3">
+            {/* Shipping & trust */}
+            <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
               {[
                 { icon: "🚚", label: "Free shipping", sub: "Orders over $120" },
+                { icon: "📦", label: "3–5 day dispatch", sub: "Tracked to 50+ countries" },
                 { icon: "↩", label: "30-day returns", sub: "Unopened rolls" },
-                { icon: "📦", label: "Tracked delivery", sub: "To 50+ countries" },
+                { icon: "🌿", label: "Eco-friendly inks", sub: "Low-VOC, child-safe" },
               ].map(({ icon, label, sub }) => (
                 <div key={label} className="text-center p-3 bg-stone-50 rounded-none border border-stone-100">
                   <p className="text-xl mb-1" aria-hidden="true">{icon}</p>

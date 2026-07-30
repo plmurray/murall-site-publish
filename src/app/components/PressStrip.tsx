@@ -3,14 +3,14 @@
 import { motion } from "framer-motion";
 
 const PRESS = [
-  { name: "Architectural Digest", abbr: "AD" },
-  { name: "Elle Decoration", abbr: "ELLE DÉCOR" },
-  { name: "Vogue Living", abbr: "VOGUE LIVING" },
-  { name: "House Beautiful", abbr: "HOUSE BEAUTIFUL" },
-  { name: "The World of Interiors", abbr: "WORLD OF INTERIORS" },
-  { name: "Dezeen", abbr: "DEZEEN" },
-  { name: "Interior Design", abbr: "INTERIOR DESIGN" },
-  { name: "Homes & Gardens", abbr: "HOMES & GARDENS" },
+  { name: "Architectural Digest", abbr: "AD", href: "https://www.architecturaldigest.com" },
+  { name: "Elle Decoration", abbr: "ELLE DÉCOR", href: "https://www.elledecoration.co.uk" },
+  { name: "Vogue Living", abbr: "VOGUE LIVING", href: "https://www.vogue.com" },
+  { name: "House Beautiful", abbr: "HOUSE BEAUTIFUL", href: "https://www.housebeautiful.com" },
+  { name: "The World of Interiors", abbr: "WORLD OF INTERIORS", href: "https://www.worldofinteriors.co.uk" },
+  { name: "Dezeen", abbr: "DEZEEN", href: "https://www.dezeen.com" },
+  { name: "Interior Design", abbr: "INTERIOR DESIGN", href: "https://www.interiordesign.net" },
+  { name: "Homes & Gardens", abbr: "HOMES & GARDENS", href: "https://www.homesandgardens.com" },
 ];
 
 const STATS = [
@@ -51,14 +51,18 @@ export default function PressStrip() {
             transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
           >
             {[...PRESS, ...PRESS].map((pub, i) => (
-              <span
+              <a
                 key={i}
-                className="inline-flex items-center mx-8 text-sm font-semibold tracking-[0.12em] text-stone-400 uppercase select-none"
+                href={pub.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={pub.name}
+                className="inline-flex items-center mx-8 text-sm font-semibold tracking-[0.12em] text-stone-400 uppercase select-none hover:text-stone-600 transition-colors"
                 style={{ fontFamily: "Georgia, serif", letterSpacing: "0.12em" }}
               >
                 {pub.abbr}
                 <span className="mx-8 text-stone-200" aria-hidden="true">◆</span>
-              </span>
+              </a>
             ))}
           </motion.div>
         </div>
