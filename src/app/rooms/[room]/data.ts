@@ -9,13 +9,13 @@ export const ROOMS = {
       "Shop living room wallpaper from 17 world-class brands. Botanical murals, bold geometrics, dark feature walls — delivered worldwide from $74/roll.",
     productSlugs: [
       "verdant-canopy",
-      "midnight-garden",
-      "strawberry-thief",
-      "woods-cole-son",
-      "diamond-lattice",
-      "hummingbirds",
-      "imperial-garden",
-      "papilio-botanical",
+      "palmeral",
+      "limerence",
+      "flamingo-pink",
+      "fornasetti-sol",
+      "king-protea",
+      "tropical-luxe",
+      "wilderness-emerald",
     ],
     tips: [
       {
@@ -43,13 +43,13 @@ export const ROOMS = {
       "Shop bedroom wallpaper from 17 world-class brands. Vintage florals, soft botanicals, chinoiserie — the perfect feature wall behind your bed, delivered worldwide.",
     productSlugs: [
       "archive-rose",
-      "garden-party",
-      "papilio-botanical",
+      "peony-garden",
+      "golden-lily",
+      "bluebell-wood",
+      "acanthus-scroll",
+      "willow-bough",
       "magnolia-peel-stick",
-      "strawberry-thief",
-      "hummingbirds",
-      "imperial-garden",
-      "blackthorn",
+      "honeysuckle-trellis",
     ],
     tips: [
       {
@@ -76,12 +76,12 @@ export const ROOMS = {
     metaDescription:
       "Shop nursery wallpaper — child-safe, removable peel & stick and paste options. Soft botanicals and gentle patterns, delivered worldwide. Samples from $12.",
     productSlugs: [
-      "magnolia-peel-stick",
       "garden-party",
-      "emerald-conservatory",
-      "blackthorn",
-      "verdant-canopy",
-      "papilio-botanical",
+      "wildflower-field",
+      "fern-frond",
+      "strawberry-fields",
+      "canopy-illustrated",
+      "magnolia-peel-stick",
     ],
     tips: [
       {
@@ -109,13 +109,13 @@ export const ROOMS = {
       "Shop dining room wallpaper — dark botanicals, chinoiserie, vintage florals for a dramatic feature wall. 17 world-class brands, delivered worldwide from $56/roll.",
     productSlugs: [
       "midnight-garden",
-      "woods-cole-son",
-      "imperial-garden",
+      "nocturne",
+      "shou-lao",
+      "broadway-noir",
+      "edo-birds",
+      "thistle-dark",
       "hummingbirds",
-      "strawberry-thief",
-      "archive-rose",
-      "blackthorn",
-      "diamond-lattice",
+      "woods-cole-son",
     ],
     tips: [
       {
