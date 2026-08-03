@@ -3,26 +3,36 @@ import { MetadataRoute } from "next";
 const BASE = "https://murallwallpaper.com";
 
 const PRODUCTS = [
-  "verdant-canopy",
-  "emerald-conservatory",
-  "midnight-garden",
-  "hex-noir",
-  "archive-rose",
-  "woods-cole-son",
-  "momentum-grid",
-  "papilio-botanical",
-  "blackthorn",
-  "diamond-lattice",
-  "hummingbirds",
-  "garden-party",
-  "imperial-garden",
-  "magnolia-peel-stick",
-  "strawberry-thief",
-  "nocturne",
-  "verdure",
-  "meadow-bloom",
-  "velvet-forest",
-  "art-deco-soleil",
+  // Row 1-5 (original 20)
+  "verdant-canopy", "emerald-conservatory", "midnight-garden", "hex-noir",
+  "archive-rose", "woods-cole-son", "momentum-grid", "papilio-botanical",
+  "blackthorn", "diamond-lattice", "hummingbirds", "garden-party",
+  "imperial-garden", "magnolia-peel-stick", "strawberry-thief", "nocturne",
+  "verdure", "meadow-bloom", "velvet-forest", "art-deco-soleil",
+  // Row 6-10
+  "jungle-reverie", "chevron-slate", "terracotta-wave", "coral-reef",
+  "peony-garden", "willow-bough", "fjord-fog", "aurora-wave",
+  "coastal-rope", "king-protea", "coastal-stripe", "wildflower-field",
+  "folly-brook", "limerence", "thistle-dark", "shou-lao",
+  "chevron-gold", "savanna-dusk", "arch-shadow", "desert-bloom",
+  // Row 11-15
+  "sunburst-retro", "bluebell-wood", "chrysanthemum-blue", "pine-needle",
+  "geo-burst", "blue-linen", "shiplap-white", "strawberry-fields",
+  "sea-grass", "palmeral", "glasgow-bird", "edo-birds",
+  "broadway-noir", "palm-paradise", "mosaic-blush", "sunset-stripe",
+  "grasscloth-natural", "honeysuckle-trellis", "acanthus-scroll", "noma-grid",
+  // Row 16-20
+  "tropical-luxe", "farmhouse-bloom", "daisy-meadow", "bramble-rose",
+  "peacock-manor", "wilderness-emerald", "lichen-stone", "moonlit-garden",
+  "deco-lattice", "rainforest-floor", "stripe-dusk", "indigo-lattice",
+  "lily-pad-pond", "etchings-seas", "golden-lily", "nordic-frost",
+  "monstera-shadow", "american-toile", "boho-mudcloth", "canopy-illustrated",
+  // Row 21-25
+  "regency-damask", "fruit-folly", "moth-nocturne", "fornasetti-sol",
+  "toile-de-verre", "flamingo-pink", "shell-bisque", "arctic-grove",
+  "linen-weave", "sage-scatter", "fern-frond", "bird-and-pomegranate",
+  "hygge-floral", "tangent-stripe", "loft-concrete", "perennial-garden",
+  "jacobean-tree", "toile-countryside", "zebra-dusk", "deco-terrazzo",
 ];
 
 const JOURNAL_POSTS = [

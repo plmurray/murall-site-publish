@@ -72,12 +72,18 @@ function CartIcon({ count }: { count: number }) {
 }
 
 const SHOP_CATEGORIES = [
-  { name: "Botanical & Tropical", count: 14, href: "/products?tag=Botanical" },
-  { name: "Bold Geometric", count: 4, href: "/products?tag=Geometric" },
-  { name: "Dark & Moody", count: 5, href: "/products?tag=Dark+%26+Moody" },
-  { name: "Peel & Stick", count: 5, href: "/products?install=Peel+%26+Stick" },
-  { name: "Vintage Floral", count: 3, href: "/products?tag=Vintage+Floral" },
-  { name: "Chinoiserie", count: 2, href: "/products?tag=Chinoiserie" },
+  { name: "Botanical & Tropical", count: 42, href: "/products?tag=Botanical" },
+  { name: "Bold Geometric", count: 14, href: "/products?tag=Geometric" },
+  { name: "Dark & Moody", count: 12, href: "/products?tag=Dark+%26+Moody" },
+  { name: "Peel & Stick", count: 18, href: "/products?install=Peel+%26+Stick" },
+  { name: "Vintage Floral", count: 12, href: "/products?tag=Vintage+Floral" },
+  { name: "Chinoiserie", count: 5, href: "/products?tag=Chinoiserie" },
+  { name: "Coastal",            count: 8,  href: "/products?tag=Coastal" },
+  { name: "Boho",               count: 7,  href: "/products?tag=Boho" },
+  { name: "Grandmillennial",    count: 6,  href: "/products?tag=Grandmillennial" },
+  { name: "Art Deco",           count: 6,  href: "/products?tag=Art+Deco" },
+  { name: "Cottage Core",       count: 7,  href: "/products?tag=Cottage+Core" },
+  { name: "Maximalist",         count: 5,  href: "/products?tag=Maximalist" },
 ];
 
 const SHOP_ROOMS = [

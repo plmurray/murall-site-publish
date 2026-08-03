@@ -11,7 +11,7 @@ import SearchOverlay from "@/app/components/SearchOverlay";
 import SampleRequestModal from "@/app/components/SampleRequestModal";
 
 const INSTALL_FILTERS = ["All", "Paste-the-Wall", "Peel & Stick"];
-const TAG_FILTERS = ["All styles", "Botanical", "Geometric", "Dark & Moody", "Vintage Floral", "Chinoiserie", "Bestseller", "New", "Renter-friendly"];
+const TAG_FILTERS = ["All styles", "Botanical", "Geometric", "Dark & Moody", "Vintage Floral", "Chinoiserie", "Coastal", "Boho", "Maximalist", "Grandmillennial", "Cottage Core", "Abstract", "Art Deco", "Bestseller", "New", "Renter-friendly"];
 
 const SORT_OPTIONS = [
   { value: "featured", label: "Featured" },
@@ -127,7 +127,7 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: n
   );
 }
 
-const COMING_SOON_TAGS = ["Vintage Floral", "Chinoiserie"];
+const COMING_SOON_TAGS: string[] = [];
 
 function NotifyMeBanner({ tag }: { tag: string }) {
   const [email, setEmail] = useState("");
