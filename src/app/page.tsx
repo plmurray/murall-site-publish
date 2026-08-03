@@ -445,17 +445,22 @@ function Footer() {
           ))}
         </div>
 
-        <div className="border-t border-stone-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-stone-600" style={{ fontFamily: "Inter, sans-serif" }}>
-            © 2026 Murall Ltd. All rights reserved.
+        <div className="border-t border-stone-800 pt-6 space-y-3">
+          <p className="text-[11px] text-stone-700 leading-relaxed max-w-3xl" style={{ fontFamily: "Inter, sans-serif" }}>
+            Murall Wallpaper is a curated affiliate site. When you click &ldquo;Buy&rdquo; and make a purchase, we may earn a commission from the brand at no extra cost to you. Prices and availability are set by the retailer.
           </p>
-          <div className="flex gap-5">
-            {LEGAL_LINKS.map((item) => (
-              <a key={item.label} href={item.href}
-                className="text-xs text-stone-600 hover:text-stone-400 transition-colors cursor-pointer" style={{ fontFamily: "Inter, sans-serif" }}>
-                {item.label}
-              </a>
-            ))}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <p className="text-xs text-stone-600" style={{ fontFamily: "Inter, sans-serif" }}>
+              © 2026 Murall Ltd. All rights reserved.
+            </p>
+            <div className="flex gap-5">
+              {LEGAL_LINKS.map((item) => (
+                <a key={item.label} href={item.href}
+                  className="text-xs text-stone-600 hover:text-stone-400 transition-colors cursor-pointer" style={{ fontFamily: "Inter, sans-serif" }}>
+                  {item.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
