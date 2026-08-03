@@ -133,6 +133,72 @@ export const ROOMS = {
     ],
     filterHref: "/products?tag=Dark+%26+Moody",
   },
+  "bathroom": {
+    name: "Bathroom",
+    headline: "Bathroom wallpaper",
+    subheadline: "The smallest room deserves the boldest idea.",
+    description:
+      "The bathroom is the one room where guests expect to be surprised. A peel-and-stick botanical, a coastal stripe, or a single arresting design on one wall transforms a functional space into something worth lingering in. Peel-and-stick papers are ideal — they install cleanly, hold well in low-humidity bathrooms, and remove without damage.",
+    metaDescription:
+      "Shop bathroom wallpaper — peel & stick botanicals, coastal designs, bold statement walls. Moisture-friendly options from 17 brands, delivered worldwide.",
+    productSlugs: [
+      "fern-frond",
+      "lily-pad-pond",
+      "coastal-stripe",
+      "shell-bisque",
+      "indigo-lattice",
+      "grasscloth-natural",
+    ],
+    tips: [
+      {
+        heading: "Peel & Stick is safest",
+        body: "Traditional paste papers can struggle in high-humidity bathrooms. Peel-and-stick vinyl papers handle moisture better and come away cleanly. If your bathroom has good ventilation, paste papers work fine on a single accent wall — but always size that wall away from the shower.",
+      },
+      {
+        heading: "One wall, not four",
+        body: "In a bathroom, papering all four walls is rarely necessary and often overwhelming. One wall — typically behind the basin or opposite the door — is enough to transform the room. The other three walls in a complementary colour let the wallpaper breathe.",
+      },
+      {
+        heading: "Small rooms, bold patterns",
+        body: "The counterintuitive rule: a bold, large-scale pattern in a small bathroom often works better than a small, busy repeat. The large pattern gives the eye a clear place to land. In a small room, a big design reads as a single picture rather than competing visual noise.",
+      },
+    ],
+    filterHref: "/products?install=Peel+%26+Stick",
+  },
+  "hallway": {
+    name: "Hallway",
+    headline: "Hallway wallpaper",
+    subheadline: "The first impression your home makes. Make it memorable.",
+    description:
+      "The hallway sets the register for everything beyond it. A bold botanical, a sweeping mural, or a confident geometric on the long wall announces what kind of home this is before anyone has sat down. Because hallways are high-traffic, non-woven paste papers are the most practical choice — they're durable, scrubbable, and far more forgiving than paint.",
+    metaDescription:
+      "Shop hallway wallpaper — bold botanicals, geometric feature walls, dark murals from 17 brands. The perfect first impression, delivered worldwide.",
+    productSlugs: [
+      "woods-cole-son",
+      "arctic-grove",
+      "hex-noir",
+      "fornasetti-sol",
+      "arch-shadow",
+      "flamingo-pink",
+      "loft-concrete",
+      "chevron-slate",
+    ],
+    tips: [
+      {
+        heading: "Go bold in the hallway",
+        body: "The hallway is a transitional space — people move through it rather than sitting in it for hours. This makes it the ideal place for a pattern or colourway you might find exhausting in a living room. A deep botanical, a striking geometric, or a full mural: the hallway can take it.",
+      },
+      {
+        heading: "The long wall",
+        body: "In most hallways, paper the long wall and paint the others. The long wall is what you see from the door and from the bottom of the stairs — it's the canvas. The short end walls in a deep complementary tone give the space a finished, considered quality.",
+      },
+      {
+        heading: "Durability matters",
+        body: "Hallways get knocked, scraped, and brushed by coats, bags, and children. Non-woven paste papers are significantly more hardwearing than paper-backed options and can be gently wiped clean. Worth spending a little more on a quality substrate in this particular room.",
+      },
+    ],
+    filterHref: "/products?tag=Botanical",
+  },
 } as const;
 
 export type RoomKey = keyof typeof ROOMS;

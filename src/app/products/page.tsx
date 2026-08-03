@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { PRODUCTS } from "@/lib/products";
 import { getAffiliateUrl } from "@/lib/affiliate";
+import { PRODUCT_COLORS, COLOUR_FILTERS } from "@/lib/productColors";
 import Navbar from "@/app/components/Navbar";
 import CartDrawer from "@/app/components/CartDrawer";
 import SearchOverlay from "@/app/components/SearchOverlay";
@@ -203,6 +204,10 @@ function ProductsCatalogue() {
     const v = searchParams.get("tag");
     return v ? decodeURIComponent(v) : "All styles";
   });
+  const [colourFilter, setColourFilter] = useState(() => {
+    const v = searchParams.get("colour");
+    return v ? decodeURIComponent(v) : "All colours";
+  });
   const [sort, setSort] = useState("featured");
 
   let filtered = PRODUCTS.filter((p) => {
@@ -211,7 +216,9 @@ function ProductsCatalogue() {
       (installFilter === "Paste-the-Wall" && (p.installType === "paste-the-wall" || p.installType === "both")) ||
       (installFilter === "Peel & Stick" && (p.installType === "peel-and-stick" || p.installType === "both"));
     const tagMatch = tagFilter === "All styles" || p.tags.some((t) => t.toLowerCase().includes(tagFilter.toLowerCase()));
-    return installMatch && tagMatch;
+    const colours = PRODUCT_COLORS[p.slug] ?? [];
+    const colourMatch = colourFilter === "All colours" || colours.includes(colourFilter);
+    return installMatch && tagMatch && colourMatch;
   });
 
   if (sort === "price-asc") filtered = [...filtered].sort((a, b) => a.price - b.price);
@@ -240,9 +247,9 @@ function ProductsCatalogue() {
       {/* Filters + Sort */}
       <div className="sticky top-0 z-30 bg-white border-b border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-4">
+          <div className="flex flex-col gap-3 py-4">
+            {/* Row 1: install + style */}
             <div className="flex flex-wrap gap-2">
-              {/* Install type */}
               {INSTALL_FILTERS.map((f) => (
                 <button key={f} onClick={() => setInstallFilter(f)}
                   className={`px-3 py-1.5 rounded-none text-xs font-medium transition-all duration-200 cursor-pointer border ${installFilter === f ? "bg-stone-900 text-white border-stone-900" : "bg-white text-stone-600 border-stone-200 hover:border-stone-400"}`}
@@ -251,7 +258,6 @@ function ProductsCatalogue() {
                 </button>
               ))}
               <span className="text-stone-200 self-center">|</span>
-              {/* Tag filters */}
               {TAG_FILTERS.map((f) => (
                 <button key={f} onClick={() => setTagFilter(f)}
                   className={`px-3 py-1.5 rounded-none text-xs font-medium transition-all duration-200 cursor-pointer border ${tagFilter === f ? "bg-stone-900 text-white border-stone-900" : "bg-white text-stone-600 border-stone-200 hover:border-stone-400"}`}
@@ -260,8 +266,19 @@ function ProductsCatalogue() {
                 </button>
               ))}
             </div>
-
-            <div className="flex items-center gap-2 flex-shrink-0">
+            {/* Row 2: colour swatches */}
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-[10px] uppercase tracking-widest text-stone-400 mr-1" style={{ fontFamily: "Inter, sans-serif" }}>Colour</span>
+              {COLOUR_FILTERS.map((c) => (
+                <button key={c} onClick={() => setColourFilter(c)}
+                  className={`px-3 py-1.5 rounded-none text-xs font-medium transition-all duration-200 cursor-pointer border ${colourFilter === c ? "bg-stone-900 text-white border-stone-900" : "bg-white text-stone-600 border-stone-200 hover:border-stone-400"}`}
+                  style={{ fontFamily: "Inter, sans-serif" }}>
+                  {c}
+                </button>
+              ))}
+            </div>
+            {/* Row 3: result count + sort */}
+            <div className="flex items-center justify-between">
               <span className="text-xs text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>{filtered.length} results</span>
               <select
                 value={sort}
@@ -286,7 +303,7 @@ function ProductsCatalogue() {
         <AnimatePresence mode="wait">
           {filtered.length > 0 ? (
             <motion.div
-              key={`${installFilter}-${tagFilter}-${sort}`}
+              key={`${installFilter}-${tagFilter}-${colourFilter}-${sort}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -303,7 +320,7 @@ function ProductsCatalogue() {
               className="text-center py-24"
             >
               <p className="text-stone-400 text-lg mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>No wallpapers match those filters</p>
-              <button onClick={() => { setInstallFilter("All"); setTagFilter("All styles"); }}
+              <button onClick={() => { setInstallFilter("All"); setTagFilter("All styles"); setColourFilter("All colours"); }}
                 className="text-sm text-emerald-700 underline underline-offset-4 cursor-pointer"
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 Clear filters

@@ -127,7 +127,7 @@ export default function RoomPageClient({ params }: { params: Promise<{ room: str
               {data.description}
             </p>
             <div className="flex flex-wrap gap-2">
-              {(["living-room", "bedroom", "nursery", "dining-room"] as RoomKey[]).map((r) => (
+              {(["living-room", "bedroom", "nursery", "dining-room", "bathroom", "hallway"] as RoomKey[]).map((r) => (
                 <a
                   key={r}
                   href={`/rooms/${r}`}

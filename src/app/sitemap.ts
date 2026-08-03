@@ -49,6 +49,8 @@ const ROOMS = [
   "bedroom",
   "nursery",
   "dining-room",
+  "bathroom",
+  "hallway",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

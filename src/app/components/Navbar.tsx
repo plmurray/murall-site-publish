@@ -88,9 +88,11 @@ const SHOP_CATEGORIES = [
 
 const SHOP_ROOMS = [
   { name: "Living Room", href: "/rooms/living-room" },
-  { name: "Bedroom", href: "/rooms/bedroom" },
-  { name: "Nursery", href: "/rooms/nursery" },
+  { name: "Bedroom",     href: "/rooms/bedroom" },
+  { name: "Nursery",     href: "/rooms/nursery" },
   { name: "Dining Room", href: "/rooms/dining-room" },
+  { name: "Bathroom",    href: "/rooms/bathroom" },
+  { name: "Hallway",     href: "/rooms/hallway" },
 ];
 
 function MegaMenu({ visible }: { visible: boolean }) {
