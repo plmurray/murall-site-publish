@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import { useCart } from "@/context/CartContext";
 import { useSearch } from "@/context/SearchContext";
 
@@ -192,9 +192,7 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
 
 export default function Navbar({ onSampleOpen = () => {}, onCalcOpen, lightMode = false }: { onSampleOpen?: () => void; onCalcOpen?: () => void; lightMode?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
-  // isDark = white navbar mode (dark text, dark logo ink) — only when scrolled
   const isDark = scrolled;
-  // darkBanner = inner pages get stone-900 banner so cream+gold logo is visible
   const darkBanner = lightMode && !scrolled;
 
   const [shopOpen, setShopOpen] = useState(false);
@@ -202,11 +200,11 @@ export default function Navbar({ onSampleOpen = () => {}, onCalcOpen, lightMode 
   const { count, openCart } = useCart();
   const { openSearch } = useSearch();
 
-  useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handler, { passive: true });
-    return () => window.removeEventListener("scroll", handler);
-  }, []);
+  const { scrollY } = useScroll();
+  const headerHeight = useTransform(scrollY, [0, 100], [160, 64]);
+  const logoScale   = useTransform(scrollY, [0, 100], [1, 0.42]);
+
+  useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 20));
 
   const navBg = isDark
     ? "bg-white/90 backdrop-blur-xl shadow-sm border-b border-stone-100"
@@ -217,14 +215,21 @@ export default function Navbar({ onSampleOpen = () => {}, onCalcOpen, lightMode 
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${navBg}`}
-        initial={{ y: -64 }} animate={{ y: 0 }} transition={{ duration: 0.4, ease: "easeOut" }}
+        style={{ height: headerHeight }}
+        className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-300 ${navBg}`}
+        initial={{ y: -200 }} animate={{ y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-40">
-            <a href="/" className="flex-shrink-0 cursor-pointer" aria-label="Murall Wallpaper home">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+          <div className="flex items-center justify-between h-full">
+            <motion.a
+              href="/"
+              style={{ scale: logoScale, originX: 0, originY: 0.5 }}
+              className="flex-shrink-0 cursor-pointer"
+              aria-label="Murall Wallpaper home"
+            >
               <MurallLogo scrolled={isDark} />
-            </a>
+            </motion.a>
+
 
             <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
               <div className="relative" onMouseEnter={() => setShopOpen(true)} onMouseLeave={() => setShopOpen(false)}>
