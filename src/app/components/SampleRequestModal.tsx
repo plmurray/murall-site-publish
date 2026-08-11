@@ -21,20 +21,22 @@ export default function SampleRequestModal({ isOpen, onClose }: SampleRequestMod
     e.preventDefault();
     setLoading(true);
     try {
-      await fetch("/", {
+      await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          "form-name": "sample-request",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: "REPLACE_WITH_WEB3FORMS_KEY",
+          subject: `Sample request from ${form.name}`,
+          from_name: "Murall Wallpaper",
           name: form.name,
           email: form.email,
           address: form.address,
           style: form.style,
-          notes: form.notes,
-        }).toString(),
+          notes: form.notes || "None",
+        }),
       });
     } catch {
-      // Still show success — submission logged server-side or retried
+      // Show success regardless — don't block the user on network errors
     } finally {
       setLoading(false);
       setStep("success");
