@@ -25,7 +25,7 @@ export default function SampleRequestModal({ isOpen, onClose }: SampleRequestMod
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          access_key: "REPLACE_WITH_WEB3FORMS_KEY",
+          access_key: "71e977b9-1690-45aa-9829-e406ccbc68ab",
           subject: `Sample request from ${form.name}`,
           from_name: "Murall Wallpaper",
           name: form.name,
