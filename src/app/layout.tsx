@@ -4,8 +4,7 @@ import { CartProvider } from "@/context/CartContext";
 import { SearchProvider } from "@/context/SearchContext";
 import CookieBanner from "@/app/components/CookieBanner";
 
-// Replace GA_MEASUREMENT_ID with your real GA4 ID from analytics.google.com
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "";
+const GA_ID = "G-KC3SZJSFW7";
 
 export const metadata: Metadata = {
   title: "Murall Wallpaper — Walls that tell stories",
