@@ -74,6 +74,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             ]),
           }}
         />
+        {/* Hidden form for Netlify Forms build-time detection */}
+        <form name="sample-request" data-netlify="true" hidden aria-hidden="true">
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="text" name="address" />
+          <input type="text" name="style" />
+          <textarea name="notes" />
+        </form>
         <CartProvider>
           <SearchProvider>
             {children}
