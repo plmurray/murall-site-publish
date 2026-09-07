@@ -167,7 +167,6 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
             {SHOP_ROOMS.map((room) => (
               <a key={room.name} href={room.href}
                 className="flex items-center justify-between py-3 border-b border-stone-50 text-base font-medium text-stone-700 transition-colors cursor-pointer hover:opacity-70"
-                style={{ ["--tw-text-opacity" as string]: "1" }}
                 style={{ fontFamily: "'EB Garamond', serif" }} onClick={onClose}>
                 {room.name}
               </a>
