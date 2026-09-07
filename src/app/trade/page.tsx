@@ -388,7 +388,7 @@ export default function TradePage() {
           <AnimatePresence mode="wait">
             {step === "success" ? (
               <motion.div key="success" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-16">
-                <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 rounded-full bg-brand-forest text-brand-gold flex items-center justify-center mx-auto mb-6">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5" />
                   </svg>

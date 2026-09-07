@@ -163,7 +163,7 @@ export default function AffiliatesPage() {
       {/* Who it's for */}
       <section className="py-16 bg-stone-50 border-b border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-6 text-center" style={{ fontFamily: "Inter, sans-serif" }}>Perfect for</p>
+          <p className="text-xs text-stone-400 mb-6 text-center" style={{ fontFamily: "Inter, sans-serif" }}>Perfect for</p>
           <div className="flex flex-wrap justify-center gap-3">
             {WHO.map((w, i) => (
               <motion.span key={w.label} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
@@ -181,7 +181,7 @@ export default function AffiliatesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>What you get</p>
+            <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>What you get</p>
             <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
               Everything you need to <em>succeed</em>
             </h2>
@@ -208,7 +208,7 @@ export default function AffiliatesPage() {
       <section id="how-it-works" className="py-20 bg-stone-50 border-y border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Simple process</p>
+            <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Simple process</p>
             <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
               How it <em>works</em>
             </h2>
@@ -232,7 +232,7 @@ export default function AffiliatesPage() {
       <section id="apply" className="py-20 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Join the programme</p>
+            <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Join the programme</p>
             <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
               Apply <em>today</em>
             </h2>
@@ -243,7 +243,7 @@ export default function AffiliatesPage() {
             {step === "success" ? (
               <motion.div key="success" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }}
                 className="text-center py-16 px-8 bg-stone-50 rounded-none border border-stone-100">
-                <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 rounded-full bg-brand-forest flex items-center justify-center mx-auto mb-6">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
                 </div>
                 <h3 className="text-2xl font-semibold text-stone-900 mb-3" style={{ fontFamily: "'EB Garamond', serif" }}>Application received!</h3>

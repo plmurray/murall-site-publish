@@ -84,7 +84,7 @@ const NETWORKS = [
 ];
 
 const colorMap: Record<string, string> = {
-  emerald: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  emerald: "bg-brand-forest text-brand-gold border-brand-gold",
   amber: "bg-amber-50 text-amber-700 border-amber-200",
   rose: "bg-rose-50 text-rose-700 border-rose-200",
   violet: "bg-violet-50 text-violet-700 border-violet-200",

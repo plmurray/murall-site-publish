@@ -50,7 +50,7 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: n
 
       <div className="absolute top-3 left-3 flex flex-col gap-1.5">
         {product.isBestseller && <span className="px-2 py-0.5 text-[10px] font-semibold bg-amber-50/90 text-amber-800 border border-amber-200">Bestseller</span>}
-        {product.isNew && <span className="px-2 py-0.5 text-[10px] font-semibold bg-emerald-50/90 text-emerald-800 border border-emerald-200">New</span>}
+        {product.isNew && <span className="px-2 py-0.5 text-[10px] font-semibold bg-brand-forest/90 text-brand-gold border border-brand-gold">New</span>}
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -148,7 +148,7 @@ export default function RoomPageClient({ params }: { params: Promise<{ room: str
           <p className="text-sm text-stone-500" style={{ fontFamily: "Inter, sans-serif" }}>
             {products.length} curated picks for the {data.name.toLowerCase()}
           </p>
-          <a href={data.filterHref} className="text-xs text-emerald-700 font-medium hover:text-emerald-900 transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
+          <a href={data.filterHref} className="text-xs text-brand-gold font-medium hover:text-brand-gold transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
             See full collection →
           </a>
         </div>
@@ -160,7 +160,7 @@ export default function RoomPageClient({ params }: { params: Promise<{ room: str
       {/* Design tips */}
       <section className="bg-stone-50 border-y border-stone-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Expert advice</p>
+          <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Expert advice</p>
           <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900 mb-10" style={{ fontFamily: "'EB Garamond', serif" }}>
             Styling your <em>{data.name.toLowerCase()}</em>
           </h2>
@@ -178,7 +178,7 @@ export default function RoomPageClient({ params }: { params: Promise<{ room: str
       {/* Other rooms */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-8" style={{ fontFamily: "Inter, sans-serif" }}>Shop by room</p>
+          <p className="text-xs text-stone-400 mb-8" style={{ fontFamily: "Inter, sans-serif" }}>Shop by room</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {(Object.entries(ROOMS) as [RoomKey, typeof ROOMS[RoomKey]][])
               .filter(([r]) => r !== room)
@@ -209,7 +209,7 @@ export default function RoomPageClient({ params }: { params: Promise<{ room: str
       {/* Sample CTA */}
       <section className="bg-stone-900 py-16 text-center">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <p className="text-xs tracking-widest uppercase text-emerald-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Before you commit</p>
+          <p className="text-xs text-brand-gold mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Before you commit</p>
           <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
             Order a physical sample
           </h2>

@@ -148,7 +148,7 @@ function CategoryTile({
       }}
       className={`relative overflow-hidden rounded-none aspect-[4/3] cursor-pointer group
         border-2 transition-colors duration-300
-        ${hovered ? "border-emerald-600/60" : "border-transparent"}
+        ${hovered ? "border-brand-gold/60" : "border-transparent"}
         ${category.comingSoon ? "opacity-70 cursor-default" : ""}
       `}
       onMouseEnter={() => setHovered(true)}
@@ -229,7 +229,7 @@ function CategoryTile({
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -10 }}
               transition={{ duration: 0.22 }}
-              className="text-emerald-300 flex-shrink-0 mb-1"
+              className="text-brand-gold flex-shrink-0 mb-1"
             >
               <ArrowIcon />
             </motion.div>
@@ -238,7 +238,7 @@ function CategoryTile({
       </div>
 
       {/* Focus ring for keyboard nav */}
-      <div className="absolute inset-0 rounded-none ring-0 focus-within:ring-2 focus-within:ring-emerald-500 focus-within:ring-offset-2 pointer-events-none" />
+      <div className="absolute inset-0 rounded-none ring-0 focus-within:ring-2 focus-within:ring-brand-gold focus-within:ring-offset-2 pointer-events-none" />
     </motion.div>
   );
 }

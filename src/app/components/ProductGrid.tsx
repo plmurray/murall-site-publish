@@ -72,7 +72,7 @@ function ProductCard({ product, index }: { product: ProductWithRating; index: nu
           <span className="px-2 py-0.5 rounded-none text-[10px] font-semibold bg-amber-50/90 text-amber-800 border border-amber-200">Bestseller</span>
         )}
         {product.isNew && (
-          <span className="px-2 py-0.5 rounded-none text-[10px] font-semibold bg-emerald-50/90 text-emerald-800 border border-emerald-200">New</span>
+          <span className="px-2 py-0.5 rounded-none text-[10px] font-semibold border" style={{ background: "rgba(191,155,90,0.15)", color: "var(--brand-gold)", borderColor: "rgba(191,155,90,0.4)" }}>New</span>
         )}
       </div>
 
@@ -148,7 +148,7 @@ export default function ProductGrid() {
     <section id="bestsellers" className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" aria-labelledby="bestsellers-heading">
       <div className="flex items-end justify-between mb-10">
         <div>
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-2">Editor&apos;s picks</p>
+          <p className="text-xs text-stone-400 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Editor&apos;s picks</p>
           <h2 id="bestsellers-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
             This week&apos;s <em>bestsellers</em>
           </h2>

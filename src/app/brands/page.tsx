@@ -413,7 +413,7 @@ function BrandCard({ brand, index }: { brand: typeof BRANDS[0]; index: number })
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.55, delay: index * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
-      className="group relative bg-white rounded-none overflow-hidden border border-stone-100 hover:border-emerald-200 hover:shadow-xl transition-all duration-300 flex flex-col"
+      className="group relative bg-white rounded-none overflow-hidden border border-stone-100 hover:border-brand-gold hover:shadow-xl transition-all duration-300 flex flex-col"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -429,7 +429,7 @@ function BrandCard({ brand, index }: { brand: typeof BRANDS[0]; index: number })
         <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent" />
         {brand.featured && (
           <div className="absolute top-3 left-3">
-            <span className="px-2.5 py-1 rounded-none text-[10px] font-semibold bg-emerald-600 text-white">Featured</span>
+            <span className="px-2.5 py-1 rounded-none text-[10px] font-semibold bg-brand-forest text-white">Featured</span>
           </div>
         )}
         {/* Affiliate / Trade badge */}
@@ -455,7 +455,7 @@ function BrandCard({ brand, index }: { brand: typeof BRANDS[0]; index: number })
           <h3 className="text-lg font-semibold text-stone-900 leading-snug" style={{ fontFamily: "'EB Garamond', serif" }}>{brand.name}</h3>
           <span className="text-xs px-2 py-0.5 rounded-none bg-stone-100 text-stone-500 ml-2 flex-shrink-0" title={PRICE_LABELS[brand.priceRange]}>{brand.priceRange}</span>
         </div>
-        <p className="text-xs text-emerald-700 font-medium mb-3 tracking-wide uppercase" style={{ fontFamily: "Inter, sans-serif" }}>{brand.specialty}</p>
+        <p className="text-xs text-brand-gold font-medium mb-3" style={{ fontFamily: "Inter, sans-serif" }}>{brand.specialty}</p>
         <p className="text-sm text-stone-500 leading-relaxed mb-4 flex-1" style={{ fontFamily: "Inter, sans-serif" }}>{brand.description}</p>
 
         {/* Tags */}
@@ -469,8 +469,8 @@ function BrandCard({ brand, index }: { brand: typeof BRANDS[0]; index: number })
         <div className="flex items-center gap-1.5 mb-3 text-[11px] text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>
           {brand.hasAffiliate ? (
             <>
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
-              <span className="text-emerald-700 font-medium">{brand.affiliateNetwork}</span>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--brand-gold)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
+              <span className="text-brand-gold font-medium">{brand.affiliateNetwork}</span>
               <span className="text-stone-300">·</span>
               <span>{brand.commission}</span>
             </>
@@ -527,7 +527,7 @@ export default function BrandsPage() {
       <section className="pt-32 pb-16 bg-stone-50 border-b border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Our partners</p>
+            <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Our partners</p>
             <h1 className="text-4xl sm:text-5xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
               25 world-class <em>brands</em>
             </h1>
@@ -583,12 +583,12 @@ export default function BrandsPage() {
       {/* CTA */}
       <section className="bg-stone-900 py-16 text-center">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <p className="text-xs tracking-widest uppercase text-emerald-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Trade programme</p>
+          <p className="text-xs text-brand-gold mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Trade programme</p>
           <h2 className="text-3xl font-semibold text-white mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>Are you a designer or architect?</h2>
           <p className="text-stone-400 text-sm mb-8 max-w-md mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
             Unlock trade pricing across all 25 brands plus dedicated account support.
           </p>
-          <a href="/trade" className="inline-flex items-center gap-2 px-6 py-3 rounded-none bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition-colors cursor-pointer" style={{ fontFamily: "Inter, sans-serif" }}>
+          <a href="/trade" className="inline-flex items-center gap-2 px-6 py-3 rounded-none bg-brand-forest text-white text-sm font-semibold hover:opacity-80 transition-opacity cursor-pointer" style={{ fontFamily: "Inter, sans-serif" }}>
             Apply for trade access
             <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6" /></svg>
           </a>

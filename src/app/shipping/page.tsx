@@ -125,7 +125,7 @@ function FAQItem({ faq, index }: { faq: typeof FAQS[0]; index: number }) {
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between py-5 text-left cursor-pointer group"
       >
-        <span className="text-base font-medium text-stone-900 group-hover:text-emerald-800 transition-colors pr-8"
+        <span className="text-base font-medium text-stone-900 group-hover:text-brand-gold transition-colors pr-8"
           style={{ fontFamily: "'EB Garamond', serif" }}>{faq.q}</span>
         <span className="text-stone-400 flex-shrink-0 text-lg">{open ? "−" : "+"}</span>
       </button>
@@ -158,7 +158,7 @@ export default function ShippingPage() {
       <section className="pt-32 pb-16 bg-stone-50 border-b border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Delivery information</p>
+            <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Delivery information</p>
             <h1 className="text-4xl sm:text-5xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
               We ship to <em>50+ countries</em>
             </h1>
@@ -194,7 +194,7 @@ export default function ShippingPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>By region</p>
+            <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>By region</p>
             <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
               Shipping rates & <em>timelines</em>
             </h2>
@@ -225,7 +225,7 @@ export default function ShippingPage() {
                     <p className="text-sm font-medium text-stone-800" style={{ fontFamily: "Inter, sans-serif" }}>{region.expressCost} · {region.express}</p>
                   </div>
                   <div className="pt-1 border-t border-stone-50">
-                    <p className="text-xs text-emerald-700 font-medium" style={{ fontFamily: "Inter, sans-serif" }}>
+                    <p className="text-xs text-brand-gold font-medium" style={{ fontFamily: "Inter, sans-serif" }}>
                       Free standard over {region.freeOver}
                     </p>
                   </div>
@@ -242,7 +242,7 @@ export default function ShippingPage() {
       <section className="py-20 bg-stone-50 border-t border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mb-12">
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Our packaging</p>
+            <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Our packaging</p>
             <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
               Packed to <em>arrive perfect</em>
             </h2>
@@ -302,7 +302,7 @@ export default function ShippingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Returns policy</p>
+              <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Returns policy</p>
               <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900 mb-6" style={{ fontFamily: "'EB Garamond', serif" }}>
                 30-day <em>hassle-free</em> returns
               </h2>
@@ -344,7 +344,7 @@ export default function ShippingPage() {
       {/* FAQ */}
       <section className="py-20 bg-stone-50 border-t border-stone-100">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Common questions</p>
+          <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Common questions</p>
           <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900 mb-10" style={{ fontFamily: "'EB Garamond', serif" }}>
             Shipping <em>FAQs</em>
           </h2>
@@ -359,7 +359,7 @@ export default function ShippingPage() {
       {/* CTA */}
       <section className="py-16 bg-stone-900 text-center">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Still have questions?</p>
+          <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Still have questions?</p>
           <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
             We're here to help
           </h2>

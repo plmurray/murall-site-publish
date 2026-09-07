@@ -22,7 +22,7 @@ export default function ContactPage() {
 
       <section className="pt-32 pb-16 bg-stone-50 border-b border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Get in touch</p>
+          <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Get in touch</p>
           <h1 className="text-4xl sm:text-5xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
             Contact <em>us</em>
           </h1>
@@ -62,7 +62,7 @@ export default function ContactPage() {
                   <h3 className="text-base font-semibold text-stone-900 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>{item.title}</h3>
                   <p className="text-sm text-stone-500 leading-relaxed mb-2" style={{ fontFamily: "Inter, sans-serif" }}>{item.body}</p>
                   {item.link && (
-                    <a href={item.link.href} className="text-sm text-emerald-700 hover:text-emerald-900 font-medium" style={{ fontFamily: "Inter, sans-serif" }}>
+                    <a href={item.link.href} className="text-sm text-brand-gold hover:text-brand-gold font-medium" style={{ fontFamily: "Inter, sans-serif" }}>
                       {item.link.label}
                     </a>
                   )}
@@ -72,7 +72,7 @@ export default function ContactPage() {
 
             <div className="mt-8 p-6 bg-stone-50 border border-stone-100">
               <p className="text-sm font-semibold text-stone-900 mb-1" style={{ fontFamily: "Inter, sans-serif" }}>Email us directly</p>
-              <a href="mailto:hello@murallwallpaper.com" className="text-sm text-emerald-700 hover:text-emerald-900" style={{ fontFamily: "Inter, sans-serif" }}>
+              <a href="mailto:hello@murallwallpaper.com" className="text-sm text-brand-gold hover:text-brand-gold" style={{ fontFamily: "Inter, sans-serif" }}>
                 hello@murallwallpaper.com
               </a>
               <p className="text-xs text-stone-400 mt-3" style={{ fontFamily: "Inter, sans-serif" }}>We aim to respond to all enquiries within one business day.</p>
@@ -84,9 +84,9 @@ export default function ContactPage() {
             <h2 className="text-2xl font-semibold text-stone-900 mb-8" style={{ fontFamily: "'EB Garamond', serif" }}>Send a message</h2>
 
             {submitted ? (
-              <div className="p-8 bg-emerald-50 border border-emerald-100 text-center">
-                <p className="text-lg font-medium text-emerald-900 mb-2" style={{ fontFamily: "'EB Garamond', serif" }}>Message received</p>
-                <p className="text-sm text-emerald-700" style={{ fontFamily: "Inter, sans-serif" }}>
+              <div className="p-8 bg-brand-forest border border-brand-gold text-center">
+                <p className="text-lg font-medium text-brand-gold mb-2" style={{ fontFamily: "'EB Garamond', serif" }}>Message received</p>
+                <p className="text-sm text-brand-gold" style={{ fontFamily: "Inter, sans-serif" }}>
                   Thank you — we&apos;ll be in touch within one business day.
                 </p>
               </div>

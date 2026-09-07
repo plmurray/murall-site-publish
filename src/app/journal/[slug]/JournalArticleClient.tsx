@@ -284,7 +284,7 @@ const ARTICLES: Article[] = [
 const CATEGORY_COLORS: Record<string, string> = {
   "How-to": "bg-sky-50 text-sky-700 border-sky-100",
   "Guide": "bg-amber-50 text-amber-700 border-amber-100",
-  "Trend": "bg-emerald-50 text-emerald-700 border-emerald-100",
+  "Trend": "bg-brand-forest text-brand-gold border-brand-gold",
   "Interview": "bg-violet-50 text-violet-700 border-violet-100",
   "Inspiration": "bg-rose-50 text-rose-700 border-rose-100",
 };
@@ -301,7 +301,7 @@ function RelatedCard({ article }: { article: Article }) {
         </div>
       </div>
       <p className="text-xs text-stone-400 mb-1" style={{ fontFamily: "Inter, sans-serif" }}>{article.date} · {article.readTime}</p>
-      <h3 className="text-base font-medium text-stone-900 leading-snug group-hover:text-emerald-800 transition-colors duration-200"
+      <h3 className="text-base font-medium text-stone-900 leading-snug group-hover:text-brand-gold transition-colors duration-200"
         style={{ fontFamily: "'EB Garamond', serif" }}>{article.title}</h3>
     </a>
   );
@@ -477,7 +477,7 @@ export default function JournalArticleClient({ params }: { params: Promise<{ slu
       {related.length > 0 && (
         <section className="bg-stone-50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-8" style={{ fontFamily: "Inter, sans-serif" }}>Continue reading</p>
+            <p className="text-xs text-stone-400 mb-8" style={{ fontFamily: "Inter, sans-serif" }}>Continue reading</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {related.map((r) => <RelatedCard key={r.slug} article={r} />)}
             </div>
@@ -488,16 +488,16 @@ export default function JournalArticleClient({ params }: { params: Promise<{ slu
       {/* Newsletter */}
       <section className="bg-stone-900 py-16 text-center">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <p className="text-xs tracking-widest uppercase text-emerald-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Never miss a story</p>
+          <p className="text-xs tracking-widest uppercase text-brand-gold mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Never miss a story</p>
           <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-8" style={{ fontFamily: "'EB Garamond', serif" }}>
             Get the Journal delivered fortnightly
           </h2>
           <form className="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto" onSubmit={(e) => e.preventDefault()}>
             <label htmlFor="article-email" className="sr-only">Email address</label>
             <input id="article-email" type="email" placeholder="your@email.com" required
-              className="flex-1 px-4 py-3 rounded-none bg-white/10 border border-white/20 text-white placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="flex-1 px-4 py-3 rounded-none bg-white/10 border border-white/20 text-white placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold"
               style={{ fontFamily: "Inter, sans-serif" }} />
-            <button type="submit" className="px-6 py-3 rounded-none bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition-colors cursor-pointer flex-shrink-0"
+            <button type="submit" className="px-6 py-3 rounded-none bg-brand-forest text-white text-sm font-semibold hover:bg-brand-forest transition-colors cursor-pointer flex-shrink-0"
               style={{ fontFamily: "Inter, sans-serif" }}>Subscribe</button>
           </form>
         </motion.div>

@@ -132,7 +132,7 @@ function MegaMenu({ visible }: { visible: boolean }) {
             </div>
           </div>
           <div className="mt-4 pt-4 border-t border-stone-100">
-            <a href="/products" className="text-xs tracking-widest uppercase text-emerald-700 hover:text-emerald-900 font-medium transition-colors">
+            <a href="/products" className="text-xs tracking-widest uppercase font-medium transition-colors hover:opacity-70" style={{ color: "var(--brand-gold)" }}>
               View all 20 wallpapers →
             </a>
           </div>
@@ -166,7 +166,8 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
             <p className="text-[10px] tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Shop by room</p>
             {SHOP_ROOMS.map((room) => (
               <a key={room.name} href={room.href}
-                className="flex items-center justify-between py-3 border-b border-stone-50 text-base font-medium text-stone-700 hover:text-emerald-700 transition-colors cursor-pointer"
+                className="flex items-center justify-between py-3 border-b border-stone-50 text-base font-medium text-stone-700 transition-colors cursor-pointer hover:opacity-70"
+                style={{ ["--tw-text-opacity" as string]: "1" }}
                 style={{ fontFamily: "'EB Garamond', serif" }} onClick={onClose}>
                 {room.name}
               </a>
@@ -176,7 +177,7 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
             </div>
             {["Shop", "Brands", "Journal", "Visualizer", "Trade", "Affiliates", "Shipping"].map((item) => (
               <a key={item} href={item === "Shop" ? "/products" : item === "Shipping" ? "/shipping" : `/${item.toLowerCase()}`}
-                className="flex items-center justify-between py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-emerald-700 transition-colors cursor-pointer"
+                className="flex items-center justify-between py-4 border-b border-stone-100 text-lg font-medium text-stone-800 transition-colors cursor-pointer hover:opacity-60"
                 style={{ fontFamily: "'EB Garamond', serif" }} onClick={onClose}>
                 {item}
                 <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -217,14 +218,16 @@ export default function Navbar({ onSampleOpen = () => {}, onCalcOpen, lightMode 
   const navBg = isDark
     ? "bg-white/90 backdrop-blur-xl shadow-sm border-b border-stone-100"
     : darkBanner
-      ? "bg-stone-900/95 backdrop-blur-xl border-b border-stone-800"
+      ? "backdrop-blur-xl border-b border-white/10"
       : "bg-transparent";
+
+  const navStyle = darkBanner ? { background: "rgba(30,58,47,0.97)" } : undefined;
 
   return (
     <>
       <motion.header
-        style={{ height: headerHeight }}
-        className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-300 ${navBg}`}
+        style={{ height: headerHeight, ...navStyle }}
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${navBg}`}
         initial={{ y: -200 }} animate={{ y: 0 }} transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">

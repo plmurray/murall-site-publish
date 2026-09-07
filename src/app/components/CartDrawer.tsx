@@ -66,7 +66,7 @@ export default function CartDrawer() {
                     </svg>
                   </div>
                   <p className="text-stone-500 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>Your cart is empty</p>
-                  <button onClick={closeCart} className="mt-4 text-xs text-emerald-700 hover:text-emerald-900 font-medium cursor-pointer" style={{ fontFamily: "Inter, sans-serif" }}>
+                  <button onClick={closeCart} className="mt-4 text-xs font-medium cursor-pointer hover:opacity-70 transition-opacity" style={{ fontFamily: "Inter, sans-serif", color: "var(--brand-gold)" }}>
                     Continue browsing →
                   </button>
                 </div>

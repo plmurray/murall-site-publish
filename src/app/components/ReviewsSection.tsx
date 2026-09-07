@@ -110,7 +110,7 @@ export default function ReviewsSection() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 gap-4">
           <div>
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Customer stories</p>
+            <p className="text-xs text-stone-400 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Customer stories</p>
             <h2 id="reviews-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
               Loved by <em>design lovers</em>
             </h2>
@@ -168,7 +168,7 @@ export default function ReviewsSection() {
                     </div>
                   </div>
                   {REVIEWS[active].verified && (
-                    <span className="flex items-center gap-1 text-[10px] text-emerald-700 font-medium" style={{ fontFamily: "Inter, sans-serif" }}>
+                    <span className="flex items-center gap-1 text-[10px] font-medium" style={{ fontFamily: "Inter, sans-serif", color: "var(--brand-gold)" }}>
                       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <path d="M20 6 9 17l-5-5" />
                       </svg>

@@ -79,7 +79,7 @@ const POSTS = [
 const CATEGORY_COLORS: Record<string, string> = {
   "How-to": "bg-sky-50 text-sky-700 border-sky-100",
   "Guide": "bg-amber-50 text-amber-700 border-amber-100",
-  "Trend": "bg-emerald-50 text-emerald-700 border-emerald-100",
+  "Trend": "bg-brand-forest text-brand-gold border-brand-gold",
   "Interview": "bg-violet-50 text-violet-700 border-violet-100",
   "Inspiration": "bg-rose-50 text-rose-700 border-rose-100",
 };
@@ -121,7 +121,7 @@ function PostCard({ post, index, large = false }: { post: typeof POSTS[0]; index
         <span className="text-xs text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>{post.readTime}</span>
       </div>
 
-      <h2 className={`font-semibold text-stone-900 mb-2 leading-snug group-hover:text-emerald-800 transition-colors duration-200 ${large ? "text-2xl sm:text-3xl" : "text-base"}`}
+      <h2 className={`font-semibold text-stone-900 mb-2 leading-snug group-hover:text-brand-gold transition-colors duration-200 ${large ? "text-2xl sm:text-3xl" : "text-base"}`}
         style={{ fontFamily: "'EB Garamond', serif" }}>
         {post.title}
       </h2>
@@ -136,7 +136,7 @@ function PostCard({ post, index, large = false }: { post: typeof POSTS[0]; index
           {post.author[0]}
         </div>
         <span className="text-xs text-stone-500" style={{ fontFamily: "Inter, sans-serif" }}>{post.author}</span>
-        <span className="ml-auto text-xs text-emerald-700 font-medium group-hover:underline" style={{ fontFamily: "Inter, sans-serif" }}>Read →</span>
+        <span className="ml-auto text-xs text-brand-gold font-medium group-hover:underline" style={{ fontFamily: "Inter, sans-serif" }}>Read →</span>
       </div>
     </motion.article>
   );
@@ -160,7 +160,7 @@ export default function JournalPage() {
       <section className="pt-32 pb-16 bg-stone-50 border-b border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>The Murall Journal</p>
+            <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>The Murall Journal</p>
             <h1 className="text-4xl sm:text-5xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
               Stories, guides &amp; <em>inspiration</em>
             </h1>
@@ -174,7 +174,7 @@ export default function JournalPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         {/* Featured posts */}
         <div className="mb-16">
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-8" style={{ fontFamily: "Inter, sans-serif" }}>Featured</p>
+          <p className="text-xs text-stone-400 mb-8" style={{ fontFamily: "Inter, sans-serif" }}>Featured</p>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featured.map((post, i) => (
               <PostCard key={post.slug} post={post} index={i} large />
@@ -211,16 +211,16 @@ export default function JournalPage() {
       {/* Newsletter strip */}
       <section className="bg-stone-900 py-16 text-center">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <p className="text-xs tracking-widest uppercase text-emerald-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Never miss a story</p>
+          <p className="text-xs text-brand-gold mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Never miss a story</p>
           <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-8" style={{ fontFamily: "'EB Garamond', serif" }}>
             Get the Journal delivered fortnightly
           </h2>
           <form className="flex flex-col sm:flex-row gap-3 max-w-sm mx-auto" onSubmit={(e) => e.preventDefault()}>
             <label htmlFor="journal-email" className="sr-only">Email address</label>
             <input id="journal-email" type="email" placeholder="your@email.com" required
-              className="flex-1 px-4 py-3 rounded-none bg-white/10 border border-white/20 text-white placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="flex-1 px-4 py-3 rounded-none bg-white/10 border border-white/20 text-white placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold"
               style={{ fontFamily: "Inter, sans-serif" }} />
-            <button type="submit" className="px-6 py-3 rounded-none bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition-colors cursor-pointer flex-shrink-0"
+            <button type="submit" className="px-6 py-3 rounded-none bg-brand-forest text-white text-sm font-semibold hover:bg-brand-forest transition-colors cursor-pointer flex-shrink-0"
               style={{ fontFamily: "Inter, sans-serif" }}>Subscribe</button>
           </form>
         </motion.div>

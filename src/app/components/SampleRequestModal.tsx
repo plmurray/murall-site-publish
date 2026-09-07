@@ -101,13 +101,13 @@ export default function SampleRequestModal({ isOpen, onClose }: SampleRequestMod
                       <div>
                         <label htmlFor="s-name" className="block text-xs font-medium text-stone-700 mb-1.5" style={{ fontFamily: "Inter, sans-serif" }}>Full name *</label>
                         <input id="s-name" type="text" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
-                          className="w-full px-3 py-2 rounded-none border border-stone-200 text-sm text-stone-900 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+                          className="w-full px-3 py-2 rounded-none border border-stone-200 text-sm text-stone-900 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors"
                           style={{ fontFamily: "Inter, sans-serif" }} placeholder="Jane Smith" />
                       </div>
                       <div>
                         <label htmlFor="s-email" className="block text-xs font-medium text-stone-700 mb-1.5" style={{ fontFamily: "Inter, sans-serif" }}>Email *</label>
                         <input id="s-email" type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
-                          className="w-full px-3 py-2 rounded-none border border-stone-200 text-sm text-stone-900 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+                          className="w-full px-3 py-2 rounded-none border border-stone-200 text-sm text-stone-900 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors"
                           style={{ fontFamily: "Inter, sans-serif" }} placeholder="jane@example.com" />
                       </div>
                     </div>
@@ -115,14 +115,14 @@ export default function SampleRequestModal({ isOpen, onClose }: SampleRequestMod
                     <div>
                       <label htmlFor="s-address" className="block text-xs font-medium text-stone-700 mb-1.5" style={{ fontFamily: "Inter, sans-serif" }}>Shipping address *</label>
                       <input id="s-address" type="text" required value={form.address} onChange={(e) => setForm({ ...form, address: e.target.value })}
-                        className="w-full px-3 py-2 rounded-none border border-stone-200 text-sm text-stone-900 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+                        className="w-full px-3 py-2 rounded-none border border-stone-200 text-sm text-stone-900 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors"
                         style={{ fontFamily: "Inter, sans-serif" }} placeholder="123 Main St, City, Country" />
                     </div>
 
                     <div>
                       <label htmlFor="s-style" className="block text-xs font-medium text-stone-700 mb-1.5" style={{ fontFamily: "Inter, sans-serif" }}>Style interest</label>
                       <select id="s-style" value={form.style} onChange={(e) => setForm({ ...form, style: e.target.value })}
-                        className="w-full px-3 py-2 rounded-none border border-stone-200 text-sm text-stone-900 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors bg-white cursor-pointer"
+                        className="w-full px-3 py-2 rounded-none border border-stone-200 text-sm text-stone-900 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors bg-white cursor-pointer"
                         style={{ fontFamily: "Inter, sans-serif" }}>
                         <option value="botanical">Botanical & Tropical</option>
                         <option value="geometric">Bold Geometric</option>
@@ -136,7 +136,7 @@ export default function SampleRequestModal({ isOpen, onClose }: SampleRequestMod
                     <div>
                       <label htmlFor="s-notes" className="block text-xs font-medium text-stone-700 mb-1.5" style={{ fontFamily: "Inter, sans-serif" }}>Notes (optional)</label>
                       <textarea id="s-notes" value={form.notes} onChange={(e) => setForm({ ...form, notes: e.target.value })} rows={2}
-                        className="w-full px-3 py-2 rounded-none border border-stone-200 text-sm text-stone-900 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors resize-none"
+                        className="w-full px-3 py-2 rounded-none border border-stone-200 text-sm text-stone-900 focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors resize-none"
                         style={{ fontFamily: "Inter, sans-serif" }} placeholder="Room size, color preferences, installation type…" />
                     </div>
 
@@ -159,8 +159,8 @@ export default function SampleRequestModal({ isOpen, onClose }: SampleRequestMod
                     animate={{ opacity: 1, scale: 1 }}
                     className="px-6 py-10 text-center"
                   >
-                    <div className="w-14 h-14 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center mx-auto mb-4">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-600" aria-hidden="true">
+                    <div className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: "rgba(191,155,90,0.1)", border: "1px solid rgba(191,155,90,0.3)" }}>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--brand-gold)" }} aria-hidden="true">
                         <path d="M20 6 9 17l-5-5" />
                       </svg>
                     </div>

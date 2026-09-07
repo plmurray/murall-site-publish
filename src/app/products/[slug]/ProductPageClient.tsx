@@ -75,7 +75,7 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
               {/* Badges */}
               <div className="absolute top-4 left-4 flex flex-col gap-1.5">
                 {product.isBestseller && <span className="px-2.5 py-1 rounded-none text-[10px] font-semibold bg-amber-50 text-amber-800 border border-amber-200">Bestseller</span>}
-                {product.isNew && <span className="px-2.5 py-1 rounded-none text-[10px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">New</span>}
+                {product.isNew && <span className="px-2.5 py-1 rounded-none text-[10px] font-semibold bg-brand-forest text-brand-gold border border-brand-gold">New</span>}
               </div>
 
               {/* Zoom hint */}
@@ -100,7 +100,7 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
 
           {/* Product info */}
           <div className="py-2">
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-1" style={{ fontFamily: "Inter, sans-serif" }}>{product.brand}</p>
+            <p className="text-xs text-stone-400 mb-1" style={{ fontFamily: "Inter, sans-serif" }}>{product.brand}</p>
             <h1 className="text-3xl sm:text-4xl font-semibold text-stone-900 mb-3" style={{ fontFamily: "'EB Garamond', serif" }}>{product.name}</h1>
 
             {/* Rating */}
@@ -120,7 +120,7 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
 
             {/* Install type */}
             <div className="flex items-center gap-2 mb-6 p-3 bg-stone-50 rounded-none border border-stone-100">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4A8A6A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-gold)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M20 6 9 17l-5-5" />
               </svg>
               <span className="text-xs font-medium text-stone-700 capitalize" style={{ fontFamily: "Inter, sans-serif" }}>
@@ -134,8 +134,8 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
                 href={getAffiliateUrl(product.slug, product.brandSlug)}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="w-full py-3.5 rounded-none bg-stone-900 text-white text-sm font-semibold hover:bg-stone-800 transition-colors flex items-center justify-center gap-2"
-                style={{ fontFamily: "Inter, sans-serif" }}
+                className="w-full py-3.5 rounded-none text-sm font-semibold transition-colors flex items-center justify-center gap-2"
+                style={{ background: "var(--brand-forest)", color: "var(--brand-parchment)", fontFamily: "Inter, sans-serif" }}
               >
                 Buy from {product.brand}
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -167,7 +167,7 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
               <dl className="grid grid-cols-2 gap-x-6 gap-y-3">
                 {Object.entries(product.details).map(([key, value]) => (
                   <div key={key}>
-                    <dt className="text-[10px] uppercase tracking-widest text-stone-400 mb-0.5" style={{ fontFamily: "Inter, sans-serif" }}>
+                    <dt className="text-[10px] text-stone-400 mb-0.5" style={{ fontFamily: "Inter, sans-serif" }}>
                       {key.replace(/([A-Z])/g, " $1").trim()}
                     </dt>
                     <dd className="text-sm text-stone-700" style={{ fontFamily: "Inter, sans-serif" }}>{value}</dd>
@@ -177,17 +177,19 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
             </div>
 
             {/* Trust strip */}
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="mt-6 pt-6 border-t border-stone-100 grid grid-cols-2 gap-x-8 gap-y-4">
               {[
-                { icon: "🏷️", label: "Best price", sub: "At the brand's store" },
-                { icon: "📦", label: "Ships worldwide", sub: "Direct from the brand" },
-                { icon: "↩", label: "Brand returns", sub: "Per retailer policy" },
-                { icon: "🌿", label: "Eco-friendly inks", sub: "Low-VOC, child-safe" },
-              ].map(({ icon, label, sub }) => (
-                <div key={label} className="text-center p-3 bg-stone-50 rounded-none border border-stone-100">
-                  <p className="text-xl mb-1" aria-hidden="true">{icon}</p>
-                  <p className="text-xs font-semibold text-stone-800" style={{ fontFamily: "Inter, sans-serif" }}>{label}</p>
-                  <p className="text-[10px] text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>{sub}</p>
+                { label: "Best price", sub: "At the brand's own store" },
+                { label: "Ships worldwide", sub: "Direct from the brand" },
+                { label: "Brand returns", sub: "Per retailer policy" },
+                { label: "Eco-friendly inks", sub: "Low-VOC, child-safe" },
+              ].map(({ label, sub }) => (
+                <div key={label} className="flex items-start gap-2.5">
+                  <span className="w-1 h-1 rotate-45 mt-1.5 flex-shrink-0" style={{ background: "var(--brand-gold)" }} aria-hidden="true" />
+                  <div>
+                    <p className="text-xs font-medium text-stone-700" style={{ fontFamily: "Inter, sans-serif" }}>{label}</p>
+                    <p className="text-[10px] text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>{sub}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -201,13 +203,13 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {related.map((r) => (
                 <a key={r.slug} href={`/products/${r.slug}`}
-                  className="group flex gap-4 p-4 rounded-none border border-stone-100 hover:border-emerald-200 hover:shadow-md transition-all cursor-pointer">
+                  className="group flex gap-4 p-4 rounded-none border border-stone-100 hover:border-brand-gold hover:shadow-md transition-all cursor-pointer">
                   <div className="w-20 h-20 rounded-none overflow-hidden flex-shrink-0">
                     <img src={r.imageUrl} alt={r.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-xs text-stone-400 mb-0.5" style={{ fontFamily: "Inter, sans-serif" }}>{r.brand}</p>
-                    <p className="text-base font-semibold text-stone-900 group-hover:text-emerald-800 transition-colors truncate" style={{ fontFamily: "'EB Garamond', serif" }}>{r.name}</p>
+                    <p className="text-base font-semibold text-stone-900 group-hover:text-brand-gold transition-colors truncate" style={{ fontFamily: "'EB Garamond', serif" }}>{r.name}</p>
                     <p className="text-sm text-stone-600 mt-1" style={{ fontFamily: "Inter, sans-serif" }}>From ${r.price} / roll</p>
                   </div>
                   <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0 mt-1 text-stone-300 group-hover:text-stone-600 transition-colors" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6"/></svg>

@@ -62,7 +62,7 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: n
       {/* Badges */}
       <div className="absolute top-3 left-3 flex flex-col gap-1.5">
         {product.isBestseller && <span className="px-2 py-0.5 rounded-none text-[10px] font-semibold bg-amber-50/90 text-amber-800 border border-amber-200">Bestseller</span>}
-        {product.isNew && <span className="px-2 py-0.5 rounded-none text-[10px] font-semibold bg-emerald-50/90 text-emerald-800 border border-emerald-200">New</span>}
+        {product.isNew && <span className="px-2 py-0.5 rounded-none text-[10px] font-semibold bg-brand-forest/90 text-brand-gold border border-brand-gold">New</span>}
       </div>
 
       {/* Wishlist */}
@@ -151,7 +151,7 @@ function NotifyMeBanner({ tag }: { tag: string }) {
     >
       <div className="flex flex-col sm:flex-row sm:items-center gap-5">
         <div className="flex-1">
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-1" style={{ fontFamily: "Inter, sans-serif" }}>
+          <p className="text-xs text-stone-400 mb-1" style={{ fontFamily: "Inter, sans-serif" }}>
             Growing collection
           </p>
           <h3 className="text-xl font-semibold text-stone-900 mb-1" style={{ fontFamily: "'EB Garamond', serif" }}>
@@ -163,7 +163,7 @@ function NotifyMeBanner({ tag }: { tag: string }) {
         </div>
         <div className="flex-shrink-0 min-w-[280px]">
           {submitted ? (
-            <div className="flex items-center gap-2 text-emerald-700 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
+            <div className="flex items-center gap-2 text-brand-gold text-sm" style={{ fontFamily: "Inter, sans-serif" }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
               You&apos;re on the list — we&apos;ll be in touch!
             </div>
@@ -233,7 +233,7 @@ function ProductsCatalogue() {
       <section className="pt-32 pb-14 bg-stone-50 border-b border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>All wallpapers</p>
+            <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>All wallpapers</p>
             <h1 className="text-4xl sm:text-5xl font-semibold text-stone-900 mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
               The <em>full collection</em>
             </h1>
@@ -321,7 +321,7 @@ function ProductsCatalogue() {
             >
               <p className="text-stone-400 text-lg mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>No wallpapers match those filters</p>
               <button onClick={() => { setInstallFilter("All"); setTagFilter("All styles"); setColourFilter("All colours"); }}
-                className="text-sm text-emerald-700 underline underline-offset-4 cursor-pointer"
+                className="text-sm text-brand-gold underline underline-offset-4 cursor-pointer"
                 style={{ fontFamily: "Inter, sans-serif" }}>
                 Clear filters
               </button>

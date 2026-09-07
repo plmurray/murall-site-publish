@@ -17,7 +17,7 @@ const STORIES = [
     hero: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png",
     bg: "bg-stone-900",
     text: "text-white",
-    accent: "text-emerald-400",
+    accent: "text-brand-gold",
   },
   {
     id: "botanical",
@@ -30,9 +30,9 @@ const STORIES = [
       { name: "Midnight Garden", brand: "Chasing Paper", price: 84, img: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png" },
     ],
     hero: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
-    bg: "bg-emerald-950",
+    bg: "bg-brand-forest",
     text: "text-white",
-    accent: "text-emerald-300",
+    accent: "text-brand-gold",
   },
   {
     id: "soft-dawn",

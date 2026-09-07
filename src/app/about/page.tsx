@@ -35,7 +35,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="pt-32 pb-16 bg-stone-50 border-b border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Our story</p>
+          <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Our story</p>
           <h1 className="text-4xl sm:text-5xl font-semibold text-stone-900 mb-6" style={{ fontFamily: "'EB Garamond', serif" }}>
             About <em>Murall</em>
           </h1>
@@ -65,7 +65,7 @@ export default function AboutPage() {
       {/* Values */}
       <section className="py-20 bg-stone-50 border-y border-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>What we stand for</p>
+          <p className="text-xs text-stone-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>What we stand for</p>
           <h2 className="text-3xl sm:text-4xl font-semibold text-stone-900 mb-12" style={{ fontFamily: "'EB Garamond', serif" }}>
             The Murall <em>difference</em>
           </h2>
@@ -101,7 +101,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="bg-stone-900 py-16 text-center">
-        <p className="text-xs tracking-widest uppercase text-emerald-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Ready to start?</p>
+        <p className="text-xs text-brand-gold mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Ready to start?</p>
         <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-8" style={{ fontFamily: "'EB Garamond', serif" }}>
           Find your perfect wallpaper
         </h2>

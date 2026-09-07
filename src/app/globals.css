@@ -3,20 +3,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --brand-gold: #BF9B5A;
+  --brand-gold-light: #D4B478;
+  --brand-forest: #1E3A2F;
+  --brand-forest-mid: #2A4F40;
+  --brand-parchment: #FAF7F2;
+  --brand-linen: #F5F0E8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-gold-light: var(--brand-gold-light);
+  --color-brand-forest: var(--brand-forest);
+  --color-brand-forest-mid: var(--brand-forest-mid);
+  --color-brand-parchment: var(--brand-parchment);
+  --color-brand-linen: var(--brand-linen);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {

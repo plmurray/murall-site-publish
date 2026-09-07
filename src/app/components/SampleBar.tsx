@@ -28,7 +28,7 @@ export default function SampleBar({ onSampleOpen }: { onSampleOpen: () => void }
         >
           <div className="bg-stone-900 text-white rounded-none px-5 py-4 shadow-2xl flex items-center gap-4 border border-white/10">
             {/* Icon */}
-            <div className="w-10 h-10 rounded-none bg-emerald-600 flex items-center justify-center flex-shrink-0">
+            <div className="w-10 h-10 rounded-none flex items-center justify-center flex-shrink-0" style={{ background: "var(--brand-gold)" }}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
               </svg>

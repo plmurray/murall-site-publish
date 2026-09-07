@@ -94,8 +94,8 @@ function Hero({ onSampleOpen }: { onSampleOpen: () => void }) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-xs tracking-[0.2em] uppercase text-emerald-300 mb-4 font-medium"
-          style={{ fontFamily: "Inter, sans-serif" }}
+          className="text-xs tracking-[0.2em] uppercase mb-4 font-medium"
+          style={{ fontFamily: "Inter, sans-serif", color: "var(--brand-gold)" }}
         >
           New arrivals — Summer 2026
         </motion.p>
@@ -155,7 +155,7 @@ function Hero({ onSampleOpen }: { onSampleOpen: () => void }) {
         >
           {[...TRUST_ITEMS, ...TRUST_ITEMS].map((item, i) => (
             <span key={i} className="inline-flex items-center gap-3 mx-6 text-xs text-white/70 tracking-wider uppercase" style={{ fontFamily: "Inter, sans-serif" }}>
-              <span className="w-1 h-1 rounded-full bg-emerald-400 flex-shrink-0" aria-hidden="true" />
+              <span className="w-1 h-1 rotate-45 flex-shrink-0" style={{ background: "var(--brand-gold)" }} aria-hidden="true" />
               {item}
             </span>
           ))}
@@ -169,68 +169,44 @@ function Hero({ onSampleOpen }: { onSampleOpen: () => void }) {
 
 const WHY_ITEMS = [
   {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    title: "12 Curated Brands",
+    title: "17 curated brands",
     body: "We hand-select every brand — from indie studios to iconic houses. No mass-market filler, ever.",
   },
   {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <rect x="1" y="3" width="15" height="13" rx="2" /><path d="M16 8h4l3 3v5h-7V8z" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" />
-      </svg>
-    ),
-    title: "Free Worldwide Shipping",
+    title: "Free worldwide shipping",
     body: "Every order over $120 ships free — tracked, insured, and delivered to your door.",
   },
   {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" />
-      </svg>
-    ),
-    title: "Try Before You Commit",
+    title: "Try before you commit",
     body: "Sample packs from $12. See the true colour and texture on your wall before ordering full rolls.",
   },
   {
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" />
-      </svg>
-    ),
-    title: "30-Day Returns",
+    title: "30-day returns",
     body: "Changed your mind? Return unopened rolls within 30 days — no questions asked.",
   },
 ];
 
 function WhyMurall() {
   return (
-    <section className="w-full bg-stone-50 py-20" aria-labelledby="why-heading">
+    <section className="w-full py-20" style={{ background: "var(--brand-linen)" }} aria-labelledby="why-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Why murall</p>
+        <div className="mb-14">
           <h2 id="why-heading" className="text-3xl sm:text-4xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>
             The Murall <em>difference</em>
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-16">
           {WHY_ITEMS.map((item, i) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.55, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="flex flex-col items-start"
+              transition={{ duration: 0.5, delay: i * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="py-8 border-t border-stone-300"
             >
-              <div className="w-11 h-11 rounded-none bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4 flex-shrink-0">
-                {item.icon}
-              </div>
-              <h3 className="text-base font-semibold text-stone-900 mb-2" style={{ fontFamily: "'EB Garamond', serif" }}>{item.title}</h3>
-              <p className="text-sm text-stone-500 leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>{item.body}</p>
+              <h3 className="text-xl sm:text-2xl font-semibold text-stone-900 mb-3" style={{ fontFamily: "'EB Garamond', serif" }}>{item.title}</h3>
+              <p className="text-sm text-stone-500 leading-relaxed max-w-xs" style={{ fontFamily: "Inter, sans-serif" }}>{item.body}</p>
             </motion.div>
           ))}
         </div>
@@ -256,7 +232,7 @@ function Newsletter() {
   };
 
   return (
-    <section className="w-full bg-stone-900 py-20" aria-labelledby="newsletter-heading">
+    <section className="w-full py-20" style={{ background: "var(--brand-forest)" }} aria-labelledby="newsletter-heading">
       <div className="max-w-2xl mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -264,9 +240,8 @@ function Newsletter() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-xs tracking-widest uppercase text-emerald-400 mb-3" style={{ fontFamily: "Inter, sans-serif" }}>Stay inspired</p>
           <h2 id="newsletter-heading" className="text-3xl sm:text-4xl font-semibold text-white mb-4" style={{ fontFamily: "'EB Garamond', serif" }}>
-            Design stories, straight to your inbox
+            Design stories, <em>straight to your inbox</em>
           </h2>
           <p className="text-stone-400 text-sm mb-8 leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
             New arrivals, interior inspiration, and exclusive subscriber offers — every fortnight.
@@ -280,7 +255,7 @@ function Newsletter() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="flex flex-col items-center gap-3"
               >
-                <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{ background: "rgba(191,155,90,0.2)", color: "var(--brand-gold)" }}>
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M20 6 9 17l-5-5" />
                   </svg>
@@ -302,14 +277,14 @@ function Newsletter() {
                   placeholder="your@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-4 py-3 rounded-none bg-white/10 border border-white/20 text-white placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  className="flex-1 px-4 py-3 rounded-none bg-white/10 border border-white/20 text-white placeholder-stone-500 text-sm focus:outline-none focus:border-transparent"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 />
                 <button
                   type="submit"
                   disabled={loading}
-                  className="px-6 py-3 rounded-none bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-500 transition-colors duration-200 disabled:opacity-60 cursor-pointer flex-shrink-0"
-                  style={{ fontFamily: "Inter, sans-serif" }}
+                  className="px-6 py-3 rounded-none text-sm font-semibold transition-colors duration-200 disabled:opacity-60 cursor-pointer flex-shrink-0"
+                  style={{ fontFamily: "Inter, sans-serif", background: "var(--brand-gold)", color: "#0F0D0B" }}
                 >
                   {loading ? (
                     <svg className="animate-spin w-4 h-4 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -430,13 +405,13 @@ function Footer() {
         {/* Trust badges */}
         <div className="border-t border-stone-800 pt-8 pb-6 grid grid-cols-2 sm:grid-cols-4 gap-5">
           {[
-            { icon: "🔒", label: "Secure checkout", sub: "256-bit encrypted" },
-            { icon: "🌿", label: "Eco-friendly inks", sub: "Low-VOC, child-safe" },
-            { icon: "📋", label: "Sample first", sub: "From $12 before you commit" },
-            { icon: "🚚", label: "Free shipping", sub: "On orders over $120" },
-          ].map(({ icon, label, sub }) => (
-            <div key={label} className="flex items-center gap-3">
-              <span className="text-lg flex-shrink-0" aria-hidden="true">{icon}</span>
+            { label: "Secure checkout", sub: "256-bit encrypted" },
+            { label: "Eco-friendly inks", sub: "Low-VOC, child-safe" },
+            { label: "Sample first", sub: "From $12 before you commit" },
+            { label: "Free shipping", sub: "On orders over $120" },
+          ].map(({ label, sub }) => (
+            <div key={label} className="flex items-start gap-3">
+              <span className="w-1 h-1 rotate-45 mt-1.5 flex-shrink-0" style={{ background: "var(--brand-gold)" }} aria-hidden="true" />
               <div>
                 <p className="text-xs font-medium text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>{label}</p>
                 <p className="text-[10px] text-stone-600" style={{ fontFamily: "Inter, sans-serif" }}>{sub}</p>
