@@ -25,7 +25,7 @@ type Section =
   | { type: "numbered"; items: string[] }
   | { type: "table"; head: string[]; rows: string[][] }
   | { type: "image"; src: string; caption: string }
-  | { type: "cta"; heading: string; body: string; buttonText: string }
+  | { type: "cta"; heading: string; body: string; buttonText: string; href?: string }
   | { type: "tip"; text: string }
   | { type: "faq"; items: { q: string; a: string }[] };
 
@@ -318,6 +318,100 @@ const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "best-peel-and-stick-wallpaper",
+    category: "Guide",
+    title: "Best Peel & Stick Wallpaper 2026: The Definitive Brand Guide",
+    excerpt: "We've assessed every major removable wallpaper brand — adhesive quality, print fidelity, wall compatibility, and how cleanly they remove. Here's who actually delivers.",
+    author: "James Whitfield",
+    authorBio: "James is Murall's product editor and a qualified interior architect. He has overseen wallpaper specifications on residential and hospitality projects across Europe.",
+    date: "25 September 2026",
+    readTime: "9 min read",
+    imageUrl: IMAGES.hex,
+    relatedSlugs: ["peel-and-stick-vs-paste-the-wall", "how-many-rolls-do-i-need", "accent-wall-ideas"],
+    body: [
+      { type: "p", text: "Peel-and-stick wallpaper has had a transformation. What began as a compromise product for renters — thin, plasticky, prone to bubbling at the seams — has become a genuinely premium category. The best brands today use non-toxic pressure-sensitive adhesives, print on high-quality woven substrates, and adhere so cleanly that professional decorators are now specifying them on permanent installations." },
+      { type: "p", text: "But the category has exploded with entrants, and quality varies wildly. We assessed papers from six major brands, looking at adhesive performance, print resolution, repositionability, and how cleanly they remove from painted walls. Here is what we found." },
+
+      { type: "h2", text: "At a glance: the best brands in 2026" },
+      { type: "table", head: ["Brand", "Price range", "Panel width", "Repositionable?", "Best for"], rows: [
+        ["Chasing Paper", "$64–$115 / roll", "24 inches", "Yes — 7 days", "Bold designs, feature walls"],
+        ["Tempaper", "$62–$98 / roll", "20.5 inches", "Yes — up to 5 years", "Botanicals, maximalist"],
+        ["Hygge & West", "$98–$145 / roll", "24 inches", "Yes", "Design-led, artisan"],
+        ["NuWallpaper", "$28–$48 / roll", "20.5 inches", "Limited", "Budget, first-time DIY"],
+        ["Rebel Walls", "Mural pricing", "Custom", "Yes", "Full-wall photographic murals"],
+      ]},
+
+      { type: "h2", text: "Our detailed verdicts" },
+
+      { type: "h3", text: "Chasing Paper — Best overall" },
+      { type: "p", text: "Founded in New York in 2013 by two friends who were tired of renting with plain walls, Chasing Paper has become the benchmark against which every other removable wallpaper brand is measured. Their panels ship pre-cut at 24 inches wide with precision-aligned pattern edges — no trimming at seams, no guesswork. The non-toxic, solvent-free adhesive bonds firmly within 24 hours but remains fully repositionable for seven days after application, which is genuinely useful for a solo installation where you're eyeing the hang from across the room." },
+      { type: "p", text: "Print quality is exceptional. Their botanical and geometric designs are produced at a resolution that holds up to close inspection — no visible dot patterns or banding. The substrate is a woven non-woven material that hangs flat without bubbling, even in rooms with minor humidity. A standard bedroom takes four to six hours to hang solo." },
+      { type: "tip", text: "Chasing Paper sells sample panels for around $4 each. Always order one before committing to a room — the colours read differently on a wall than on a screen." },
+
+      { type: "h3", text: "Tempaper — Best for botanical designs" },
+      { type: "p", text: "Tempaper invented removable wallpaper. Founded in 2008, they hold the original patents on the peel-and-stick format and have spent fifteen years refining the adhesive chemistry. The result is a brand with the deepest trust credentials in the category: clean removal is guaranteed on walls painted more than 30 days ago, and their Tempaper Pure range is fully vinyl-free and VOC-free." },
+      { type: "p", text: "Their pattern library is the widest of any removable brand — thousands of designs, updated quarterly. They are particularly strong on botanicals: intricate herbarium prints, lush tropical canopies, delicate climbing vines in colourways that read as rich and complex up close. The 20.5-inch panel width means more seams in a wide room, but the precision of the pattern matching makes joins nearly invisible." },
+      { type: "tip", text: "Tempaper's 'Designer' collection features exclusive artist collaborations at a small premium over the standard range. Worth the upgrade for rooms you'll live with for years." },
+
+      { type: "h3", text: "Hygge & West — Best premium option" },
+      { type: "p", text: "San Francisco studio Hygge & West operates as a design publisher as much as a wallpaper brand — every design is an exclusive collaboration with an independent artist. You will not find these patterns anywhere else, and many sell out permanently when a collaboration ends. The print quality reflects the premium: water-based inks on a woven non-woven substrate, printed to order." },
+      { type: "p", text: "The price premium over Chasing Paper and Tempaper is real — typically 30–50% higher per panel. It is justified by the design exclusivity and the quality of the substrate, which has a slight texture that reads as more premium in person than the photographs suggest. For a powder room, a home office, or any room where you want a genuinely distinctive result, Hygge & West is the right choice." },
+
+      { type: "h3", text: "NuWallpaper — Best budget option" },
+      { type: "p", text: "Owned by York Wallcoverings — one of the oldest wallpaper manufacturers in the United States — NuWallpaper gives the brand's century of pattern experience at a fraction of the typical price. A standard bedroom can be wallpapered for under £150 at their entry-level prices. The trade-off is visible: panels feel thinner, the print resolution is lower, and the adhesive has a shorter repositioning window." },
+      { type: "p", text: "Their strongest categories are faux textures (shiplap, brick, concrete) and simple geometrics — designs that are less demanding of print precision. For a rental bedroom, a child's room, or any space where budget genuinely matters more than longevity, NuWallpaper is the sensible choice." },
+
+      { type: "h3", text: "Rebel Walls — Best for full-wall murals" },
+      { type: "p", text: "The Swedish studio is best known for its photographic-quality murals, and their removable option — available on most designs as a drop-down selection on the product page — extends that capability to renters and commitment-phobes. The mural is printed to your exact wall dimensions and ships as a numbered set of panels that assemble into a seamless image." },
+      { type: "p", text: "Pricing is per-mural rather than per-roll, which makes it difficult to compare directly against panel-format brands. A typical bedroom feature wall runs to £200–£400 depending on size and design. The quality justifies it: Rebel Walls murals look as good in person as they do in their beautifully photographed marketing images." },
+
+      { type: "cta", heading: "Shop removable wallpaper", body: "Browse our curated edit of peel-and-stick papers across all price points — from budget-friendly to premium designer.", buttonText: "View peel & stick collection →", href: "/products?install=Peel+%26+Stick" },
+
+      { type: "h2", text: "What to look for when buying" },
+      { type: "h3", text: "Substrate: vinyl vs woven non-woven" },
+      { type: "p", text: "The substrate is the material the paper is printed on. Cheaper panels use a vinyl (PVC) backing: smooth, slightly plasticky, and not breathable. Premium brands use woven non-woven — a fibre-based material that feels more like traditional wallpaper, breathes better, and tends to lie flatter over time. If you're sensitive to indoor air quality, look for vinyl-free options (Tempaper Pure is the clearest leader here)." },
+      { type: "h3", text: "Adhesive: repositionable vs permanent" },
+      { type: "p", text: "Most removable wallpaper uses a pressure-sensitive adhesive: it sticks on contact, but can be peeled and repositioned for a short window. The repositioning window varies by brand — seven days for Chasing Paper, up to five years for Tempaper. Beyond the stated window, the adhesive cures more fully and removal can lift paint. Permanent peel-and-stick adhesive (used by some budget brands) should not be applied to rented walls." },
+      { type: "h3", text: "Panel width: seam count matters" },
+      { type: "p", text: "Standard panels range from 20.5 to 24 inches wide. Narrower panels mean more seams in a given wall width. Seams are minimally visible when the paper is freshly hung, but may become more noticeable over time as the adhesive settles. For pattern-heavy papers, more seams also means more alignment joins to manage. Wider panels are easier to align but harder to handle solo." },
+      { type: "h3", text: "Wall compatibility" },
+      { type: "p", text: "Peel-and-stick performs best on smooth, flat, hard surfaces: painted plaster, MDF, and glass. Textured surfaces — Artex, orange-peel, knockdown — prevent the adhesive from bonding evenly, causing lifting and bubbling. High-gloss paint is also problematic: the adhesive slides rather than grips. Flat or eggshell paint is ideal." },
+
+      { type: "h2", text: "Wall prep: the step most people skip" },
+      { type: "p", text: "Poor wall preparation is the cause of almost every peel-and-stick failure. Follow this sequence regardless of which brand you choose." },
+      { type: "numbered", items: [
+        "Wipe walls thoroughly with a damp cloth to remove dust, grease, and residue. Allow to dry completely — at least 2 hours.",
+        "If the wall was recently painted, wait a minimum of 30 days before applying. Fresh paint continues to off-gas and the adhesive will not bond correctly.",
+        "Fill any holes, cracks, or dents with filler. Sand smooth and wipe clean when dry.",
+        "For textured walls, apply a skim coat of filler or a dedicated peel-and-stick primer before hanging. Do not apply directly to Artex.",
+        "Remove any switch plates or socket covers — tuck the paper behind the fitting rather than cutting around it for a clean result.",
+      ]},
+
+      { type: "h2", text: "Seven installation tips from experience" },
+      { type: "numbered", items: [
+        "Mark a plumb vertical line on the wall before you start. Use a spirit level, not the corner of the room — corners are rarely truly vertical.",
+        "Cut all panels to length before peeling any backing. Lay them out in order so pattern alignment is confirmed before you commit.",
+        "Peel only 6–8 inches of backing at a time. Exposing the full panel creates an unmanageable sticky surface that will fold on itself.",
+        "Press firmly from the centre outward to push air toward the edges. Never smooth from one edge to the other — you trap air in the middle.",
+        "Use a plastic smoothing tool or a clean credit card, not your hands. Fingernails create permanent dents in the adhesive surface.",
+        "Trim at skirting board and ceiling with a sharp craft knife against a metal rule. Scissors produce a ragged edge that becomes visible over time.",
+        "Stand back to check alignment after every 2–3 panels. It is far easier to reposition now than after the adhesive has cured.",
+      ]},
+
+      { type: "h2", text: "Frequently asked questions" },
+      { type: "faq", items: [
+        { q: "Does peel and stick wallpaper damage walls?", a: "Not if applied correctly. On smooth walls with well-cured paint (30+ days old), premium brands remove cleanly without lifting paint. Older latex paints and low-adhesion surfaces are higher risk — always test a small patch in an inconspicuous area before hanging a full room." },
+        { q: "How long does peel and stick wallpaper last?", a: "Premium brands (Chasing Paper, Tempaper, Hygge & West) reliably last 5–10 years in normal living conditions. Budget brands may begin lifting at seams after 2–3 years, particularly in kitchens and bathrooms with fluctuating humidity." },
+        { q: "Can you use peel and stick wallpaper on textured walls?", a: "Not directly. Textured surfaces prevent the adhesive from bonding evenly, which causes lifting and bubbling within weeks. Apply a skim coat of filler to create a smooth surface, allow to dry and sand smooth, then hang the paper once the skim coat has fully cured (at least 7 days)." },
+        { q: "Is peel and stick wallpaper good for bathrooms?", a: "Yes, in well-ventilated bathrooms. Prolonged high humidity (such as a poorly ventilated shower room) can weaken the adhesive bond over time. Ensure adequate ventilation, avoid placing panels directly behind a bath or shower where they will be regularly splashed, and choose a brand with moisture-resistant credentials." },
+        { q: "Can you reuse peel and stick wallpaper after removing it?", a: "Generally no. Removing a panel transfers most of the adhesive to the wall or degrades it, and the panels are prone to tearing during removal. Plan to replace rather than reuse. Some panels survive being relocated a short distance if repositioned immediately after installation, but storage and reapplication weeks later is not reliable." },
+        { q: "How do you remove peel and stick wallpaper?", a: "Start at a corner and pull slowly at a 45-degree angle, close to the wall. Pulling fast or at a steep angle is the most common cause of paint damage. If adhesive is stubborn, apply gentle heat from a hairdryer on a low setting to soften it. Any residual adhesive on the wall can be removed with a damp sponge or a small amount of adhesive remover." },
+        { q: "Is peel and stick wallpaper suitable for renters?", a: "Yes — it's specifically designed for this use case. Most tenancy agreements permit peel-and-stick on smooth walls since it leaves no damage. Check your specific agreement, but the vast majority of landlords have no objection. Paste-the-wall paper should never be used in a rented property without landlord permission." },
+        { q: "Can I apply peel and stick wallpaper over existing wallpaper?", a: "No. Applying peel-and-stick to an existing wallpaper surface creates an unstable bond — the adhesive will grip the old paper rather than the wall, and when removed may take the original paper with it. Strip any existing wallpaper, fill and prepare the bare wall, then apply." },
+      ]},
+    ],
+  },
+  {
     slug: "accent-wall-ideas",
     category: "Inspiration",
     title: "10 accent wall ideas that interior designers actually approve of",
@@ -503,13 +597,21 @@ function ArticleBody({ body }: { body: Section[] }) {
                 </svg>
                 <h3 className="text-2xl font-semibold text-white mb-3" style={{ fontFamily: "'EB Garamond', serif" }}>{section.heading}</h3>
                 <p className="text-stone-400 text-sm mb-6 max-w-sm mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>{section.body}</p>
-                <button
-                  onClick={() => document.dispatchEvent(new CustomEvent("open-rolls-calculator"))}
-                  className="px-8 py-3 bg-white text-stone-900 text-sm font-semibold hover:bg-stone-100 transition-colors cursor-pointer"
-                  style={{ fontFamily: "Inter, sans-serif" }}
-                >
-                  {section.buttonText}
-                </button>
+                {section.href ? (
+                  <a href={section.href}
+                    className="inline-block px-8 py-3 bg-white text-stone-900 text-sm font-semibold hover:bg-stone-100 transition-colors cursor-pointer"
+                    style={{ fontFamily: "Inter, sans-serif" }}>
+                    {section.buttonText}
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => document.dispatchEvent(new CustomEvent("open-rolls-calculator"))}
+                    className="px-8 py-3 bg-white text-stone-900 text-sm font-semibold hover:bg-stone-100 transition-colors cursor-pointer"
+                    style={{ fontFamily: "Inter, sans-serif" }}
+                  >
+                    {section.buttonText}
+                  </button>
+                )}
               </div>
             );
           case "tip":
