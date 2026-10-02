@@ -24,7 +24,10 @@ type Section =
   | { type: "list"; items: string[] }
   | { type: "numbered"; items: string[] }
   | { type: "table"; head: string[]; rows: string[][] }
-  | { type: "image"; src: string; caption: string };
+  | { type: "image"; src: string; caption: string }
+  | { type: "cta"; heading: string; body: string; buttonText: string }
+  | { type: "tip"; text: string }
+  | { type: "faq"; items: { q: string; a: string }[] };
 
 interface Article {
   slug: string;
@@ -164,50 +167,122 @@ const ARTICLES: Article[] = [
     author: "Harriet Cole",
     authorBio: "Harriet is Murall's editorial director and a former contributing editor at World of Interiors. She has been writing about interior design for fifteen years.",
     date: "12 May 2026",
-    readTime: "7 min read",
+    readTime: "10 min read",
     imageUrl: IMAGES.emerald,
     relatedSlugs: ["peel-and-stick-vs-paste-the-wall", "how-to-choose-wallpaper-for-small-rooms", "accent-wall-ideas"],
     body: [
-      { type: "p", text: "Ordering too few rolls is one of the most common — and most expensive — mistakes in home decorating. Dye lots vary between print runs, which means a roll ordered six weeks later may not match the rolls you've already hung. The only insurance is to order enough the first time." },
-      { type: "p", text: "Here's the exact process we use. It takes about ten minutes and a tape measure." },
-      { type: "h2", text: "Step 1: Measure your walls" },
-      { type: "p", text: "Measure the width of each wall you intend to paper, then add them together to get the total perimeter. Measure the height from skirting board to ceiling (or to the cornice if you're stopping there)." },
-      { type: "p", text: "Example: a room with four walls measuring 3.6m, 4.2m, 3.6m, and 4.2m has a total perimeter of 15.6m. Ceiling height is 2.5m." },
-      { type: "h2", text: "Step 2: Understand pattern repeat" },
-      { type: "p", text: "Every wallpaper has a pattern repeat — the vertical distance before the pattern starts again. A plain or textured paper has a repeat of zero. A small geometric might repeat every 9cm. A large botanical mural might repeat every 64cm." },
-      { type: "p", text: "The repeat matters because you need to align it at every join. This creates waste: the larger the repeat, the more paper you lose per drop. A paper with a 64cm repeat in a 2.5m-high room means each strip wastes up to 64cm of paper finding its match." },
-      { type: "table", head: ["Pattern repeat", "Waste per drop (2.5m ceiling)"], rows: [
+      { type: "p", text: "Ordering too few rolls is one of the most common — and most expensive — mistakes in home decorating. Wallpaper is printed in batches, and a roll ordered six weeks after your original purchase may come from a different dye lot: subtly different in colour, visible on the wall every time you walk past. The only insurance is to order enough the first time." },
+      { type: "p", text: "This guide gives you everything you need to calculate rolls correctly: the step-by-step formula, room-by-room reference tables, an explanation of pattern repeat, and our free calculator that does the arithmetic for you." },
+
+      { type: "h2", text: "Quick reference: how many rolls by room" },
+      { type: "p", text: "The table below covers typical UK room sizes using standard rolls (52cm wide × 10m long), with 2.4m ceilings, one door, and one to two windows. Use it as a starting point, then verify with the full calculation below." },
+      { type: "table", head: ["Room", "Typical dimensions", "No repeat", "Large repeat (64cm+)"], rows: [
+        ["Powder room / WC", "2m × 2m", "5–6 rolls", "7–8 rolls"],
+        ["Single bedroom", "3m × 3.3m", "8–10 rolls", "11–13 rolls"],
+        ["Double bedroom", "3.6m × 4.2m", "10–12 rolls", "13–15 rolls"],
+        ["Master bedroom", "4.5m × 5m", "13–15 rolls", "17–20 rolls"],
+        ["Living room", "4.5m × 5.5m", "14–17 rolls", "18–22 rolls"],
+        ["Dining room", "3.5m × 4m", "10–12 rolls", "13–15 rolls"],
+        ["Hallway (narrow)", "1.2m wide, 6m run", "6–8 rolls", "8–10 rolls"],
+        ["Accent wall only", "3.6m wide", "3–4 rolls", "5–6 rolls"],
+      ]},
+      { type: "tip", text: "Always add at least one extra roll beyond your calculation, regardless of the room size. If you end up with a spare, store it for future repairs — it will be from the same dye lot." },
+
+      { type: "h2", text: "UK vs US roll sizes: know the difference" },
+      { type: "p", text: "If you're shopping from a US brand or using a US calculator, the roll dimensions are completely different. UK and European standard rolls are narrower and longer; US rolls are wider and shorter. Using the wrong numbers will throw your entire calculation off." },
+      { type: "table", head: ["", "UK / European standard", "US standard"], rows: [
+        ["Width", "52–53cm", "68.5cm (27 inches)"],
+        ["Length", "10m", "4.5m (15 feet)"],
+        ["Usable coverage", "~5.2m²", "~2.8m²"],
+        ["Rolls for a double bedroom", "10–12", "20–24"],
+      ]},
+      { type: "p", text: "Some US brands now offer their designs in European-width rolls. Always check the product specification page — not just the listing title — before calculating." },
+
+      { type: "h2", text: "The full calculation: step by step" },
+      { type: "p", text: "You'll need: a tape measure, the product specification for your chosen wallpaper (roll width, roll length, and pattern repeat), and about ten minutes." },
+
+      { type: "h3", text: "Step 1: Measure your walls" },
+      { type: "p", text: "Measure the width of each wall you intend to paper, then add them all together to get your total perimeter. Measure ceiling height from top of skirting board to ceiling — or to the cornice if you're stopping there." },
+      { type: "p", text: "Example: a room with walls measuring 3.6m, 4.2m, 3.6m, 4.2m has a perimeter of 15.6m. Ceiling height is 2.4m." },
+
+      { type: "h3", text: "Step 2: Find the pattern repeat" },
+      { type: "p", text: "Every wallpaper specifies a pattern repeat on its product page — the vertical distance before the design starts again. A plain or textured paper has a repeat of zero. A small geometric might repeat every 9cm. A large botanical mural might repeat every 64cm." },
+      { type: "p", text: "The repeat matters because you must align it at every seam. This creates unavoidable waste: the larger the repeat, the more paper is trimmed from each strip." },
+      { type: "table", head: ["Pattern repeat", "Waste per strip (2.4m ceiling)"], rows: [
         ["None / plain", "0–5cm"],
         ["Up to 15cm", "~10cm"],
         ["15–30cm", "~20cm"],
         ["30–64cm", "~40cm"],
         ["64cm+", "Up to 64cm"],
       ]},
-      { type: "h2", text: "Step 3: Calculate drops per roll" },
-      { type: "p", text: "A standard roll is 10m long (some luxury papers are 5m — check the spec). Divide the usable roll length by the cut length per drop." },
-      { type: "p", text: "Cut length per drop = ceiling height + pattern repeat. In our example: 2.5m ceiling + 0.64m repeat = 3.14m per drop. A 10m roll gives us 3 drops (10 ÷ 3.14 = 3.18, rounded down). Don't round up — the fractional drop isn't usable for a full-height strip." },
-      { type: "h2", text: "Step 4: Calculate total drops needed" },
-      { type: "p", text: "Most wallpaper rolls are 52–53cm wide. Divide your total perimeter by the roll width to get the number of drops: 15.6m ÷ 0.52m = 30 drops." },
-      { type: "h2", text: "Step 5: Account for doors and windows" },
-      { type: "p", text: "A standard door (0.9m wide) saves approximately 1–2 drops. A standard window (1.2m wide) saves 1–2 drops. However, the strips on either side of a door or window still need to be cut from full drops to maintain pattern alignment, so the saving is modest." },
-      { type: "p", text: "Our rule of thumb: subtract one roll per door, half a roll per window. For the example room with one door and two windows: 30 drops ÷ 3 drops per roll = 10 rolls, minus 1 (door) minus 1 (two windows) = 8 rolls." },
-      { type: "h2", text: "Step 6: Add your safety margin" },
-      { type: "p", text: "Always order at least 10% extra on plain or small-repeat papers, and 15% on large-repeat papers. This covers installation errors, future repairs, and the inevitable moment you realise you miscounted." },
-      { type: "p", text: "In our example: 8 rolls × 1.15 = 9.2, rounded up to 10 rolls. Order 10." },
-      { type: "quote", text: "The rule I give every client: if you're between a number and the next number up, always go up. The cost of one extra roll is nothing compared to the cost of a mis-matched patch repair.", attribution: "Harriet Cole" },
-      { type: "h2", text: "Quick reference" },
-      { type: "list", items: [
-        "Measure total perimeter of walls to be papered",
-        "Note ceiling height and pattern repeat from the product spec",
-        "Cut length = ceiling height + pattern repeat",
-        "Drops per roll = roll length (usually 10m) ÷ cut length (round down)",
-        "Total drops = perimeter ÷ roll width (usually 0.52m)",
-        "Total rolls = total drops ÷ drops per roll",
-        "Subtract: 1 roll per door, 0.5 per window",
-        "Add 10–15% for waste and contingency",
-        "Always round up to the nearest whole roll",
+
+      { type: "h3", text: "Step 3: Calculate drops per roll" },
+      { type: "p", text: "Cut length per drop = ceiling height + pattern repeat. Our example: 2.4m ceiling + 0.64m repeat = 3.04m per drop. A standard 10m roll gives 3 usable drops (10 ÷ 3.04 = 3.28, rounded down — never up)." },
+      { type: "tip", text: "Check the roll length on the product spec — some luxury papers come in 5m rolls. This halves your drops per roll and doubles the number of rolls you need." },
+
+      { type: "h3", text: "Step 4: Calculate total drops needed" },
+      { type: "p", text: "Divide your total perimeter by the roll width to get the number of drops required. Standard rolls are 52–53cm wide: 15.6m ÷ 0.52m = 30 drops." },
+
+      { type: "h3", text: "Step 5: Account for doors and windows" },
+      { type: "p", text: "The strips beside and above doors or windows still need to come from full-length drops to maintain pattern alignment, so the saving is modest. A reliable rule of thumb: subtract one roll per standard door and half a roll per standard window." },
+      { type: "p", text: "Our example room with one door and two windows: 30 drops ÷ 3 drops per roll = 10 rolls, minus 1 (door), minus 1 (two windows at 0.5 each) = 8 rolls." },
+
+      { type: "h3", text: "Step 6: Add your safety margin" },
+      { type: "p", text: "Add 10% for plain or small-repeat papers, 15% for large-repeat papers. This covers installation errors, trimming mistakes, and future repair patches." },
+      { type: "p", text: "Our example: 8 rolls × 1.15 = 9.2, rounded up to 10 rolls. Order 10." },
+      { type: "quote", text: "If you're between a number and the next number up, always go up. One extra roll costs very little. A mismatched patch repair costs everything.", attribution: "Harriet Cole" },
+
+      { type: "cta", heading: "Skip the arithmetic", body: "Enter your wall measurements and our calculator gives you an exact roll count in under a minute — accounting for pattern repeat, doors, and windows.", buttonText: "Open the free rolls calculator" },
+
+      { type: "h2", text: "Pattern repeat types explained" },
+      { type: "p", text: "Not all repeats work the same way. Understanding the type affects both waste and how you cut your strips." },
+      { type: "table", head: ["Repeat type", "How it works", "Waste", "Common on"], rows: [
+        ["Free match / plain", "No alignment needed — each strip hangs independently", "Minimal", "Textures, plains, grasscloth"],
+        ["Straight match", "Pattern aligns straight across at every seam", "Low–medium", "Small geometrics, stripes"],
+        ["Half drop", "Alternating strips drop by exactly half the repeat height", "Medium–high", "Large florals, botanicals, diagonals"],
+        ["Random match", "No repeat (e.g. natural fibres)", "None", "Grasscloth, jute, seagrass"],
       ]},
-      { type: "p", text: "Still not sure? Use our free Rolls Calculator — it does all of this automatically in under a minute." },
+      { type: "p", text: "Half-drop papers are the most wasteful. For every two strips you hang, you lose half a repeat's worth of paper from one of them. On a 64cm half-drop repeat, that's 32cm of wasted paper per alternate strip — always factor this into your calculation." },
+
+      { type: "h2", text: "The five most common mistakes" },
+      { type: "numbered", items: [
+        "Measuring the full perimeter including doors and windows, then failing to subtract any of it back",
+        "Forgetting to check the roll length — especially important with luxury and US-brand papers that often use 5m or 4.5m rolls",
+        "Ignoring the dye lot number when ordering extra rolls later — always match this to your original order",
+        "Using the ceiling height alone as the drop length, without adding the pattern repeat",
+        "Ordering exactly the calculated number with no safety margin, then discovering a damaged roll in the delivery",
+      ]},
+
+      { type: "h2", text: "What to do with leftover rolls" },
+      { type: "p", text: "Store any unused rolls flat, in the original packaging, away from light and moisture. Label them with the dye lot number and the room they came from. A leftover roll is your best insurance policy against accidental damage: a scuff, a water mark, or a failed attempt at moving a radiator pipe." },
+      { type: "p", text: "Most retailers accept returns of unopened, undamaged rolls within their returns window — often 30–60 days. If you're genuinely unsure between quantities, order the higher number and return what you don't open." },
+
+      { type: "h2", text: "Quick reference checklist" },
+      { type: "list", items: [
+        "Measure total perimeter of all walls to be papered (add widths together)",
+        "Note ceiling height and pattern repeat from the product spec",
+        "Cut length per drop = ceiling height + pattern repeat",
+        "Drops per roll = roll length ÷ cut length (round DOWN)",
+        "Total drops needed = perimeter ÷ roll width (usually 0.52m)",
+        "Total rolls = total drops ÷ drops per roll",
+        "Subtract: 1 roll per door, 0.5 rolls per standard window",
+        "Add 10% (plain) or 15% (large repeat) safety margin",
+        "Round up to the nearest whole roll — always",
+        "Check all rolls are from the same dye lot before opening any",
+      ]},
+
+      { type: "h2", text: "Frequently asked questions" },
+      { type: "faq", items: [
+        { q: "How many rolls of wallpaper do I need for a bedroom?", a: "A standard double bedroom (approximately 3.6m × 4.2m walls, 2.4m ceiling height) typically requires 10–12 rolls of standard UK wallpaper (52cm wide × 10m long) with no pattern repeat, or 13–15 rolls with a large pattern repeat (64cm+). Always add at least one extra roll. Use our free calculator above for an exact figure based on your specific measurements." },
+        { q: "How many rolls do I need for a living room?", a: "A typical living room (4.5m × 5.5m walls, 2.4m ceiling) needs 14–17 rolls with no pattern repeat, or 18–22 rolls with a large repeat. Deduct approximately one roll per door and half a roll per standard window. Living rooms often have chimney breasts — measure the face of the breast and its flanking alcoves separately and add the widths together." },
+        { q: "How many rolls for a hallway?", a: "A narrow hallway (1.2m wide, 6m run, 2.4m ceiling) typically needs 6–8 rolls with no pattern repeat, or 8–10 rolls with a large repeat. Hallways benefit from papers with strong vertical movement — stripes or tall botanicals — which minimise the visual waste of a narrow space." },
+        { q: "What size is a standard wallpaper roll in the UK?", a: "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll (slightly less after accounting for trimming and pattern repeat waste). Some luxury papers come in 5m rolls — always check the product specification before calculating." },
+        { q: "What is pattern repeat in wallpaper?", a: "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain or textured paper has a repeat of zero — no alignment is needed and waste is minimal. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam. The larger the repeat, the more rolls you need." },
+        { q: "How many rolls do I need for an accent wall?", a: "For a single accent wall approximately 3.6–4.2m wide with 2.4m ceiling height, expect 3–4 rolls with no pattern repeat, or 5–6 rolls with a large repeat. Always add one extra roll as a safety margin." },
+        { q: "Should I order extra rolls?", a: "Yes — always order at least one extra roll beyond your calculation, and ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch (different dye lot) ordered weeks later may have subtle colour variations that are invisible on screen but visible on your wall. Most retailers accept returns of unopened rolls, so the financial risk of one extra roll is minimal." },
+        { q: "What do I do if I need more rolls after installation?", a: "Contact the retailer immediately and quote the dye lot number from the labels of your original rolls. Ask them to match it exactly. If the same dye lot is unavailable, you may need to consider whether a full replacement of one wall is feasible — or use any leftover rolls you stored for this purpose. This is why the one-extra-roll rule matters so much." },
+        { q: "How do I measure a room with a chimney breast?", a: "Treat the chimney breast as three separate flat surfaces: the front face, and the two return walls on either side. Measure the width of each surface and add them to your total perimeter. The return walls are often narrow enough that you can use off-cuts from the main drops, so factor that into your calculation." },
+      ]},
     ],
   },
   {
@@ -288,6 +363,30 @@ const CATEGORY_COLORS: Record<string, string> = {
   "Interview": "bg-violet-50 text-violet-700 border-violet-100",
   "Inspiration": "bg-rose-50 text-rose-700 border-rose-100",
 };
+
+function FaqItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-stone-100">
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className="w-full flex items-center justify-between py-4 text-left cursor-pointer gap-4"
+        aria-expanded={open}
+      >
+        <span className="text-base font-medium text-stone-900" style={{ fontFamily: "Inter, sans-serif" }}>{q}</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+          className={`flex-shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true">
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </button>
+      {open && (
+        <div className="pb-5">
+          <p className="text-stone-600 text-sm leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>{a}</p>
+        </div>
+      )}
+    </div>
+  );
+}
 
 function RelatedCard({ article }: { article: Article }) {
   return (
@@ -395,6 +494,37 @@ function ArticleBody({ body }: { body: Section[] }) {
                 <figcaption className="mt-3 text-xs text-stone-400 text-center"
                   style={{ fontFamily: "Inter, sans-serif" }}>{section.caption}</figcaption>
               </figure>
+            );
+          case "cta":
+            return (
+              <div key={i} className="my-10 p-8 bg-stone-900 text-center">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#BF9B5A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mx-auto mb-4" aria-hidden="true">
+                  <rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="8" x2="16" y1="10" y2="10"/><line x1="8" x2="12" y1="14" y2="14"/>
+                </svg>
+                <h3 className="text-2xl font-semibold text-white mb-3" style={{ fontFamily: "'EB Garamond', serif" }}>{section.heading}</h3>
+                <p className="text-stone-400 text-sm mb-6 max-w-sm mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>{section.body}</p>
+                <button
+                  onClick={() => document.dispatchEvent(new CustomEvent("open-rolls-calculator"))}
+                  className="px-8 py-3 bg-white text-stone-900 text-sm font-semibold hover:bg-stone-100 transition-colors cursor-pointer"
+                  style={{ fontFamily: "Inter, sans-serif" }}
+                >
+                  {section.buttonText}
+                </button>
+              </div>
+            );
+          case "tip":
+            return (
+              <div key={i} className="my-6 pl-5 border-l-2 py-3 pr-4" style={{ borderColor: "var(--brand-gold)", background: "rgba(191,155,90,0.06)" }}>
+                <p className="text-sm text-stone-700" style={{ fontFamily: "Inter, sans-serif" }}>
+                  <span className="font-semibold" style={{ color: "var(--brand-forest)" }}>Pro tip: </span>{section.text}
+                </p>
+              </div>
+            );
+          case "faq":
+            return (
+              <div key={i} className="my-8 border-t border-stone-100">
+                {section.items.map((item, j) => <FaqItem key={j} q={item.q} a={item.a} />)}
+              </div>
             );
           default:
             return null;

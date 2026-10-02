@@ -317,6 +317,12 @@ export default function Navbar({ onSampleOpen = () => {}, lightMode = false }: {
 
   useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 20));
 
+  useEffect(() => {
+    const handler = () => setCalcOpen(true);
+    document.addEventListener("open-rolls-calculator", handler);
+    return () => document.removeEventListener("open-rolls-calculator", handler);
+  }, []);
+
   const navBg = isDark
     ? "bg-white/90 backdrop-blur-xl shadow-sm border-b border-stone-100"
     : darkBanner

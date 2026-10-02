@@ -64,6 +64,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function JournalArticlePage({ params }: Props) {
-  return <JournalArticleClient params={params} />;
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How many rolls of wallpaper do I need for a bedroom?", "acceptedAnswer": { "@type": "Answer", "text": "A standard double bedroom (approximately 3.6m × 4.2m walls, 2.4m ceiling height) typically requires 10–12 rolls of standard UK wallpaper with no pattern repeat, or 13–15 rolls with a large pattern repeat (64cm+). Always add at least one extra roll." } },
+    { "@type": "Question", "name": "How many rolls do I need for a living room?", "acceptedAnswer": { "@type": "Answer", "text": "A typical living room (4.5m × 5.5m walls, 2.4m ceiling) needs 14–17 rolls with no pattern repeat, or 18–22 rolls with a large repeat. Deduct approximately one roll per door and half a roll per standard window." } },
+    { "@type": "Question", "name": "How many rolls for a hallway?", "acceptedAnswer": { "@type": "Answer", "text": "A narrow hallway (1.2m wide, 6m run, 2.4m ceiling) typically needs 6–8 rolls with no pattern repeat, or 8–10 rolls with a large repeat." } },
+    { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
+    { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
+    { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+  ],
+};
+
+export default async function JournalArticlePage({ params }: Props) {
+  const { slug } = await params;
+  return (
+    <>
+      {slug === "how-many-rolls-do-i-need" && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+        />
+      )}
+      <JournalArticleClient params={params} />
+    </>
+  );
 }
