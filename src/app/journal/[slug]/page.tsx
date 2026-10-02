@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "bedroom-wallpaper-ideas",
+    title: "Bedroom Wallpaper Ideas: 10 Designer-Approved Looks for Every Style",
+    excerpt: "The bedroom rewards bolder choices than almost any other room — you're looking at it last thing at night and first thing in the morning. Here are ten wallpaper directions that consistently deliver in the space that matters most.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png",
+  },
+  {
     slug: "how-to-wallpaper-a-room",
     title: "How to Wallpaper a Room: A Complete Beginner's Guide",
     excerpt: "Hanging wallpaper yourself is entirely achievable with the right preparation and a methodical approach. This step-by-step guide covers everything from wall prep to trimming the final drop — no professional experience required.",
@@ -93,6 +99,18 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "bedroom-wallpaper-ideas": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the most popular bedroom wallpaper colour?", "acceptedAnswer": { "@type": "Answer", "text": "Deep botanical greens and midnight navies are consistently the top-searched bedroom wallpaper colours, particularly for feature walls behind the bed. For full-room treatment, warm neutrals and soft botanical designs on pale backgrounds perform better because they are less visually demanding at close range over extended periods." } },
+      { "@type": "Question", "name": "Should I wallpaper behind the bed only?", "acceptedAnswer": { "@type": "Answer", "text": "For most bedrooms, yes — the head wall is the natural feature wall and creates the strongest design impact per roll of paper used. Full-room papering works beautifully but requires a quieter design. The head-wall-only approach works with a wider range of patterns, including bold and dense designs." } },
+      { "@type": "Question", "name": "Is dark wallpaper bad for small bedrooms?", "acceptedAnswer": { "@type": "Answer", "text": "No. Dark wallpaper in a small bedroom creates a jewel-box effect rather than a confined one, provided it is used on one wall only. A dark head wall with pale walls on either side gives the room depth. Full dark-on-four-walls in a small room with limited light can feel oppressive — that is the specific combination to avoid." } },
+      { "@type": "Question", "name": "What wallpaper is best for a bedroom with low ceilings?", "acceptedAnswer": { "@type": "Answer", "text": "A vertical stripe on the head wall is the most effective option — the eye follows the stripe upward and the ceiling appears higher. Avoid strong horizontal patterns on all four walls. A mural that includes vertical elements (trees, tall architectural features) achieves a similar effect." } },
+      { "@type": "Question", "name": "Can I use peel-and-stick wallpaper in a bedroom?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — bedrooms are ideal for peel-and-stick because they have low humidity and no cooking or steam. The adhesive performs best in stable, dry conditions. Premium brands will last 7–10 years in a bedroom environment." } },
+      { "@type": "Question", "name": "How many rolls do I need for a bedroom feature wall?", "acceptedAnswer": { "@type": "Answer", "text": "A standard double bedroom head wall (typically 3.6–4.0m wide, 2.4m ceiling) needs 3–4 rolls of standard UK paper for a plain design, or 4–5 rolls for a paper with a large pattern repeat. Use a rolls calculator for a precise quantity based on your exact wall dimensions." } },
     ],
   },
   "how-to-wallpaper-a-room": {
