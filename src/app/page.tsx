@@ -11,7 +11,6 @@ import SampleRequestModal from "@/app/components/SampleRequestModal";
 import PressStrip from "@/app/components/PressStrip";
 import ReviewsSection from "@/app/components/ReviewsSection";
 import RoomVisualizer from "@/app/components/RoomVisualizer";
-import RollsCalculator from "@/app/components/RollsCalculator";
 import SampleBar from "@/app/components/SampleBar";
 import BeforeAfter from "@/app/components/BeforeAfter";
 import ColorStories from "@/app/components/ColorStories";
@@ -447,11 +446,10 @@ function Footer() {
 
 export default function Home() {
   const [sampleOpen, setSampleOpen] = useState(false);
-  const [calcOpen, setCalcOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar onSampleOpen={() => setSampleOpen(true)} onCalcOpen={() => setCalcOpen(true)} />
+      <Navbar onSampleOpen={() => setSampleOpen(true)} />
       <main>
         <Hero onSampleOpen={() => setSampleOpen(true)} />
         <PressStrip />
@@ -470,7 +468,6 @@ export default function Home() {
       <CartDrawer />
       <SearchOverlay />
       <SampleRequestModal isOpen={sampleOpen} onClose={() => setSampleOpen(false)} />
-      <RollsCalculator isOpen={calcOpen} onClose={() => setCalcOpen(false)} />
       <SampleBar onSampleOpen={() => setSampleOpen(true)} />
     </div>
   );

@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useScroll, useTransform, useMotionValueEvent }
 import { useCart } from "@/context/CartContext";
 import { useSearch } from "@/context/SearchContext";
 import { useCurrency, CURRENCIES, type Currency } from "@/context/CurrencyContext";
+import RollsCalculator from "@/app/components/RollsCalculator";
 
 // ─── Murall Brand Logo ────────────────────────────────────────────────────────
 function MurallLogo({ scrolled, dark = false }: { scrolled?: boolean; dark?: boolean }) {
@@ -213,7 +214,7 @@ function MegaMenu({ visible }: { visible: boolean }) {
   );
 }
 
-function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () => void; onSample: () => void }) {
+function MobileMenu({ open, onClose, onSample, onCalc }: { open: boolean; onClose: () => void; onSample: () => void; onCalc: () => void }) {
   const { currency, setCurrency } = useCurrency();
   return (
     <AnimatePresence>
@@ -256,6 +257,16 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
                 </svg>
               </a>
             ))}
+            <button
+              onClick={onCalc}
+              className="flex items-center justify-between w-full py-4 border-b border-stone-100 text-lg font-medium text-stone-800 transition-colors cursor-pointer hover:opacity-60"
+              style={{ fontFamily: "'EB Garamond', serif" }}
+            >
+              Rolls Calculator
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="8" x2="16" y1="10" y2="10"/><line x1="8" x2="12" y1="14" y2="14"/>
+              </svg>
+            </button>
           </nav>
           <div className="px-6 pb-8 space-y-4">
             <div>
@@ -289,8 +300,9 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
   );
 }
 
-export default function Navbar({ onSampleOpen = () => {}, onCalcOpen, lightMode = false }: { onSampleOpen?: () => void; onCalcOpen?: () => void; lightMode?: boolean }) {
+export default function Navbar({ onSampleOpen = () => {}, lightMode = false }: { onSampleOpen?: () => void; lightMode?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
+  const [calcOpen, setCalcOpen] = useState(false);
   const isDark = scrolled;
   const darkBanner = lightMode && !scrolled;
 
@@ -349,14 +361,13 @@ export default function Navbar({ onSampleOpen = () => {}, onCalcOpen, lightMode 
 
             <div className="flex items-center gap-1">
               <CurrencySwitcher isDark={isDark} />
-              {onCalcOpen && (
-                <button onClick={onCalcOpen}
-                  className={`hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-none text-xs font-medium transition-all duration-200 cursor-pointer mr-1 ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
-                  style={{ fontFamily: "Inter, sans-serif" }}>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="8" x2="16" y1="10" y2="10"/><line x1="8" x2="12" y1="14" y2="14"/></svg>
-                  Rolls calc
-                </button>
-              )}
+              <button onClick={() => setCalcOpen(true)}
+                className={`hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-none text-xs font-medium transition-all duration-200 cursor-pointer mr-1 ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}
+                style={{ fontFamily: "Inter, sans-serif" }}
+                aria-label="Open rolls calculator">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="8" x2="16" y1="10" y2="10"/><line x1="8" x2="12" y1="14" y2="14"/></svg>
+                Rolls calc
+              </button>
               <button onClick={onSampleOpen}
                 className={`hidden md:inline-flex items-center px-4 py-1.5 rounded-none text-xs font-medium border transition-all duration-200 cursor-pointer mr-2 ${isDark ? "border-stone-300 text-stone-700 hover:border-stone-900 hover:text-stone-900 bg-white/80" : "border-white/40 text-white/90 hover:border-white hover:text-white bg-white/10"} backdrop-blur-sm`}
                 style={{ fontFamily: "Inter, sans-serif" }}>
@@ -383,7 +394,8 @@ export default function Navbar({ onSampleOpen = () => {}, onCalcOpen, lightMode 
           </div>
         </div>
       </motion.header>
-      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} onSample={onSampleOpen} />
+      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} onSample={onSampleOpen} onCalc={() => { setMobileOpen(false); setCalcOpen(true); }} />
+      <RollsCalculator isOpen={calcOpen} onClose={() => setCalcOpen(false)} />
     </>
   );
 }
