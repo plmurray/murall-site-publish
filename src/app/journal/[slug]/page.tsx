@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "wallpaper-trends-2026",
+    title: "Wallpaper Trends 2026: The 10 Directions Defining Interiors Right Now",
+    excerpt: "From the sustained dominance of dark botanicals to the unexpected return of the dado rail, here is what is actually selling, what designers are specifying, and what is quietly fading out — based on what we are seeing across the market in 2026.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
+  },
+  {
     slug: "bathroom-wallpaper-ideas",
     title: "Bathroom Wallpaper Ideas: Yes, You Can — Here's How to Do It Right",
     excerpt: "The biggest question about bathroom wallpaper isn't which design to choose — it's whether you can use wallpaper at all. The answer is yes, with conditions. Here's what works, what doesn't, and ten ideas worth stealing.",
@@ -111,6 +117,18 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "wallpaper-trends-2026": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the biggest wallpaper trend in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Dark botanical wallpaper remains the dominant residential trend in 2026 — deep-background designs in forest green, teal, and near-black with layered botanical illustrations. The trend has been in place since 2022 and is maturing rather than declining, with the colour palette broadening and the illustration quality increasing." } },
+      { "@type": "Question", "name": "What wallpaper colours are popular in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Deep forest green is the defining colour of the decade in interior design. In 2026 it is joined by deep teal, warm near-black with green or brown undertones, and coloured grasscloth papers in rust, sage, and warm stone. Cool greys, which dominated the 2010s, are in significant decline." } },
+      { "@type": "Question", "name": "Is maximalist wallpaper still in fashion in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — but the register has shifted. The maximalism current in 2026 is more refined: a single strong paper (often a dark botanical or full-wall mural) with restraint everywhere else. Maximalist wallpaper within a disciplined room, rather than pattern everywhere." } },
+      { "@type": "Question", "name": "Are geometric wallpapers out of fashion?", "acceptedAnswer": { "@type": "Answer", "text": "High-contrast black-and-white geometric is in decline and now reads as the 2010s. Tonal geometric — pattern created through two close values of the same colour — is current and growing. The geometry is the same; the contrast is not." } },
+      { "@type": "Question", "name": "What wallpaper will look dated in a few years?", "acceptedAnswer": { "@type": "Answer", "text": "Designs most likely to date quickly: high-contrast black-and-white geometric, coastal and nautical motifs, photographic landscape murals, and anything with a cool grey background. Safest long-term bets: grasscloth and natural textures, tonal stripe, botanical in a strong colourway, and painterly mural designs." } },
+      { "@type": "Question", "name": "Is green wallpaper still in style in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — deep forest green is arguably the defining interior colour of the entire 2020s decade and shows no sign of declining in 2026. The trend is evolving rather than ending: the palette is broadening into teal and warm near-black, and the designs are becoming more sophisticated and botanically detailed." } },
     ],
   },
   "bathroom-wallpaper-ideas": {
