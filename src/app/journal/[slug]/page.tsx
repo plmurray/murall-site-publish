@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "hallway-wallpaper-ideas",
+    title: "Hallway Wallpaper Ideas: 12 Ways to Make Your First Impression Count",
+    excerpt: "The hallway is the room every visitor sees first — and the one most homeowners neglect. These twelve wallpaper ideas work with the hallway's specific challenges: narrow widths, high traffic, awkward staircases, and the pressure of first impressions.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
+  },
+  {
     slug: "bedroom-wallpaper-ideas",
     title: "Bedroom Wallpaper Ideas: 10 Designer-Approved Looks for Every Style",
     excerpt: "The bedroom rewards bolder choices than almost any other room — you're looking at it last thing at night and first thing in the morning. Here are ten wallpaper directions that consistently deliver in the space that matters most.",
@@ -99,6 +105,18 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "hallway-wallpaper-ideas": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is dark wallpaper a good idea in a hallway?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — narrow hallways are one of the best applications for dark wallpaper. The confined width means the pattern surrounds you and reads as immersive rather than oppressive. The solution to a dark hallway feeling gloomy is better lighting, not lighter wallpaper." } },
+      { "@type": "Question", "name": "What is the most durable wallpaper for a hallway?", "acceptedAnswer": { "@type": "Answer", "text": "Vinyl-coated papers and papers with a Class 2 or Class 3 abrasion resistance rating perform best in hallways. Avoid untreated paste papers and genuine grasscloth in very high-traffic situations — it is not scrubbable. Always check the durability rating on the label before purchasing for a hallway." } },
+      { "@type": "Question", "name": "How many rolls of wallpaper do I need for a hallway?", "acceptedAnswer": { "@type": "Answer", "text": "A standard narrow hallway (1.2m wide, 5m run, 2.4m ceiling) typically needs 6–8 rolls with no pattern repeat, or 8–10 rolls with a large repeat. A stairwell adds significantly more — often 12–16 rolls due to long drops and angled cuts." } },
+      { "@type": "Question", "name": "Can I wallpaper a stairwell myself?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, but it requires two people, a proper scaffold platform (not a ladder), and experience with hanging long drops. Each stair drop can be 4–5 metres long. If it is your first wallpapering project, practise on a simpler room first." } },
+      { "@type": "Question", "name": "What pattern works best in a narrow hallway?", "acceptedAnswer": { "@type": "Answer", "text": "Vertical designs — stripes, tall botanicals, upward-reaching compositions — work best in narrow hallways because they draw the eye upward and make the space feel taller. Avoid strong horizontal patterns, which emphasise the narrowness. Large-scale designs can work well because the close walls bring you into the pattern." } },
+      { "@type": "Question", "name": "Should I use the same wallpaper on the stairs as in the hall?", "acceptedAnswer": { "@type": "Answer", "text": "Using the same paper throughout creates a continuous, intentional environment — the stronger design choice. Different papers for hall and stairs work if the staircase is architecturally distinct and the two papers relate tonally. Avoid two strong contrasting patterns in adjacent zones." } },
     ],
   },
   "bedroom-wallpaper-ideas": {

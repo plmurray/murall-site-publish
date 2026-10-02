@@ -519,6 +519,93 @@ const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "hallway-wallpaper-ideas",
+    category: "Inspiration",
+    title: "Hallway Wallpaper Ideas: 12 Ways to Make Your First Impression Count",
+    excerpt: "The hallway is the room every visitor sees first — and the one most homeowners neglect. These twelve wallpaper ideas work with the hallway's specific challenges: narrow widths, high traffic, awkward staircases, and the pressure of first impressions.",
+    author: "Sofia Laurent",
+    authorBio: "Sofia is a Paris-based interiors writer and contributing editor at Murall Journal. She covers trend, design culture, and the spaces that shape us.",
+    date: "2 October 2026",
+    readTime: "7 min read",
+    imageUrl: IMAGES.verdant,
+    relatedSlugs: ["living-room-wallpaper-ideas", "how-to-wallpaper-a-room", "how-many-rolls-do-i-need"],
+    body: [
+      { type: "p", text: "The hallway is the most visited room in the house and the one that gets the least design attention. Every person who enters your home passes through it. You pass through it yourself many times a day. Yet the default treatment is magnolia paint and a coat hook — a non-decision dressed as neutrality." },
+      { type: "p", text: "The hallway is also one of the most rewarding rooms to wallpaper. The constraints that make it seem difficult — narrow width, awkward corners, the staircase — are in fact design assets. A narrow hallway makes bold wallpaper more immersive, not more overwhelming. A tight corridor with a strong paper on all four walls is one of the most dramatic domestic interiors possible. A mural at the end of a long corridor stops you in your tracks." },
+      { type: "p", text: "Here are twelve directions that work — along with the practical considerations that are specific to hallways." },
+
+      { type: "h2", text: "The hallway's design challenges (and why they're not what you think)" },
+      { type: "p", text: "Most people approach hallway wallpaper cautiously because of three perceived problems: it's narrow, it's high-traffic, and it's complicated by the staircase. All three are real, but none of them point to restraint as the solution." },
+      { type: "p", text: "Narrow hallways actually suit bold, immersive papers better than large rooms do, because the walls are close and the pattern fills your visual field. High traffic means durability matters — choose a vinyl-coated or washable paper rather than an untreated paste paper. The staircase is genuinely complex to hang but has no bearing on your design choice, only your hanging method." },
+      { type: "tip", text: "The single most important thing to do in a hallway: keep the floor and ceiling as simple as possible, then let the walls do everything. A confident wallpaper in a hall with plain ceiling and simple flooring reads brilliantly. The same paper in a hall with a patterned carpet, textured ceiling tiles, and coloured woodwork fights itself into mediocrity." },
+
+      { type: "h2", text: "12 hallway wallpaper ideas" },
+
+      { type: "h3", text: "1. The dark immersive hallway" },
+      { type: "p", text: "Dark wallpaper in a narrow hallway is not a mistake — it is the strongest possible use of the space. A deep, richly patterned paper (dark botanical, dense geometric, inky toile) on all four walls of a narrow corridor creates a jewel-box effect. The narrowness amplifies the design rather than making it feel cramped, because the pattern surrounds you and there is no pale wall to dilute it." },
+      { type: "p", text: "The practical concern about dark halls being gloomy is resolved by lighting, not paper choice. A well-lit dark hallway is dramatic and welcoming. An unlit pale hallway is just dull. Install a decent pendant or wall lights before reaching for pale paint as your solution to a dark space." },
+
+      { type: "h3", text: "2. Vertical stripe for borrowed height" },
+      { type: "p", text: "A narrow hallway with a low ceiling is the prime use case for a vertical stripe wallpaper. The eye follows the stripe upward and the ceiling recedes. Choose a stripe with a relatively tight repeat (5–10cm between stripes) for a classic, elegant effect; a wider repeat (20–30cm) reads more modern and graphic. Tone-on-tone stripes — two values of the same colour — age better in a hallway than high-contrast stripes because they are less visually tiring on the most-used route in the house." },
+
+      { type: "h3", text: "3. Bold print at the stair return" },
+      { type: "p", text: "If your hallway opens onto a staircase with a landing return, the wall at the end of the stairs — the one you face as you turn at the landing — is one of the best feature wall positions in any home. It sits at eye level at the moment of pause (the turn) and is typically the most prominent wall in the entire hall and stair zone. A single bold print — a large-scale botanical, a graphic geometric, a mural panel — placed here makes the staircase feel like a designed journey rather than a functional route." },
+
+      { type: "h3", text: "4. End-of-corridor mural" },
+      { type: "p", text: "A long corridor with a dead end — a wall at the far end — is an opportunity that most people use for a coat rack or a mirror. A full-wall mural at the end of a corridor does something architecturally interesting: it suggests continuation. A landscape, a colonnade, a garden vista — anything that implies depth — makes the corridor feel longer and more purposeful. It is one of the most effective visual tricks in domestic interiors and requires only one wall." },
+
+      { type: "h3", text: "5. Grasscloth for high-traffic durability" },
+      { type: "p", text: "Grasscloth is tactile, warm, and — in its vinyl-backed versions — reasonably resistant to the scuffs and shoulder-brushes that hallways accumulate. It handles all four walls of a hallway well because its tonal neutrality means it never competes with coats, bags, shoes, and the other objects that accumulate in halls. It is the safe choice that does not look like a safe choice." },
+      { type: "p", text: "Note that genuine woven grasscloth is not scrubbable — marks must be spot-cleaned carefully. For a genuinely high-traffic hallway with children or pets, choose a vinyl paper with a grasscloth texture rather than the real thing." },
+
+      { type: "h3", text: "6. Chinoiserie runner" },
+      { type: "p", text: "A long, narrow hallway hung with chinoiserie — a continuous panoramic landscape of pagodas, exotic birds, and trailing branches — is one of the oldest and most successful uses of wallpaper in the English tradition. Georgian town houses were frequently treated this way because chinoiserie is a landscape paper: it runs continuously around a room (or along a corridor) telling a story from wall to wall. The effect is of moving through a landscape rather than a decorated space." },
+      { type: "p", text: "Modern chinoiserie papers are available in panel form (pre-sized to standard wall sections) which makes hanging significantly easier than matching a traditional roll-hung repeat in a narrow space." },
+
+      { type: "h3", text: "7. Dado rail treatment" },
+      { type: "p", text: "Hanging wallpaper above the dado rail (approximately 900mm from the floor) with painted woodwork below is the traditional approach to hallway decoration — and it remains highly practical. The lower section, which takes the most abuse from feet, bags, and furniture, is in hard-wearing paint. The upper section, which gets far less contact, carries the decorative paper." },
+      { type: "p", text: "The combination also prevents the common hallway problem of a bold paper that is perpetually obscured by coats and bags hung low on the wall. By keeping the paper above the clutter line, it remains visible and unobstructed." },
+
+      { type: "h3", text: "8. Panelling effect" },
+      { type: "p", text: "A wallpaper that simulates raised panel woodwork — dado rails, picture rails, framed rectangular panels — creates an architectural quality in a hallway that signals arrival in a way that plain walls never can. Applied below a picture rail in a warm neutral colourway, it reads as a Georgian or Victorian entrance hall regardless of the house's actual age. Applied in a darker colourway across all four walls, it reads as a private members' club." },
+
+      { type: "h3", text: "9. Maximalist botanical (all four walls)" },
+      { type: "p", text: "A dense, dark-background botanical on all four walls of a hallway is the statement that has defined the forward end of UK interior design for the past three years. Rebel Walls, House of Hackney, and Cole & Son all produce versions that hang well in narrow spaces. The key requirement: the paper must have a vertical composition (tall plants, trailing vines, upward-reaching branches) rather than a horizontal repeat. A horizontal botanical repeat in a narrow space reads as wallpaper; a vertical one reads as a garden." },
+
+      { type: "h3", text: "10. Bold graphic modern print" },
+      { type: "p", text: "A hallway is also the place where a paper that would be too emphatic in a living room can work without reservation — because the hallway is transitory. You move through it rather than settling into it, which means a very high-energy design (strong contrast, large scale, bold colour) can be experienced as energising rather than exhausting. The papers that are too confrontational for a sofa wall are often exactly right for a 90-second corridor." },
+
+      { type: "h3", text: "11. Staircase wall treatment" },
+      { type: "p", text: "The wall running alongside a staircase — the oblique surface that follows the rake of the stairs — is one of the most prominent but most often plain surfaces in a house. Papering it in the same design as the rest of the hall creates a continuous, immersive environment. Papering it in a contrasting design treats the staircase as a separate zone — which can work well in larger entrance halls where the staircase is architecturally distinct from the corridor." },
+      { type: "p", text: "Hanging on the stair wall is technically demanding because every drop must be cut at the same oblique angle at top and bottom. Measure carefully and cut with a straight-edge rather than scissors for a clean raking line." },
+
+      { type: "h3", text: "12. Peel-and-stick for rented hallways" },
+      { type: "p", text: "Rented hallways are among the worst-treated rooms in domestic interiors — blank magnolia that tenants leave untouched for years because traditional wallpaper is not permitted. Premium peel-and-stick papers solve this completely. A full hallway hang in a rental property takes half a day, requires no paste, and leaves the walls entirely undamaged on removal." },
+      { type: "p", text: "The hallway is actually a better peel-and-stick environment than many rooms — stable temperature, low humidity, no steam or cooking vapour — which means adhesion is reliable and longevity is good. Use it without hesitation." },
+
+      { type: "h2", text: "Practical considerations specific to hallways" },
+
+      { type: "h3", text: "Durability and washability" },
+      { type: "p", text: "Hallways receive more physical contact than any other room. Shoulders brush the wall when carrying shopping. Children drag hands along it. Coats swing against it. Choose a paper with a vinyl coating or a manufacturer durability rating of Class 2 or above (the European standard for abrasion resistance). Check the label — it will specify whether the paper is wipeable, washable, or scrubbable. In a hallway, you want at minimum wipeable; washable is preferable." },
+
+      { type: "h3", text: "The stairwell — what's different" },
+      { type: "p", text: "The stairwell combines the hallway's narrow-space challenges with a significant height increase and an awkward access problem. Standard drops may be 4–5 metres long rather than 2.4 metres, which means paste soak time increases and the paper is much heavier to manoeuvre. Two people are almost always required. A scaffold board or platform step (rather than a ladder) is needed to reach the top of the drop safely." },
+      { type: "p", text: "Design-wise, the stairwell height works in your favour: a paper with a strong vertical movement (a tall botanical, a long-repeat panoramic print) can be seen at full vertical scale in a way that is impossible in a standard-height room. The stairwell is the one place in the house where a truly tall, dramatic repeat can be appreciated." },
+
+      { type: "cta", heading: "How many rolls for a hallway?", body: "Hallways and stairwells have more waste than standard rooms due to angled cuts and long drops. Use our calculator to get the precise quantity before you order.", buttonText: "Open rolls calculator" },
+
+      { type: "h2", text: "Frequently asked questions" },
+      { type: "faq", items: [
+        { q: "Is dark wallpaper a good idea in a hallway?", a: "Yes — narrow hallways are one of the best applications for dark wallpaper. The confined width means the pattern surrounds you and reads as immersive rather than oppressive. The solution to a dark hallway feeling gloomy is better lighting, not lighter wallpaper." },
+        { q: "What wallpaper is most durable for a hallway?", a: "Vinyl-coated papers and papers with a Class 2 or Class 3 abrasion resistance rating (marked on the label) perform best in hallways. Avoid untreated paste papers, embossed papers with deep texture that traps dirt, and genuine grasscloth in very high-traffic situations — it is not scrubbable." },
+        { q: "How many rolls do I need for a hallway?", a: "A standard narrow hallway (1.2m wide, 5m run, 2.4m ceiling) typically needs 6–8 rolls for no pattern repeat, or 8–10 rolls for a paper with a large repeat. A stairwell adds significantly more — often 12–16 rolls due to the long drops and angled cuts at the top and bottom. Use the rolls calculator for your specific dimensions." },
+        { q: "Can I wallpaper a stairwell myself?", a: "Yes, but it requires two people, a proper scaffold platform (not a ladder), and experience with hanging long drops. Each stair drop can be 4–5 metres — substantially heavier and more unwieldy than a standard drop. If it is your first wallpapering project, practise on a simpler room first." },
+        { q: "What pattern works best in a narrow hallway?", a: "Vertical designs — stripes, tall botanicals, upward-reaching compositions — work best in narrow hallways because they draw the eye upward and make the space feel taller. Avoid strong horizontal patterns, which emphasise the narrowness. Large-scale designs can work well in narrow spaces because the close walls bring you into the pattern rather than letting you observe it from a distance." },
+        { q: "Should I use the same wallpaper on the stairs as in the hall?", a: "Using the same paper throughout creates a continuous, intentional environment — the stronger design choice. Different papers for hall and stairs work if the staircase is architecturally distinct (a separate flight visible through an arch, for example) and the two papers relate tonally. Avoid two strong, contrasting patterns in adjacent zones — they compete rather than complement." },
+      ]},
+    ],
+  },
+  {
     slug: "bedroom-wallpaper-ideas",
     category: "Inspiration",
     title: "Bedroom Wallpaper Ideas: 10 Designer-Approved Looks for Every Style",
