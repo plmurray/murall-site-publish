@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "kitchen-wallpaper-ideas",
+    title: "Kitchen Wallpaper Ideas: What Works, What Doesn't, and 10 Looks Worth Trying",
+    excerpt: "Kitchens present the same question as bathrooms: can wallpaper survive here? The answer depends on where in the kitchen and what type of paper. Here is how to get it right — and ten ideas that genuinely work.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png",
+  },
+  {
     slug: "wallpaper-trends-2026",
     title: "Wallpaper Trends 2026: The 10 Directions Defining Interiors Right Now",
     excerpt: "From the sustained dominance of dark botanicals to the unexpected return of the dado rail, here is what is actually selling, what designers are specifying, and what is quietly fading out — based on what we are seeing across the market in 2026.",
@@ -117,6 +123,18 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "kitchen-wallpaper-ideas": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Can you put wallpaper in a kitchen?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — in the low-risk zones of the kitchen (the dining wall, the wall opposite the hob, a kitchen-diner partition wall), any vinyl-coated paper performs well. The wall directly behind the hob must be tiled or purpose-panelled. Ventilation is the key variable everywhere else." } },
+      { "@type": "Question", "name": "What is the best wallpaper for a kitchen?", "acceptedAnswer": { "@type": "Answer", "text": "Vinyl-coated paste-the-wall papers are the best all-round kitchen choice — wipeable to washable, good dimensional stability in slightly humid conditions, available in the full range of designs. For walls nearest cooking appliances, choose a paper with a Class 3 washability rating and hang with a fungicidal paste." } },
+      { "@type": "Question", "name": "Can you wallpaper behind a kitchen splashback?", "acceptedAnswer": { "@type": "Answer", "text": "No. The splashback position — behind the hob and above the worktop — must be tiled, glass, or a purpose-made splashback panel. Water, heat, and grease make this position unsuitable for any wallpaper. Tile-effect papers work well on adjacent lower-risk walls as a visual complement to a tiled splashback." } },
+      { "@type": "Question", "name": "How do I stop kitchen wallpaper from peeling?", "acceptedAnswer": { "@type": "Answer", "text": "The three most common causes of kitchen wallpaper failure: inadequate degreasing before hanging, poor ventilation, and unsealed bottom edges. Wash the wall with sugar soap before sizing, ensure your extractor vents to the outside, and seal all edges with clear silicone caulk where the paper meets the worktop upstand or tiles." } },
+      { "@type": "Question", "name": "Is peel-and-stick wallpaper suitable for a kitchen?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, in low-risk zones with good ventilation — the dining wall of a kitchen-diner, a display wall away from the hob and steam appliances. Keep it away from the hob, kettle, and sink area. Premium peel-and-stick is an excellent choice for rental kitchens." } },
+      { "@type": "Question", "name": "What wallpaper works best in a small galley kitchen?", "acceptedAnswer": { "@type": "Answer", "text": "A vertical stripe on the end wall draws the eye toward it and makes the corridor feel longer and taller. Avoid busy repeating patterns on all four walls of a galley — one strong end wall with plain tile or paint on the long sides reads better and feels less confined." } },
     ],
   },
   "wallpaper-trends-2026": {
