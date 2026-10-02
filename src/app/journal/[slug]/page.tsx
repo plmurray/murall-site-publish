@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "how-to-wallpaper-a-room",
+    title: "How to Wallpaper a Room: A Complete Beginner's Guide",
+    excerpt: "Hanging wallpaper yourself is entirely achievable with the right preparation and a methodical approach. This step-by-step guide covers everything from wall prep to trimming the final drop — no professional experience required.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png",
+  },
+  {
     slug: "accent-wall-ideas",
     title: "10 accent wall ideas that interior designers actually approve of",
     excerpt: "Forget the feature wall clichés. These are the wallpaper moments that our favourite designers have used to transform ordinary rooms into something memorable.",
@@ -87,6 +93,19 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "how-to-wallpaper-a-room": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Do I need to strip old wallpaper before hanging new?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, almost always. Hanging over existing wallpaper adds moisture to old adhesive, which can cause both layers to lift. There are rare cases where a single layer of lining paper over a perfectly adhered original can work, but as a general rule, strip and start from a clean wall." } },
+      { "@type": "Question", "name": "What paste should I use for wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Check the manufacturer's specification on your wallpaper — it will state the correct paste type. Lightweight papers typically use standard cellulose paste. Heavy vinyl and textured papers often require a heavy-duty or border paste. Paste-the-wall papers use their own formulation applied to the wall, not the paper." } },
+      { "@type": "Question", "name": "How long does wallpaper take to dry?", "acceptedAnswer": { "@type": "Answer", "text": "Most papers are touch-dry within 12–24 hours in normal conditions (18–20°C, moderate ventilation). Full bond strength takes 48–72 hours. Avoid moving furniture back against the walls or applying any pressure to seams during this period." } },
+      { "@type": "Question", "name": "Can I wallpaper over painted walls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — painted walls are one of the best substrates, provided the paint is sound, fully dry, and not peeling. Apply a coat of size before hanging. Gloss-painted walls need light sanding first to provide a mechanical key for the adhesive." } },
+      { "@type": "Question", "name": "What is the difference between paste-the-wall and paste-the-paper wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Paste-the-paper (traditional) applies paste to the back of the paper, which then needs to soak before hanging. This allows the paper to expand with moisture. Paste-the-wall applies paste directly to the wall surface — the paper goes on dry, so no soaking is required and there is no expansion issue. Most modern papers specify paste-the-wall." } },
+      { "@type": "Question", "name": "How do I fix air bubbles in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Small bubbles often disappear as the paste dries. If they persist after 24 hours, make a small incision with a sharp blade, inject a small amount of paste with a syringe, and press flat. Wipe off any excess paste immediately with a damp sponge." } },
+      { "@type": "Question", "name": "Where do I start when hanging wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Never start from a corner — corners are rarely perfectly straight. Start from a point one roll-width from the most prominent corner, using a plumb bob or spirit level to draw a perfectly vertical line. This plumb line is your reference for every subsequent drop." } },
     ],
   },
   "living-room-wallpaper-ideas": {
