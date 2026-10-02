@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "bathroom-wallpaper-ideas",
+    title: "Bathroom Wallpaper Ideas: Yes, You Can — Here's How to Do It Right",
+    excerpt: "The biggest question about bathroom wallpaper isn't which design to choose — it's whether you can use wallpaper at all. The answer is yes, with conditions. Here's what works, what doesn't, and ten ideas worth stealing.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png",
+  },
+  {
     slug: "hallway-wallpaper-ideas",
     title: "Hallway Wallpaper Ideas: 12 Ways to Make Your First Impression Count",
     excerpt: "The hallway is the room every visitor sees first — and the one most homeowners neglect. These twelve wallpaper ideas work with the hallway's specific challenges: narrow widths, high traffic, awkward staircases, and the pressure of first impressions.",
@@ -105,6 +111,18 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "bathroom-wallpaper-ideas": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Can you use wallpaper in a bathroom?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — in the dry zone of a well-ventilated bathroom, any vinyl-coated wallpaper will perform reliably. Avoid the wet zone (inside or directly above the bath or shower) and ensure the room has an extractor fan that runs for at least 15–20 minutes after showering. Ventilation matters more than paper type." } },
+      { "@type": "Question", "name": "What is the best wallpaper for a bathroom?", "acceptedAnswer": { "@type": "Answer", "text": "Vinyl-coated paste-the-wall papers are the best all-round bathroom choice — they have better dimensional stability in humid conditions and are typically wipeable to washable. For maximum moisture resistance near the bath or shower (zone 2), use a solid vinyl commercial paper with a fungicidal paste." } },
+      { "@type": "Question", "name": "Will wallpaper go mouldy in a bathroom?", "acceptedAnswer": { "@type": "Answer", "text": "Only in bathrooms with inadequate ventilation. In a well-ventilated bathroom with an extractor fan running 15–20 minutes after every shower, a vinyl-coated paper hung with fungicidal paste will not mould. Standard paste papers or genuine grasscloth in a poorly ventilated bathroom will mould within 6–18 months." } },
+      { "@type": "Question", "name": "How do I waterproof bathroom wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Apply a coat of clear matt water-based varnish over the hung paper for additional surface protection near splash zones. Seal all cut edges with clear silicone caulk where the paper meets tiles or the bath surround. Neither treatment makes paper suitable for wet zones, but both improve durability in zone 2 positions." } },
+      { "@type": "Question", "name": "Can I wallpaper a shower room?", "acceptedAnswer": { "@type": "Answer", "text": "Only the dry walls — those at least 600mm from the shower enclosure. The wet walls inside and immediately adjacent to the shower must be tiled, stone, or a purpose-made wet-room panel. No wallpaper, however moisture-resistant, is suitable for continuous water contact." } },
+      { "@type": "Question", "name": "Is a cloakroom or downstairs WC safe for wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — a cloakroom or WC with no shower is the safest bathroom environment for wallpaper. There is no steam source, humidity levels are close to the rest of the house, and virtually any paper type performs well. It is the room most often recommended for a bold or expensive paper because the risk is negligible and the impact is high." } },
     ],
   },
   "hallway-wallpaper-ideas": {

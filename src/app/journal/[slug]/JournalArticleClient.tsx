@@ -519,6 +519,101 @@ const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "bathroom-wallpaper-ideas",
+    category: "Inspiration",
+    title: "Bathroom Wallpaper Ideas: Yes, You Can — Here's How to Do It Right",
+    excerpt: "The biggest question about bathroom wallpaper isn't which design to choose — it's whether you can use wallpaper at all. The answer is yes, with conditions. Here's what works, what doesn't, and ten ideas worth stealing.",
+    author: "James Whitfield",
+    authorBio: "James is a former interior decorator turned writer, based in Edinburgh. He has hung wallpaper in over 200 homes and writes about craft, materials, and getting things right first time.",
+    date: "2 October 2026",
+    readTime: "8 min read",
+    imageUrl: IMAGES.emerald,
+    relatedSlugs: ["peel-and-stick-vs-paste-the-wall", "best-peel-and-stick-wallpaper", "how-to-wallpaper-a-room"],
+    body: [
+      { type: "p", text: "The question people type into search engines before choosing bathroom wallpaper is not which pattern they want. It is whether they can use wallpaper at all. The short answer is yes. The longer answer involves understanding where exactly in a bathroom wallpaper works, what type of paper to use, and what makes the difference between a bathroom hang that lasts five years and one that starts peeling within six months." },
+      { type: "p", text: "Get those variables right and a bathroom wallpaper is one of the most rewarding interiors decisions you can make. The bathroom is small, enclosed, and used in an almost ritual way — morning light, steam from the shower, the same view every day. A paper that rewards that repeated close-range attention transforms the room entirely." },
+
+      { type: "h2", text: "Can you wallpaper a bathroom? The honest answer" },
+      { type: "p", text: "Yes — but not everywhere, and not with every paper type. The variables that matter are: where in the bathroom the paper goes, how well the room is ventilated, and whether you choose a paper rated for humid environments." },
+      { type: "p", text: "UK building regulations divide bathrooms into moisture zones. Zone 0 is inside the bath or shower — no wallpaper. Zone 1 is directly above the bath or within the shower enclosure — no wallpaper. Zone 2 is within 600mm of the bath or shower edge — only purpose-made bathroom papers or vinyl-coated papers with appropriate adhesive. Beyond zone 2 is the dry area of the bathroom, where most wallpaper types perform well provided the room has adequate ventilation." },
+      { type: "p", text: "In practice, most wallpaper in bathrooms goes on the wall facing the bath (not the wet wall), on the wall behind the toilet, or in a cloakroom/WC that has no shower at all. These are low-risk positions that any good vinyl-coated paper will handle comfortably." },
+      { type: "tip", text: "Ventilation is the single most important factor — more important than the paper type. A bathroom with good ventilation (an extractor fan that runs for 20 minutes after showering, or an openable window) will keep any vinyl-coated paper in good condition indefinitely. A bathroom with poor ventilation will damage even the best moisture-resistant paper within two years." },
+
+      { type: "h2", text: "10 bathroom wallpaper ideas" },
+
+      { type: "h3", text: "1. Dark botanical facing the bath" },
+      { type: "p", text: "The wall facing the bath — the one you look at while lying in it — is the most rewarding position for a dramatic paper in the whole house. You are at rest, at close range, with time to look. A dark botanical on this wall (forest green, midnight blue, deep teal) creates a genuinely luxurious effect. The steam from the bath adds a quality to the light that makes dark papers look particularly good: warm, atmospheric, slightly hazed." },
+      { type: "p", text: "This is the one bathroom wallpaper direction that genuinely competes with hotel interiors. Choose a paper with a vinyl coating and seal the bottom edge with decorator's caulk where it meets the bath surround or tiled splash area." },
+
+      { type: "h3", text: "2. Maximalist floral in an en-suite" },
+      { type: "p", text: "An en-suite, particularly a small one, is the ideal room for a paper that would be too overwhelming at larger scale — a dense, maximalist floral, an all-over chintz, a pattern where every square centimetre is filled with something. The room is used briefly and privately, which means the intensity that would be exhausting in a living room reads as richly indulgent here. Small, maximalist, enclosed: the combination works." },
+
+      { type: "h3", text: "3. Navy geometric in a family bathroom" },
+      { type: "p", text: "A bold navy or dark teal geometric on the dry wall of a family bathroom is one of the most durable-feeling choices: the dark ground hides minor marks, the graphic pattern distracts from the inevitable splash zone, and the strong contrast reads clearly even under the flat overhead lighting that most family bathrooms have." },
+      { type: "p", text: "Choose a paper with a Class 3 washability rating for a family bathroom. This means the surface can be cleaned with a mild detergent and a soft cloth without degrading the print or the coating." },
+
+      { type: "h3", text: "4. Chinoiserie in a cloakroom or WC" },
+      { type: "p", text: "The cloakroom or downstairs WC is the most forgiving bathroom environment for wallpaper — no shower, minimal steam, and typically the room where guests spend the most time looking at the walls in any house. It is the room interior designers most reliably recommend for a bold or expensive paper, because the square meterage is small (typically 4–6 rolls total), the risk is low, and the impact per pound spent is higher than anywhere else." },
+      { type: "p", text: "Chinoiserie on all four walls of a cloakroom is a classic application — the small room scale suits the intricate, detailed quality of the pattern, and the enclosed space makes the panoramic landscape quality of chinoiserie particularly immersive." },
+
+      { type: "h3", text: "5. Tonal stripe in a narrow bathroom" },
+      { type: "p", text: "Most bathrooms are narrow — they are designed to use space efficiently rather than to feel expansive. A vertical stripe in a deep colour on all four walls pulls the ceiling up visually and makes the room feel less corridor-like. Tone-on-tone (deep sage on mid-sage, charcoal on dark grey) is better for bathrooms than high-contrast stripes because the room is typically experienced at close range and high contrast is harder to be near." },
+
+      { type: "h3", text: "6. Art Deco tile effect" },
+      { type: "p", text: "Several manufacturers produce papers that mimic ceramic tile patterns — Art Deco geometric mosaics, Victorian encaustic designs, Moorish zellige patterns — at a fraction of the cost of real tiles and with none of the grout-cleaning maintenance. Applied to a splash zone wall (above the basin, on a non-wet wall), a tile-effect paper creates a period-appropriate bathroom look that is entirely convincing at normal viewing distances." },
+      { type: "p", text: "Choose a paper specifically rated for wet areas if it will go near a basin splash. Apply a coat of clear matt varnish over the surface after hanging for additional water resistance in high-splash positions." },
+
+      { type: "h3", text: "7. Tropical mural panel" },
+      { type: "p", text: "A full-wall tropical mural — banana leaves, palm fronds, bird-of-paradise — behind a freestanding bath is the contemporary luxury bathroom statement. It works because the mural and the freestanding bath together create a scene: the bath is the object, the mural is the backdrop. The composition is complete in itself, in a way that a tiled wall or a plain painted wall never is." },
+      { type: "p", text: "For this application, choose a mural printed on a moisture-resistant substrate and seal all edges carefully. Rebel Walls and several other premium brands offer bathroom-rated mural papers." },
+
+      { type: "h3", text: "8. Grasscloth-effect vinyl" },
+      { type: "p", text: "Real grasscloth should not go in a humid bathroom — it is organic material that absorbs moisture and can mould in a poorly ventilated space. But several manufacturers produce vinyl papers with a grasscloth texture that replicates the warmth and tactility of the real thing with none of the moisture sensitivity. In a bathroom, this is the better choice: the warmth reads the same, the texture is convincing, and the paper can be wiped clean." },
+
+      { type: "h3", text: "9. Monochrome graphic print" },
+      { type: "p", text: "A strong two-colour graphic print — black-on-white, navy-on-cream, deep green-on-pale ground — in a modern abstract or botanical style works particularly well in bathrooms because the high contrast reads clearly under the varying light conditions of a bathroom (bright overhead light for grooming, softer side light for atmosphere). The monochrome palette also means the paper works with whatever tile colour the bathroom already has." },
+
+      { type: "h3", text: "10. Peel-and-stick for easy updates" },
+      { type: "p", text: "Bathroom tastes evolve faster than most rooms — trends in tile colour, sanitaryware style, and accessory finish shift regularly, and the bathroom is often updated more frequently than living spaces. Peel-and-stick wallpaper suits this update cycle perfectly: it can be changed every few years without the cost and disruption of a full strip-and-repaste. In the dry zone of a well-ventilated bathroom, premium peel-and-stick adhesion is entirely reliable." },
+
+      { type: "h2", text: "What type of wallpaper to use in a bathroom" },
+      { type: "table",
+        head: ["Paper type", "Bathroom suitability", "Notes"],
+        rows: [
+          ["Standard paste paper (untreated)", "Dry zone only, good ventilation", "Will peel in humid conditions within 1–2 years"],
+          ["Vinyl-coated paste paper", "Dry zone, zone 2 with caution", "Best all-round bathroom choice; wipeable to washable"],
+          ["Solid vinyl / commercial vinyl", "Zones 1–2 with appropriate adhesive", "Maximum moisture resistance; used in commercial bathrooms"],
+          ["Peel-and-stick", "Dry zone, good ventilation", "Premium brands reliable in low-humidity bathrooms"],
+          ["Genuine grasscloth", "Not recommended", "Organic fibres absorb moisture and can mould"],
+          ["Vinyl grasscloth (synthetic)", "Dry zone and zone 2", "Wipeable version safe in bathrooms"],
+          ["Non-woven paste-the-wall", "Dry zone, good ventilation", "Better dimensional stability than paper-backed in humidity"],
+        ]
+      },
+
+      { type: "h2", text: "How to prepare a bathroom for wallpapering" },
+      { type: "numbered", items: [
+        "Check ventilation first. If the bathroom has no extractor fan or openable window, install one before papering. A bathroom fan rated to at least 15 litres per second is the minimum for a room where you shower daily.",
+        "Remove all existing wallpaper. Do not paper over existing paper in a bathroom — the adhesive layer compounds the moisture-retention problem and accelerates failure.",
+        "Seal any bare plaster with a diluted PVA coat (1:4 PVA to water) or a specialist bathroom wall primer. Bare plaster in a humid room absorbs moisture through the paper and causes bubbling.",
+        "Allow freshly painted walls to cure for at least 30 days before papering. Fresh emulsion off-gasses moisture that interferes with adhesive bonding in already-humid conditions.",
+        "Use a moisture-resistant adhesive. Standard cellulose paste is not appropriate for bathrooms. Use a fungicidal paste or a paste specifically formulated for vinyl papers in humid environments.",
+        "Seal all cut edges. After hanging, run a bead of clear silicone caulk or decorator's sealant along all cut edges that meet a tile, bath surround, or shower enclosure. This prevents moisture from wicking up behind the paper from the bottom edge.",
+      ]},
+
+      { type: "cta", heading: "How many rolls for a bathroom?", body: "Bathrooms are small but have more obstacles per square metre than any other room — basin, toilet, window, door. Use our calculator to get the exact roll count.", buttonText: "Open rolls calculator" },
+
+      { type: "h2", text: "Frequently asked questions" },
+      { type: "faq", items: [
+        { q: "Can you use wallpaper in a bathroom?", a: "Yes — in the dry zone of a well-ventilated bathroom, any vinyl-coated wallpaper will perform reliably. Avoid the wet zone (inside or directly above the bath or shower) and ensure the room has an extractor fan that runs for at least 15–20 minutes after showering. Ventilation matters more than paper type." },
+        { q: "What is the best wallpaper for a bathroom?", a: "Vinyl-coated paste-the-wall papers are the best all-round bathroom choice — they have better dimensional stability than paper-backed types in humid conditions and are typically wipeable to washable. For maximum moisture resistance in a zone 2 position (within 600mm of the bath or shower), use a solid vinyl commercial paper with a fungicidal paste." },
+        { q: "Will wallpaper go mouldy in a bathroom?", a: "It can — but only in bathrooms with inadequate ventilation. In a well-ventilated bathroom (extractor fan running 15–20 minutes after every shower), a vinyl-coated paper hung with fungicidal paste will not mould. Using a standard paste paper or genuine grasscloth in a poorly ventilated bathroom will result in mould within 6–18 months." },
+        { q: "How do I waterproof bathroom wallpaper?", a: "Apply a coat of clear matt water-based varnish over the hung paper for additional surface protection, particularly near splash zones. Seal all cut edges with clear silicone caulk where the paper meets tiles, the bath surround, or any wet surface. Neither treatment makes the paper suitable for wet zones (zones 0–1), but both improve durability in zone 2 positions." },
+        { q: "Can I wallpaper a shower room?", a: "Only the dry walls — those at least 600mm from the shower enclosure. The wet walls inside and immediately adjacent to the shower must be tiled, stone, or a purpose-made wet-room panel. No wallpaper, however moisture-resistant, is suitable for continuous water contact." },
+        { q: "Is a downstairs WC or cloakroom safe for wallpaper?", a: "Yes — a cloakroom or WC with no shower is the safest bathroom environment for wallpaper. There is no steam source, humidity levels are close to the rest of the house, and virtually any paper type works well. It is the room interior designers most often recommend for a bold or expensive paper precisely because the risk is negligible and the impact is high." },
+      ]},
+    ],
+  },
+  {
     slug: "hallway-wallpaper-ideas",
     category: "Inspiration",
     title: "Hallway Wallpaper Ideas: 12 Ways to Make Your First Impression Count",
