@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useCurrency } from "@/context/CurrencyContext";
 
 const STORIES = [
   {
@@ -69,6 +70,7 @@ const STORIES = [
 export default function ColorStories() {
   const [active, setActive] = useState(0);
   const story = STORIES[active];
+  const { formatPrice } = useCurrency();
 
   return (
     <section className="w-full py-20 bg-white" aria-labelledby="stories-heading">
@@ -135,7 +137,7 @@ export default function ColorStories() {
                         <p className={`text-sm font-semibold ${story.text} group-hover:opacity-80 transition-opacity`} style={{ fontFamily: "'EB Garamond', serif" }}>{p.name}</p>
                         <p className={`text-xs ${story.text} opacity-50`} style={{ fontFamily: "Inter, sans-serif" }}>{p.brand}</p>
                       </div>
-                      <p className={`text-sm font-semibold ${story.text} opacity-70`} style={{ fontFamily: "Inter, sans-serif" }}>From ${p.price}</p>
+                      <p className={`text-sm font-semibold ${story.text} opacity-70`} style={{ fontFamily: "Inter, sans-serif" }}>From {formatPrice(p.price)}</p>
                     </motion.div>
                   ))}
                 </div>

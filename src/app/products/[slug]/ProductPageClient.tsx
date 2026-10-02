@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { use } from "react";
 import { getProduct, getRelatedProducts } from "@/lib/products";
 import { getAffiliateUrl } from "@/lib/affiliate";
+import { useCurrency } from "@/context/CurrencyContext";
 import Navbar from "@/app/components/Navbar";
 import CartDrawer from "@/app/components/CartDrawer";
 import SearchOverlay from "@/app/components/SearchOverlay";
@@ -33,6 +34,7 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
   const [activeImg, setActiveImg] = useState(0);
   const [sampleOpen, setSampleOpen] = useState(false);
   const [zoomed, setZoomed] = useState(false);
+  const { formatPrice } = useCurrency();
 
   return (
     <div className="min-h-screen bg-white">
@@ -111,7 +113,7 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
 
             {/* Price */}
             <div className="flex items-baseline gap-2 mb-6">
-              <span className="text-3xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>${product.price}</span>
+              <span className="text-3xl font-semibold text-stone-900" style={{ fontFamily: "'EB Garamond', serif" }}>{formatPrice(product.price)}</span>
               <span className="text-stone-400 text-sm" style={{ fontFamily: "Inter, sans-serif" }}>{product.priceUnit}</span>
             </div>
 
@@ -210,7 +212,7 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
                   <div className="flex-1 min-w-0">
                     <p className="text-xs text-stone-400 mb-0.5" style={{ fontFamily: "Inter, sans-serif" }}>{r.brand}</p>
                     <p className="text-base font-semibold text-stone-900 group-hover:text-brand-gold transition-colors truncate" style={{ fontFamily: "'EB Garamond', serif" }}>{r.name}</p>
-                    <p className="text-sm text-stone-600 mt-1" style={{ fontFamily: "Inter, sans-serif" }}>From ${r.price} / roll</p>
+                    <p className="text-sm text-stone-600 mt-1" style={{ fontFamily: "Inter, sans-serif" }}>From {formatPrice(r.price)} / roll</p>
                   </div>
                   <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0 mt-1 text-stone-300 group-hover:text-stone-600 transition-colors" aria-hidden="true"><path d="M4 10h12M10 4l6 6-6 6"/></svg>
                 </a>

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import { useCart } from "@/context/CartContext";
 import { useSearch } from "@/context/SearchContext";
+import { useCurrency, CURRENCIES, type Currency } from "@/context/CurrencyContext";
 
 // ─── Murall Brand Logo ────────────────────────────────────────────────────────
 function MurallLogo({ scrolled, dark = false }: { scrolled?: boolean; dark?: boolean }) {
@@ -95,6 +96,76 @@ const SHOP_ROOMS = [
   { name: "Hallway",     href: "/rooms/hallway" },
 ];
 
+function CurrencySwitcher({ isDark }: { isDark: boolean }) {
+  const { currency, setCurrency } = useCurrency();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleOutside(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener("mousedown", handleOutside);
+    return () => document.removeEventListener("mousedown", handleOutside);
+  }, []);
+
+  return (
+    <div ref={ref} className="relative hidden md:block">
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className={`flex items-center gap-1 px-2.5 py-1.5 rounded-none text-xs font-medium transition-all duration-200 cursor-pointer ${
+          isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"
+        }`}
+        style={{ fontFamily: "Inter, sans-serif" }}
+        aria-label="Change currency"
+        aria-expanded={open}
+        aria-haspopup="listbox"
+      >
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/>
+        </svg>
+        {currency}
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.ul
+            role="listbox"
+            aria-label="Select currency"
+            initial={{ opacity: 0, y: -6, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -6, scale: 0.97 }}
+            transition={{ duration: 0.15 }}
+            className="absolute top-full right-0 mt-1.5 w-48 bg-white shadow-xl border border-stone-100 z-50 overflow-hidden"
+          >
+            {CURRENCIES.map((cur) => (
+              <li key={cur.code} role="option" aria-selected={currency === cur.code}>
+                <button
+                  onClick={() => { setCurrency(cur.code as Currency); setOpen(false); }}
+                  className={`w-full flex items-center justify-between px-4 py-2.5 text-xs transition-colors cursor-pointer ${
+                    currency === cur.code
+                      ? "bg-stone-50 font-semibold text-stone-900"
+                      : "text-stone-600 hover:bg-stone-50 hover:text-stone-900"
+                  }`}
+                  style={{ fontFamily: "Inter, sans-serif" }}
+                >
+                  <span className="font-medium">{cur.symbol} {cur.code}</span>
+                  <span className="text-stone-400">{cur.label}</span>
+                </button>
+              </li>
+            ))}
+            <li className="px-4 py-2 border-t border-stone-100">
+              <p className="text-[10px] text-stone-400" style={{ fontFamily: "Inter, sans-serif" }}>Prices are indicative conversions</p>
+            </li>
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 function MegaMenu({ visible }: { visible: boolean }) {
   return (
     <AnimatePresence>
@@ -143,6 +214,7 @@ function MegaMenu({ visible }: { visible: boolean }) {
 }
 
 function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () => void; onSample: () => void }) {
+  const { currency, setCurrency } = useCurrency();
   return (
     <AnimatePresence>
       {open && (
@@ -185,7 +257,26 @@ function MobileMenu({ open, onClose, onSample }: { open: boolean; onClose: () =>
               </a>
             ))}
           </nav>
-          <div className="px-6 pb-8">
+          <div className="px-6 pb-8 space-y-4">
+            <div>
+              <p className="text-[10px] tracking-widest uppercase text-stone-400 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Currency</p>
+              <div className="flex gap-2 flex-wrap">
+                {CURRENCIES.map((cur) => (
+                  <button
+                    key={cur.code}
+                    onClick={() => setCurrency(cur.code as Currency)}
+                    className={`px-3 py-1.5 text-xs font-medium border transition-colors cursor-pointer ${
+                      currency === cur.code
+                        ? "bg-stone-900 text-white border-stone-900"
+                        : "bg-white text-stone-600 border-stone-200 hover:border-stone-400"
+                    }`}
+                    style={{ fontFamily: "Inter, sans-serif" }}
+                  >
+                    {cur.symbol} {cur.code}
+                  </button>
+                ))}
+              </div>
+            </div>
             <button onClick={() => { onClose(); onSample(); }}
               className="block w-full text-center py-3 rounded-none bg-stone-900 text-white text-sm font-medium hover:bg-stone-800 transition-colors cursor-pointer"
               style={{ fontFamily: "Inter, sans-serif" }}>
@@ -257,6 +348,7 @@ export default function Navbar({ onSampleOpen = () => {}, onCalcOpen, lightMode 
             </nav>
 
             <div className="flex items-center gap-1">
+              <CurrencySwitcher isDark={isDark} />
               {onCalcOpen && (
                 <button onClick={onCalcOpen}
                   className={`hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-none text-xs font-medium transition-all duration-200 cursor-pointer mr-1 ${isDark ? "text-stone-600 hover:text-stone-900 hover:bg-stone-50" : "text-white/80 hover:text-white hover:bg-white/10"}`}

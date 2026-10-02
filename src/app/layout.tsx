@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { SearchProvider } from "@/context/SearchContext";
+import { CurrencyProvider } from "@/context/CurrencyContext";
 import CookieBanner from "@/app/components/CookieBanner";
 
 const GA_ID = "G-KC3SZJSFW7";
@@ -82,12 +83,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <input type="text" name="style" />
           <textarea name="notes" />
         </form>
-        <CartProvider>
-          <SearchProvider>
-            {children}
-            <CookieBanner />
-          </SearchProvider>
-        </CartProvider>
+        <CurrencyProvider>
+          <CartProvider>
+            <SearchProvider>
+              {children}
+              <CookieBanner />
+            </SearchProvider>
+          </CartProvider>
+        </CurrencyProvider>
       </body>
     </html>
   );

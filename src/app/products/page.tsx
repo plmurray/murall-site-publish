@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { PRODUCTS } from "@/lib/products";
 import { getAffiliateUrl } from "@/lib/affiliate";
+import { useCurrency } from "@/context/CurrencyContext";
 import { PRODUCT_COLORS, COLOUR_FILTERS } from "@/lib/productColors";
 import Navbar from "@/app/components/Navbar";
 import CartDrawer from "@/app/components/CartDrawer";
@@ -36,6 +37,7 @@ function Stars({ rating }: { rating: number }) {
 function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: number }) {
   const [hovered, setHovered] = useState(false);
   const [saved, setSaved] = useState(false);
+  const { formatPrice } = useCurrency();
 
   return (
     <motion.article
@@ -90,7 +92,7 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: n
           <div className="flex items-center gap-2">
             <Stars rating={product.rating} />
             <p className="text-sm font-semibold text-white/90">
-              From ${product.price}<span className="text-xs font-normal text-white/50 ml-1">/ roll</span>
+              From {formatPrice(product.price)}<span className="text-xs font-normal text-white/50 ml-1">/ roll</span>
             </p>
           </div>
           <span className={`text-[10px] px-2 py-0.5 rounded-none font-medium border ${product.installType === "peel-and-stick" ? "bg-amber-900/60 text-amber-200 border-amber-700/50" : "bg-sky-900/60 text-sky-200 border-sky-700/50"}`}>
