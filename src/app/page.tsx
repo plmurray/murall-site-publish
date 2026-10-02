@@ -29,7 +29,7 @@ const HERO_SLIDES = [
 
 const TRUST_ITEMS = [
   "Free shipping over $120",
-  "12 curated brands",
+  "17 curated brands",
   "Sample packs from $12",
   "Expert install guides",
   "Peel & Stick options",

@@ -3,7 +3,7 @@ const BASE_URL = "https://www.awin1.com/cread.php";
 
 // Brand fallback homepages — used when a product has no Awin URL yet
 const BRAND_URLS: Record<string, string> = {
-  "rebel-walls":       "https://www.rebellwalls.com",
+  "rebel-walls":       "https://www.rebelwalls.com",
   "graham-brown":      "https://www.grahambrown.com",
   "chasing-paper":     "https://www.chasingpaper.com",
   "tempaper":          "https://www.tempaper.com",
