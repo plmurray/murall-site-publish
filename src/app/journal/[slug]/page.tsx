@@ -42,6 +42,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "living-room-wallpaper-ideas",
+    title: "Living Room Wallpaper Ideas: 12 Looks That Interior Designers Actually Recommend",
+    excerpt: "The living room is the hardest room to get right — and the one where wallpaper makes the most dramatic difference. Here are 12 ideas worth stealing, from dark feature walls to full-room botanical immersion.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
+  },
+  {
     slug: "accent-wall-ideas",
     title: "10 accent wall ideas that interior designers actually approve of",
     excerpt: "Forget the feature wall clichés. These are the wallpaper moments that our favourite designers have used to transform ordinary rooms into something memorable.",
@@ -81,6 +87,18 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "living-room-wallpaper-ideas": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the most popular wallpaper style for living rooms?", "acceptedAnswer": { "@type": "Answer", "text": "Botanical designs consistently top living room wallpaper searches. Dark-background botanicals (forest green, midnight navy) are particularly strong for feature walls. Large-scale geometric patterns are a close second, especially in contemporary and newly-built spaces." } },
+      { "@type": "Question", "name": "Should I wallpaper one wall or all four in a living room?", "acceptedAnswer": { "@type": "Answer", "text": "Both work, for different reasons. One wall (typically behind the sofa) is lower commitment and works with bolder, busier patterns. Four walls works best with quieter designs — tonal botanicals, textured grasscloth, subtle geometrics — that read as an enveloping environment rather than a repeating pattern." } },
+      { "@type": "Question", "name": "What colour wallpaper is best for a living room?", "acceptedAnswer": { "@type": "Answer", "text": "Deep colours (forest green, midnight blue, charcoal) are the consistent choice of interior designers for living rooms. They create warmth and intimacy in the evening and age well. Lighter and warm neutral papers work well in rooms with limited natural light where you need to preserve brightness." } },
+      { "@type": "Question", "name": "How much does it cost to wallpaper a living room?", "acceptedAnswer": { "@type": "Answer", "text": "A full four-wall living room (4.5m × 5.5m, 2.4m ceiling) requires 14–17 rolls of standard UK wallpaper. At mid-range prices (£50–80 per roll), materials alone run to £700–£1,360. Professional hanging typically adds £200–400. A single feature wall cuts material costs by roughly 70%." } },
+      { "@type": "Question", "name": "Does wallpaper make a living room look smaller?", "acceptedAnswer": { "@type": "Answer", "text": "Not inherently. Small-scale repeating patterns on light backgrounds can actually make rooms feel larger by implying depth and texture. Dark papers in small living rooms, done well, create an intimate jewel-box effect rather than a confined feeling. The key variable is how confidently the choice is committed to." } },
+      { "@type": "Question", "name": "What wallpaper works best in a north-facing living room?", "acceptedAnswer": { "@type": "Answer", "text": "North-facing rooms receive cool indirect light that makes whites feel cold and blues feel grey. Warm colours — terracotta, amber, deep forest green, warm cream — compensate for the cool light quality. Darker papers often work better than expected in north-facing rooms because the contrast between wall and furnishings is less harsh under cool diffuse light." } },
     ],
   },
   "best-peel-and-stick-wallpaper": {
