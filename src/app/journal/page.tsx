@@ -31,6 +31,17 @@ const POSTS = [
     featured: true,
   },
   {
+    slug: "kids-room-wallpaper-ideas",
+    category: "Inspiration",
+    title: "Kids' Room Wallpaper Ideas: 12 Designs That Actually Last",
+    excerpt: "The hardest wallpaper brief isn't 'make it beautiful' — it's 'make it beautiful for a five-year-old and still work when they're twelve.' These 12 ideas solve that problem.",
+    author: "Sofia Laurent",
+    date: "3 October 2026",
+    readTime: "8 min read",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
+    featured: false,
+  },
+  {
     slug: "feature-wall-ideas",
     category: "Guide",
     title: "Feature Wall Ideas: How to Choose the Right Wall and Get It Right",

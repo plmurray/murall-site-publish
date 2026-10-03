@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "kids-room-wallpaper-ideas",
+    title: "Kids' Room Wallpaper Ideas: 12 Designs That Actually Last",
+    excerpt: "The hardest wallpaper brief isn't 'make it beautiful' — it's 'make it beautiful for a five-year-old and still work when they're twelve.' These 12 ideas solve that problem.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
+  },
+  {
     slug: "feature-wall-ideas",
     title: "Feature Wall Ideas: How to Choose the Right Wall and Get It Right",
     excerpt: "A feature wall done well is one of the most cost-effective design decisions in a home. Done badly, it looks like an afterthought. The difference is almost always in which wall you choose and how you treat the three walls around it.",
@@ -153,6 +159,16 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "kids-room-wallpaper-ideas": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the most durable wallpaper for a children's room?", "acceptedAnswer": { "@type": "Answer", "text": "Vinyl-coated or vinyl-backed wallpaper is the most durable choice for children's rooms. Look for papers labelled 'scrubbable' or 'washable' — these withstand damp cloth cleaning, which is unavoidable. Avoid natural-fibre papers like grasscloth or unpasted silk at low heights." } },
+      { "@type": "Question", "name": "Is peel-and-stick wallpaper good for nurseries?", "acceptedAnswer": { "@type": "Answer", "text": "Peel-and-stick wallpaper is a practical choice for nurseries that will be redecorated within a few years. Modern adhesive-backed papers hold well on smooth, painted walls. Check that the paper is Oeko-Tex certified or low-VOC — important in a room where a newborn sleeps." } },
+      { "@type": "Question", "name": "How do I choose wallpaper that grows with my child?", "acceptedAnswer": { "@type": "Answer", "text": "Choose designs based on natural subjects (woodland, celestial, maps, botanical) rather than specific characters or franchises. Abstract and geometric patterns are more age-neutral than themed prints. Restrict character or franchise choices to posters and accessories rather than wallpaper." } },
+      { "@type": "Question", "name": "Should I wallpaper the whole children's room or just one wall?", "acceptedAnswer": { "@type": "Answer", "text": "One wall — typically behind the bed — gives most of the visual impact at a quarter of the cost. It also makes future updates significantly easier and cheaper. A full-room wallpaper commit makes sense when you are confident the design will last at least seven to ten years." } },
     ],
   },
   "feature-wall-ideas": {
