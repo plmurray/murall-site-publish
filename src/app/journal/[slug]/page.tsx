@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "how-to-remove-wallpaper",
+    title: "How to Remove Wallpaper: The Complete Step-by-Step Guide",
+    excerpt: "Wallpaper removal is the step most people rush and then regret. Done correctly, it leaves walls ready to paper or paint immediately. Done badly, it leaves torn plaster, paste residue, and a surface that causes every subsequent finish to fail.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png",
+  },
+  {
     slug: "wallpaper-cost-guide",
     title: "How Much Does Wallpaper Cost? A Room-by-Room Price Guide for 2026",
     excerpt: "Most wallpaper cost guides online are useless — vague ranges that tell you nothing about what you will actually spend. This one breaks it down by room, by market tier, and by whether you are hanging it yourself or paying someone else.",
@@ -129,6 +135,18 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "how-to-remove-wallpaper": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the easiest way to remove wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Score with a perforating roller, apply hot water with a tablespoon of fabric softener, wait at least five minutes for the water to reach the paste, then strip from the bottom up with a wide stripping knife held at a shallow angle. Working in small, fully soaked sections is faster than trying to rush large areas." } },
+      { "@type": "Question", "name": "Do I need a steam stripper to remove wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Not for most jobs. Soaking with hot water and fabric softener is sufficient for single or double layers of modern wallpaper on solid plaster. A steam stripper is worth hiring for multiple layers of old paper, heavily embossed paper, and paper hung directly onto bare plaster without sizing." } },
+      { "@type": "Question", "name": "How do I remove wallpaper without damaging the plaster?", "acceptedAnswer": { "@type": "Answer", "text": "Use a perforating roller (not a knife) to score, apply water with a sponge, and hold the stripping knife at a very shallow angle (15–20 degrees). On plasterboard specifically, use minimal water and avoid steam — over-wetting plasterboard damages the paper face of the board." } },
+      { "@type": "Question", "name": "How do I remove wallpaper from plasterboard?", "acceptedAnswer": { "@type": "Answer", "text": "Score lightly with a perforating roller (one or two passes only), apply water sparingly with a spray bottle, and wait 3–4 minutes before stripping with a wide knife at a very shallow angle. Avoid steam entirely on plasterboard. If the board's paper face lifts or tears, apply a bonding primer before any further decoration." } },
+      { "@type": "Question", "name": "Can I wallpaper over existing wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "No, as a general rule. Hanging over existing paper adds moisture to old adhesive, which can cause both layers to lift. The only exception is a single layer of firmly adhered, perfectly flat lining paper — which can be papered over directly. Finish paper should always be stripped." } },
+      { "@type": "Question", "name": "How long does it take to remove wallpaper from a room?", "acceptedAnswer": { "@type": "Answer", "text": "A standard double bedroom (single layer of modern paper, solid plaster) takes one person 3–5 hours to strip and wash down. Multiple layers or plasterboard takes 6–8 hours. A full stairwell is typically a full day's work due to access difficulty." } },
     ],
   },
   "wallpaper-cost-guide": {

@@ -519,6 +519,126 @@ const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "how-to-remove-wallpaper",
+    category: "How-To",
+    title: "How to Remove Wallpaper: The Complete Step-by-Step Guide",
+    excerpt: "Wallpaper removal is the step most people rush and then regret. Done correctly, it leaves walls ready to paper or paint immediately. Done badly, it leaves torn plaster, paste residue, and a surface that causes every subsequent finish to fail. Here is how to do it correctly.",
+    author: "James Whitfield",
+    authorBio: "James is a former interior decorator turned writer, based in Edinburgh. He has hung wallpaper in over 200 homes and writes about craft, materials, and getting things right first time.",
+    date: "2 October 2026",
+    readTime: "9 min read",
+    imageUrl: IMAGES.midnight,
+    relatedSlugs: ["how-to-wallpaper-a-room", "how-many-rolls-do-i-need", "wallpaper-cost-guide"],
+    body: [
+      { type: "p", text: "Wallpaper removal has a reputation for being the worst part of any decorating project. The reputation is mostly earned by people who tried to do it fast. Done slowly and methodically, wallpaper strips cleanly and leaves a wall that is ready to decorate the same day. Done impatiently — dry scraping, inadequate soaking, pulling at angles that tear the plaster — it creates a wall that takes twice as long to prepare as a bare surface would have." },
+      { type: "p", text: "The key insight is that you are not fighting the paper. You are dissolving the adhesive bond between the paper and the wall. Get the adhesive wet enough and the paper releases without effort. Every technique in this guide is in service of that single principle." },
+
+      { type: "h2", text: "What you'll need" },
+      { type: "list", items: [
+        "Scoring tool (perforating roller or paper tiger — do not use a knife)",
+        "Large bucket and sponge, or a garden pump sprayer",
+        "Hot water — the hotter the better",
+        "Fabric softener or washing-up liquid (a tablespoon per bucket improves penetration)",
+        "Wide stripping knife (125–150mm) — wider is better for large flat sections",
+        "Narrow stripping knife (50–75mm) — for corners, around switches, and detail work",
+        "Steam stripper (hire if you do not own one — essential for multiple layers or embossed paper)",
+        "Dustsheets to protect the floor",
+        "Bucket and sponge for wash-down",
+        "Sugar soap or diluted white vinegar for the final wash",
+      ]},
+
+      { type: "h2", text: "Before you start: two things to check" },
+
+      { type: "h3", text: "Is it lining paper or finish paper?" },
+      { type: "p", text: "Many walls have two layers: a lining paper underneath and a finish paper on top. The finish paper usually strips first, leaving the lining behind. You then have a choice: strip the lining too, or paper over it if it is in good condition. Lining paper that is firmly adhered, flat, and undamaged can be papered over directly — it provides an excellent substrate. Lining paper that is lifting, bubbling, or torn must come off completely." },
+      { type: "p", text: "To check how many layers you have, lift a corner at a seam and peel slowly. If a thin decorative layer comes away leaving a white backing, you have a strippable paper and the backing can often be left as lining. If the whole thickness comes off in one, there is a single layer." },
+
+      { type: "h3", text: "What is behind the paper?" },
+      { type: "p", text: "The wall substrate determines how aggressive you can be. Solid plaster (the lime or gypsum plaster found in most pre-1980s houses) is forgiving — it can handle vigorous scraping and heavy soaking without damage. Plasterboard (the paper-faced gypsum board used in most modern builds and stud partitions) is not. Its paper facing tears if over-soaked or scraped too aggressively, and damaged plasterboard needs to be either skim-coated or replaced before the wall can be decorated cleanly." },
+      { type: "tip", text: "If you are working on plasterboard, use significantly less water than you think you need — just enough to soften the adhesive, not enough to soak through the paper into the board behind. A spray bottle gives better control than a sponge for plasterboard." },
+
+      { type: "h2", text: "Method 1: soaking and hand stripping" },
+      { type: "p", text: "This is the right method for most domestic wallpaper removal: single or double layers on solid plaster, paste-the-wall papers, vinyl-coated papers, and most papers hung in the last 20 years." },
+
+      { type: "h3", text: "Step 1: score the surface" },
+      { type: "p", text: "Score the wallpaper surface with a perforating roller (also called a paper tiger). This creates hundreds of small perforations that allow water to penetrate through the paper to the adhesive layer beneath. Without scoring, water sits on the surface of most vinyl-coated papers and does not reach the paste." },
+      { type: "p", text: "Use moderate pressure — enough to perforate without gouging the plaster. On plasterboard, use very light pressure and make only one or two passes. Do not score with a craft knife or anything with a sharp edge that cuts rather than perforates — this creates ridges in the plaster that are difficult to fill." },
+
+      { type: "h3", text: "Step 2: soak thoroughly" },
+      { type: "p", text: "Mix a bucket of the hottest tap water you can get with a tablespoon of fabric softener. Apply generously with a large sponge or a garden pump sprayer. Work in sections of approximately one square metre. The water needs time to penetrate — apply it and move to the next section while the first soaks. Come back to the first section only after it has had at least five minutes of dwell time." },
+      { type: "p", text: "The paper is ready to strip when it looks darker and slightly translucent, when it feels soft rather than papery to the touch, and when a corner lifts easily without resistance. If it tears rather than peeling, it needs more water and more time. Apply a second coat and wait again." },
+
+      { type: "h3", text: "Step 3: strip from the bottom up" },
+      { type: "p", text: "Work from the bottom of each drop upward, sliding the stripping knife flat against the wall at a shallow angle (15–20 degrees) rather than digging in at a steep angle. A shallow angle lets the knife ride under the paper without gouging. A steep angle concentrates force on a small point and damages the surface." },
+      { type: "p", text: "Strip in large sheets where possible. If the paper is tearing into small pieces, it is not wet enough. Stop, re-soak, and wait. The correct sound of stripping is a soft tearing away; the wrong sound is a dry, resistant ripping." },
+
+      { type: "h3", text: "Step 4: wash down" },
+      { type: "p", text: "Once all paper is off, wash the entire wall with warm water and a sponge to remove all paste residue. Paste left on the wall dries to a hard film that prevents new adhesive from bonding properly and causes new paper to lift at the seams within weeks. Change the water in the bucket frequently — dirty paste water spread back onto the wall is self-defeating." },
+      { type: "p", text: "A final wash with diluted sugar soap (one part sugar soap to ten parts water) removes any grease or remaining residue and leaves the wall ready for sizing. Allow to dry completely — usually 12–24 hours — before continuing." },
+
+      { type: "h2", text: "Method 2: steam stripping" },
+      { type: "p", text: "A steam stripper is the right tool for: multiple layers of old paste paper, heavily embossed papers (where the texture prevents water penetration), papers hung directly onto bare plaster without sizing (old houses frequently have this), and any job where soaking is not shifting the paper after two attempts." },
+
+      { type: "h3", text: "How to use a steam stripper" },
+      { type: "p", text: "Hold the steam plate against the wall for 20–30 seconds until the section behind it softens — you will hear the paper begin to bubble slightly. Move the plate to the next section and immediately strip the section you just steamed with a wide stripping knife. The steam creates a brief window (approximately 30 seconds) where the adhesive is liquid and the paper strips almost effortlessly. Work in a rhythm: steam a section, move plate, strip the previous section." },
+      { type: "p", text: "Do not hold the steamer on one spot for more than 45 seconds on solid plaster or more than 20 seconds on plasterboard. Steam drives moisture deep into the substrate and can cause plasterboard to swell, delaminate, or even mould if over-saturated." },
+
+      { type: "h3", text: "Steam on plasterboard: proceed carefully" },
+      { type: "p", text: "Many decorators avoid steam on plasterboard entirely and use soaking with a spray bottle instead. If you must steam plasterboard, use the shortest dwell time possible (15 seconds), move fast, and keep air moving in the room to allow the board to dry out after stripping. Check the board surface after stripping: if the paper facing of the board has lifted or become soft, you will need to apply a bonding primer before any further work." },
+
+      { type: "h2", text: "Removing wallpaper from specific surfaces" },
+      { type: "table",
+        head: ["Surface", "Method", "Key caution"],
+        rows: [
+          ["Solid lime plaster (pre-1950)", "Soak and strip or steam", "Old lime plaster can crumble if saturated — soak moderately and work quickly"],
+          ["Gypsum plaster (post-1950)", "Soak and strip or steam", "Most forgiving surface — handles full soaking well"],
+          ["Plasterboard", "Light scoring, spray bottle, minimal soaking", "Over-wetting destroys the paper face of the board — use minimal water"],
+          ["Previously painted walls (paper over paint)", "Score thoroughly, soak well", "Paint layer prevents water reaching paste — score more aggressively than usual"],
+          ["Bare brick", "Soak and strip", "Grout lines hold paste — scrub residue with a stiff brush after stripping"],
+        ]
+      },
+
+      { type: "h2", text: "Dealing with stubborn paste residue" },
+      { type: "p", text: "Dried paste residue is the most common cause of new wallpaper failure. It looks invisible when dry but activates when new paste is applied, creating a soft, unstable layer under the new paper that causes it to lift at the seams." },
+      { type: "p", text: "To detect residue: shine a raking light (a torch held at a very acute angle to the wall) across the surface. Residue catches the light and appears as a slightly shiny or uneven patch on an otherwise matt surface. Alternatively, run the back of your hand across the wall — residue feels slightly slippery compared to clean plaster." },
+      { type: "p", text: "To remove it: rewet with warm water and a sponge, leave for two minutes, then scrub with a coarse sponge or a nail brush. Change the water frequently. Repeat until the wall feels uniformly dry and slightly rough — that is clean plaster. If residue is extensive or very old, a solution of warm water and white vinegar (equal parts) cuts through paste more effectively than water alone." },
+
+      { type: "h2", text: "Preparing the wall after stripping" },
+      { type: "p", text: "A stripped wall almost always needs some repair before it is ready for new decoration. What level of work is required depends on the condition of the surface." },
+      { type: "numbered", items: [
+        "Fill any holes, cracks, or damaged areas with a lightweight ready-mixed filler. Small holes need one application; deeper damage may need two, allowing each coat to dry fully.",
+        "Sand the filled areas smooth with 120-grit sandpaper once fully dry. Feather the edges of any patch so it blends into the surrounding plaster without a visible ridge.",
+        "Check the whole wall surface with a raking light and fill any further imperfections revealed. Wallpaper does not hide surface imperfections — it emphasises them under the right light.",
+        "Apply a coat of size (diluted paste at half-strength) or specialist primer to the entire wall. This seals the plaster, prevents it from absorbing paste too quickly, and improves adhesion for the new paper.",
+        "Allow size to dry completely (typically 2–4 hours) before hanging. The wall is ready when it is uniformly dry and very slightly tacky to the touch.",
+      ]},
+
+      { type: "cta", heading: "Ready to choose what comes next?", body: "Use our rolls calculator to work out exactly how much wallpaper you'll need for the freshly stripped room.", buttonText: "Open rolls calculator" },
+
+      { type: "h2", text: "Common mistakes" },
+      { type: "numbered", items: [
+        "Dry scraping without soaking. This tears the plaster surface and creates ridges and craters that are difficult to fill perfectly. Always soak first.",
+        "Not soaking long enough. The most common mistake. Paper that has not soaked sufficiently tears into small pieces rather than stripping in sheets. Each small piece takes three times as long to remove as a large sheet would. Apply water and wait.",
+        "Using too much water on plasterboard. The opposite problem to under-soaking on solid plaster. Plasterboard cannot absorb the same water loading as solid plaster. Use a spray bottle and minimal dwell time.",
+        "Holding the stripping knife at a steep angle. A steep angle digs into the plaster. A shallow angle (15–20 degrees) rides under the paper and does not damage the surface.",
+        "Skipping the wash-down. Invisible paste residue on the wall causes new paper to lift at the seams within weeks. Always wash down after stripping, even if the wall looks clean.",
+        "Papering the same day as stripping. The wall needs to be fully dry before new adhesive is applied. In a well-ventilated room, allow a minimum of 12 hours after the final wash-down. 24 hours is safer.",
+        "Not checking for multiple layers before starting. Finding a second layer of paper midway through a job is demoralising and avoidable. Lift a corner at a seam before you begin.",
+      ]},
+
+      { type: "h2", text: "Frequently asked questions" },
+      { type: "faq", items: [
+        { q: "What is the easiest way to remove wallpaper?", a: "Score with a perforating roller, apply hot water with a tablespoon of fabric softener using a large sponge or pump sprayer, wait at least five minutes for the water to reach the paste, then strip from the bottom up with a wide stripping knife held at a shallow angle. Working in small, fully soaked sections is faster than trying to rush large areas." },
+        { q: "Do I need a steam stripper to remove wallpaper?", a: "Not for most jobs. Soaking with hot water and fabric softener is sufficient for single or double layers of modern wallpaper on solid plaster. A steam stripper is worth hiring for: multiple layers of old paper, heavily embossed paper where soaking does not penetrate, and paper hung directly onto bare plaster without sizing." },
+        { q: "How do I remove wallpaper without damaging the plaster?", a: "Use a perforating roller (not a knife) to score, apply water with a sponge rather than flooding the wall, and hold the stripping knife at a very shallow angle (15–20 degrees) when stripping. On plasterboard specifically, use minimal water and avoid steam — over-wetting plasterboard damages the paper face of the board." },
+        { q: "How do I remove wallpaper from plasterboard?", a: "Score lightly with a perforating roller (one or two passes only), apply water sparingly with a spray bottle rather than a sponge, and wait 3–4 minutes before stripping. Use a wide knife at a very shallow angle. Avoid steam entirely on plasterboard. If the board's paper face lifts or tears, apply a bonding primer to the damaged area before any further decoration." },
+        { q: "Can I wallpaper over existing wallpaper?", a: "No, as a general rule. Hanging over existing paper adds moisture to old adhesive, which can cause both layers to lift. The new paste also cannot bond evenly through an uneven surface. The only exception is a single layer of firmly adhered, perfectly flat lining paper — which can be papered over directly. Finish paper should always be stripped." },
+        { q: "How long does it take to remove wallpaper from a room?", a: "A standard double bedroom (all four walls, single layer of modern paper, solid plaster) takes one person 3–5 hours to strip and wash down. A room with multiple layers, embossed paper, or plasterboard takes 6–8 hours. Stairwells are significantly longer due to access difficulty — a full stairwell is typically a full day's work." },
+        { q: "What do I do with the walls after removing wallpaper?", a: "Fill any holes or cracks with ready-mixed filler, sand smooth, then apply a coat of size or primer to the whole wall. Allow to dry completely (minimum 12 hours, ideally 24) before hanging new paper. Check the entire surface under a raking light to catch any residue or imperfections before sizing — it is much harder to address these after the new paper is up." },
+      ]},
+    ],
+  },
+  {
     slug: "wallpaper-cost-guide",
     category: "Buying Guide",
     title: "How Much Does Wallpaper Cost? A Room-by-Room Price Guide for 2026",
