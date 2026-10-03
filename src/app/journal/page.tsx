@@ -31,6 +31,17 @@ const POSTS = [
     featured: true,
   },
   {
+    slug: "wallpaper-vs-paint",
+    category: "Guide",
+    title: "Wallpaper vs Paint: Which Is Right for Your Room?",
+    excerpt: "Most people frame this as an either/or. It isn't. Wallpaper and paint are different tools for different jobs — and knowing which job each does better is what separates a considered room from a generic one.",
+    author: "James Whitfield",
+    date: "3 October 2026",
+    readTime: "8 min read",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png",
+    featured: false,
+  },
+  {
     slug: "home-office-wallpaper-ideas",
     category: "Inspiration",
     title: "Home Office Wallpaper Ideas: 10 Ways to Make Your Workspace Actually Work",

@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "wallpaper-vs-paint",
+    title: "Wallpaper vs Paint: Which Is Right for Your Room?",
+    excerpt: "Most people frame this as an either/or. It isn't. Wallpaper and paint are different tools for different jobs — and knowing which job each does better is what separates a considered room from a generic one.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png",
+  },
+  {
     slug: "home-office-wallpaper-ideas",
     title: "Home Office Wallpaper Ideas: 10 Ways to Make Your Workspace Actually Work",
     excerpt: "Most home offices are decorated like an afterthought — beige walls, flat lighting, a chair pushed against whatever space is available. Wallpaper is one of the fastest ways to change that.",
@@ -165,6 +171,17 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "wallpaper-vs-paint": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is wallpaper more expensive than paint?", "acceptedAnswer": { "@type": "Answer", "text": "Upfront, yes — wallpaper typically costs more to buy and install than paint. But a quality wallpaper lasts 10–20 years, while a painted room typically needs repainting every 3–5 years. Over a ten-year period, a single mid-range wallpaper hang often costs less in total than multiple repaints of the same surface." } },
+      { "@type": "Question", "name": "Can you wallpaper over paint?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, in most cases. A sound, clean, non-flaking painted surface is a good substrate for wallpaper. Very glossy paint should be lightly sanded first. Powder paint and oil-based paints should be primed before papering. Avoid papering over fresh emulsion that has not fully cured — wait at least four weeks." } },
+      { "@type": "Question", "name": "Is wallpaper easier to remove than repainting?", "acceptedAnswer": { "@type": "Answer", "text": "Removing wallpaper is more labour-intensive than repainting over paint. Modern paste-the-wall papers typically remove more cleanly than older paste-the-paper types. Peel-and-stick papers are the easiest to remove with no soaking required." } },
+      { "@type": "Question", "name": "Does wallpaper increase house value?", "acceptedAnswer": { "@type": "Answer", "text": "Quality wallpaper in living rooms, hallways, and principal bedrooms consistently tests well in property photography and viewings. It signals a considered approach to decoration. Bold or highly personalised designs can deter some buyers. Classic, high-quality papers in tonal, botanical, or geometric patterns are safest for resale." } },
+      { "@type": "Question", "name": "Is wallpaper harder to DIY than painting?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, significantly — particularly for patterned papers that require alignment at each seam. Painting a room is achievable for most people with no experience. Hanging wallpaper well requires patience, the right tools, and a willingness to make mistakes on the first drop. Paste-the-wall papers are somewhat easier than traditional paste-the-paper types." } },
     ],
   },
   "home-office-wallpaper-ideas": {
