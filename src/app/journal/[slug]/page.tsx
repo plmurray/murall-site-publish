@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "feature-wall-ideas",
+    title: "Feature Wall Ideas: How to Choose the Right Wall and Get It Right",
+    excerpt: "A feature wall done well is one of the most cost-effective design decisions in a home. Done badly, it looks like an afterthought. The difference is almost always in which wall you choose and how you treat the three walls around it.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png",
+  },
+  {
     slug: "wallpaper-for-dark-rooms",
     title: "Wallpaper for Dark Rooms: What Actually Works (and What Makes It Worse)",
     excerpt: "The standard advice for dark rooms — go pale, go light, avoid pattern — is wrong more often than it is right. Here is what actually works in north-facing, low-light, and basement rooms, and why leaning into the darkness frequently produces a better result than fighting it.",
@@ -147,6 +153,17 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "feature-wall-ideas": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Which wall should be the feature wall?", "acceptedAnswer": { "@type": "Answer", "text": "The wall your eye goes to first when you enter the room — typically the wall opposite the door, the chimney breast, the sofa wall in a living room, or the head wall behind the bed in a bedroom. These positions work because the eye naturally travels to them. A feature wall on any other position tends to look applied rather than architectural." } },
+      { "@type": "Question", "name": "How many rolls do I need for a feature wall?", "acceptedAnswer": { "@type": "Answer", "text": "A typical living room or bedroom feature wall (3.5–4.5m wide, 2.4m ceiling) needs 3–5 rolls with no pattern repeat, or 4–6 rolls with a large pattern repeat. Use a rolls calculator with your exact wall dimensions for a precise figure." } },
+      { "@type": "Question", "name": "What colour should the walls be around a feature wall?", "acceptedAnswer": { "@type": "Answer", "text": "Paint the three surrounding walls in the background colour of the wallpaper, or in a warm off-white that relates to the paper's palette. Avoid bright white — it creates a high-contrast cut that makes the feature wall look pasted on. A cohesive tonal relationship between the paper and the surrounding walls is what makes a feature wall read as designed." } },
+      { "@type": "Question", "name": "Is a feature wall still in style in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — the feature wall remains the dominant residential wallpaper approach. What has dated is the early 2010s version: a single wall in a bright accent colour against white. What is current is a feature wall as part of a cohesive tonal room — paper, paint, and woodwork working together rather than the paper applied in isolation." } },
+      { "@type": "Question", "name": "Should I do a feature wall or wallpaper the whole room?", "acceptedAnswer": { "@type": "Answer", "text": "A feature wall is lower commitment, uses fewer rolls, and works with a wider range of patterns. A full-room hang creates a more immersive environment and suits quieter, more tonal designs. Dining rooms and bedrooms most consistently benefit from four walls. Living rooms and hallways work well with either approach." } },
     ],
   },
   "wallpaper-for-dark-rooms": {

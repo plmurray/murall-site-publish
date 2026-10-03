@@ -54,7 +54,7 @@ const ARTICLES: Article[] = [
     date: "4 June 2026",
     readTime: "6 min read",
     imageUrl: IMAGES.verdant,
-    relatedSlugs: ["botanical-wallpaper-trend-2026", "accent-wall-ideas", "how-many-rolls-do-i-need"],
+    relatedSlugs: ["botanical-wallpaper-trend-2026", "wallpaper-for-dark-rooms", "wallpaper-cost-guide"],
     body: [
       { type: "p", text: "The received wisdom about small rooms and wallpaper is almost always the same: keep it light, keep it plain, don't make a statement. It's well-meaning advice, but it misses the point. A small room with a confident, well-chosen wallpaper can feel like a jewel box — intimate, considered, and more memorable than any magnolia-painted space twice its size." },
       { type: "p", text: "The key isn't pattern size or colour intensity. It's understanding how your eye moves around a room — and giving it somewhere interesting to go." },
@@ -94,7 +94,7 @@ const ARTICLES: Article[] = [
     date: "28 May 2026",
     readTime: "5 min read",
     imageUrl: IMAGES.hex,
-    relatedSlugs: ["how-to-choose-wallpaper-for-small-rooms", "how-many-rolls-do-i-need", "accent-wall-ideas"],
+    relatedSlugs: ["best-peel-and-stick-wallpaper", "how-to-wallpaper-a-room", "wallpaper-cost-guide"],
     body: [
       { type: "p", text: "The question comes up in almost every conversation we have with customers: should I go peel and stick or traditional paste? The honest answer is that it depends on your situation — your walls, your rental status, your patience, and how long you intend to stay. Here's everything you need to make the right call." },
       { type: "h2", text: "How each method works" },
@@ -132,7 +132,7 @@ const ARTICLES: Article[] = [
     date: "19 May 2026",
     readTime: "4 min read",
     imageUrl: IMAGES.midnight,
-    relatedSlugs: ["accent-wall-ideas", "how-to-choose-wallpaper-for-small-rooms", "interview-rebel-walls"],
+    relatedSlugs: ["wallpaper-trends-2026", "living-room-wallpaper-ideas", "interview-rebel-walls"],
     body: [
       { type: "p", text: "The numbers don't lie. Searches for botanical wallpaper across our platform are up 340% compared to this time last year. Designers from London to Los Angeles are specifying lush, nature-inspired wallcoverings in spaces where they would once have chosen plain paint or a quiet stripe. Something has shifted — and it goes deeper than a seasonal trend." },
       { type: "h2", text: "The biophilic moment" },
@@ -169,7 +169,7 @@ const ARTICLES: Article[] = [
     date: "12 May 2026",
     readTime: "10 min read",
     imageUrl: IMAGES.emerald,
-    relatedSlugs: ["peel-and-stick-vs-paste-the-wall", "how-to-choose-wallpaper-for-small-rooms", "accent-wall-ideas"],
+    relatedSlugs: ["how-to-wallpaper-a-room", "wallpaper-cost-guide", "peel-and-stick-vs-paste-the-wall"],
     body: [
       { type: "p", text: "Ordering too few rolls is one of the most common — and most expensive — mistakes in home decorating. Wallpaper is printed in batches, and a roll ordered six weeks after your original purchase may come from a different dye lot: subtly different in colour, visible on the wall every time you walk past. The only insurance is to order enough the first time." },
       { type: "p", text: "This guide gives you everything you need to calculate rolls correctly: the step-by-step formula, room-by-room reference tables, an explanation of pattern repeat, and our free calculator that does the arithmetic for you." },
@@ -295,7 +295,7 @@ const ARTICLES: Article[] = [
     date: "2 May 2026",
     readTime: "8 min read",
     imageUrl: IMAGES.verdant,
-    relatedSlugs: ["botanical-wallpaper-trend-2026", "peel-and-stick-vs-paste-the-wall", "accent-wall-ideas"],
+    relatedSlugs: ["peel-and-stick-vs-paste-the-wall", "bathroom-wallpaper-ideas", "bedroom-wallpaper-ideas"],
     body: [
       { type: "p", text: "Rebel Walls began in a small studio outside Stockholm in 2007 with a simple idea: that photographic-quality murals should be accessible to anyone decorating their home, not just clients with luxury budgets. Nineteen years later, they're one of the most recognised names in the global wallpaper industry, stocked by retailers in over 40 countries and specified regularly on high-end residential and hospitality projects." },
       { type: "p", text: "We spoke with Creative Director Anna Lindqvist about process, philosophy, and what comes next." },
@@ -327,7 +327,7 @@ const ARTICLES: Article[] = [
     date: "25 September 2026",
     readTime: "9 min read",
     imageUrl: IMAGES.hex,
-    relatedSlugs: ["peel-and-stick-vs-paste-the-wall", "how-many-rolls-do-i-need", "accent-wall-ideas"],
+    relatedSlugs: ["botanical-wallpaper-trend-2026", "wallpaper-trends-2026", "living-room-wallpaper-ideas"],
     body: [
       { type: "p", text: "Peel-and-stick wallpaper has had a transformation. What began as a compromise product for renters — thin, plasticky, prone to bubbling at the seams — has become a genuinely premium category. The best brands today use non-toxic pressure-sensitive adhesives, print on high-quality woven substrates, and adhere so cleanly that professional decorators are now specifying them on permanent installations." },
       { type: "p", text: "But the category has exploded with entrants, and quality varies wildly. We assessed papers from six major brands, looking at adhesive performance, print resolution, repositionability, and how cleanly they remove from painted walls. Here is what we found." },
@@ -421,7 +421,7 @@ const ARTICLES: Article[] = [
     date: "18 September 2026",
     readTime: "8 min read",
     imageUrl: IMAGES.verdant,
-    relatedSlugs: ["how-to-choose-wallpaper-for-small-rooms", "accent-wall-ideas", "botanical-wallpaper-trend-2026"],
+    relatedSlugs: ["wallpaper-for-dark-rooms", "wallpaper-trends-2026", "wallpaper-cost-guide"],
     body: [
       { type: "p", text: "The living room is the room that does the most work. It receives guests, absorbs daily life, and is typically the space you look at most — including from the sofa, which means you're looking at the walls for extended periods in a way you rarely are in a kitchen or hallway. Getting the wallpaper right here matters more than anywhere else in the house." },
       { type: "p", text: "The good news: the living room is also the most forgiving room to experiment in. The scale forgives bold choices. The furniture provides enough visual ballast that even a dramatic paper lands rather than overwhelms. Here are twelve ideas that consistently deliver." },
@@ -519,6 +519,104 @@ const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "feature-wall-ideas",
+    category: "Buying Guide",
+    title: "Feature Wall Ideas: How to Choose the Right Wall and Get It Right",
+    excerpt: "A feature wall done well is one of the most cost-effective design decisions in a home. Done badly, it looks like an afterthought. The difference is almost always in which wall you choose and how you treat the three walls around it.",
+    author: "Sofia Laurent",
+    authorBio: "Sofia is a Paris-based interiors writer and contributing editor at Murall Journal. She covers trend, design culture, and the spaces that shape us.",
+    date: "2 October 2026",
+    readTime: "8 min read",
+    imageUrl: IMAGES.midnight,
+    relatedSlugs: ["accent-wall-ideas", "living-room-wallpaper-ideas", "bedroom-wallpaper-ideas"],
+    body: [
+      { type: "p", text: "A feature wall is a single wall treated differently from the three surrounding it — most often with wallpaper, though sometimes with paint, panelling, or a combination. The idea is simple. The execution varies enormously in quality. The difference between a feature wall that transforms a room and one that looks applied and awkward is almost always in the two decisions made before the paper goes up: which wall, and what to do with the walls around it." },
+      { type: "p", text: "This guide covers both. It is not a list of pattern ideas — those are in the room-specific guides for living rooms, bedrooms, hallways, dining rooms, and bathrooms. This is the practical architecture of feature wall decisions: the spatial logic that makes one work and another not." },
+
+      { type: "h2", text: "Which wall to choose" },
+      { type: "p", text: "The natural feature wall in any room is the wall that draws the eye first when you enter, or the wall that has the most visual weight by virtue of what is in front of it or what punctuates it. In practice, this means:" },
+      { type: "list", items: [
+        "The wall directly opposite the main entrance to the room — the wall you face as you walk in.",
+        "The wall the sofa backs against in a living room.",
+        "The head wall (behind the bed) in a bedroom.",
+        "The chimney breast in any room that has one.",
+        "The wall at the end of a corridor or hallway.",
+        "The wall at the head of the dining table.",
+      ]},
+      { type: "p", text: "These positions work because they are where the eye naturally travels and rests. A feature wall on one of these positions looks architectural — as if the room was designed that way. A feature wall on any other position (a side wall, a wall partially obscured by a door, a wall that is mostly window) looks applied, because it occupies a position the eye does not naturally move to." },
+      { type: "tip", text: "Stand in the doorway of the room and look in. The wall your eye goes to first is almost always the right feature wall. If you are uncertain between two options, choose the one that a piece of furniture will be placed against — a sofa, a bed, a dining table. Furniture anchors the feature wall and gives it a base." },
+
+      { type: "h2", text: "The wall you choose changes the paper you need" },
+      { type: "p", text: "Different feature wall positions have different viewing distances and dwell times, which affects which paper types work best." },
+      { type: "table",
+        head: ["Feature wall position", "Viewing distance", "Paper direction"],
+        rows: [
+          ["Behind the sofa (living room)", "2–3.5m seated", "Bold is fine — viewed at distance, not close range"],
+          ["Behind the bed (bedroom)", "1.5–2.5m from pillow", "Needs close-range quality — detail, depth, texture matter"],
+          ["End of hallway / corridor", "3–8m walking", "High contrast and graphic scale read best at distance"],
+          ["Chimney breast", "Variable — centre of room", "Works for almost any scale; becomes room's anchor"],
+          ["Head of dining table", "2–4m seated", "Viewed under lamplight — warm tones and depth essential"],
+          ["Entrance wall (first thing you see)", "From doorway", "First impression — bold and clear reads better than intricate"],
+        ]
+      },
+
+      { type: "h2", text: "What to do with the three walls around it" },
+      { type: "p", text: "This is where most feature walls fail. The paper is chosen carefully; the surrounding walls are an afterthought. The three walls around a feature wall need to respond to it, not ignore it. There are three approaches that work:" },
+
+      { type: "h3", text: "Option 1: pick out a background colour" },
+      { type: "p", text: "The most reliable approach: identify the background colour of the wallpaper and paint the three surrounding walls in that exact colour, or in a slightly lighter or darker shade of it. This creates a seamless transition — the room reads as a unified colour environment, and the pattern on the feature wall appears to float against a consistent backdrop. It also makes the room significantly easier to furnish, because the dominant colour is already established." },
+      { type: "p", text: "To find the right paint match: take a sample of the wallpaper to a paint supplier and ask them to colour-match the background. Alternatively, most wallpaper manufacturers publish the paint colours they used in the background — check the product page or contact the brand." },
+
+      { type: "h3", text: "Option 2: use a complementary tone, not white" },
+      { type: "p", text: "White is the default choice for surrounding walls and it is usually the wrong one. Bright white against a dark or deeply coloured wallpaper creates a high-contrast cut that makes the feature wall look pasted on rather than designed. A warm off-white (cream, bone, warm stone) or a soft mid-tone in a related colour family creates a much more cohesive result. The feature wall reads as the richest point in a tonal sequence rather than as a paper stuck on a white wall." },
+
+      { type: "h3", text: "Option 3: extend the colour through the woodwork" },
+      { type: "p", text: "Painting the skirting boards, door frames, and architraves in a colour drawn from the wallpaper — particularly if it is a dark or rich tone — ties the whole room together in a way that no amount of careful paint-matching alone achieves. Dark woodwork against a feature wall with a dark background paper creates a dramatic, fully committed room. It is a more advanced move than simple paint matching, but it is the approach that produces the most resolved results." },
+
+      { type: "h2", text: "Feature wall ideas by room" },
+
+      { type: "h3", text: "Living room" },
+      { type: "p", text: "The sofa wall is the conventional choice and almost always correct. A bold botanical, a large-scale geometric, or a rich abstract on this wall turns the seating arrangement into a composed scene. Pair with the background colour on the three surrounding walls and keep the sofa upholstery in a solid colour drawn from the paper. The feature wall and the sofa together create the room's visual anchor." },
+
+      { type: "h3", text: "Bedroom" },
+      { type: "p", text: "The head wall behind the bed is the strongest feature wall position in any room. The paper substitutes for a physical headboard — or complements one — and turns the bed arrangement into a designed composition. The close viewing distance from the pillow means detail, texture, and depth matter more here than in any other feature wall position. Order a large sample and view it from lying distance before committing." },
+
+      { type: "h3", text: "Hallway" },
+      { type: "p", text: "In a hallway, the end wall — the wall at the far end of the corridor — is the most effective feature wall position. It stops the eye, defines the space as a journey rather than a corridor, and is viewed from a distance that suits graphic scale and high contrast. A mural, a bold geometric, or a dark botanical on this one wall transforms a hallway from functional to architectural." },
+
+      { type: "h3", text: "Home office or study" },
+      { type: "p", text: "The wall behind the desk — the one visible in video calls and photographs — is the natural feature wall in a home office. It is consistently underused. A confident paper on this wall improves not only the room but every video meeting you take in it. Warm botanicals, rich tonal wallpapers, and textured grasscloth all work well — they read as thoughtful and considered rather than distracting." },
+
+      { type: "h3", text: "Children's room" },
+      { type: "p", text: "A feature wall behind the bed is the right position in a child's room for the same reason as an adult bedroom: it defines the bed as the room's anchor. Choose a paper with enough visual content that it rewards the sustained close-range attention children give their walls — illustrated botanicals, detailed maps, narrative scenes. Peel-and-stick papers are a practical choice for children's rooms because they can be updated as the child grows without the disruption of stripping and re-prepping." },
+
+      { type: "h2", text: "How to frame the feature wall with furniture" },
+      { type: "p", text: "A feature wall without furniture placed against or in front of it can look unfinished — the paper exists in isolation rather than as part of a composed scene. Furniture grounds the feature wall and gives it a base. The principle is the same as in a gallery: the artwork needs the wall; the wall needs the object in front of it." },
+      { type: "p", text: "The specific furniture matters less than the compositional relationship. A sofa centred on the feature wall, or a bed with matching bedside tables, or a dining table with chairs — anything that creates a horizontal baseline for the wall behind it — completes the feature wall and makes the whole arrangement feel designed." },
+
+      { type: "h2", text: "Common feature wall mistakes" },
+      { type: "numbered", items: [
+        "Choosing the wrong wall — a side wall that the eye does not naturally travel to. Always use the primary visual axis of the room.",
+        "Pairing with bright white on the three surrounding walls. The high contrast makes the paper look applied rather than architectural. Use a related tone instead.",
+        "Using a small-scale pattern at feature wall distance. Small repeats that work in full-room treatments can disappear or become visual noise on a single distant wall. Scale up.",
+        "Not carrying any colour from the paper through the room. A feature wall in complete isolation from the room's other colours looks stranded. At minimum, echo the paper's dominant or background colour in a cushion, a rug, or a throw.",
+        "Hanging the paper without addressing the junction with the ceiling and skirting. A clean, sharp line where the paper meets the ceiling (no gaps, no paste marks) and a neat fit to the skirting board are what separate a professional result from a DIY one.",
+      ]},
+
+      { type: "cta", heading: "How many rolls for a feature wall?", body: "A single feature wall typically needs 3–5 rolls. Use the calculator with your exact wall dimensions for a precise figure before you order.", buttonText: "Open rolls calculator" },
+
+      { type: "h2", text: "Frequently asked questions" },
+      { type: "faq", items: [
+        { q: "Which wall should be the feature wall?", a: "The wall your eye goes to first when you enter the room — typically the wall opposite the door, the chimney breast, the wall the sofa backs against in a living room, or the head wall behind the bed in a bedroom. These positions work because the eye naturally travels to them. A feature wall on any other position tends to look applied rather than architectural." },
+        { q: "How many rolls do I need for a feature wall?", a: "A typical living room or bedroom feature wall (3.5–4.5m wide, 2.4m ceiling height) needs 3–5 rolls with no pattern repeat, or 4–6 rolls with a large pattern repeat. Use a rolls calculator with your exact dimensions — feature walls use fewer rolls than full rooms but pattern repeat waste still applies." },
+        { q: "What colour should the walls be around a feature wall?", a: "Paint the three surrounding walls in the background colour of the wallpaper, or in a warm off-white that relates to the paper's palette. Avoid bright white — it creates a high-contrast cut that makes the feature wall look pasted on. A cohesive tonal relationship between the paper and the surrounding walls is what makes a feature wall read as designed rather than applied." },
+        { q: "Can any wall be a feature wall?", a: "In principle yes, but in practice the feature wall works best on the primary visual axis of the room — the wall the eye naturally goes to. Using a secondary or partially obscured wall as a feature wall tends to look arbitrary. The strongest positions are: the wall opposite the door, the chimney breast, the sofa wall in a living room, the head wall in a bedroom, and the end wall in a hallway." },
+        { q: "Is a feature wall still in style in 2026?", a: "Yes — the feature wall remains the dominant residential wallpaper approach, and the design quality of the papers available for it has never been higher. The approach that has dated is the early 2010s version: a single wall in a bright accent colour (red, purple, teal) against white. What is current is a feature wall as part of a cohesive tonal room — paper, paint, and woodwork working together rather than the paper applied in isolation." },
+        { q: "Should I do a feature wall or wallpaper the whole room?", a: "A feature wall is lower commitment, uses fewer rolls, and works with a wider range of patterns including bold and dense designs. A full-room hang creates a more immersive environment and suits quieter, more tonal designs. The dining room and bedroom are the rooms where four walls most consistently outperforms a feature wall. The living room and hallway work well with either approach depending on the design and room size." },
+      ]},
+    ],
+  },
+  {
     slug: "wallpaper-for-dark-rooms",
     category: "Buying Guide",
     title: "Wallpaper for Dark Rooms: What Actually Works (and What Makes It Worse)",
@@ -528,7 +626,7 @@ const ARTICLES: Article[] = [
     date: "2 October 2026",
     readTime: "8 min read",
     imageUrl: IMAGES.verdant,
-    relatedSlugs: ["how-to-choose-wallpaper-for-small-rooms", "living-room-wallpaper-ideas", "bedroom-wallpaper-ideas"],
+    relatedSlugs: ["how-to-wallpaper-a-room", "how-to-remove-wallpaper", "wallpaper-cost-guide"],
     body: [
       { type: "p", text: "The advice most people receive about dark rooms is: go pale. White walls, light colours, nothing that will absorb what little natural light there is. It is given confidently and followed widely. It is also wrong most of the time." },
       { type: "p", text: "Pale walls in a dark room do not create the impression of brightness. They create the impression of an unlit pale room — which is duller than a deliberately dark room and more depressing than either. The real problem with north-facing and low-light rooms is not darkness itself but the quality of the light: cool, flat, and bluish. The solution is not to add more of that light but to counteract its quality — with warmth, texture, and in many cases, deliberate darkness used well." },
@@ -620,7 +718,7 @@ const ARTICLES: Article[] = [
     date: "2 October 2026",
     readTime: "8 min read",
     imageUrl: IMAGES.midnight,
-    relatedSlugs: ["living-room-wallpaper-ideas", "wallpaper-trends-2026", "botanical-wallpaper-trend-2026"],
+    relatedSlugs: ["wallpaper-for-dark-rooms", "wallpaper-cost-guide", "how-many-rolls-do-i-need"],
     body: [
       { type: "p", text: "The dining room makes the strongest argument for bold wallpaper of any room in the house. Consider the conditions: you sit still in it for an hour at a time, at close range to the walls, under warm lamplight rather than the flat overhead light that flattens colour and texture in other rooms. The food is a sensory experience that primes attention. The conversation creates pauses where the eye moves around the room. There is no better context in which to hang a paper that rewards looking." },
       { type: "p", text: "Interior designers have understood this for centuries — the dining room is historically where the boldest, most expensive papers went. The tradition is correct. The dining room is where wallpaper makes the most difference, where it is most noticed, and where a wrong choice is most felt. Get it right here and it is one of the best design decisions you will make in your home." },
@@ -703,7 +801,7 @@ const ARTICLES: Article[] = [
     date: "2 October 2026",
     readTime: "9 min read",
     imageUrl: IMAGES.midnight,
-    relatedSlugs: ["how-to-wallpaper-a-room", "how-many-rolls-do-i-need", "wallpaper-cost-guide"],
+    relatedSlugs: ["how-to-remove-wallpaper", "how-many-rolls-do-i-need", "wallpaper-cost-guide"],
     body: [
       { type: "p", text: "Wallpaper removal has a reputation for being the worst part of any decorating project. The reputation is mostly earned by people who tried to do it fast. Done slowly and methodically, wallpaper strips cleanly and leaves a wall that is ready to decorate the same day. Done impatiently — dry scraping, inadequate soaking, pulling at angles that tear the plaster — it creates a wall that takes twice as long to prepare as a bare surface would have." },
       { type: "p", text: "The key insight is that you are not fighting the paper. You are dissolving the adhesive bond between the paper and the wall. Get the adhesive wet enough and the paper releases without effort. Every technique in this guide is in service of that single principle." },
@@ -823,7 +921,7 @@ const ARTICLES: Article[] = [
     date: "2 October 2026",
     readTime: "9 min read",
     imageUrl: IMAGES.emerald,
-    relatedSlugs: ["how-many-rolls-do-i-need", "peel-and-stick-vs-paste-the-wall", "best-peel-and-stick-wallpaper"],
+    relatedSlugs: ["kitchen-wallpaper-ideas", "peel-and-stick-vs-paste-the-wall", "how-to-wallpaper-a-room"],
     body: [
       { type: "p", text: "The problem with most wallpaper cost estimates is that they are written to cover every possible scenario without committing to any. 'Wallpaper costs between £10 and £300 per roll' is technically accurate and practically useless. What you need to know is: what will a roll of paper that actually looks good cost, how many rolls will a specific room need, what will a decorator charge, and what are the costs that most people forget to budget for until they are already halfway through the job?" },
       { type: "p", text: "This guide answers all of those questions with specific numbers. All prices are 2026 UK market figures. They will not match every retailer — prices vary by collection, brand, and sale — but they reflect what you should expect to pay for paper at each quality tier." },
@@ -922,7 +1020,7 @@ const ARTICLES: Article[] = [
     date: "2 October 2026",
     readTime: "8 min read",
     imageUrl: IMAGES.hex,
-    relatedSlugs: ["bathroom-wallpaper-ideas", "peel-and-stick-vs-paste-the-wall", "hallway-wallpaper-ideas"],
+    relatedSlugs: ["bathroom-wallpaper-ideas", "how-to-remove-wallpaper", "wallpaper-cost-guide"],
     body: [
       { type: "p", text: "The kitchen is the room people most often exclude from wallpaper plans without really thinking it through. The logic is: there is steam, there is grease, therefore wallpaper will not survive. This is partly true and mostly not. Whether wallpaper works in a kitchen depends almost entirely on two variables — where in the kitchen you are putting it and what type of paper you choose — neither of which points to blanket exclusion." },
       { type: "p", text: "A well-chosen, correctly hung kitchen wallpaper on the right wall will outlast most kitchen refits. The mistake is not choosing wallpaper for a kitchen; it is choosing the wrong paper type or the wrong wall position." },
@@ -1017,7 +1115,7 @@ const ARTICLES: Article[] = [
     date: "2 October 2026",
     readTime: "9 min read",
     imageUrl: IMAGES.verdant,
-    relatedSlugs: ["botanical-wallpaper-trend-2026", "living-room-wallpaper-ideas", "bedroom-wallpaper-ideas"],
+    relatedSlugs: ["botanical-wallpaper-trend-2026", "dining-room-wallpaper-ideas", "wallpaper-for-dark-rooms"],
     body: [
       { type: "p", text: "Wallpaper trends move more slowly than fashion trends, and that is part of their appeal. A paper hung in 2023 does not need to be replaced in 2026. But understanding what is current matters for two reasons: it tells you which directions have market momentum — and therefore wider product ranges, more design variation, and better value — and it tells you which directions are fading, so you do not invest in something that will feel dated before the paste has fully cured." },
       { type: "p", text: "What follows is not a mood board exercise. It is a genuine read of where the market is in 2026, based on what is selling, what designers are specifying, and where the most interesting new work is appearing." },
@@ -1104,7 +1202,7 @@ const ARTICLES: Article[] = [
     date: "2 October 2026",
     readTime: "8 min read",
     imageUrl: IMAGES.emerald,
-    relatedSlugs: ["peel-and-stick-vs-paste-the-wall", "best-peel-and-stick-wallpaper", "how-to-wallpaper-a-room"],
+    relatedSlugs: ["kitchen-wallpaper-ideas", "peel-and-stick-vs-paste-the-wall", "how-to-wallpaper-a-room"],
     body: [
       { type: "p", text: "The question people type into search engines before choosing bathroom wallpaper is not which pattern they want. It is whether they can use wallpaper at all. The short answer is yes. The longer answer involves understanding where exactly in a bathroom wallpaper works, what type of paper to use, and what makes the difference between a bathroom hang that lasts five years and one that starts peeling within six months." },
       { type: "p", text: "Get those variables right and a bathroom wallpaper is one of the most rewarding interiors decisions you can make. The bathroom is small, enclosed, and used in an almost ritual way — morning light, steam from the shower, the same view every day. A paper that rewards that repeated close-range attention transforms the room entirely." },
@@ -1371,7 +1469,7 @@ const ARTICLES: Article[] = [
     date: "25 September 2026",
     readTime: "11 min read",
     imageUrl: IMAGES.hex,
-    relatedSlugs: ["how-many-rolls-do-i-need", "peel-and-stick-vs-paste-the-wall", "best-peel-and-stick-wallpaper"],
+    relatedSlugs: ["how-to-remove-wallpaper", "how-many-rolls-do-i-need", "wallpaper-cost-guide"],
     body: [
       { type: "p", text: "Wallpapering has a reputation for being difficult. In practice, it is methodical — a series of straightforward steps that compound into a professional result if executed in order and without rushing. The people who struggle are almost always those who skip the preparation. The people who do the preparation properly find the hanging itself unremarkable." },
       { type: "p", text: "This guide covers the full process: what you need, how to prep the walls, how to hang the first drop correctly, and how to handle the common obstacles — corners, light switches, windows — that intimidate first-timers. Work through it once before you start. The sequence matters." },
@@ -1492,7 +1590,7 @@ const ARTICLES: Article[] = [
     date: "24 Apr 2026",
     readTime: "5 min read",
     imageUrl: IMAGES.hex,
-    relatedSlugs: ["how-to-choose-wallpaper-for-small-rooms", "botanical-wallpaper-trend-2026", "how-many-rolls-do-i-need"],
+    relatedSlugs: ["feature-wall-ideas", "living-room-wallpaper-ideas", "wallpaper-cost-guide"],
     body: [
       { type: "p", text: "The phrase 'feature wall' has taken a battering over the years — unfairly, in our view. A poorly executed accent wall (a random red wall in an otherwise beige room; a printed canvas-look paper behind a sofa it has nothing to say to) deserves the criticism. But a thoughtfully chosen wallpapered surface is one of the most powerful single moves in interior design. Here are ten ways to do it properly." },
       { type: "h2", text: "1. The headboard wall" },
