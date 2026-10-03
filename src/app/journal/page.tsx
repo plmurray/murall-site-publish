@@ -75,6 +75,17 @@ const POSTS = [
     featured: false,
   },
   {
+    slug: "maximalist-wallpaper-ideas",
+    category: "Inspiration",
+    title: "Maximalist Wallpaper Ideas: 10 Bold Designs for Rooms That Know What They Want",
+    excerpt: "Maximalism is not about putting too much on the walls — it is about having the confidence to say something clearly. These 10 ideas show exactly how to do it.",
+    author: "James Whitfield",
+    date: "3 October 2026",
+    readTime: "9 min read",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20261003_005812_6d63cd0e-d1b8-49bf-94b1-89f162633ab8.png",
+    featured: false,
+  },
+  {
     slug: "kids-room-wallpaper-ideas",
     category: "Inspiration",
     title: "Kids' Room Wallpaper Ideas: 12 Designs That Actually Last",

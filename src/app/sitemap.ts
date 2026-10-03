@@ -60,6 +60,7 @@ const JOURNAL_POSTS = [
   "wallpaper-vs-paint",
   "home-office-wallpaper-ideas",
   "kids-room-wallpaper-ideas",
+  "maximalist-wallpaper-ideas",
 ];
 
 const ROOMS = [

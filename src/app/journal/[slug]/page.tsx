@@ -78,6 +78,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "maximalist-wallpaper-ideas",
+    title: "Maximalist Wallpaper Ideas: 10 Bold Designs for Rooms That Know What They Want",
+    excerpt: "Maximalism is not about putting too much on the walls — it is about having the confidence to say something clearly. These 10 ideas show exactly how to do it.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20261003_005812_6d63cd0e-d1b8-49bf-94b1-89f162633ab8.png",
+  },
+  {
     slug: "feature-wall-ideas",
     title: "Feature Wall Ideas: How to Choose the Right Wall and Get It Right",
     excerpt: "A feature wall done well is one of the most cost-effective design decisions in a home. Done badly, it looks like an afterthought. The difference is almost always in which wall you choose and how you treat the three walls around it.",
@@ -234,6 +240,16 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "Is peel-and-stick wallpaper good for nurseries?", "acceptedAnswer": { "@type": "Answer", "text": "Peel-and-stick wallpaper is a practical choice for nurseries that will be redecorated within a few years. Modern adhesive-backed papers hold well on smooth, painted walls. Check that the paper is Oeko-Tex certified or low-VOC — important in a room where a newborn sleeps." } },
       { "@type": "Question", "name": "How do I choose wallpaper that grows with my child?", "acceptedAnswer": { "@type": "Answer", "text": "Choose designs based on natural subjects (woodland, celestial, maps, botanical) rather than specific characters or franchises. Abstract and geometric patterns are more age-neutral than themed prints. Restrict character or franchise choices to posters and accessories rather than wallpaper." } },
       { "@type": "Question", "name": "Should I wallpaper the whole children's room or just one wall?", "acceptedAnswer": { "@type": "Answer", "text": "One wall — typically behind the bed — gives most of the visual impact at a quarter of the cost. It also makes future updates significantly easier and cheaper. A full-room wallpaper commit makes sense when you are confident the design will last at least seven to ten years." } },
+    ],
+  },
+  "maximalist-wallpaper-ideas": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is maximalist wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Maximalist wallpaper is characterised by large pattern repeats, dense design, and committed colour — designs that make a strong, complete statement rather than a quiet suggestion. Botanical prints, tropical designs, chinoiserie, and large-scale florals are the most common maximalist styles. The quality is one of visual abundance and deliberate presence rather than restraint." } },
+      { "@type": "Question", "name": "What rooms work best with maximalist wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Dining rooms and principal bedrooms are the most natural homes for maximalist wallpaper. Dining rooms because sustained, close-range viewing rewards pattern and lamplight makes bold papers extraordinary. Bedrooms because the anchor wall behind the bed is designed to be seen. Powder rooms, hallways, and studies also suit maximalism well." } },
+      { "@type": "Question", "name": "Can you use maximalist wallpaper in a small room?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and often more successfully than expected. A small room with one maximalist wall can feel more interesting than the same room with four pale walls, because the eye engages with the pattern rather than registering the room's boundaries. Choose the right wall, keep the remaining three plain, and the large repeat will work in your favour." } },
+      { "@type": "Question", "name": "What furniture goes with maximalist wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Simple forms, natural materials, and colours taken from the wallpaper's own palette. Avoid ornate furniture that competes with the pattern. Linen, velvet, and bouclé upholstery in tones already present in the paper are the most reliable choices. Timber, stone, and unlacquered metals work better than lacquered or highly finished surfaces." } },
     ],
   },
   "feature-wall-ideas": {
