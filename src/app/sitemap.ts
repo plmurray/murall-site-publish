@@ -42,6 +42,24 @@ const JOURNAL_POSTS = [
   "how-many-rolls-do-i-need",
   "interview-rebel-walls",
   "accent-wall-ideas",
+  "best-peel-and-stick-wallpaper",
+  "living-room-wallpaper-ideas",
+  "feature-wall-ideas",
+  "wallpaper-for-dark-rooms",
+  "dining-room-wallpaper-ideas",
+  "how-to-remove-wallpaper",
+  "wallpaper-cost-guide",
+  "kitchen-wallpaper-ideas",
+  "wallpaper-trends-2026",
+  "bathroom-wallpaper-ideas",
+  "hallway-wallpaper-ideas",
+  "bedroom-wallpaper-ideas",
+  "how-to-wallpaper-a-room",
+  "nursery-wallpaper-ideas",
+  "floral-wallpaper-ideas",
+  "wallpaper-vs-paint",
+  "home-office-wallpaper-ideas",
+  "kids-room-wallpaper-ideas",
 ];
 
 const ROOMS = [
@@ -59,6 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE,                        lastModified: now, changeFrequency: "daily",   priority: 1.0 },
     { url: `${BASE}/products`,          lastModified: now, changeFrequency: "daily",   priority: 0.95 },
+    { url: `${BASE}/wallpaper-calculator`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/brands`,            lastModified: now, changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE}/journal`,           lastModified: now, changeFrequency: "weekly",  priority: 0.8 },
     { url: `${BASE}/visualizer`,        lastModified: now, changeFrequency: "monthly", priority: 0.7 },
