@@ -31,6 +31,17 @@ const POSTS = [
     featured: true,
   },
   {
+    slug: "nursery-wallpaper-ideas",
+    category: "Guide",
+    title: "Nursery Wallpaper Ideas: Safe, Beautiful, and Built to Last Beyond the Baby Years",
+    excerpt: "The nursery is the most emotionally loaded decorating project most parents take on — and the one where the safety stakes are highest. Here is how to get it right.",
+    author: "Sofia Laurent",
+    date: "3 October 2026",
+    readTime: "7 min read",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
+    featured: false,
+  },
+  {
     slug: "floral-wallpaper-ideas",
     category: "Inspiration",
     title: "Floral Wallpaper Ideas: 11 Ways to Use the Most Enduring Pattern in Interiors",

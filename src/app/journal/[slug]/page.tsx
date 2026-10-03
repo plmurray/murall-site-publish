@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "nursery-wallpaper-ideas",
+    title: "Nursery Wallpaper Ideas: Safe, Beautiful, and Built to Last Beyond the Baby Years",
+    excerpt: "The nursery is the most emotionally loaded decorating project most parents take on — and the one where the safety stakes are highest. Here is how to get it right.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
+  },
+  {
     slug: "floral-wallpaper-ideas",
     title: "Floral Wallpaper Ideas: 11 Ways to Use the Most Enduring Pattern in Interiors",
     excerpt: "Florals are the only wallpaper pattern that has never been out of fashion — because they were never fully in it. Here are 11 ways to use them, from the barely-there ditsy to the floor-to-ceiling maximalist.",
@@ -177,6 +183,16 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "nursery-wallpaper-ideas": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is wallpaper safe for a baby's nursery?", "acceptedAnswer": { "@type": "Answer", "text": "Wallpaper can be safe in a nursery if you choose papers with Oeko-Tex Standard 100 certification, use water-based paste, and allow 48–72 hours of ventilation after installation before bringing the baby into the room. Avoid uncertified papers and solvent-based adhesives in any room occupied by a newborn." } },
+      { "@type": "Question", "name": "What is the best colour for nursery wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Warm whites, soft sage greens, dusty terracottas, and muted greys are the most durable nursery colours — soothing without being limiting as the child grows. Avoid high-saturation primary colours, which are stimulating rather than restful." } },
+      { "@type": "Question", "name": "Should I use peel-and-stick wallpaper in a nursery?", "acceptedAnswer": { "@type": "Answer", "text": "Peel-and-stick wallpaper is practical for nurseries where flexibility is a priority. Choose papers with Oeko-Tex certification covering the adhesive layer, and ventilate the room for at least 24 hours after installation before occupancy." } },
+      { "@type": "Question", "name": "How do I choose nursery wallpaper that grows with the child?", "acceptedAnswer": { "@type": "Answer", "text": "Choose designs based on natural subjects — woodland, botanical, celestial, soft geometric — rather than character themes or franchise prints. Illustrated, hand-drawn styles age better than flat graphic treatments. The best nursery papers look as appropriate at age seven as they do at seven months." } },
     ],
   },
   "floral-wallpaper-ideas": {
