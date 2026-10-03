@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "wallpaper-for-dark-rooms",
+    title: "Wallpaper for Dark Rooms: What Actually Works (and What Makes It Worse)",
+    excerpt: "The standard advice for dark rooms — go pale, go light, avoid pattern — is wrong more often than it is right. Here is what actually works in north-facing, low-light, and basement rooms, and why leaning into the darkness frequently produces a better result than fighting it.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
+  },
+  {
     slug: "dining-room-wallpaper-ideas",
     title: "Dining Room Wallpaper Ideas: 10 Looks That Make Every Meal Feel Like an Occasion",
     excerpt: "The dining room is the strongest argument for bold wallpaper in the house. You sit in it, at close range, for an hour at a time, under lamplight. Here are ten directions that reward exactly that kind of sustained, intimate attention.",
@@ -141,6 +147,18 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "wallpaper-for-dark-rooms": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the best wallpaper colour for a dark north-facing room?", "acceptedAnswer": { "@type": "Answer", "text": "Warm tones: forest green with warm undertones, terracotta, amber, warm cream (not bright white), deep teal, burgundy, and warm rust. Avoid cool whites, pale greys, and any colour with a blue or cool undertone — these amplify the cold, flat quality of north-facing light rather than counteracting it." } },
+      { "@type": "Question", "name": "Should you use dark or light wallpaper in a dark room?", "acceptedAnswer": { "@type": "Answer", "text": "Warm mid-tones or deliberate darkness are usually better than pale. Pale papers in dark rooms look cold and defeated — they reflect the room's cool light back without adding warmth. A warm mid-depth paper counteracts the cool light quality. A deliberately dark paper combined with warm artificial lighting creates an atmospheric jewel-box effect that outperforms any pale treatment." } },
+      { "@type": "Question", "name": "Does dark wallpaper make a room feel smaller?", "acceptedAnswer": { "@type": "Answer", "text": "It makes a room feel more enclosed, which is different from smaller. A well-lit room with dark walls feels intimate and deliberate. The variable that matters is lighting, not paper colour. Warm, layered artificial light transforms dark wallpaper from oppressive to enveloping." } },
+      { "@type": "Question", "name": "What wallpaper works in a room with no windows?", "acceptedAnswer": { "@type": "Answer", "text": "With no natural light, you control the light quality entirely. Use warm bulbs (2700K) and the full range opens up — including the most dramatic dark papers. A windowless room with a rich, complex paper and warm layered lighting is one of the most successful interior design outcomes possible." } },
+      { "@type": "Question", "name": "Does metallic wallpaper help in a dark room?", "acceptedAnswer": { "@type": "Answer", "text": "Warm-toned metallics (gold, bronze, warm champagne) do help — they catch and reflect available light, creating movement and warmth. Cool-toned metallics (silver, chrome) amplify the blue quality of north-facing light and should be avoided in dark rooms." } },
+      { "@type": "Question", "name": "What wallpaper should I avoid in a north-facing room?", "acceptedAnswer": { "@type": "Answer", "text": "Cool white and bright white backgrounds, pale grey tones, cool blue or lavender papers, high-contrast black-and-white geometric, and cold metallic finishes. All interact badly with the cool, flat, blue-cast quality of north-facing natural light." } },
     ],
   },
   "dining-room-wallpaper-ideas": {
