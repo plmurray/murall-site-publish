@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "floral-wallpaper-ideas",
+    title: "Floral Wallpaper Ideas: 11 Ways to Use the Most Enduring Pattern in Interiors",
+    excerpt: "Florals are the only wallpaper pattern that has never been out of fashion — because they were never fully in it. Here are 11 ways to use them, from the barely-there ditsy to the floor-to-ceiling maximalist.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
+  },
+  {
     slug: "wallpaper-vs-paint",
     title: "Wallpaper vs Paint: Which Is Right for Your Room?",
     excerpt: "Most people frame this as an either/or. It isn't. Wallpaper and paint are different tools for different jobs — and knowing which job each does better is what separates a considered room from a generic one.",
@@ -171,6 +177,16 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "floral-wallpaper-ideas": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Are floral wallpapers fashionable in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — florals remain among the best-selling wallpaper categories in 2026. Dark-ground botanicals, large-scale maximalist florals, and contemporary graphic florals are all performing strongly. Small pastel-on-white florals are being selectively revived but carry more traditional connotations." } },
+      { "@type": "Question", "name": "What rooms suit floral wallpaper best?", "acceptedAnswer": { "@type": "Answer", "text": "Bedrooms and dining rooms consistently benefit most from floral wallpaper. The bedroom rewards the warmth of floral pattern; the dining room rewards visual complexity viewed at close range. Hallways and cloakrooms are strong options for maximalist choices." } },
+      { "@type": "Question", "name": "How do I choose between a large and small floral pattern?", "acceptedAnswer": { "@type": "Answer", "text": "Large-pattern florals suit rooms with high ceilings and generous floor areas. Small-pattern florals work in any room size and are particularly forgiving in small spaces. For rooms under 12m², consider a small-pattern or tonal floral unless you specifically want the immersive effect of a large pattern used boldly." } },
+      { "@type": "Question", "name": "Can men live with floral wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — the association between florals and femininity is a 20th century convention, not a design principle. Dark-ground florals, graphic botanicals, Japanese-influenced prints, and oversized Morris-style papers carry none of the chintz associations." } },
     ],
   },
   "wallpaper-vs-paint": {

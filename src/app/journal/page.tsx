@@ -31,6 +31,17 @@ const POSTS = [
     featured: true,
   },
   {
+    slug: "floral-wallpaper-ideas",
+    category: "Inspiration",
+    title: "Floral Wallpaper Ideas: 11 Ways to Use the Most Enduring Pattern in Interiors",
+    excerpt: "Florals are the only wallpaper pattern that has never been out of fashion — because they were never fully in it. From the barely-there ditsy to the floor-to-ceiling maximalist.",
+    author: "Sofia Laurent",
+    date: "3 October 2026",
+    readTime: "7 min read",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
+    featured: false,
+  },
+  {
     slug: "wallpaper-vs-paint",
     category: "Guide",
     title: "Wallpaper vs Paint: Which Is Right for Your Room?",
