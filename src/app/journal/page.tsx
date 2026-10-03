@@ -31,6 +31,17 @@ const POSTS = [
     featured: true,
   },
   {
+    slug: "home-office-wallpaper-ideas",
+    category: "Inspiration",
+    title: "Home Office Wallpaper Ideas: 10 Ways to Make Your Workspace Actually Work",
+    excerpt: "Most home offices are decorated like an afterthought — beige walls, flat lighting, a chair pushed against whatever space is available. Wallpaper is one of the fastest ways to change that.",
+    author: "James Whitfield",
+    date: "3 October 2026",
+    readTime: "7 min read",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png",
+    featured: false,
+  },
+  {
     slug: "kids-room-wallpaper-ideas",
     category: "Inspiration",
     title: "Kids' Room Wallpaper Ideas: 12 Designs That Actually Last",

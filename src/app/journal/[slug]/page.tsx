@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "home-office-wallpaper-ideas",
+    title: "Home Office Wallpaper Ideas: 10 Ways to Make Your Workspace Actually Work",
+    excerpt: "Most home offices are decorated like an afterthought — beige walls, flat lighting, a chair pushed against whatever space is available. Wallpaper is one of the fastest ways to change that.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png",
+  },
+  {
     slug: "kids-room-wallpaper-ideas",
     title: "Kids' Room Wallpaper Ideas: 12 Designs That Actually Last",
     excerpt: "The hardest wallpaper brief isn't 'make it beautiful' — it's 'make it beautiful for a five-year-old and still work when they're twelve.' These 12 ideas solve that problem.",
@@ -159,6 +165,16 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "home-office-wallpaper-ideas": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What colour wallpaper is best for a home office?", "acceptedAnswer": { "@type": "Answer", "text": "Deep, saturated tones — bottle green, navy, warm charcoal — support focus better than white or very pale colours. Research into biophilic design also suggests muted botanical wallpapers improve sustained attention. The most important factor is choosing a colour you can be comfortable with for long periods." } },
+      { "@type": "Question", "name": "What wallpaper looks best on video calls?", "acceptedAnswer": { "@type": "Answer", "text": "Mid-dark, textured, or strongly tonal papers photograph well on video calls. Deep greens, navies, and warm charcoals resolve clearly in compressed video formats. Avoid very pale flat walls (indistinct), metallic papers (create glare), and small busy patterns (create moiré distortion on screen)." } },
+      { "@type": "Question", "name": "Should I wallpaper a whole home office or just one wall?", "acceptedAnswer": { "@type": "Answer", "text": "One wall — the wall behind you on camera, or the wall your desk faces — is usually enough. A feature wall gives the room a clear focal point, costs significantly less than four walls, and is easier to update when tastes or work requirements change." } },
+      { "@type": "Question", "name": "Is grasscloth wallpaper good for a home office?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — grasscloth and other textured natural-fibre papers work well in a home office. They add warmth without visual noise, absorb some room echo, and photograph well on video calls. The limitation is durability: grasscloth doesn't clean as easily as vinyl papers and is not ideal in high-humidity rooms or where the walls will be touched frequently." } },
     ],
   },
   "kids-room-wallpaper-ideas": {
