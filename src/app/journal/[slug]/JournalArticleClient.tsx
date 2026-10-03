@@ -519,6 +519,105 @@ const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "wallpaper-cost-guide",
+    category: "Buying Guide",
+    title: "How Much Does Wallpaper Cost? A Room-by-Room Price Guide for 2026",
+    excerpt: "Most wallpaper cost guides online are useless — vague ranges that tell you nothing about what you will actually spend. This one breaks it down by room, by market tier, and by whether you are hanging it yourself or paying someone else.",
+    author: "James Whitfield",
+    authorBio: "James is a former interior decorator turned writer, based in Edinburgh. He has hung wallpaper in over 200 homes and writes about craft, materials, and getting things right first time.",
+    date: "2 October 2026",
+    readTime: "9 min read",
+    imageUrl: IMAGES.emerald,
+    relatedSlugs: ["how-many-rolls-do-i-need", "peel-and-stick-vs-paste-the-wall", "best-peel-and-stick-wallpaper"],
+    body: [
+      { type: "p", text: "The problem with most wallpaper cost estimates is that they are written to cover every possible scenario without committing to any. 'Wallpaper costs between £10 and £300 per roll' is technically accurate and practically useless. What you need to know is: what will a roll of paper that actually looks good cost, how many rolls will a specific room need, what will a decorator charge, and what are the costs that most people forget to budget for until they are already halfway through the job?" },
+      { type: "p", text: "This guide answers all of those questions with specific numbers. All prices are 2026 UK market figures. They will not match every retailer — prices vary by collection, brand, and sale — but they reflect what you should expect to pay for paper at each quality tier." },
+
+      { type: "h2", text: "Wallpaper price per roll: what each tier buys you" },
+      { type: "table",
+        head: ["Tier", "Price per roll", "What you get", "Best for"],
+        rows: [
+          ["Budget", "£8–£20", "Thin paper, limited colourways, short repeat, basic print fidelity", "Temporary use, rental properties, children's rooms you'll repaper soon"],
+          ["Mid-range", "£20–£60", "Good print quality, wider design range, standard durability ratings, non-woven or vinyl-coated options", "Most rooms in most homes — the best value tier"],
+          ["Premium", "£60–£120", "Superior print fidelity, richer colourways, heavier substrate, longer pattern repeats, designer ranges", "Feature walls, main living areas, rooms where the paper is the design statement"],
+          ["Luxury", "£120–£300+", "Hand-printed or hand-finished, archival inks, unusual substrates (grasscloth, silk, cork), limited production", "Formal rooms, investment properties, buyers for whom material quality is the point"],
+        ]
+      },
+      { type: "p", text: "The mid-range tier (£20–£60 per roll) is where most good residential wallpaper lives. Below it, the print quality and substrate weight begin to compromise the result. Above it, you are paying for craft and provenance as much as for visual quality — not always the right call for a trend-led design you might repaper in five years, but absolutely correct for a classic pattern in a room you intend to keep long-term." },
+
+      { type: "h2", text: "Cost to wallpaper a room: full breakdown" },
+      { type: "p", text: "The table below shows typical total material costs for papering standard-sized rooms in the UK. Figures assume a mid-range paper at £40 per roll and standard ceiling height (2.4m). Pattern repeat waste adds approximately 15–20% to roll count for designs with repeats over 32cm." },
+      { type: "table",
+        head: ["Room", "Rolls needed (plain)", "Rolls needed (large repeat)", "Mid-range cost", "Premium cost"],
+        rows: [
+          ["Cloakroom / WC (feature wall)", "1–2", "2–3", "£40–£80", "£80–£240"],
+          ["Cloakroom / WC (all walls)", "3–5", "4–6", "£120–£200", "£240–£600"],
+          ["Small bedroom (feature wall)", "3–4", "4–5", "£120–£160", "£240–£480"],
+          ["Small bedroom (all walls)", "8–10", "10–13", "£320–£400", "£640–£1,200"],
+          ["Double bedroom (feature wall)", "4–5", "5–6", "£160–£200", "£320–£600"],
+          ["Double bedroom (all walls)", "10–12", "13–16", "£400–£480", "£800–£1,440"],
+          ["Hallway (standard, no stairs)", "6–8", "8–10", "£240–£320", "£480–£960"],
+          ["Hallway + stairwell", "12–16", "15–20", "£480–£640", "£960–£1,920"],
+          ["Living room (feature wall)", "4–5", "5–7", "£160–£200", "£320–£600"],
+          ["Living room (all walls)", "14–17", "18–22", "£560–£680", "£1,120–£2,040"],
+        ]
+      },
+      { type: "tip", text: "Always order one roll more than your calculation requires. Wallpaper is produced in batches; a roll from a different batch ordered later may not match the colour exactly. The cost of one extra roll is trivial compared to the cost of a visible colour discrepancy mid-room." },
+
+      { type: "h2", text: "Decorator costs: professional hanging" },
+      { type: "p", text: "Professional wallpaper hanging is priced two ways: per roll hung, or as a day rate. Both approaches are common, and which is used typically depends on the decorator." },
+      { type: "table",
+        head: ["Pricing model", "Typical rate (2026 UK)", "Notes"],
+        rows: [
+          ["Per roll hung", "£15–£35 per roll", "More common for standard rooms; lower end for plain paper, higher for large repeats"],
+          ["Day rate", "£150–£280 per day", "More common for complex jobs (stairwells, murals, difficult rooms)"],
+          ["London premium", "+20–40% above national average", "Central London and premium boroughs command significantly higher rates"],
+          ["Lining paper (additional)", "£8–£15 per roll hung", "If lining paper is required, this is typically priced separately"],
+        ]
+      },
+      { type: "p", text: "To estimate professional hanging cost for a room: take your roll count, multiply by the per-roll rate, and add the cost of any preparatory work (stripping old paper, filling, lining). A standard double bedroom hang (12 rolls, mid-range decorator) typically costs £180–£420 in labour. A living room all-four-walls hang (16 rolls) runs to £240–£560 in labour." },
+      { type: "p", text: "Stairwells are priced higher because of the difficulty: long drops, awkward access, and the time required. Expect to pay 30–50% more per roll than a standard room rate, and two decorators are sometimes required (one at the top of the scaffold, one managing the drop from below)." },
+
+      { type: "h2", text: "The costs most people forget to budget for" },
+      { type: "list", items: [
+        "Paste — a standard tub of ready-mixed paste costs £8–£15 and covers approximately 10–12 rolls. For a full room, budget £15–£25 in paste.",
+        "Primer / size — a litre of wallpaper size costs £5–£12. You will need at least one coat on all walls before hanging.",
+        "Lining paper — if the walls are in poor condition or you are hanging a premium paper, lining is strongly advised. Budget £3–£6 per roll of lining paper, plus the hanging cost if using a decorator.",
+        "Tools — a pasting table (£20–£40), smoothing brush or plastic smoother (£8–£15), seam roller (£5–£10), long scissors (£10–£20), and a sharp craft knife and spare blades (£10–£15). Total tool budget for a first hang: £50–£100. Tools last for many projects.",
+        "Filler and sandpaper — even well-maintained walls typically need some filling before papering. Budget £10–£20 for filler, sandpaper, and a small scraper.",
+        "Pattern repeat waste — if your paper has a large repeat (64cm or more), you may waste 20–25% of each roll in trimming. This is already accounted for in the 'large repeat' column above, but worth understanding: a paper that costs £40 per roll and has a 64cm repeat will effectively cost more per square metre covered than the label price suggests.",
+        "Delivery — many wallpaper orders ship free above a threshold (typically 4–8 rolls), but sample orders and small quantities often incur delivery charges of £3–£8 per order.",
+      ]},
+
+      { type: "h2", text: "DIY vs professional: the real calculation" },
+      { type: "p", text: "The decision to hang yourself or hire a decorator should be made on honest self-assessment, not just cost. The material savings from DIY are real — a room that costs £240 in labour becomes £0 — but only if the finished result is good. A poorly hung room (misaligned pattern, visible joins, paste on the woodwork) does not save money if it needs to be re-done." },
+      { type: "p", text: "A useful framework: if you have not hung wallpaper before, practise on a small, forgiving room first — a cloakroom, a utility room, a room that will be repainted soon anyway. A plain paper with no pattern repeat, on a well-prepared wall, in a simple room with no awkward obstacles. The first room teaches you more than any guide can. The second room will be notably better." },
+      { type: "p", text: "Where professional hanging is clearly worth the cost: stairwells (access and length of drop make this genuinely risky for first-timers), premium papers (the cost of damaging a £120-per-roll paper is significant), and rooms with complex obstacles (many doors, windows, radiators, or a chimney breast with multiple reveals)." },
+
+      { type: "h2", text: "How to reduce costs without compromising the result" },
+      { type: "numbered", items: [
+        "Paper one wall, not four. A feature wall uses 3–5 rolls instead of 14–17. The visual impact relative to cost is dramatically better on a single wall — the paper reads as a statement rather than wallpaper.",
+        "Choose mid-range paper for trend-led designs. If you are following a current trend that may shift in five years, there is no reason to spend £100 per roll on it. A mid-range paper at £35–45 per roll in the same design direction will look identical from normal viewing distances.",
+        "Spend more on classic patterns. Chinoiserie, quality stripe, good botanical on a timeless background: these are the papers worth spending £80–120 per roll on, because they will still be correct in fifteen years.",
+        "Buy samples before ordering. A sample costs £3–£8. Ordering four rolls of the wrong paper and needing to reorder costs £160–£480. The sample is the best-value purchase in any wallpaper project.",
+        "Calculate carefully and order once. The extra delivery charge and the batch-matching risk of a second order both cost money. Use a calculator, add 10% waste, and order everything you need in a single purchase.",
+        "Hire a decorator for the stairwell only. If you are competent at standard room hanging but nervous about the stairwell, there is no rule that says you must do the whole house yourself or none of it. Doing the main rooms yourself and paying a professional for the stairwell is a reasonable division.",
+      ]},
+
+      { type: "cta", heading: "Calculate before you order", body: "Get a precise roll count for your room — including pattern repeat waste — before placing your order. One calculation, one order, no batch-match risk.", buttonText: "Open rolls calculator" },
+
+      { type: "h2", text: "Frequently asked questions" },
+      { type: "faq", items: [
+        { q: "How much does it cost to wallpaper a room in the UK?", a: "A standard double bedroom (all four walls, mid-range paper at £40/roll, professional hanging) typically costs £600–£960 total: £400–£480 in materials (12 rolls) plus £200–£480 in labour. DIY reduces the total to £400–£480 in materials plus £50–£80 in tools if it is your first hang. A living room runs to £800–£1,240 total with a professional, or £560–£680 in materials only for DIY." },
+        { q: "Is wallpaper more expensive than paint?", a: "Yes, for materials. A litre of mid-range emulsion (£15–£25) covers approximately 12m², making a typical living room paint cost £60–£120 in materials. The equivalent mid-range wallpaper for the same room costs £560–£680 in materials. However, wallpaper lasts 15–20 years without repainting, adds texture and depth that paint cannot, and transforms a room in a way that paint rarely does." },
+        { q: "How much does a decorator charge to hang wallpaper?", a: "UK national average is £15–£35 per roll hung, or £150–£280 per day rate. A standard bedroom hang (12 rolls) costs £180–£420 in labour. London and premium areas command 20–40% above the national average. Stairwells are priced higher — 30–50% more per roll than a standard room — due to the difficulty of access and long drops." },
+        { q: "What is the cheapest way to wallpaper a room?", a: "Paper one feature wall rather than four walls — this reduces material costs by 70–75%. Choose a mid-range paper (£20–£40 per roll) on a plain or short-repeat design that minimises waste. Hang it yourself on a well-prepared wall. Total cost for a feature wall: £80–£200 in materials plus £50–£80 in tools for a first-time hanger." },
+        { q: "Is expensive wallpaper worth it?", a: "For classic, long-term papers — chinoiserie, quality stripe, a botanical on a timeless palette — yes. Premium papers (£60–£120 per roll) have better substrate weight, richer colour fidelity, and longer pattern repeats that waste less per drop. They also tend to hang more forgivingly than budget papers. For a trend-led design you expect to change within five years, mid-range is the better value decision." },
+        { q: "How do I avoid wasting wallpaper money?", a: "Order a sample before committing to a full order. Calculate your roll count accurately (use a calculator rather than estimating) and order everything in one purchase to avoid batch-matching issues. Add one roll of contingency to your order. Choose a paper that suits both the trend direction and the room's long-term character — the most expensive mistake is a paper that looks right for two years and wrong for the next ten." },
+      ]},
+    ],
+  },
+  {
     slug: "kitchen-wallpaper-ideas",
     category: "Inspiration",
     title: "Kitchen Wallpaper Ideas: What Works, What Doesn't, and 10 Looks Worth Trying",

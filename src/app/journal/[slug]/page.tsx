@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "wallpaper-cost-guide",
+    title: "How Much Does Wallpaper Cost? A Room-by-Room Price Guide for 2026",
+    excerpt: "Most wallpaper cost guides online are useless — vague ranges that tell you nothing about what you will actually spend. This one breaks it down by room, by market tier, and by whether you are hanging it yourself or paying someone else.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png",
+  },
+  {
     slug: "kitchen-wallpaper-ideas",
     title: "Kitchen Wallpaper Ideas: What Works, What Doesn't, and 10 Looks Worth Trying",
     excerpt: "Kitchens present the same question as bathrooms: can wallpaper survive here? The answer depends on where in the kitchen and what type of paper. Here is how to get it right — and ten ideas that genuinely work.",
@@ -123,6 +129,18 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "wallpaper-cost-guide": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How much does it cost to wallpaper a room in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "A standard double bedroom (all four walls, mid-range paper at £40/roll, professional hanging) typically costs £600–£960 total: £400–£480 in materials (12 rolls) plus £200–£480 in labour. DIY reduces the total to £400–£480 in materials. A living room runs to £800–£1,240 total with a professional, or £560–£680 in materials only for DIY." } },
+      { "@type": "Question", "name": "Is wallpaper more expensive than paint?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, for materials. A litre of mid-range emulsion covers approximately 12m², making a typical living room paint cost £60–£120 in materials. The equivalent mid-range wallpaper costs £560–£680. However, wallpaper lasts 15–20 years without repainting and adds texture and depth that paint cannot achieve." } },
+      { "@type": "Question", "name": "How much does a decorator charge to hang wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "UK national average is £15–£35 per roll hung, or £150–£280 per day rate. A standard bedroom hang (12 rolls) costs £180–£420 in labour. London commands 20–40% above the national average. Stairwells are priced 30–50% higher per roll than standard rooms due to access difficulty and long drops." } },
+      { "@type": "Question", "name": "What is the cheapest way to wallpaper a room?", "acceptedAnswer": { "@type": "Answer", "text": "Paper one feature wall rather than four — this reduces material costs by 70–75%. Choose a mid-range paper (£20–£40 per roll) on a plain or short-repeat design. Hang it yourself on a well-prepared wall. Total cost for a feature wall: £80–£200 in materials plus £50–£80 in tools for a first-time hanger." } },
+      { "@type": "Question", "name": "Is expensive wallpaper worth it?", "acceptedAnswer": { "@type": "Answer", "text": "For classic long-term papers — chinoiserie, quality stripe, a timeless botanical — yes. Premium papers (£60–£120 per roll) have better substrate weight, richer colour fidelity, and tend to hang more forgivingly. For a trend-led design you expect to change within five years, mid-range is the better value decision." } },
+      { "@type": "Question", "name": "How much wallpaper do I need for a bedroom?", "acceptedAnswer": { "@type": "Answer", "text": "A standard double bedroom (all four walls, 2.4m ceiling) needs 10–12 rolls with no pattern repeat, or 13–16 rolls with a large pattern repeat (64cm+). A feature wall behind the bed typically needs 4–5 rolls. Always order one extra roll as contingency — wallpaper is printed in batches and a second order may not match." } },
     ],
   },
   "kitchen-wallpaper-ideas": {
