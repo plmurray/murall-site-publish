@@ -48,6 +48,12 @@ const ARTICLE_META = [
     imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png",
   },
   {
+    slug: "dining-room-wallpaper-ideas",
+    title: "Dining Room Wallpaper Ideas: 10 Looks That Make Every Meal Feel Like an Occasion",
+    excerpt: "The dining room is the strongest argument for bold wallpaper in the house. You sit in it, at close range, for an hour at a time, under lamplight. Here are ten directions that reward exactly that kind of sustained, intimate attention.",
+    imageUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png",
+  },
+  {
     slug: "how-to-remove-wallpaper",
     title: "How to Remove Wallpaper: The Complete Step-by-Step Guide",
     excerpt: "Wallpaper removal is the step most people rush and then regret. Done correctly, it leaves walls ready to paper or paint immediately. Done badly, it leaves torn plaster, paste residue, and a surface that causes every subsequent finish to fail.",
@@ -135,6 +141,18 @@ const FAQ_SCHEMAS: Record<string, object> = {
       { "@type": "Question", "name": "What size is a standard wallpaper roll in the UK?", "acceptedAnswer": { "@type": "Answer", "text": "Standard UK and European wallpaper rolls are 52–53cm wide and 10 metres long, giving approximately 5.2m² of paper per roll." } },
       { "@type": "Question", "name": "What is pattern repeat in wallpaper?", "acceptedAnswer": { "@type": "Answer", "text": "Pattern repeat is the vertical distance before a wallpaper's design starts again. A plain paper has a repeat of zero. A large botanical mural might have a repeat of 64cm, meaning up to 64cm of each strip is trimmed to align the pattern at every seam." } },
       { "@type": "Question", "name": "Should I order extra rolls?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — always order at least one extra roll, ideally 10–15% more. Wallpaper is printed in batches; rolls from a different batch ordered later may not match exactly." } },
+    ],
+  },
+  "dining-room-wallpaper-ideas": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is the best wallpaper for a dining room?", "acceptedAnswer": { "@type": "Answer", "text": "Dark botanical wallpaper is the most consistently successful dining room choice — it creates warmth and intimacy under lamplight, rewards close-range attention, and has the theatrical quality that makes a dining room feel like a destination. For period houses, full chinoiserie is equally strong. For contemporary dining rooms, a rich abstract or tonal geometric on all four walls delivers similar atmosphere." } },
+      { "@type": "Question", "name": "Should I wallpaper all four walls in a dining room?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, in most cases. The dining room is where four walls most consistently outperforms a feature wall. The enclosed quality of a fully papered dining room creates genuine atmosphere. A feature wall creates decoration; four walls creates an environment." } },
+      { "@type": "Question", "name": "What colour wallpaper is best for a dining room?", "acceptedAnswer": { "@type": "Answer", "text": "Dark colours — forest green, deep navy, burgundy, near-black — are the most successful dining room palette. They absorb ambient light, focus attention on the table, and are highly flattering under warm lamplight. Always view your sample under your actual dining lighting before ordering." } },
+      { "@type": "Question", "name": "How does wallpaper look under dining room lighting?", "acceptedAnswer": { "@type": "Answer", "text": "Differently to how it looks in daylight. Warm light (2700K pendants, candles) enriches warm tones and makes dark papers look particularly good — rich, atmospheric, flattering. It flattens cool tones. Always view a sample under your actual dining light before ordering, not just in daylight." } },
+      { "@type": "Question", "name": "Can I use a mural in a dining room?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — the dining room is one of the best rooms for a single-wall mural, applied to the wall at the head of the table. The table creates a strong horizontal foreground that grounds the mural's vertical scale. A tropical, botanical, or landscape mural on this one wall makes the room immersive without a full four-wall installation." } },
+      { "@type": "Question", "name": "How many rolls of wallpaper do I need for a dining room?", "acceptedAnswer": { "@type": "Answer", "text": "A standard dining room (approximately 3.6m × 4.2m, 2.4m ceiling) needs 12–14 rolls for all four walls with no pattern repeat, or 15–18 rolls with a large repeat. A chimney breast feature wall alone needs 3–4 rolls. Use a rolls calculator with your exact dimensions for a precise figure." } },
     ],
   },
   "how-to-remove-wallpaper": {
