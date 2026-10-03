@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { notFound } from "next/navigation";
 import { use } from "react";
 import { getProduct, getRelatedProducts } from "@/lib/products";
+import { getProductImageFilter } from "@/lib/productFilters";
 import { getAffiliateUrl } from "@/lib/affiliate";
 import { useCurrency } from "@/context/CurrencyContext";
 import Navbar from "@/app/components/Navbar";
@@ -67,6 +68,7 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
                   src={product.images[activeImg]}
                   alt={`${product.name} — image ${activeImg + 1}`}
                   className="w-full h-full object-cover"
+                  style={{ filter: getProductImageFilter(product.slug) }}
                   initial={{ opacity: 0, scale: 1.03 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
@@ -93,7 +95,7 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
                   <button key={i} onClick={() => setActiveImg(i)}
                     className={`relative w-20 aspect-square rounded-none overflow-hidden border-2 transition-all cursor-pointer ${activeImg === i ? "border-stone-900" : "border-transparent hover:border-stone-300"}`}
                     aria-label={`View image ${i + 1}`} aria-pressed={activeImg === i}>
-                    <img src={img} alt="" className="w-full h-full object-cover" />
+                    <img src={img} alt="" className="w-full h-full object-cover" style={{ filter: getProductImageFilter(product.slug) }} />
                   </button>
                 ))}
               </div>
@@ -207,7 +209,7 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
                 <a key={r.slug} href={`/products/${r.slug}`}
                   className="group flex gap-4 p-4 rounded-none border border-stone-100 hover:border-brand-gold hover:shadow-md transition-all cursor-pointer">
                   <div className="w-20 h-20 rounded-none overflow-hidden flex-shrink-0">
-                    <img src={r.imageUrl} alt={r.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <img src={r.imageUrl} alt={r.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" style={{ filter: getProductImageFilter(r.slug) }} />
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-xs text-stone-400 mb-0.5" style={{ fontFamily: "Inter, sans-serif" }}>{r.brand}</p>
@@ -232,6 +234,7 @@ export default function ProductPageClient({ params }: { params: Promise<{ slug: 
               src={product.images[activeImg]}
               alt={product.name}
               className="max-w-full max-h-full rounded-none shadow-2xl object-contain"
+              style={{ filter: getProductImageFilter(product.slug) }}
               initial={{ scale: 0.9 }} animate={{ scale: 1 }} exit={{ scale: 0.9 }}
               transition={{ duration: 0.3 }}
             />

@@ -7,6 +7,7 @@ import { PRODUCTS } from "@/lib/products";
 import { getAffiliateUrl } from "@/lib/affiliate";
 import { useCurrency } from "@/context/CurrencyContext";
 import { PRODUCT_COLORS, COLOUR_FILTERS } from "@/lib/productColors";
+import { getProductImageFilter } from "@/lib/productFilters";
 import Navbar from "@/app/components/Navbar";
 import CartDrawer from "@/app/components/CartDrawer";
 import SearchOverlay from "@/app/components/SearchOverlay";
@@ -55,6 +56,7 @@ function ProductCard({ product, index }: { product: typeof PRODUCTS[0]; index: n
         alt={`${product.name} wallpaper by ${product.brand}`}
         loading="lazy"
         className="absolute inset-0 w-full h-full object-cover"
+        style={{ filter: getProductImageFilter(product.slug) }}
         animate={{ scale: hovered ? 1.06 : 1 }}
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
       />
