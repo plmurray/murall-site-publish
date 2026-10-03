@@ -26,15 +26,113 @@ export interface Product {
   relatedSlugs: string[];
 }
 
-// The four base images — assigned in a 4×5 Latin-square so no two
-// adjacent cards in the grid share the same visual.
-const IMG_A = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png";
-const IMG_B = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png";
-const IMG_C = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png";
-const IMG_D = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png";
+// Original four base images
+const IMG_A = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160940_6effa5f0-e7e9-4fa1-8778-5effbd43b966.png"; // lush forest botanical
+const IMG_B = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160651_6f151b60-e9e1-486d-8d44-e5fcd2348cd7.png"; // emerald botanical
+const IMG_C = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160653_f13ae913-090c-4797-ba0f-66a1694d1dc7.png"; // dark midnight botanical
+const IMG_D = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20260607_160943_0287b85a-2fd9-4ade-ae21-1c6bfd9fafbe.png"; // hex geometric
+// Eight additional distinct images — each matched to a colour/style family
+const IMG_BLUE  = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20261003_005812_5661e546-0c07-441f-b8e1-c6b4ca6a67ef.png";
+const IMG_ROSE  = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20261003_005812_93bed77f-ee91-4340-8c53-b3826c8ecfdf.png";
+const IMG_TERRA = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20261003_005811_02a92214-42a0-49b7-ae2f-fa273f379c3e.png";
+const IMG_GOLD  = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20261003_005811_c30fceb7-be6f-4d97-80fd-c0bbd4f87c49.png";
+const IMG_WHITE = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20261003_005812_45407aab-4f33-4502-b392-fb36263da025.png";
+const IMG_MULTI = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20261003_005812_6d63cd0e-d1b8-49bf-94b1-89f162633ab8.png";
+const IMG_SAGE  = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20261003_005812_8719196d-d112-439c-88b2-08d6cde34ade.png";
+const IMG_CHINA = "https://d8j0ntlcm91z4.cloudfront.net/user_3EjidxRvAQx3MA2C4ZfgGXwr8Gw/hf_20261003_005811_0142503d-7c06-4407-83ee-a10cac027749.png";
 
-// Grid order (4-col): row 1 A B C D | row 2 B C D A | row 3 C D A B |
-//                     row 4 D A B C | row 5 A B C D … repeating
+// Maps each slug to its theme-matched image. Applied at read-time in getProduct so the
+// PRODUCTS array below can stay compact without 100 individual imageUrl edits.
+const PRODUCT_IMAGE_OVERRIDES: Record<string, string> = {
+  // ── Pink / Rose floral ───────────────────────────────────────────
+  "archive-rose":         IMG_ROSE,
+  "garden-party":         IMG_ROSE,
+  "magnolia-peel-stick":  IMG_ROSE,
+  "peony-garden":         IMG_ROSE,
+  "strawberry-fields":    IMG_ROSE,
+  "mosaic-blush":         IMG_ROSE,
+  "bramble-rose":         IMG_ROSE,
+  "flamingo-pink":        IMG_ROSE,
+  "perennial-garden":     IMG_ROSE,
+  // ── Blue / Coastal ───────────────────────────────────────────────
+  "coral-reef":           IMG_BLUE,
+  "fjord-fog":            IMG_BLUE,
+  "aurora-wave":          IMG_BLUE,
+  "coastal-rope":         IMG_BLUE,
+  "coastal-stripe":       IMG_BLUE,
+  "bluebell-wood":        IMG_BLUE,
+  "chrysanthemum-blue":   IMG_BLUE,
+  "blue-linen":           IMG_BLUE,
+  "indigo-lattice":       IMG_BLUE,
+  "lily-pad-pond":        IMG_BLUE,
+  "etchings-seas":        IMG_BLUE,
+  "nordic-frost":         IMG_BLUE,
+  // ── Terracotta / Warm neutral ─────────────────────────────────────
+  "chevron-slate":        IMG_TERRA,
+  "terracotta-wave":      IMG_TERRA,
+  "king-protea":          IMG_TERRA,
+  "savanna-dusk":         IMG_TERRA,
+  "arch-shadow":          IMG_TERRA,
+  "desert-bloom":         IMG_TERRA,
+  "sunset-stripe":        IMG_TERRA,
+  "grasscloth-natural":   IMG_TERRA,
+  "boho-mudcloth":        IMG_TERRA,
+  "regency-damask":       IMG_TERRA,
+  "shell-bisque":         IMG_TERRA,
+  "linen-weave":          IMG_TERRA,
+  "stripe-dusk":          IMG_TERRA,
+  // ── Art Deco / Gold ──────────────────────────────────────────────
+  "art-deco-soleil":      IMG_GOLD,
+  "chevron-gold":         IMG_GOLD,
+  "sunburst-retro":       IMG_GOLD,
+  "broadway-noir":        IMG_GOLD,
+  "golden-lily":          IMG_GOLD,
+  "peacock-manor":        IMG_GOLD,
+  "deco-lattice":         IMG_GOLD,
+  "fornasetti-sol":       IMG_GOLD,
+  "deco-terrazzo":        IMG_GOLD,
+  // ── White / Farmhouse ────────────────────────────────────────────
+  "shiplap-white":        IMG_WHITE,
+  "noma-grid":            IMG_WHITE,
+  "daisy-meadow":         IMG_WHITE,
+  "arctic-grove":         IMG_WHITE,
+  // ── Maximalist multi-colour ───────────────────────────────────────
+  "jungle-reverie":       IMG_MULTI,
+  "limerence":            IMG_MULTI,
+  "tropical-luxe":        IMG_MULTI,
+  "fruit-folly":          IMG_MULTI,
+  // ── Sage / Meadow botanical ───────────────────────────────────────
+  "strawberry-thief":     IMG_SAGE,
+  "meadow-bloom":         IMG_SAGE,
+  "willow-bough":         IMG_SAGE,
+  "wildflower-field":     IMG_SAGE,
+  "folly-brook":          IMG_SAGE,
+  "pine-needle":          IMG_SAGE,
+  "sea-grass":            IMG_SAGE,
+  "honeysuckle-trellis":  IMG_SAGE,
+  "farmhouse-bloom":      IMG_SAGE,
+  "sage-scatter":         IMG_SAGE,
+  "canopy-illustrated":   IMG_SAGE,
+  "hygge-floral":         IMG_SAGE,
+  // ── Chinoiserie / Toile ──────────────────────────────────────────
+  "hummingbirds":         IMG_CHINA,
+  "imperial-garden":      IMG_CHINA,
+  "shou-lao":             IMG_CHINA,
+  "edo-birds":            IMG_CHINA,
+  "moonlit-garden":       IMG_CHINA,
+  "american-toile":       IMG_CHINA,
+  "toile-de-verre":       IMG_CHINA,
+  "toile-countryside":    IMG_CHINA,
+  // ── Re-assignments within original four ──────────────────────────
+  "palmeral":             IMG_A,   // deep green maximalist palm
+  "palm-paradise":        IMG_A,
+  "wilderness-emerald":   IMG_A,
+  "rainforest-floor":     IMG_A,
+  "bird-and-pomegranate": IMG_A,
+  "monstera-shadow":      IMG_C,   // dark moody (was IMG_D)
+  "loft-concrete":        IMG_C,   // dark urban (was IMG_B)
+  "tangent-stripe":       IMG_D,   // geometric (was IMG_A)
+};
 export const PRODUCTS: Product[] = [
 
   // ── Row 1 ──────────────────────────────────────────────────────
@@ -1818,7 +1916,19 @@ export const PRODUCTS: Product[] = [
 ];
 
 export function getProduct(slug: string): Product | undefined {
-  return PRODUCTS.find((p) => p.slug === slug);
+  const product = PRODUCTS.find((p) => p.slug === slug);
+  if (!product) return undefined;
+  const override = PRODUCT_IMAGE_OVERRIDES[slug];
+  if (!override) return product;
+  return { ...product, imageUrl: override, images: [override, product.images[1] ?? override] };
+}
+
+export function getProducts(): Product[] {
+  return PRODUCTS.map((p) => {
+    const override = PRODUCT_IMAGE_OVERRIDES[p.slug];
+    if (!override) return p;
+    return { ...p, imageUrl: override, images: [override, p.images[1] ?? override] };
+  });
 }
 
 export function getRelatedProducts(slug: string): Product[] {

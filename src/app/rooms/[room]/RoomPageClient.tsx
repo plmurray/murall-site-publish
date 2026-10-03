@@ -4,7 +4,7 @@ import { useState } from "react";
 import { use } from "react";
 import { notFound } from "next/navigation";
 import { motion } from "framer-motion";
-import { PRODUCTS } from "@/lib/products";
+import { PRODUCTS, getProduct } from "@/lib/products";
 import { getAffiliateUrl } from "@/lib/affiliate";
 import { useCurrency } from "@/context/CurrencyContext";
 import Navbar from "@/app/components/Navbar";
@@ -102,7 +102,7 @@ export default function RoomPageClient({ params }: { params: Promise<{ room: str
   const data = ROOMS[room as RoomKey];
 
   const products = data.productSlugs
-    .map((slug) => PRODUCTS.find((p) => p.slug === slug))
+    .map((slug) => getProduct(slug))
     .filter(Boolean) as typeof PRODUCTS;
 
   return (
@@ -186,7 +186,7 @@ export default function RoomPageClient({ params }: { params: Promise<{ room: str
               .filter(([r]) => r !== room)
               .slice(0, 3)
               .map(([r, d]) => {
-                const first = PRODUCTS.find((p) => p.slug === d.productSlugs[0]);
+                const first = getProduct(d.productSlugs[0]);
                 return (
                   <a key={r} href={`/rooms/${r}`} className="group relative overflow-hidden aspect-[4/3] block cursor-pointer">
                     {first && (

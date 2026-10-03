@@ -3,7 +3,7 @@
 import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { PRODUCTS } from "@/lib/products";
+import { PRODUCTS, getProducts } from "@/lib/products";
 import { getAffiliateUrl } from "@/lib/affiliate";
 import { useCurrency } from "@/context/CurrencyContext";
 import { PRODUCT_COLORS, COLOUR_FILTERS } from "@/lib/productColors";
@@ -214,7 +214,8 @@ function ProductsCatalogue() {
   });
   const [sort, setSort] = useState("featured");
 
-  let filtered = PRODUCTS.filter((p) => {
+  const ALL_PRODUCTS = getProducts();
+  let filtered = ALL_PRODUCTS.filter((p) => {
     const installMatch =
       installFilter === "All" ||
       (installFilter === "Paste-the-Wall" && (p.installType === "paste-the-wall" || p.installType === "both")) ||
@@ -242,7 +243,7 @@ function ProductsCatalogue() {
               The <em>full collection</em>
             </h1>
             <p className="text-stone-500 text-lg max-w-xl leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
-              {PRODUCTS.length} designs from {[...new Set(PRODUCTS.map(p => p.brand))].length} world-class brands. Filter by style or installation type to find your perfect match.
+              {ALL_PRODUCTS.length} designs from {[...new Set(ALL_PRODUCTS.map(p => p.brand))].length} world-class brands. Filter by style or installation type to find your perfect match.
             </p>
           </motion.div>
         </div>
